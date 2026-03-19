@@ -1,23 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Title (Keep under 60 characters for optimal search display) -->
   <title>Vihiga Times - Local & National News in Kenya</title>
-  <meta name="description" content="Vihiga Times is your trusted source for local and national news in Kenya. Stay updated with the latest stories from Vihiga County and beyond.">
+  
+  <!-- Meta Description (150-160 characters optimal) -->
+  <meta name="description" content="Vihiga Times is your trusted source for breaking local and national news in Kenya. Stay updated with latest stories from Vihiga County, politics, business, and sports.">
+  
+  <!-- Keywords (Helpful for SEO though less critical now) -->
+  <meta name="keywords" content="Vihiga Times, Kenya news, Vihiga County news, local news Kenya, national news, breaking news Kenya, Vihiga politics, Kenyan newspapers, Luhyia news">
+  
+  <!-- Robots - Indexing instructions -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  
+  <!-- Canonical URL (Prevents duplicate content issues) -->
+  <link rel="canonical" href="https://vihigatimes.co.ke/">
+  
+  <!-- Author/Publisher -->
+  <meta name="author" content="Vihiga Times">
+  <meta name="publisher" content="Vihiga Times Media">
+  
+  <!-- Favicon (Browser Tab Logo) - Multiple sizes for different devices -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  <link rel="shortcut icon" href="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  
+  <!-- Mobile Browser Theme Color -->
+  <meta name="theme-color" content="#1a365d">
+  <meta name="msapplication-TileColor" content="#1a365d">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vihiga Times - Local & National News in Kenya">
+  <meta property="og:description" content="Vihiga Times is your trusted source for breaking local and national news in Kenya. Stay updated with stories from Vihiga County and beyond.">
+  <meta property="og:url" content="https://vihigatimes.co.ke/">
+  <meta property="og:site_name" content="Vihiga Times">
+  <meta property="og:image" content="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vihiga Times - Kenyan News Logo">
+  <meta property="og:updated_time" content="2026-03-20T12:00:00+03:00">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vihiga Times - Local & National News in Kenya">
+  <meta name="twitter:description" content="Vihiga Times is your trusted source for breaking local and national news in Kenya. Stay updated with stories from Vihiga County and beyond.">
+  <meta name="twitter:image" content="https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png">
+  <meta name="twitter:image:alt" content="Vihiga Times - Kenyan News Logo">
+  
+  <!-- Geo-location Tags (Good for local news SEO) -->
+  <meta name="geo.region" content="KE">
+  <meta name="geo.placename" content="Vihiga, Kenya">
+  <meta name="ICBM" content="0.0768, 34.7198">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
   
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (Fixed - removed spaces in URLs) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "NewsMediaOrganization",
     "name": "Vihiga Times",
-    "url": "https://vihigatimes.co.ke/",
-    "logo": "https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png",
+    "url": "https://vihigatimes.co.ke",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ik.imagekit.io/vihigatimes/vihigatimes-logo-1.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Vihiga Times is your trusted source for local and national news in Kenya.",
     "sameAs": [
       "https://facebook.com/vihigatimes",
-         ]
+      "https://twitter.com/vihigatimes",
+      "https://instagram.com/vihigatimes"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vihiga",
+      "addressRegion": "Western Province",
+      "addressCountry": "KE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Newsroom",
+      "areaServed": "KE",
+      "availableLanguage": ["English", "Swahili"]
+    }
   }
   </script>
 </head>
