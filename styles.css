@@ -640,17 +640,17 @@ ul, ol {
   height: 100%;
   object-fit: cover;
 }
-
-.hero-slide__overlay {
+  .hero-slide__overlay {
   position: absolute;
   inset: 0;
-   background: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 0.95) 0%,
-  rgba(0, 0, 0, 0.7) 50%,
-  rgba(0, 0, 0, 0.3) 100%
-);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
+
 
 .hero-slide__content {
   position: absolute;
