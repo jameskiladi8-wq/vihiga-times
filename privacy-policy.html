@@ -1,169 +1,1882 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PR9W5VH1T1');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PR9W5VH1T1');
+  </script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Vihiga Times</title>
-  <meta name="description" content="Vihiga Times Privacy Policy - Learn how we protect your personal information.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Vihiga Times Privacy Policy - Learn how we collect, use, and protect your personal data in compliance with Kenyan Data Protection Act 2019.">
+  <meta name="theme-color" content="#1e293b">
+  
+  <title>Privacy Policy | Vihiga Times - Data Protection & Privacy</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      --primary: #1e293b;
+      --primary-dark: #0f172a;
+      --accent: #d97706;
+      --accent-light: #f59e0b;
+      --secondary: #059669;
+      --danger: #dc2626;
+      --info: #2563eb;
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --surface: #ffffff;
+      --text: #334155;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    [data-theme="dark"] {
+      --primary: #f8fafc;
+      --primary-dark: #e2e8f0;
+      --bg: #0f172a;
+      --bg-alt: #1e293b;
+      --surface: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: var(--transition);
+    }
+
+    /* Reading Progress */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+      z-index: 9999;
+      transition: width 0.1s;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .header-scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .header__logo a {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+
+    .header__logo span {
+      color: var(--accent);
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+      background: rgba(217, 119, 6, 0.05);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .icon-btn:hover {
+      background: var(--bg-alt);
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Search Overlay */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      padding-top: 100px;
+    }
+
+    .search-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .search-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1.25rem 3rem 1.25rem 1.5rem;
+      font-size: 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.1);
+    }
+
+    .search-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 1001;
+      box-shadow: var(--shadow-xl);
+      transition: left 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      left: 0;
+    }
+
+    .mobile-nav__header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav__list {
+      list-style: none;
+      padding: 1rem 0;
+    }
+
+    .mobile-nav__link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .mobile-nav__link:hover,
+    .mobile-nav__link.active {
+      background: var(--bg-alt);
+      color: var(--accent);
+      border-left-color: var(--accent);
+      padding-left: 2rem;
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Hero Section */
+    .legal-hero {
+      position: relative;
+      background: linear-gradient(135deg,  0%, #334155 100%);
+      color: white;
+      padding: 5rem 0 4rem;
+      overflow: hidden;
+    }
+
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .legal-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .legal-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .legal-hero__subtitle {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .legal-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    .legal-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Main Layout */
+    .legal-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+    }
+
+    /* Table of Contents - Sticky Sidebar */
+    .toc-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .toc-link:hover {
+      background: var(--bg-alt);
+      color: var(--accent);
+    }
+
+    .toc-link.active {
+      background: rgba(217, 119, 6, 0.1);
+      color: var(--accent);
+      border-left-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .toc-number {
+      width: 24px;
+      height: 24px;
+      background: var(--bg-alt);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .toc-link.active .toc-number {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Content Area */
+    .legal-content {
+      max-width: 800px;
+    }
+
+    .legal-section {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 100px;
+    }
+
+    .legal-section__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--info);
+      flex-shrink: 0;
+    }
+
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .legal-section h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legal-section h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .legal-section p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .legal-section ul li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Info Cards */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, var(--bg-alt) 0%, var(--surface) 100%);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .info-card__icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(217, 119, 6, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .info-card h4 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Data Rights Table */
+    .rights-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rights-table th {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .rights-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .rights-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .rights-table tr:hover td {
+      background: var(--bg-alt);
+    }
+
+    .right-name {
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Highlight Boxes */
+    .highlight-box {
+      background: linear-gradient(135deg, #3d4e64 0%, #5c8713 100%);
+      border-left: 4px solid var(--info);
+      padding: 1.5rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-box.warning {
+      background: linear-gradient(135deg, #5e5e5a 0%, #371111 100%);
+      border-left-color: var(--accent);
+    }
+
+    .highlight-box.success {
+      background: linear-gradient(135deg, #808582 0%, #a06969 100%);
+      border-left-color: var(--secondary);
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, #2563eb 0%, #334155 100%);
+      color: white;
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      margin-top: 3rem;
+    }
+
+    .contact-section h2 {
+      color: white;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item a,
+    .contact-item p {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-light);
+    }
+
+    /* Print Button */
+    .floating-actions {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 100;
+    }
+
+    .fab {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+
+    .fab:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .fab.secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 2px solid var(--border);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--surface);
+      color: var(--text);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-xl);
+      border-left: 4px solid var(--secondary);
+      transition: transform 0.3s;
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: white;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__brand {
+      max-width: 300px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .footer__logo span {
+      color: var(--accent-light);
+    }
+
+    .footer__description {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: var(--transition);
+    }
+
+    .footer__social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer__column h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__links {
+      list-style: none;
+    }
+
+    .footer__links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__link:hover {
+      color: var(--accent-light);
+      transform: translateX(5px);
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__copyright {
+      opacity: 0.6;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .legal-container {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-sidebar {
+        position: relative;
+        top: 0;
+        order: -1;
+      }
+
+      .toc-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .toc-item {
+        margin: 0;
+      }
+
+      .toc-link {
+        white-space: nowrap;
+      }
+
+      .header__nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .legal-section {
+        padding: 1.5rem;
+      }
+
+      .rights-table {
+        font-size: 0.9rem;
+      }
+
+      .rights-table th,
+      .rights-table td {
+        padding: 1rem;
+      }
+
+      .contact-section {
+        padding: 2rem;
+      }
+
+      .floating-actions {
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .footer__brand {
+        max-width: 100%;
+      }
+
+      .footer__social {
+        justify-content: center;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .header, .toc-sidebar, .floating-actions, .footer {
+        display: none;
+      }
+
+      .legal-hero {
+        background: rgb(21, 21, 21);
+        color: black;
+        padding: 2rem 0;
+      }
+
+      .legal-container {
+        display: block;
+        padding: 0;
+      }
+
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Reading Progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
   <!-- Header -->
-  <header class="header">
-    <div class="container header__container">
-      <div class="header__logo">
-        <div><a href="index.html" title="Vihiga Times – Local & National News in Kenya"><span>Vihiga</span> Times</a></div>
-      </div>
-      <div class="header__search">
-        <form class="search-form" role="search">
-          <input type="search" class="search-input" placeholder="Search Vihiga news, crime, business..." aria-label="Search articles">
-          <button type="submit" class="search-button" aria-label="Submit search">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          </button>
-          <span class="search-error">No matching section found</span>
-        </form>
-      </div>
-      <button class="header__search-toggle" aria-label="Toggle search">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+  <header class="header" id="header">
+    <div class="header__container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
+      <div class="header__logo">
+        <a href="index.html">
+          Vihiga<span>Times</span>
+        </a>
+      </div>
+
       <nav class="header__nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a>
-        <a href="local-news/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a>
-        <a href="national/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a>
-        <a href="crime-safety/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a>
-        <a href="hustle-business/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a>
-        <a href="entertainment-culture/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a>
+        <a href="index.html" class="nav-link">
+          <i data-lucide="home" style="width: 18px; height: 18px;"></i>
+          Home
+        </a>
+        <a href="local-news/index.html" class="nav-link">
+          <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+          Local
+        </a>
+        <a href="national/index.html" class="nav-link">
+          <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+          National
+        </a>
+        <a href="crime-safety/index.html" class="nav-link">
+          <i data-lucide="shield" style="width: 18px; height: 18px;"></i>
+          Crime
+        </a>
+        <a href="hustle-business/index.html" class="nav-link">
+          <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+          Business
+        </a>
+        <a href="entertainment-culture/index.html" class="nav-link">
+          <i data-lucide="music" style="width: 18px; height: 18px;"></i>
+          Culture
+        </a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span></button>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" style="width: 20px; height: 20px;" id="themeIcon"></i>
+        </button>
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle search">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
     </div>
   </header>
-  <div class="mobile-overlay"></div>
-  <nav class="mobile-nav" aria-label="Mobile navigation">
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search privacy topics..." aria-label="Search">
+        <button class="search-close" id="searchClose">
+          <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__header">
+      <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">Vihiga<span style="color: var(--accent);">Times</span></span>
+      <button class="icon-btn" id="mobileNavClose">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
     <ul class="mobile-nav__list">
-      <li><a href="index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a></li>
-      <li><a href="local-news/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a></li>
-      <li><a href="national/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a></li>
-      <li><a href="crime-safety/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a></li>
-      <li><a href="hustle-business/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a></li>
-      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a></li>
+      <li><a href="index.html" class="mobile-nav__link"><i data-lucide="home" style="width: 20px; height: 20px;"></i>Home</a></li>
+      <li><a href="local-news/index.html" class="mobile-nav__link"><i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>Local News</a></li>
+      <li><a href="national/index.html" class="mobile-nav__link"><i data-lucide="globe" style="width: 20px; height: 20px;"></i>National</a></li>
+      <li><a href="crime-safety/index.html" class="mobile-nav__link"><i data-lucide="shield" style="width: 20px; height: 20px;"></i>Crime & Safety</a></li>
+      <li><a href="hustle-business/index.html" class="mobile-nav__link"><i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>Hustle & Business</a></li>
+      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><i data-lucide="music" style="width: 20px; height: 20px;"></i>Entertainment</a></li>
+      <li><a href="about-us.html" class="mobile-nav__link"><i data-lucide="users" style="width: 20px; height: 20px;"></i>About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav__link"><i data-lucide="mail" style="width: 20px; height: 20px;"></i>Contact</a></li>
     </ul>
   </nav>
 
-  <main class="legal-page">
-    <div class="legal-page__container">
-      <h1 class="legal-page__title">Privacy Policy</h1>
-      <p class="legal-page__date">Last updated: February 14, 2026</p>
-      
-      <div class="legal-page__content">
-        <p>At Vihiga Times, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+  <main>
+    <!-- Hero Section -->
+    <section class="legal-hero">
+      <div class="legal-hero__content">
+        <div class="legal-badge">
+          <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+          Data Protection Compliant
+        </div>
+        <h1 class="legal-hero__title">Privacy Policy</h1>
+        <p class="legal-hero__subtitle">
+          Your privacy matters to us. Learn how Vihiga Times collects, uses, and protects your personal information in accordance with the Kenyan Data Protection Act 2019.
+        </p>
+        <div class="legal-meta">
+          <span class="legal-meta-item">
+            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+            Last updated: February 14, 2026
+          </span>
+          <span class="legal-meta-item">
+            <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
+            Version 2.0
+          </span>
+          <span class="legal-meta-item">
+            <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+            Read time: 6 minutes
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="legal-container">
+      <!-- Table of Contents -->
+      <aside class="toc-sidebar">
+        <h3 class="toc-title">
+          <i data-lucide="list" style="width: 20px; height: 20px;"></i>
+          Contents
+        </h3>
+        <nav>
+          <ul class="toc-list">
+            <li class="toc-item">
+              <a href="#introduction" class="toc-link active">
+                <span class="toc-number">1</span>
+                Introduction
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#collection" class="toc-link">
+                <span class="toc-number">2</span>
+                Information We Collect
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#usage" class="toc-link">
+                <span class="toc-number">3</span>
+                How We Use Information
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#legal-basis" class="toc-link">
+                <span class="toc-number">4</span>
+                Legal Basis
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#sharing" class="toc-link">
+                <span class="toc-number">5</span>
+                Data Sharing
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#cookies" class="toc-link">
+                <span class="toc-number">6</span>
+                Cookies & Tracking
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#security" class="toc-link">
+                <span class="toc-number">7</span>
+                Data Security
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#retention" class="toc-link">
+                <span class="toc-number">8</span>
+                Data Retention
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#rights" class="toc-link">
+                <span class="toc-number">9</span>
+                Your Rights
+              </a>
+            </li>
+            <li class="toc-item">
+              <a href="#contact" class="toc-link">
+                <span class="toc-number">10</span>
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="legal-content">
         
-        <h2>Information We Collect</h2>
-        <p>We may collect personal information that you voluntarily provide to us when you:</p>
-        <ul>
-          <li>Subscribe to our newsletter</li>
-          <li>Contact us through our contact form</li>
-          <li>Comment on articles</li>
-          <li>Participate in surveys or promotions</li>
-        </ul>
-        <p>This information may include your name, email address, phone number, and any other information you choose to provide.</p>
-        
-        <h2>Automatically Collected Information</h2>
-        <p>When you visit our website, we automatically collect certain information about your device, including:</p>
-        <ul>
-          <li>IP address</li>
-          <li>Browser type and version</li>
-          <li>Operating system</li>
-          <li>Pages visited and time spent</li>
-          <li>Referring website</li>
-        </ul>
-        
-        <h2>How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-          <li>Provide and maintain our services</li>
-          <li>Send you newsletters and updates (if subscribed)</li>
-          <li>Respond to your inquiries</li>
-          <li>Improve our website and user experience</li>
-          <li>Analyze usage patterns and trends</li>
-          <li>Prevent fraud and ensure security</li>
-        </ul>
-        
-        <h2>Cookies</h2>
-        <p>We use cookies and similar tracking technologies to enhance your browsing experience. You can control cookies through your browser settings.</p>
-        
-        <h2>Third-Party Services</h2>
-        <p>We may use third-party services such as analytics providers and advertising partners. These services may collect information about your online activities over time and across different websites.</p>
-        
-        <h2>Data Security</h2>
-        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-        
-        <h2 id="data-protection">Your Rights</h2>
-        <p>Under Kenyan data protection laws, you have the right to:</p>
-        <ul>
-          <li>Access your personal information</li>
-          <li>Correct inaccurate information</li>
-          <li>Request deletion of your information</li>
-          <li>Object to processing of your information</li>
-          <li>Withdraw consent at any time</li>
-        </ul>
-        
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at privacy@vihigatimes.com.</p>
+        <!-- Section 1: Introduction -->
+        <section class="legal-section" id="introduction">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="info" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>1. Introduction</h2>
+          </div>
+          
+          <p>Vihiga Times ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you visit our website, use our services, or interact with our content.</p>
+          
+          <div class="highlight-box">
+            <p>We operate in full compliance with the <strong>Kenyan Data Protection Act 2019</strong> and international best practices for data privacy.</p>
+          </div>
+          
+          <p>By accessing or using Vihiga Times, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.</p>
+          
+          <p><strong>Data Controller:</strong> Vihiga Times Media House<br>
+          <strong>Physical Address:</strong> Luanda, Vihiga County, Kenya<br>
+          <strong>Registration:</strong> Registered under the Data Protection Act, Office of the Data Protection Commissioner</p>
+        </section>
+
+        <!-- Section 2: Information Collection -->
+        <section class="legal-section" id="collection">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="database" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>2. Information We Collect</h2>
+          </div>
+          
+          <p>We collect several types of information from and about users of our website:</p>
+          
+          <h3>2.1 Personal Information You Provide</h3>
+          <ul>
+            <li><strong>Contact Information:</strong> Name, email address, phone number when you subscribe to newsletters or contact us</li>
+            <li><strong>Profile Information:</strong> Username, profile picture if you create an account or comment on articles</li>
+            <li><strong>Communication Data:</strong> Records of your correspondence with us, including feedback and survey responses</li>
+            <li><strong>User Content:</strong> Comments, posts, or other content you submit to our platform</li>
+          </ul>
+
+          <h3>2.2 Automatically Collected Information</h3>
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="smartphone" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Device Information</h4>
+              <p>IP address, browser type, operating system, device identifiers, and mobile network information</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="mouse-pointer" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Usage Data</h4>
+              <p>Pages visited, time spent, click patterns, referring websites, and feature interactions</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Location Data</h4>
+              <p>General geographic location based on IP address (not precise GPS coordinates)</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="cookie" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Cookie Data</h4>
+              <p>Session IDs, preferences, analytics identifiers, and advertising data</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Usage -->
+        <section class="legal-section" id="usage">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="settings" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>3. How We Use Your Information</h2>
+          </div>
+          
+          <p>We use the information we collect for the following purposes:</p>
+          
+          <ul>
+            <li><strong>Service Provision:</strong> To deliver news content, process subscriptions, and maintain your account</li>
+            <li><strong>Personalization:</strong> To customize content recommendations based on your reading preferences</li>
+            <li><strong>Communication:</strong> To send newsletters, respond to inquiries, and provide customer support</li>
+            <li><strong>Analytics:</strong> To understand how our services are used and improve user experience</li>
+            <li><strong>Security:</strong> To detect and prevent fraud, spam, and security incidents</li>
+            <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes</li>
+            <li><strong>Marketing:</strong> To send promotional materials (only with your explicit consent)</li>
+          </ul>
+
+          <div class="highlight-box warning">
+            <p><strong>Important:</strong> We will never sell your personal data to third parties. Any data sharing is strictly limited to the purposes described in this policy.</p>
+          </div>
+        </section>
+
+        <!-- Section 4: Legal Basis -->
+        <section class="legal-section" id="legal-basis">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="scale" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>4. Legal Basis for Processing</h2>
+          </div>
+          
+          <p>Under the Kenyan Data Protection Act 2019, we process your personal data based on the following legal grounds:</p>
+          
+          <table class="rights-table">
+            <thead>
+              <tr>
+                <th>Legal Basis</th>
+                <th>Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="right-name"><i data-lucide="check" style="width: 16px; height: 16px;"></i> Consent</span></td>
+                <td>Newsletter subscriptions, marketing communications, optional cookies, and user-generated content</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="check" style="width: 16px; height: 16px;"></i> Contract</span></td>
+                <td>Providing services you've requested, processing payments, and fulfilling our terms of service</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="check" style="width: 16px; height: 16px;"></i> Legal Obligation</span></td>
+                <td>Complying with court orders, regulatory requirements, and data retention laws</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="check" style="width: 16px; height: 16px;"></i> Legitimate Interest</span></td>
+                <td>Website security, fraud prevention, analytics, and improving our services</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="check" style="width: 16px; height: 16px;"></i> Vital Interests</span></td>
+                <td>Protecting your life or physical safety in emergency situations</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 5: Data Sharing -->
+        <section class="legal-section" id="sharing">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="share-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>5. Data Sharing and Third Parties</h2>
+          </div>
+          
+          <p>We may share your personal data with the following categories of recipients:</p>
+          
+          <h3>5.1 Service Providers</h3>
+          <ul>
+            <li><strong>Hosting & Infrastructure:</strong> Cloud service providers for website hosting and data storage</li>
+            <li><strong>Analytics:</strong> Google Analytics for website traffic analysis (anonymized data)</li>
+            <li><strong>Email Services:</strong> Mailchimp or similar for newsletter delivery</li>
+            <li><strong>Payment Processors:</strong> If applicable, for subscription payments</li>
+          </ul>
+
+          <h3>5.2 Legal Requirements</h3>
+          <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., court orders, law enforcement agencies).</p>
+
+          <h3>5.3 Business Transfers</h3>
+          <p>If Vihiga Times is involved in a merger, acquisition, or asset sale, your personal data may be transferred. We will provide notice before your personal data is transferred and becomes subject to a different privacy policy.</p>
+
+          <div class="highlight-box success">
+            <p><strong>International Transfers:</strong> When we transfer data outside Kenya, we ensure appropriate safeguards are in place in accordance with the Data Protection Act, including Standard Contractual Clauses (SCCs).</p>
+          </div>
+        </section>
+
+        <!-- Section 6: Cookies -->
+        <section class="legal-section" id="cookies">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="cookie" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>6. Cookies and Tracking Technologies</h2>
+          </div>
+          
+          <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. For detailed information about the cookies we use and how to manage them, please see our <a href="cookie-policy.html" style="color: var(--accent); text-decoration: none; font-weight: 600;">Cookie Policy</a>.</p>
+          
+          <h3>6.1 Types of Cookies We Use</h3>
+          <ul>
+            <li><strong>Essential Cookies:</strong> Required for the website to function (e.g., session management, security)</li>
+            <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+            <li><strong>Analytical Cookies:</strong> Help us understand how visitors interact with our website</li>
+            <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements (only with consent)</li>
+          </ul>
+
+          <p>You can control cookies through your browser settings. However, disabling certain cookies may affect the functionality of our website.</p>
+        </section>
+
+        <!-- Section 7: Security -->
+        <section class="legal-section" id="security">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="lock" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>7. Data Security</h2>
+          </div>
+          
+          <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction:</p>
+          
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="shield" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Encryption</h4>
+              <p>SSL/TLS encryption for all data transmission (HTTPS)</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="key" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Access Control</h4>
+              <p>Role-based access controls and multi-factor authentication</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="refresh-cw" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Regular Audits</h4>
+              <p>Security assessments and penetration testing</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <i data-lucide="users" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h4>Staff Training</h4>
+              <p>Data protection training for all employees</p>
+            </div>
+          </div>
+
+          <p>Despite these measures, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee absolute security.</p>
+        </section>
+
+        <!-- Section 8: Retention -->
+        <section class="legal-section" id="retention">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>8. Data Retention</h2>
+          </div>
+          
+          <p>We retain your personal data only for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+          
+          <h3>Retention Periods:</h3>
+          <table class="rights-table">
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Retention Period</th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Account Information</td>
+                <td>Duration of account + 2 years</td>
+                <td>Legal obligations, fraud prevention</td>
+              </tr>
+              <tr>
+                <td>Newsletter Subscriptions</td>
+                <td>Until unsubscribed + 1 year</td>
+                <td>Proof of consent, re-engagement</td>
+              </tr>
+              <tr>
+                <td>Comments & User Content</td>
+                <td>Indefinite (until deletion requested)</td>
+                <td>Public record, community value</td>
+              </tr>
+              <tr>
+                <td>Server Logs</td>
+                <td>90 days</td>
+                <td>Security monitoring, debugging</td>
+              </tr>
+              <tr>
+                <td>Analytics Data</td>
+                <td>26 months</td>
+                <td>Trend analysis, service improvement</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 9: Rights -->
+        <section class="legal-section" id="rights">
+          <div class="legal-section__header">
+            <div class="section-icon">
+              <i data-lucide="user-check" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2>9. Your Data Protection Rights</h2>
+          </div>
+          
+          <p>Under the Kenyan Data Protection Act 2019, you have the following rights regarding your personal data:</p>
+          
+          <table class="rights-table">
+            <thead>
+              <tr>
+                <th>Right</th>
+                <th>Description</th>
+                <th>How to Exercise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="right-name"><i data-lucide="eye" style="width: 16px; height: 16px;"></i> Access</span></td>
+                <td>Request copies of your personal data</td>
+                <td>Email privacy@vihigatimes.co.ke with subject "Data Access Request"</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="edit" style="width: 16px; height: 16px;"></i> Rectification</span></td>
+                <td>Correct inaccurate or incomplete data</td>
+                <td>Update via account settings or contact us directly</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="trash-2" style="width: 16px; height: 16px;"></i> Erasure</span></td>
+                <td>Request deletion of your data ("Right to be Forgotten")</td>
+                <td>Email privacy@vihigatimes.co.ke with subject "Deletion Request"</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="pause-circle" style="width: 16px; height: 16px;"></i> Restriction</span></td>
+                <td>Limit how we use your data</td>
+                <td>Contact us to specify processing restrictions</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="download" style="width: 16px; height: 16px;"></i> Portability</span></td>
+                <td>Receive data in structured, machine-readable format</td>
+                <td>Request via email; we provide JSON or CSV format</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="x-circle" style="width: 16px; height: 16px;"></i> Objection</span></td>
+                <td>Object to processing based on legitimate interests</td>
+                <td>Email with specific objection details</td>
+              </tr>
+              <tr>
+                <td><span class="right-name"><i data-lucide="refresh-ccw" style="width: 16px; height: 16px;"></i> Withdraw Consent</span></td>
+                <td>Revoke previously given consent</td>
+                <td>Use unsubscribe links or contact us directly</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="highlight-box">
+            <p><strong>Response Time:</strong> We will respond to all data subject requests within <strong>30 days</strong> as required by law. Complex requests may require additional time, which we will communicate to you.</p>
+          </div>
+
+          <p><strong>Complaints:</strong> If you are unsatisfied with our response, you have the right to lodge a complaint with the <strong>Office of the Data Protection Commissioner (ODPC)</strong> in Kenya.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+          <h2>10. Contact Us</h2>
+          <p>If you have any questions about this Privacy Policy, wish to exercise your data protection rights, or have concerns about how we handle your data, please contact us:</p>
+          
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div>
+                <h4>Data Protection Officer</h4>
+                <a href="mailto:vihigatimes038@gmail.com">vihigatimes038@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div>
+                <h4>Physical Address</h4>
+                <p>Vihiga Times Media House<br>MBALE, Vihiga County<br>Kenya, 50300</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+254769882553">+254 769882553</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Monday - Friday<br>8:00 AM - 5:00 PM EAT</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   </main>
 
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <button class="fab secondary" onclick="scrollToTop()" aria-label="Scroll to top">
+      <i data-lucide="arrow-up" style="width: 24px; height: 24px;"></i>
+    </button>
+    <button class="fab" onclick="printPolicy()" aria-label="Print this page">
+      <i data-lucide="printer" style="width: 24px; height: 24px;"></i>
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle" style="width: 20px; height: 20px; color: var(--secondary);"></i>
+    <span id="toastMessage">Action completed successfully</span>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
       <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Vihiga<span>Times</span></a>
+          <p class="footer__description">Your premier source for authentic, hyper-local news from Vihiga County. Committed to truth, community, and data protection.</p>
+          
+        </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Categories</h3>
+          <h4>Categories</h4>
           <ul class="footer__links">
             <li><a href="local-news/index.html" class="footer__link">Local News</a></li>
             <li><a href="national/index.html" class="footer__link">National</a></li>
-            <li><a href="youth-lifestyle/index.html" class="footer__link">Youth & Lifestyle</a></li>
-            <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
-            <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment & Culture</a></li>
-           
             <li><a href="crime-safety/index.html" class="footer__link">Crime & Safety</a></li>
-            
+            <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
+            <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment</a></li>
           </ul>
         </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Company</h3>
+          <h4>Company</h4>
           <ul class="footer__links">
             <li><a href="about-us.html" class="footer__link">About Us</a></li>
             <li><a href="contact.html" class="footer__link">Contact</a></li>
           </ul>
         </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Legal</h3>
+          <h4>Legal</h4>
           <ul class="footer__links">
             <li><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
             <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
             <li><a href="cookie-policy.html" class="footer__link">Cookie Policy</a></li>
             <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
-            <li><a href="privacy-policy.html#data-protection" class="footer__link">Data Protection</a></li>
           </ul>
         </div>
-        
       </div>
+      
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 Vihiga Times. All rights reserved.</p>
+        <div style="display: flex; gap: 2rem; font-size: 0.875rem; opacity: 0.6;">
+          <span>Made with pride in Vihiga</span>
+          <span>•</span>
+          <span>Protecting your data since 2024</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Reading Progress
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function toggleMobileMenu() {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMobileMenu);
+    mobileNavClose.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+    // Search
+    const searchToggle = document.getElementById('searchToggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchClose = document.getElementById('searchClose');
+    const searchInput = document.getElementById('searchInput');
+
+    searchToggle.addEventListener('click', () => {
+      searchOverlay.classList.add('active');
+      setTimeout(() => searchInput.focus(), 100);
+    });
+
+    function closeSearch() {
+      searchOverlay.classList.remove('active');
+    }
+
+    searchClose.addEventListener('click', closeSearch);
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch();
+    });
+
+    // Dark Mode
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      themeIcon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
+      lucide.createIcons();
+    }
+
+    // Active TOC Link on Scroll
+    const sections = document.querySelectorAll('.legal-section');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -80% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Smooth scroll for TOC links
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // Print Function
+    function printPolicy() {
+      window.print();
+      showToast('Preparing document for printing...');
+    }
+
+    // Scroll to Top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearch();
+        if (mobileNav.classList.contains('active')) toggleMobileMenu();
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchOverlay.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+        e.preventDefault();
+        printPolicy();
+      }
+    });
+
+    // Save reading position (optional enhancement)
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('privacyPolicyScroll', window.scrollY);
+    });
+
+    window.addEventListener('load', () => {
+      const savedScroll = localStorage.getItem('privacyPolicyScroll');
+      if (savedScroll && savedScroll > 100) {
+        // Only restore if user has previously scrolled significantly
+        // window.scrollTo(0, parseInt(savedScroll));
+      }
+    });
+  </script>
 </body>
 </html>

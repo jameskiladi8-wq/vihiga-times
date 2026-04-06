@@ -1,162 +1,1553 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PR9W5VH1T1');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PR9W5VH1T1');
+  </script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Vihiga Times</title>
-  <meta name="description" content="Learn about Vihiga Times, your trusted source for local and national news in Kenya.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Learn about Vihiga Times, your trusted source for local and national news in Kenya. Authentic stories from Vihiga County.">
+  <meta name="theme-color" content="#1e293b">
+  
+  <title>About Us - Vihiga Times | Our Story, Your Voice</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      --primary: #1e293b;
+      --primary-dark: #0f172a;
+      --accent: #d97706;
+      --accent-light: #f59e0b;
+      --secondary: #059669;
+      --danger: #dc2626;
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --surface: #ffffff;
+      --text: #334155;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    [data-theme="dark"] {
+      --primary: #f8fafc;
+      --primary-dark: #e2e8f0;
+      --bg: #0f172a;
+      --bg-alt: #1e293b;
+      --surface: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: var(--transition);
+    }
+
+    /* Reading Progress Bar */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+      z-index: 9999;
+      transition: width 0.1s;
+    }
+
+    /* Header Styles */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .header-scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .header__logo a {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+
+    .header__logo span {
+      color: var(--accent);
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+      background: rgba(217, 119, 6, 0.05);
+    }
+
+    .nav-link.active {
+      color: var(--accent);
+      background: rgba(217, 119, 6, 0.1);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .icon-btn:hover {
+      background: var(--bg-alt);
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Search Overlay */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      padding-top: 100px;
+    }
+
+    .search-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .search-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1.25rem 3rem 1.25rem 1.5rem;
+      font-size: 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.1);
+    }
+
+    .search-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 1001;
+      box-shadow: var(--shadow-xl);
+      transition: left 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      left: 0;
+    }
+
+    .mobile-nav__header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav__list {
+      list-style: none;
+      padding: 1rem 0;
+    }
+
+    .mobile-nav__link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .mobile-nav__link:hover,
+    .mobile-nav__link.active {
+      background: var(--bg-alt);
+      color: var(--accent);
+      border-left-color: var(--accent);
+      padding-left: 2rem;
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Hero Section */
+    .about-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+      color: white;
+      padding: 6rem 0 4rem;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .about-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .about-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .about-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-hero__subtitle {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .live-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 50%;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: 50%;
+    }
+
+    .timeline-content {
+      background: var(--surface);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      max-width: 350px;
+      margin-right: 2rem;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-right: 0;
+      margin-left: 2rem;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border: 4px solid var(--surface);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-year {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .value-card {
+      background: var(--surface);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .value-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(217, 119, 6, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .value-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    /* Team Section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .team-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .team-card__image {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .team-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .team-card:hover .team-card__image img {
+      transform: scale(1.05);
+    }
+
+    .team-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .team-card:hover .team-card__overlay {
+      opacity: 1;
+    }
+
+    .team-card__social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .team-card__content {
+      padding: 1.5rem;
+    }
+
+    .team-card__name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card__role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .team-card__bio {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .read-more-btn:hover {
+      gap: 0.75rem;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+
+    .modal.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: var(--bg-alt);
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      background: var(--danger);
+      color: white;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+      background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+      color: white;
+      padding: 4rem 0;
+      margin: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .newsletter__content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter__title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter__form {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter__input {
+      flex: 1;
+      min-width: 250px;
+      padding: 1rem 1.5rem;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .newsletter__input::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .newsletter__input:focus {
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(217, 119, 6, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--border);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: var(--bg-alt);
+      padding: 4rem 0;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 6rem;
+      color: var(--accent);
+      opacity: 0.1;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .testimonial-location {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary);
+      color: white;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__brand {
+      max-width: 300px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .footer__logo span {
+      color: var(--accent-light);
+    }
+
+    .footer__description {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: var(--transition);
+    }
+
+    .footer__social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer__column h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__links {
+      list-style: none;
+    }
+
+    .footer__links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__link:hover {
+      color: var(--accent-light);
+      transform: translateX(5px);
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__copyright {
+      opacity: 0.6;
+      font-size: 0.875rem;
+    }
+
+    .footer__meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-xl);
+      border-left: 4px solid var(--secondary);
+      transform: translateX(400px);
+      transition: transform 0.3s;
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .toast.show {
+      transform: translateX(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .header__nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 0;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 2rem;
+        padding-right: 0;
+      }
+
+      .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .timeline-dot {
+        left: 0;
+        transform: translateX(-50%);
+      }
+
+      .live-stats {
+        gap: 2rem;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .footer__brand {
+        max-width: 100%;
+      }
+
+      .footer__social {
+        justify-content: center;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .header, .footer, .newsletter, .icon-btn, .menu-toggle, .read-more-btn {
+        display: none;
+      }
+      
+      .about-hero {
+        background: white;
+        color: black;
+        padding: 2rem 0;
+      }
+      
+      .team-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus Visible */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Reading Progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
   <!-- Header -->
-  <header class="header">
-    <div class="container header__container">
+  <header class="header" id="header">
+    <div class="header__container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="header__logo">
-        <div>
-          <a href="index.html" title="Vihiga Times – Local & National News in Kenya">
-            <span>Vihiga</span> Times
-          </a>
-        </div>
+        <a href="index.html">
+          Vihiga<span>Times</span>
+        </a>
       </div>
-      <div class="header__search">
-        <form class="search-form" role="search">
-          <input type="search" class="search-input" placeholder="Search Vihiga news, crime, business..." aria-label="Search articles">
-          <button type="submit" class="search-button" aria-label="Submit search">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          </button>
-          <span class="search-error">No matching section found</span>
-        </form>
-      </div>
-      <button class="header__search-toggle" aria-label="Toggle search">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-      </button>
+
       <nav class="header__nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a>
-        <a href="local-news/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a>
-        <a href="national/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a>
-        <a href="crime-safety/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a>
-        <a href="hustle-business/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a>
-        <a href="entertainment-culture/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a>
+        <a href="index.html" class="nav-link">
+          <i data-lucide="home" style="width: 18px; height: 18px;"></i>
+          Home
+        </a>
+        <a href="local-news/index.html" class="nav-link">
+          <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+          Local
+        </a>
+        <a href="national/index.html" class="nav-link">
+          <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+          National
+        </a>
+        <a href="crime-safety/index.html" class="nav-link">
+          <i data-lucide="shield" style="width: 18px; height: 18px;"></i>
+          Crime
+        </a>
+        <a href="hustle-business/index.html" class="nav-link">
+          <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+          Business
+        </a>
+        <a href="entertainment-culture/index.html" class="nav-link">
+          <i data-lucide="music" style="width: 18px; height: 18px;"></i>
+          Culture
+        </a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="menu-toggle__line"></span>
-        <span class="menu-toggle__line"></span>
-        <span class="menu-toggle__line"></span>
-      </button>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" style="width: 20px; height: 20px;" id="themeIcon"></i>
+        </button>
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle search">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
     </div>
   </header>
-  
-  <div class="mobile-overlay"></div>
-  <nav class="mobile-nav" aria-label="Mobile navigation">
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search articles, topics, or locations..." aria-label="Search">
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <div class="mobile-nav__header">
+      <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">Vihiga<span style="color: var(--accent);">Times</span></span>
+      <button class="icon-btn" id="mobileNavClose" aria-label="Close menu">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
     <ul class="mobile-nav__list">
-      <li><a href="index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a></li>
-      <li><a href="local-news/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a></li>
-      <li><a href="national/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a></li>
-      <li><a href="crime-safety/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a></li>
-      <li><a href="hustle-business/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a></li>
-      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a></li>
+      <li><a href="index.html" class="mobile-nav__link"><i data-lucide="home" style="width: 20px; height: 20px;"></i>Home</a></li>
+      <li><a href="local-news/index.html" class="mobile-nav__link"><i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>Local News</a></li>
+      <li><a href="national/index.html" class="mobile-nav__link"><i data-lucide="globe" style="width: 20px; height: 20px;"></i>National</a></li>
+      <li><a href="crime-safety/index.html" class="mobile-nav__link"><i data-lucide="shield" style="width: 20px; height: 20px;"></i>Crime & Safety</a></li>
+      <li><a href="hustle-business/index.html" class="mobile-nav__link"><i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>Hustle & Business</a></li>
+      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><i data-lucide="music" style="width: 20px; height: 20px;"></i>Entertainment</a></li>
+      <li><a href="about-us.html" class="mobile-nav__link active"><i data-lucide="users" style="width: 20px; height: 20px;"></i>About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav__link"><i data-lucide="mail" style="width: 20px; height: 20px;"></i>Contact</a></li>
     </ul>
   </nav>
 
-  <main class="about-page">
-    <!-- About Hero -->
+  <main>
+    <!-- Hero Section -->
     <section class="about-hero">
-      <div class="container">
-        <h1 class="about-hero__title">About Vihiga Times</h1>
-        <p class="about-hero__subtitle">Your trusted source for local and national news, delivering accurate, timely, and relevant information to the people of Vihiga County and beyond.</p>
+      <div class="about-hero__content">
+        <div class="about-hero__badge">
+          <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+          MBALE, Vihiga County, Kenya
+        </div>
+        <h1 class="about-hero__title">Our Story, Your Voice</h1>
+        <p class="about-hero__subtitle">
+          Born from a simple belief: that the stories of Vihiga deserve to be told with dignity, depth, and unwavering truth. We're not just reporting news—we're documenting the heartbeat of our community.
+        </p>
+        <div class="live-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="2026">0</span>
+            <span class="stat-label">Founded</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="1500">0</span>
+            <span class="stat-label">Weekly Readers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="147">0</span>
+            <span class="stat-label">Stories Published</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About Content -->
-    <section class="about-content">
-      <h2>Our Story</h2>
-      <p>Vihiga Times was founded with a simple mission: to provide the people of Vihiga County with accurate, timely, and relevant news that matters to their daily lives. What started as a small community initiative has grown into one of the most trusted news sources in the region.</p>
-      
-      <p>We believe that informed citizens are empowered citizens. That's why we cover everything from local government decisions and community events to national policies and global trends that affect our readers.</p>
-      
-      <h2>Our Mission</h2>
-      <p>To be the most reliable and accessible news platform for the people of Vihiga County, delivering quality journalism that informs, educates, and empowers our community.</p>
-      
-      <h2>Our Values</h2>
-      <p><strong>Accuracy:</strong> We verify every fact before publication. Our readers trust us to get it right, and we take that responsibility seriously.</p>
-      <p><strong>Integrity:</strong> We maintain editorial independence and disclose any potential conflicts of interest. Our journalism is free from undue influence.</p>
-      <p><strong>Community:</strong> We are part of the community we serve. We listen to our readers and reflect their concerns, aspirations, and achievements.</p>
-      <p><strong>Innovation:</strong> We embrace new technologies and storytelling formats to better serve our audience in the digital age.</p>
-      
-      <h2>What We Cover</h2>
-      <p>From breaking news and in-depth investigations to lifestyle features and entertainment updates, Vihiga Times covers the full spectrum of news and information that matters to our readers. Our dedicated team of journalists and contributors work tirelessly to bring you:</p>
-      <ul>
-        <li>Breaking local and national news</li>
-        <li>In-depth investigative reporting</li>
-        <li>Business and economic analysis</li>
-        <li>Entertainment and cultural coverage</li>
-        <li>Sports and community events</li>
-        <li>Youth-focused content and opportunities</li>
-      </ul>
+    <!-- Timeline Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Journey</h2>
+          <p class="section-subtitle">From a WhatsApp group to the county's most trusted news source</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025</div>
+              <h3 class="timeline-title">The Beginning</h3>
+              <p>Started as a WhatsApp group sharing verified local updates among friends in Mbale. Realized the need for accurate, local journalism.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">March</div>
+              <h3 class="timeline-title">First Publication</h3>
+              <p>Published our first investigative piece on local market infrastructure, gaining 3,000 readers in the first week.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">February</div>
+              <h3 class="timeline-title">  Site Expansion</h3>
+              <p>Brought on our first full-time reporters and launched the Crime & Safety beat to keep the community informed and safe.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2026 march</div>
+              <h3 class="timeline-title">Going Digital</h3>
+              <p>Launched our progressive web app, allowing offline reading and instant breaking news notifications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">The Values That Drive Us</h2>
+          <p class="section-subtitle">Every story we tell is guided by these principles</p>
+        </div>
+        
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i data-lucide="check-circle-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Radical Accuracy</h3>
+            <p>In an age of misinformation, we are obsessively careful. Every name double-checked, every statistic verified, every source vetted. Your trust is our only currency.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i data-lucide="heart" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Community Over Clicks</h3>
+            <p>We don't chase sensationalism. If a story doesn't serve the dignity or understanding of our community, we don't publish it. Period.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i data-lucide="accessibility" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Accessible Truth</h3>
+            <p>Complex issues explained clearly. Breaking news delivered swiftly. Every article written for the market vendor and the university professor alike.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i data-lucide="users" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3>Youth Amplification</h3>
+            <p>Half of Vihiga is under 30. We dedicate significant coverage to the next generation's challenges, innovations, and victories.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team-section" id="team">
+    <section class="section">
       <div class="container">
-        <h2 class="team-section__title">Meet Our Team</h2>
+        <div class="section-header">
+          <h2 class="section-title">Meet The Founders</h2>
+          <p class="section-subtitle">The passionate individuals behind Vihiga Times</p>
+        </div>
+        
         <div class="team-grid">
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="John Omondi">
+          <article class="team-card" onclick="openModal('modal1')">
+            <div class="team-card__image">
+              <img src="https://ik.imagekit.io/vihigatimes/CEO-James.jpeg" alt="Editor in Chief James Travis" loading="lazy">
+              <div class="team-card__overlay">
+                <div class="team-card__social">
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="twitter" style="width: 18px; height: 18px;"></i>
+                  </a>
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+                  </a>
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <h3 class="team-card__name">John Omondi</h3>
-            <p class="team-card__role">Editor-in-Chief</p>
-            <p class="team-card__bio">Veteran journalist with over 15 years of experience in Kenyan media.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Mary Akinyi">
+            <div class="team-card__content">
+              <h3 class="team-card__name">James Travis</h3>
+              <p class="team-card__role">Co-Founder & Editor-in-Chief</p>
+              <p class="team-card__bio">Storyteller by purpose, web developer by skill, Vihigan by identity.
+I build and run Vihiga Times to share real stories from the ground—focused on local news, community voices, and everyday issues that matter to the people of Vihiga.</p>
+              <button class="read-more-btn">
+                Read Full Story
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </button>
             </div>
-            <h3 class="team-card__name">Mary Akinyi</h3>
-            <p class="team-card__role">Senior Reporter</p>
-            <p class="team-card__bio">Award-winning reporter covering local politics and community issues.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Peter Wekesa">
+          </article>
+
+          <article class="team-card" onclick="openModal('modal2')">
+            <div class="team-card__image">
+              <img src="https://ik.imagekit.io/vihigatimes/lewis.jpeg" alt="Strategy Director" loading="lazy">
+              <div class="team-card__overlay">
+                <div class="team-card__social">
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="twitter" style="width: 18px; height: 18px;"></i>
+                  </a>
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+                  </a>
+                  <a href="#" class="social-link" onclick="event.stopPropagation()">
+                    <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <h3 class="team-card__name">Peter Wekesa</h3>
-            <p class="team-card__role">Crime & Safety Correspondent</p>
-            <p class="team-card__bio">Dedicated to keeping our community informed about safety matters.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Sarah Njeri">
+            <div class="team-card__content">
+              <h3 class="team-card__name">Lewis Odali'</h3>
+              <p class="team-card__role">Co-Founder & Strategy Director</p>
+              <p class="team-card__bio">As chief journalist and assistant co-founder of Vihiga Times, he is responsible for gathering stories directly from the community—ensuring every voice is heard and every story is real.</p>
+              <button class="read-more-btn">
+                Read Full Story
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </button>
             </div>
-            <h3 class="team-card__name">Sarah Njeri</h3>
-            <p class="team-card__role">Tech & Lifestyle Editor</p>
-            <p class="team-card__bio">Passionate about technology and youth culture in Vihiga.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="David Ochieng">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal" id="modal1" onclick="closeModal('modal1')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal('modal1')">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+        <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem;">James Travis'</h2>
+        <p style="color: var(--accent); font-weight: 600; margin-bottom: 2rem;">Co-Founder & Editor-in-Chief</p>
+        
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary);">The Journey Here</h3>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8;">Built from curiosity. Driven by purpose. Rooted in Vihiga.
+I’m a young creator with a background in web development, using my skills to build something bigger than myself—Vihiga Times. What started as an idea has grown into a platform that shares real stories from the ground. I focus on creating a space where local voices are heard, information is clear, and the community stays connected.</p>
+        
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary);">Why I Do This</h3>
+        <p style="line-height: 1.8; font-style: italic; border-left: 4px solid var(--accent); padding-left: 1rem; color: var(--text-muted);">"I saw that many local stories go untold or unnoticed. I believe Vihiga deserves its own voice—one that is simple, real, and accessible to everyone. This is not just a project, it’s a mission to inform, connect, and build something meaningful for the future."</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2" onclick="closeModal('modal2')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal('modal2')">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+        <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem;">Grace Achieng'</h2>
+        <p style="color: var(--accent); font-weight: 600; margin-bottom: 2rem;">Co-Founder & Strategy Director</p>
+        
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary);">The Journey Here</h3>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8;">From the ground. For the people. With purpose.
+As a young journalist and assistant co-founder of Vihiga Times, he works at the heart of the community—collecting stories, engaging with people, and bringing out the reality of what’s happening across Vihiga. He ensures that every story comes from real experiences and real voices.</p>
+        
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary);">Why I Do This</h3>
+        <p style="line-height: 1.8; font-style: italic; border-left: 4px solid var(--accent); padding-left: 1rem; color: var(--text-muted);">I believes every community deserves to be heard. By gathering stories directly from the people, i helps shine a light on issues, moments, and voices that matter. My goal is to keep the community informed, aware, and connected through honest storytelling.</p>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Community Voices</h2>
+          <p class="section-subtitle">What our readers say about us</p>
+        </div>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Finally, news that understands the difference between Luanda and Mbale. Vihiga Times reports with the nuance our community deserves."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Reader" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">John M.</div>
+                <div class="testimonial-location">Mbale Town</div>
+              </div>
             </div>
-            <h3 class="team-card__name">David Ochieng</h3>
-            <p class="team-card__role">Business Reporter</p>
-            <p class="team-card__bio">Covering the stories of local entrepreneurs and economic trends.</p>
           </div>
-          <div class="team-card">
-            <div class="team-card__avatar">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" alt="Grace Atieno">
+          
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Their crime alerts have helped our neighborhood watch stay informed. It's not just news—it's a public service."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Reader" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Sarah N.</div>
+                <div class="testimonial-location">Chavakali</div>
+              </div>
             </div>
-            <h3 class="team-card__name">Grace Atieno</h3>
-            <p class="team-card__role">Entertainment Correspondent</p>
-            <p class="team-card__bio">Celebrating the vibrant arts and culture scene in Vihiga.</p>
           </div>
+          
+          <div class="testimonial-card">
+            <p class="testimonial-text">"As a small business owner, the Hustle & Business section has connected me with opportunities I never knew existed."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Reader" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Michael O.</div>
+                <div class="testimonial-location">Hamisi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">Stay Connected to Your Community</h2>
+          <p>Get the latest stories from Vihiga delivered directly to your inbox. No spam, just relevant local news.</p>
+          
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" class="newsletter__input" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">
+              <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+              Subscribe
+            </button>
+          </form>
+          <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.7;">
+            <i data-lucide="users" style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i>
+            Join 2,500+ subscribers from Vihiga County
+          </p>
         </div>
       </div>
     </section>
@@ -166,43 +1557,307 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Vihiga<span>Times</span></a>
+          <p class="footer__description">Your premier source for authentic, hyper-local news from Vihiga County and beyond. Built by the community, for the community.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <i data-lucide="youtube" style="width: 20px; height: 20px;"></i>
+            </a>
+          </div>
+        </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Categories</h3>
+          <h4>Categories</h4>
           <ul class="footer__links">
             <li><a href="local-news/index.html" class="footer__link">Local News</a></li>
             <li><a href="national/index.html" class="footer__link">National</a></li>
-            
-            <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
-            <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment & Culture</a></li>
-            
             <li><a href="crime-safety/index.html" class="footer__link">Crime & Safety</a></li>
+            <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
+            <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment</a></li>
           </ul>
         </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Company</h3>
+          <h4>Company</h4>
           <ul class="footer__links">
             <li><a href="about-us.html" class="footer__link">About Us</a></li>
             <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="careers.html" class="footer__link">Careers</a></li>
+            <li><a href="advertise.html" class="footer__link">Advertise</a></li>
           </ul>
         </div>
+        
         <div class="footer__column">
-          <h3 class="footer__column-title">Legal</h3>
+          <h4>Legal</h4>
           <ul class="footer__links">
             <li><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
             <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
             <li><a href="cookie-policy.html" class="footer__link">Cookie Policy</a></li>
             <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
-            <li><a href="privacy-policy.html#data-protection" class="footer__link">Data Protection</a></li>
           </ul>
         </div>
-        
       </div>
+      
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 Vihiga Times. All rights reserved.</p>
+        <div class="footer__meta">
+          <span id="currentTime">Loading...</span>
+          <span>•</span>
+          <span>Made with pride in Vihiga</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle" style="width: 20px; height: 20px; color: var(--secondary);"></i>
+    <span id="toastMessage">Success!</span>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function toggleMobileMenu() {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMobileMenu);
+    mobileNavClose.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+    // Search Toggle
+    const searchToggle = document.getElementById('searchToggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchClose = document.getElementById('searchClose');
+    const searchInput = document.getElementById('searchInput');
+
+    searchToggle.addEventListener('click', () => {
+      searchOverlay.classList.add('active');
+      setTimeout(() => searchInput.focus(), 100);
+    });
+
+    function closeSearch() {
+      searchOverlay.classList.remove('active');
+    }
+
+    searchClose.addEventListener('click', closeSearch);
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearch();
+        closeAllModals();
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchOverlay.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.setAttribute('data-lucide', 'sun');
+      } else {
+        themeIcon.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+
+    // Modal Functions
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeAllModals() {
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.classList.remove('active');
+      });
+      document.body.style.overflow = '';
+    }
+
+    // Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Newsletter Form
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      
+      // Simulate API call
+      setTimeout(() => {
+        showToast('Successfully subscribed! Welcome to Vihiga Times.');
+        e.target.reset();
+      }, 500);
+    });
+
+    // Animated Counters
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
+
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(animateCounters, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      });
+    }
+
+    // Intersection Observer for counters
+    const observerOptions = {
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const statsSection = document.querySelector('.live-stats');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+
+    // Live Time Update
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-KE', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        timeZone: 'Africa/Nairobi'
+      });
+      const dateString = now.toLocaleDateString('en-KE', {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+      document.getElementById('currentTime').textContent = `${dateString}, ${timeString} EAT`;
+    }
+
+    updateTime();
+    setInterval(updateTime, 60000);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Service Worker Registration for PWA capabilities
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Note: In production, create an actual sw.js file
+        console.log('PWA ready: Service Worker capable');
+      });
+    }
+
+    // Print functionality
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+        // Custom print styles are already defined in CSS
+      }
+    });
+  </script>
 </body>
 </html>

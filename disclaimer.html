@@ -1,127 +1,1359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PR9W5VH1T1');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PR9W5VH1T1');
+  </script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disclaimer - Vihiga Times</title>
-  <meta name="description" content="Vihiga Times Disclaimer - Important information about the content on our website.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Vihiga Times Disclaimer - Important information about content accuracy, liability, and terms of use.">
+  <meta name="theme-color" content="#1e293b">
+  <meta name="robots" content="noindex, follow">
+  
+  <title>Disclaimer | Vihiga Times</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      --primary: #1e293b;
+      --primary-dark: #0f172a;
+      --accent: #d97706;
+      --accent-light: #f59e0b;
+      --secondary: #059669;
+      --danger: #dc2626;
+      --warning: #f59e0b;
+      --info: #2563eb;
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --surface: #ffffff;
+      --text: #334155;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Playfair Display', serif;
+    }
+
+    [data-theme="dark"] {
+      --primary: #f8fafc;
+      --primary-dark: #e2e8f0;
+      --bg: #0f172a;
+      --bg-alt: #1e293b;
+      --surface: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: var(--transition);
+    }
+
+    /* Reading Progress Bar */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+      z-index: 9999;
+      transition: width 0.1s;
+    }
+
+    /* Header Styles */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .header-scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .header__logo a {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+
+    .header__logo span {
+      color: var(--accent);
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+      background: rgba(217, 119, 6, 0.05);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .icon-btn:hover {
+      background: var(--bg-alt);
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Search Overlay */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      padding-top: 100px;
+    }
+
+    .search-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .search-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1.25rem 3rem 1.25rem 1.5rem;
+      font-size: 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.1);
+    }
+
+    .search-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 1001;
+      box-shadow: var(--shadow-xl);
+      transition: left 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      left: 0;
+    }
+
+    .mobile-nav__header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav__list {
+      list-style: none;
+      padding: 1rem 0;
+    }
+
+    .mobile-nav__link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .mobile-nav__link:hover,
+    .mobile-nav__link.active {
+      background: var(--bg-alt);
+      color: var(--accent);
+      border-left-color: var(--accent);
+      padding-left: 2rem;
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Legal Page Specific Styles */
+    .legal-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+    }
+
+    .legal-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+      color: white;
+      padding: 5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .legal-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .legal-hero__icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--accent-light);
+    }
+
+    .legal-hero__icon svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .legal-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .legal-hero__date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .legal-hero__date::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--secondary);
+      border-radius: 50%;
+    }
+
+    .legal-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* Alert Banner */
+    .alert-banner {
+      background: linear-gradient(135deg, #c2b580 0%, #653636 100%);
+      border-left: 4px solid var(--warning);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      box-shadow: var(--shadow-md);
+    }
+
+    .alert-banner__icon {
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .alert-banner__content h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert-banner__content p {
+      color: white;
+      margin: 0;
+    }
+
+    /* Legal Sections */
+    .legal-section {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .legal-section:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .legal-section__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .legal-section__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .legal-section__icon.accuracy { background: rgba(37, 99, 235, 0.1); color: var(--info); }
+    .legal-section__icon.news { background: rgba(5, 150, 105, 0.1); color: var(--secondary); }
+    .legal-section__icon.opinion { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
+    .legal-section__icon.external { background: rgba(217, 119, 6, 0.1); color: var(--accent); }
+    .legal-section__icon.advice { background: rgba(220, 38, 38, 0.1); color: var(--danger); }
+    .legal-section__icon.liability { background: rgba(100, 116, 139, 0.1); color: var(--text-muted); }
+    .legal-section__icon.corrections { background: rgba(5, 150, 105, 0.1); color: var(--secondary); }
+
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .legal-section p {
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .legal-section ul li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, #266f5e 0%, #6d0707 100%);
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #5e85ac 0%, #543737 100%);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .contact-card__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(217, 119, 6, 0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-card__content h4 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-card__content a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .contact-card__content a:hover {
+      color: var(--accent-light);
+    }
+
+    /* Quick Navigation */
+    .quick-nav {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      position: sticky;
+      top: 100px;
+    }
+
+    .quick-nav__title {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quick-nav__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .quick-nav__link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .quick-nav__link:hover {
+      background: var(--bg-alt);
+      color: var(--accent);
+    }
+
+    .quick-nav__link::before {
+      content: '→';
+      opacity: 0;
+      transition: var(--transition);
+      margin-left: -0.5rem;
+    }
+
+    .quick-nav__link:hover::before {
+      opacity: 1;
+      margin-left: 0;
+    }
+
+    /* Print Button */
+    .print-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      z-index: 100;
+      color: var(--text);
+    }
+
+    .print-button:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__brand {
+      max-width: 300px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer__logo span {
+      color: var(--accent-light);
+    }
+
+    .footer__description {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: var(--transition);
+    }
+
+    .footer__social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer__column h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__links {
+      list-style: none;
+    }
+
+    .footer__links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__link:hover {
+      color: var(--accent-light);
+      transform: translateX(5px);
+    }
+
+    .footer__bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__copyright {
+      opacity: 0.6;
+      font-size: 0.875rem;
+    }
+
+    .footer__meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .header__nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .quick-nav {
+        position: relative;
+        top: 0;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .legal-hero {
+        padding: 3rem 0 2rem;
+      }
+
+      .legal-container {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .legal-section {
+        padding: 1.5rem;
+      }
+
+      .alert-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .quick-nav__list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .footer__brand {
+        max-width: 100%;
+      }
+
+      .footer__social {
+        justify-content: center;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .print-button {
+        bottom: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .header, .footer, .print-button, .quick-nav, .alert-banner {
+        display: none;
+      }
+
+      .legal-hero {
+        background: white;
+        color: black;
+        padding: 2rem 0;
+      }
+
+      .legal-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+
+      body {
+        background: white;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container header__container">
-      <div class="header__logo"><div><a href="index.html" title="Vihiga Times – Local & National News in Kenya"><span>Vihiga</span> Times</a></div></div>
-      <div class="header__search">
-        <form class="search-form" role="search">
-          <input type="search" class="search-input" placeholder="Search Vihiga news, crime, business..." aria-label="Search articles">
-          <button type="submit" class="search-button" aria-label="Submit search"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
-          <span class="search-error">No matching section found</span>
-        </form>
+
+  <!-- Reading Progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header__logo">
+        <a href="index.html">
+          Vihiga<span>Times</span>
+        </a>
       </div>
-      <button class="header__search-toggle" aria-label="Toggle search"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
+
       <nav class="header__nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a>
-        <a href="local-news/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a>
-        <a href="national/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a>
-        <a href="crime-safety/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a>
-        <a href="hustle-business/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a>
-        <a href="entertainment-culture/index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a>
+        <a href="index.html" class="nav-link">
+          <i data-lucide="home" style="width: 18px; height: 18px;"></i>
+          Home
+        </a>
+        <a href="local-news/index.html" class="nav-link">
+          <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+          Local
+        </a>
+        <a href="national/index.html" class="nav-link">
+          <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+          National
+        </a>
+        <a href="crime-safety/index.html" class="nav-link">
+          <i data-lucide="shield" style="width: 18px; height: 18px;"></i>
+          Crime
+        </a>
+        <a href="hustle-business/index.html" class="nav-link">
+          <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+          Business
+        </a>
+        <a href="entertainment-culture/index.html" class="nav-link">
+          <i data-lucide="music" style="width: 18px; height: 18px;"></i>
+          Culture
+        </a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span></button>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" style="width: 20px; height: 20px;" id="themeIcon"></i>
+        </button>
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle search">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
     </div>
   </header>
-  <div class="mobile-overlay"></div>
-  <nav class="mobile-nav" aria-label="Mobile navigation">
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search articles, topics, or locations..." aria-label="Search">
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <div class="mobile-nav__header">
+      <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">Vihiga<span style="color: var(--accent);">Times</span></span>
+      <button class="icon-btn" id="mobileNavClose" aria-label="Close menu">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
     <ul class="mobile-nav__list">
-      <li><a href="index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>Home</a></li>
-      <li><a href="local-news/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>Local News</a></li>
-      <li><a href="national/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>National</a></li>
-      <li><a href="crime-safety/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>Crime & Safety</a></li>
-      <li><a href="hustle-business/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Hustle & Business</a></li>
-      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Entertainment</a></li>
-      
+      <li><a href="index.html" class="mobile-nav__link"><i data-lucide="home" style="width: 20px; height: 20px;"></i>Home</a></li>
+      <li><a href="local-news/index.html" class="mobile-nav__link"><i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>Local News</a></li>
+      <li><a href="national/index.html" class="mobile-nav__link"><i data-lucide="globe" style="width: 20px; height: 20px;"></i>National</a></li>
+      <li><a href="crime-safety/index.html" class="mobile-nav__link"><i data-lucide="shield" style="width: 20px; height: 20px;"></i>Crime & Safety</a></li>
+      <li><a href="hustle-business/index.html" class="mobile-nav__link"><i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>Hustle & Business</a></li>
+      <li><a href="entertainment-culture/index.html" class="mobile-nav__link"><i data-lucide="music" style="width: 20px; height: 20px;"></i>Entertainment</a></li>
+      <li><a href="about-us.html" class="mobile-nav__link"><i data-lucide="users" style="width: 20px; height: 20px;"></i>About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav__link"><i data-lucide="mail" style="width: 20px; height: 20px;"></i>Contact</a></li>
     </ul>
   </nav>
 
   <main class="legal-page">
-    <div class="legal-page__container">
-      <h1 class="legal-page__title">Disclaimer</h1>
-      <p class="legal-page__date">Last updated: February 14, 2026</p>
-      <div class="legal-page__content">
-        <p>The information provided on Vihiga Times is for general informational purposes only. By using this website, you agree to the following terms:</p>
-
-        <h2>Accuracy of Information</h2>
-        <p>While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on this website.</p>
-
-        <h2>News Content</h2>
-        <p>News articles on this website are based on information available at the time of publication. Facts and circumstances may change after publication, and we cannot guarantee that all information remains current. Readers are encouraged to verify critical information independently.</p>
-
-        <h2>Opinions and Views</h2>
-        <p>Opinion pieces and editorials published on Vihiga Times represent the views of the individual authors and do not necessarily reflect the official policy or position of Vihiga Times as an organization.</p>
-
-        <h2>External Links</h2>
-        <p>Our website may contain links to external websites. We have no control over the content and availability of those sites and do not endorse or guarantee the accuracy of information on linked websites.</p>
-
-        <h2>Professional Advice</h2>
-        <p>The information on this website is not intended to be a substitute for professional advice. Always seek the advice of qualified professionals regarding legal, financial, medical, or other professional matters.</p>
-
-        <h2>Liability</h2>
-        <p>In no event will Vihiga Times be liable for any loss or damage arising from the use of this website or reliance on any information provided herein.</p>
-
-        <h2>Corrections</h2>
-        <p>We are committed to accuracy and transparency. If you believe any information on our website is incorrect, please contact us at corrections@vihigatimes.com, and we will investigate and make corrections as necessary.</p>
+    <!-- Hero Section -->
+    <section class="legal-hero">
+      <div class="legal-hero__content">
+        <div class="legal-hero__icon">
+          <i data-lucide="shield-alert" style="width: 40px; height: 40px;"></i>
+        </div>
+        <h1 class="legal-hero__title">Disclaimer</h1>
+        <p class="legal-hero__date">Last updated: February 14, 2026</p>
       </div>
+    </section>
+
+    <div class="legal-container">
+      <!-- Alert Banner -->
+      <div class="alert-banner">
+        <div class="alert-banner__icon">
+          <i data-lucide="alert-triangle" style="width: 24px; height: 24px;"></i>
+        </div>
+        <div class="alert-banner__content">
+          <h3>Important Notice</h3>
+          <p>By accessing and using Vihiga Times, you acknowledge and agree to the terms outlined in this disclaimer. Please read carefully to understand the scope and limitations of our content.</p>
+        </div>
+      </div>
+
+      <!-- Quick Navigation -->
+      <nav class="quick-nav" aria-label="Quick navigation">
+        <h3 class="quick-nav__title">
+          <i data-lucide="list" style="width: 18px; height: 18px;"></i>
+          Jump to Section
+        </h3>
+        <ul class="quick-nav__list">
+          <li><a href="#accuracy" class="quick-nav__link">Accuracy of Information</a></li>
+          <li><a href="#news-content" class="quick-nav__link">News Content</a></li>
+          <li><a href="#opinions" class="quick-nav__link">Opinions & Views</a></li>
+          <li><a href="#external-links" class="quick-nav__link">External Links</a></li>
+          <li><a href="#professional-advice" class="quick-nav__link">Professional Advice</a></li>
+          <li><a href="#liability" class="quick-nav__link">Liability</a></li>
+          <li><a href="#corrections" class="quick-nav__link">Corrections</a></li>
+        </ul>
+      </nav>
+
+      <!-- Accuracy Section -->
+      <section class="legal-section" id="accuracy">
+        <div class="legal-section__header">
+          <div class="legal-section__icon accuracy">
+            <i data-lucide="check-circle-2" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>Accuracy of Information</h2>
+        </div>
+        <p>While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on this website.</p>
+        <div class="highlight-box">
+          <p>All content is provided "as is" without warranty of any kind. We recommend cross-referencing critical information with official sources.</p>
+        </div>
+      </section>
+
+      <!-- News Content Section -->
+      <section class="legal-section" id="news-content">
+        <div class="legal-section__header">
+          <div class="legal-section__icon news">
+            <i data-lucide="newspaper" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>News Content</h2>
+        </div>
+        <p>News articles on this website are based on information available at the time of publication. Facts and circumstances may change after publication, and we cannot guarantee that all information remains current.</p>
+        <ul>
+          <li>Breaking news stories may be updated as new information becomes available</li>
+          <li>Timestamps indicate when articles were last modified</li>
+          <li>Readers are encouraged to verify critical information independently</li>
+          <li>Historical articles reflect the context of their publication date</li>
+        </ul>
+      </section>
+
+      <!-- Opinions Section -->
+      <section class="legal-section" id="opinions">
+        <div class="legal-section__header">
+          <div class="legal-section__icon opinion">
+            <i data-lucide="message-square-quote" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>Opinions and Views</h2>
+        </div>
+        <p>Opinion pieces and editorials published on Vihiga Times represent the views of the individual authors and do not necessarily reflect the official policy or position of Vihiga Times as an organization.</p>
+        <p>We are committed to publishing diverse perspectives from our community. However, the views expressed in:</p>
+        <ul>
+          <li>Guest columns</li>
+          <li>Opinion editorials</li>
+          <li>Reader submissions</li>
+          <li>Interview responses</li>
+        </ul>
+        <p>...are solely those of the respective authors and contributors.</p>
+      </section>
+
+      <!-- External Links Section -->
+      <section class="legal-section" id="external-links">
+        <div class="legal-section__header">
+          <div class="legal-section__icon external">
+            <i data-lucide="external-link" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>External Links</h2>
+        </div>
+        <p>Our website may contain links to external websites that are not operated by us. We have no control over the content and availability of those sites and do not endorse or guarantee the accuracy of information on linked websites.</p>
+        <div class="highlight-box">
+          <p>⚠️ External links are provided for convenience only. Visiting third-party websites is at your own risk.</p>
+        </div>
+      </section>
+
+      <!-- Professional Advice Section -->
+      <section class="legal-section" id="professional-advice">
+        <div class="legal-section__header">
+          <div class="legal-section__icon advice">
+            <i data-lucide="briefcase" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>Professional Advice</h2>
+        </div>
+        <p>The information on this website is not intended to be a substitute for professional advice. Always seek the advice of qualified professionals regarding:</p>
+        <ul>
+          <li><strong>Legal matters:</strong> Consult a licensed attorney for legal advice</li>
+          <li><strong>Financial decisions:</strong> Speak with a certified financial advisor</li>
+          <li><strong>Medical concerns:</strong> Contact a healthcare professional for medical advice</li>
+          <li><strong>Safety issues:</strong> Report emergencies to appropriate authorities immediately</li>
+        </ul>
+      </section>
+
+      <!-- Liability Section -->
+      <section class="legal-section" id="liability">
+        <div class="legal-section__header">
+          <div class="legal-section__icon liability">
+            <i data-lucide="scale" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>Liability</h2>
+        </div>
+        <p>In no event will Vihiga Times, its directors, employees, partners, agents, suppliers, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, arising from:</p>
+        <ul>
+          <li>Your access to or use of our services</li>
+          <li>Any conduct or content of any third party on the service</li>
+          <li>Any content obtained from the service</li>
+          <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+        </ul>
+      </section>
+
+      <!-- Corrections Section -->
+      <section class="legal-section" id="corrections">
+        <div class="legal-section__header">
+          <div class="legal-section__icon corrections">
+            <i data-lucide="edit-3" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h2>Corrections</h2>
+        </div>
+        <p>We are committed to accuracy and transparency. Despite our best efforts, errors may occasionally occur. When we become aware of factual errors, we:</p>
+        <ul>
+          <li>Investigate the reported issue promptly</li>
+          <li>Make corrections as necessary</li>
+          <li>Clearly mark significant corrections within the article</li>
+          <li>Maintain a record of corrections for accountability</li>
+        </ul>
+        
+        <div class="contact-card">
+          <div class="contact-card__icon">
+            <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+          </div>
+          <div class="contact-card__content">
+            <h4>Report an Error</h4>
+            <a href="mailto:vihigatimes038@gmail.com">vihigatimes038@gmail.com</a>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
+  <!-- Print Button -->
+  <button class="print-button" onclick="window.print()" aria-label="Print this page">
+    <i data-lucide="printer" style="width: 24px; height: 24px;"></i>
+  </button>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__column">
-          <h3 class="footer__column-title">Categories</h3>
-          <ul class="footer__links">
-            <li><a href="local-news/index.html" class="footer__link">Local News</a></li>
-            <li><a href="national/index.html" class="footer__link">National</a></li>
-            
-            <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
-            <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment & Culture</a></li>
-            <li><a href="crime-safety/index.html" class="footer__link">Crime & Safety</a></li>
-            
-          </ul>
-        </div>
-        <div class="footer__column">
-          <h3 class="footer__column-title">Company</h3>
-          <ul class="footer__links">
-            <li><a href="about-us.html" class="footer__link">About Us</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer__column">
-          <h3 class="footer__column-title">Legal</h3>
-          <ul class="footer__links">
-            <li><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
-            <li><a href="cookie-policy.html" class="footer__link">Cookie Policy</a></li>
-            <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
-            <li><a href="privacy-policy.html#data-protection" class="footer__link">Data Protection</a></li>
-          </ul>
-        </div>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">Vihiga<span>Times</span></a>
+        <p class="footer__description">Your premier source for authentic, hyper-local news from Vihiga County and beyond. Built by the community, for the community.</p>
         
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2026 Vihiga Times. All rights reserved.</p>
+      
+      <div class="footer__column">
+        <h4>Categories</h4>
+        <ul class="footer__links">
+          <li><a href="local-news/index.html" class="footer__link">Local News</a></li>
+          <li><a href="national/index.html" class="footer__link">National</a></li>
+          <li><a href="crime-safety/index.html" class="footer__link">Crime & Safety</a></li>
+          <li><a href="hustle-business/index.html" class="footer__link">Hustle & Business</a></li>
+          <li><a href="entertainment-culture/index.html" class="footer__link">Entertainment</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h4>Company</h4>
+        <ul class="footer__links">
+          <li><a href="about-us.html" class="footer__link">About Us</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h4>Legal</h4>
+        <ul class="footer__links">
+          <li><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
+          <li><a href="cookie-policy.html" class="footer__link">Cookie Policy</a></li>
+          <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Vihiga Times. All rights reserved.</p>
+      <div class="footer__meta">
+        <span id="currentTime">Loading...</span>
+        <span>•</span>
+        <span>Made with pride in Vihiga</span>
       </div>
     </div>
   </footer>
-  <script src="main.js"></script>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function toggleMobileMenu() {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMobileMenu);
+    mobileNavClose.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+    // Search Toggle
+    const searchToggle = document.getElementById('searchToggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchClose = document.getElementById('searchClose');
+
+    searchToggle.addEventListener('click', () => {
+      searchOverlay.classList.add('active');
+      setTimeout(() => document.getElementById('searchInput').focus(), 100);
+    });
+
+    function closeSearch() {
+      searchOverlay.classList.remove('active');
+    }
+
+    searchClose.addEventListener('click', closeSearch);
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearch();
+        if (mobileNav.classList.contains('active')) toggleMobileMenu();
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchOverlay.classList.add('active');
+        setTimeout(() => document.getElementById('searchInput').focus(), 100);
+      }
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      themeIcon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
+      lucide.createIcons();
+    }
+
+    // Live Time Update
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-KE', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        timeZone: 'Africa/Nairobi'
+      });
+      const dateString = now.toLocaleDateString('en-KE', {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+      document.getElementById('currentTime').textContent = `${dateString}, ${timeString} EAT`;
+    }
+
+    updateTime();
+    setInterval(updateTime, 60000);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
