@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-PR9W5VH1T1');
-</script>
+        gtag('config', 'G-PR9W5VH1T1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local News | Vihiga Times</title>
-    <meta name="description" content="Stay informed with the latest news, updates, and stories from Vihiga County and surrounding communities.">
+    <meta name="description"
+        content="Stay informed with the latest news, updates, and stories from Vihiga County and surrounding communities.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* CSS Reset & Base Styles */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -28,8 +34,10 @@
         :root {
             /* Color Palette - Sophisticated News Editorial */
             --color-primary: #1a1a1a;
-            --color-secondary: #c9a227; /* Gold accent */
-            --color-accent: #2563eb; /* Local News blue accent */
+            --color-secondary: #c9a227;
+            /* Gold accent */
+            --color-accent: #2563eb;
+            /* Local News blue accent */
             --color-bg: #fafafa;
             --color-surface: #ffffff;
             --color-text: #1a1a1a;
@@ -253,7 +261,7 @@
             background-color: var(--color-surface);
             border-bottom: 1px solid var(--color-border);
             padding: var(--space-xl) 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
@@ -319,7 +327,7 @@
             z-index: 1001;
             transform: translateX(-100%);
             transition: transform var(--transition-base);
-            box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
         }
 
@@ -376,7 +384,7 @@
         .mobile-overlay {
             position: fixed;
             inset: 0;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             opacity: 0;
             visibility: hidden;
@@ -441,8 +449,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 70px);
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.03) 35px, rgba(255, 255, 255, 0.03) 70px);
             pointer-events: none;
         }
 
@@ -490,14 +498,14 @@
             background-color: var(--color-surface);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transition: transform var(--transition-base), box-shadow var(--transition-base);
             height: 100%;
         }
 
         .article-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         }
 
         .article-card-link {
@@ -699,7 +707,7 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: var(--space-xl);
             text-align: center;
             font-size: 0.875rem;
@@ -785,7 +793,12 @@
 
         /* Print Styles */
         @media print {
-            .header, .footer, .mobile-menu, .mobile-overlay, .search-overlay {
+
+            .header,
+            .footer,
+            .mobile-menu,
+            .mobile-overlay,
+            .search-overlay {
                 display: none;
             }
 
@@ -804,7 +817,10 @@
 
         /* Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
@@ -815,8 +831,9 @@
             }
         }
     </style>
-<base target="_blank">
+    <base target="_blank">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -827,7 +844,11 @@
                     <div class="header-meta">
                         <span class="header-date" id="current-date"></span>
                         <div class="header-social">
-                            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg></a>
                         </div>
                     </div>
                 </div>
@@ -855,7 +876,8 @@
                         </ul>
                     </nav>
                     <button class="search-toggle" id="search-toggle" aria-label="Toggle search">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
@@ -868,7 +890,8 @@
                 <div class="search-content">
                     <input type="text" class="search-input" id="search-input" placeholder="Search articles...">
                     <button class="search-close" id="search-close" aria-label="Close search">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M18 6 6 18M6 6l12 12"></path>
                         </svg>
                     </button>
@@ -914,7 +937,8 @@
     <section class="category-header">
         <div class="container">
             <h1 class="category-title">Local News</h1>
-            <p class="category-description">Stay informed with the latest news, updates, and stories from Vihiga County and surrounding communities.</p>
+            <p class="category-description">Stay informed with the latest news, updates, and stories from Vihiga County
+                and surrounding communities.</p>
         </div>
     </section>
 
@@ -927,18 +951,83 @@
 
 
 
+
+
                  <article class="article-card">
+                    <a href="/local-news/osotsi-kisumu-attack-statement/index.html" class="article-card-link">                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/godfrey-speaks.jpeg?updatedAt=1775919091946"
+                                alt="Osotsi Blames 'Known People' for Attack — But Refuses Tribal Angle"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Local News</span>
+                            <h3 class="article-card-title">Osotsi Blames 'Known People' for Attack — But Refuses Tribal Angle</h3>
+                            <p class="article-card-excerpt">He’s out of hospital — but his words are now stirring fresh tension.
+What Osotsi said about the attack is leaving many asking deeper questions.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times </span>
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="article-card">
+                    <a href="/local-news/osotsi-cctv-woman-clarification/index.html" class="article-card-link">                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/osotsi-girl.jpeg?updatedAt=1775919091701"
+                                alt="Who Was the Woman With Osotsi? His Answer Is Fueling New Reactions"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Local News</span>
+                            <h3 class="article-card-title">Who Was the Woman With Osotsi? His Answer Is Fueling New Reactions</h3>
+                            <p class="article-card-excerpt">The viral CCTV clip raised more than just questions…
+Now Osotsi is responding — and calling out those behind the narrative.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times </span>
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <a href="/local-news/busali-widows-meeting-odanga/index.html" class="article-card-link">                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/gorge%20odanga.jpeg?updatedAt=1775919092108"
+                                alt="Widows Speak Out in Busali… What They Told Odanga Left Many Thinking"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Local News</span>
+                            <h3 class="article-card-title">Widows Speak Out in Busali… What They Told Odanga Left Many Thinking</h3>
+                            <p class="article-card-excerpt">They came with stories few ever hear… and didn’t hold back.
+What unfolded in Busali is now sparking quiet conversations across the area.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times Reporter</span>
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
                     <a href="/local-news/peaceful-manyatta-protests/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/manyatta-demonstrations.jpeg" alt="Peaceful Manyatta-Vihiga Protests: Residents Demand Action After Repeated Deaths Near Mosque" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/manyatta-demonstrations.jpeg"
+                                alt="Peaceful Manyatta-Vihiga Protests: Residents Demand Action After Repeated Deaths Near Mosque"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Peaceful Manyatta-Vihiga Protests: Residents Demand Action After Repeated Deaths Near Mosque</h3>
-                            <p class="article-card-excerpt">Residents of Manyatta in Vihiga County today held peaceful demonstrations, calling on authorities to urgently address a dangerous road section that has claimed multiple lives.</p>
+                            <h3 class="article-card-title">Peaceful Manyatta-Vihiga Protests: Residents Demand Action
+                                After Repeated Deaths Near Mosque</h3>
+                            <p class="article-card-excerpt">Residents of Manyatta in Vihiga County today held peaceful
+                                demonstrations, calling on authorities to urgently address a dangerous road section that
+                                has claimed multiple lives.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -946,89 +1035,121 @@
 
 
 
-                 <article class="article-card">
-                    <a href="/local-news/manyatta-residents-plan-protests-over-road-safety/index.html" class="article-card-link">
+                <article class="article-card">
+                    <a href="/local-news/manyatta-residents-plan-protests-over-road-safety/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-mnyattaa-accident.jpeg?updatedAt=1774887986854" alt="Transport Disruptions Expected on Majengo–Mbale–Chavakali Highway as Manyatta Residents Plan Protests Over Road Safety" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-mnyattaa-accident.jpeg?updatedAt=1774887986854"
+                                alt="Transport Disruptions Expected on Majengo–Mbale–Chavakali Highway as Manyatta Residents Plan Protests Over Road Safety"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Transport Disruptions Expected on Majengo–Mbale–Chavakali Highway as Manyatta Residents Plan Protests Over Road Safety</h3>
-                            <p class="article-card-excerpt">Transport activities are expected to be disrupted tomorrow, Tuesday, along the busy Majengo–Mbale–Chavakali highway as residents of Manyatta prepare to stage demonstrations demanding urgent road safety measures.</p>
+                            <h3 class="article-card-title">Transport Disruptions Expected on Majengo–Mbale–Chavakali
+                                Highway as Manyatta Residents Plan Protests Over Road Safety</h3>
+                            <p class="article-card-excerpt">Transport activities are expected to be disrupted tomorrow,
+                                Tuesday, along the busy Majengo–Mbale–Chavakali highway as residents of Manyatta prepare
+                                to stage demonstrations demanding urgent road safety measures.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
                 <article class="article-card">
-                    <a href="/local-news/inspiring-story-of-presenter-olive-keverenge/index.html" class="article-card-link">
+                    <a href="/local-news/inspiring-story-of-presenter-olive-keverenge/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/olive%20keverenge.jpeg" alt="Not Rich But Giving: Presenter Olive Keverenge Inspires Vihiga with Powerful Acts of Kindness" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/olive%20keverenge.jpeg"
+                                alt="Not Rich But Giving: Presenter Olive Keverenge Inspires Vihiga with Powerful Acts of Kindness"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Not Rich But Giving: Presenter Olive Keverenge Inspires Vihiga with Powerful Acts of Kindness</h3>
-                            <p class="article-card-excerpt">In a time when many vulnerable families are struggling to make ends meet, one young man from Vihiga County is quietly making a powerful difference. Presenter Olive Keverenge has captured the hearts of many through his selfless efforts to support those in need using the little he receives from well-wishers.</p>
+                            <h3 class="article-card-title">Not Rich But Giving: Presenter Olive Keverenge Inspires
+                                Vihiga with Powerful Acts of Kindness</h3>
+                            <p class="article-card-excerpt">In a time when many vulnerable families are struggling to
+                                make ends meet, one young man from Vihiga County is quietly making a powerful
+                                difference. Presenter Olive Keverenge has captured the hearts of many through his
+                                selfless efforts to support those in need using the little he receives from
+                                well-wishers.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
                 <article class="article-card">
-                    <a href="/local-news/tryver-adisa-burial-muhalia-village-vihiga/index.html" class="article-card-link">
+                    <a href="/local-news/tryver-adisa-burial-muhalia-village-vihiga/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Body%20of%20Vokoli%20Girls%20Student%20Arrives.jpeg" alt="Sombre Mood Engulfs Muhalia Village as Body of Vokoli Girls Student Arrives" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Body%20of%20Vokoli%20Girls%20Student%20Arrives.jpeg"
+                                alt="Sombre Mood Engulfs Muhalia Village as Body of Vokoli Girls Student Arrives"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Sombre Mood Engulfs Muhalia Village as Body of Vokoli Girls Student Arrives</h3>
-                            <p class="article-card-excerpt">A heavy cloud of grief has descended upon Muhalia Village in Vihiga County following the arrival of the body of Tryver Adisa, a Form Three student at Vokoli Girls High School in Sabatia Sub-county.</p>
+                            <h3 class="article-card-title">Sombre Mood Engulfs Muhalia Village as Body of Vokoli Girls
+                                Student Arrives</h3>
+                            <p class="article-card-excerpt">A heavy cloud of grief has descended upon Muhalia Village in
+                                Vihiga County following the arrival of the body of Tryver Adisa, a Form Three student at
+                                Vokoli Girls High School in Sabatia Sub-county.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
 
-               <article class="article-card">
-                    <a href="/local-news/chavakali-eregi-malinya-road-cost-concerns-senator-osotsi/index.html" class="article-card-link">
+                <article class="article-card">
+                    <a href="/local-news/chavakali-eregi-malinya-road-cost-concerns-senator-osotsi/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Senator%20Osotsi%20Questions.jpeg" alt="Why Is 2.5KM Costing More Than 9KM? Senator Osotsi Questions Chavakali–Eregi–Malinya Road Project" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Senator%20Osotsi%20Questions.jpeg"
+                                alt="Why Is 2.5KM Costing More Than 9KM? Senator Osotsi Questions Chavakali–Eregi–Malinya Road Project"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Why Is 2.5KM Costing More Than 9KM? Senator Osotsi Questions Chavakali–Eregi–Malinya Road Project</h3>
-                            <p class="article-card-excerpt">Concerns are mounting over the cost of completing the Chavakali–Eregi–Malinya road, a key transport link shared between Vihiga and Kakamega counties, after Vihiga Senator Godfrey Osotsi raised serious questions about the project's budget.</p>
+                            <h3 class="article-card-title">Why Is 2.5KM Costing More Than 9KM? Senator Osotsi Questions
+                                Chavakali–Eregi–Malinya Road Project</h3>
+                            <p class="article-card-excerpt">Concerns are mounting over the cost of completing the
+                                Chavakali–Eregi–Malinya road, a key transport link shared between Vihiga and Kakamega
+                                counties, after Vihiga Senator Godfrey Osotsi raised serious questions about the
+                                project's budget.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
 
-                 
-               <article class="article-card">
+
+                <article class="article-card">
                     <a href="/local-news/humphrey-kisia-helps-widow-vihiga/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/ransform%20Life%20of%20Struggling%20Widow.jpeg" alt="Hon. Humphrey Kisia, Vihiga Constituency MP Aspirant, Steps In to Transform Life of Struggling Widow" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/ransform%20Life%20of%20Struggling%20Widow.jpeg"
+                                alt="Hon. Humphrey Kisia, Vihiga Constituency MP Aspirant, Steps In to Transform Life of Struggling Widow"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Hon. Humphrey Kisia, Vihiga Constituency MP Aspirant, Steps In to Transform Life of Struggling Widow</h3>
-                            <p class="article-card-excerpt">What was once a painful story of hardship is now turning into a powerful testimony of hope for Gladys Kageha, a widow from Madzuu in Vihiga County.</p>
+                            <h3 class="article-card-title">Hon. Humphrey Kisia, Vihiga Constituency MP Aspirant, Steps
+                                In to Transform Life of Struggling Widow</h3>
+                            <p class="article-card-excerpt">What was once a painful story of hardship is now turning
+                                into a powerful testimony of hope for Gladys Kageha, a widow from Madzuu in Vihiga
+                                County.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1038,17 +1159,24 @@
 
 
                 <article class="article-card">
-                    <a href="/local-news\luanda-reggae-defenders-msafara-ban-defiance/index.html" class="article-card-link">
+                    <a href="/local-news\luanda-reggae-defenders-msafara-ban-defiance/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Reggae%20Defenders%20Defy%20Ban.jpeg" alt="Reggae Defenders Defy Ban of Msafara i.e. Reggae na Lami While Transporting the Body of Their Fellow Bodaboda Rider" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Reggae%20Defenders%20Defy%20Ban.jpeg"
+                                alt="Reggae Defenders Defy Ban of Msafara i.e. Reggae na Lami While Transporting the Body of Their Fellow Bodaboda Rider"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Reggae Defenders Defy Ban of "Msafara i.e. Reggae na Lami" While Transporting the Body of Their Fellow Bodaboda Rider</h3>
-                            <p class="article-card-excerpt">Luanda town in Vihiga County was thrown into chaos today as local reggae defenders ignored a DCC directive banning "msafara" processions, locally known as "Reggae na Lami," while transporting the body of a fallen bodaboda rider from the mortuary.</p>
+                            <h3 class="article-card-title">Reggae Defenders Defy Ban of "Msafara i.e. Reggae na Lami"
+                                While Transporting the Body of Their Fellow Bodaboda Rider</h3>
+                            <p class="article-card-excerpt">Luanda town in Vihiga County was thrown into chaos today as
+                                local reggae defenders ignored a DCC directive banning "msafara" processions, locally
+                                known as "Reggae na Lami," while transporting the body of a fallen bodaboda rider from
+                                the mortuary.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1059,18 +1187,23 @@
 
 
 
-               <article class="article-card">
+                <article class="article-card">
                     <a href="/local-news/lukhuna-man-suicide-neighbors-house/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Man%20Commits%20Suicide%20in%20Neighbor_s%20House.jpg" alt="Man Commits Suicide in Neighbor's House, Leaving Family and Community in Shock" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Man%20Commits%20Suicide%20in%20Neighbor_s%20House.jpg"
+                                alt="Man Commits Suicide in Neighbor's House, Leaving Family and Community in Shock"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Man Commits Suicide in Neighbor's House, Leaving Family and Community in Shock</h3>
-                            <p class="article-card-excerpt">A wave of shock and grief has gripped Lukhuna village in Mautuma Ward, Lugari Constituency, after 34-year-old Ezekiel Masoni was found dead, having taken his own life inside a neighbor's house.</p>
+                            <h3 class="article-card-title">Man Commits Suicide in Neighbor's House, Leaving Family and
+                                Community in Shock</h3>
+                            <p class="article-card-excerpt">A wave of shock and grief has gripped Lukhuna village in
+                                Mautuma Ward, Lugari Constituency, after 34-year-old Ezekiel Masoni was found dead,
+                                having taken his own life inside a neighbor's house.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1083,17 +1216,23 @@
 
 
                 <article class="article-card">
-                    <a href="/local-news/vtrh-healthcare-upgrades-mother-child-unit/index.html" class="article-card-link">
+                    <a href="/local-news/vtrh-healthcare-upgrades-mother-child-unit/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/VTRH-Mbale.jpeg" alt="Major Boost for Healthcare in Vihiga as VTRH Upgrades Services and Strengthens Mother & Child Care" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/VTRH-Mbale.jpeg"
+                                alt="Major Boost for Healthcare in Vihiga as VTRH Upgrades Services and Strengthens Mother & Child Care"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Major Boost for Healthcare in Vihiga as VTRH Upgrades Services and Strengthens Mother & Child Care</h3>
-                            <p class="article-card-excerpt">The Vihiga Teaching and Referral Hospital (VTRH) continues to position itself as a pillar of quality healthcare in the Western region following key improvements that are set to transform service delivery.</p>
+                            <h3 class="article-card-title">Major Boost for Healthcare in Vihiga as VTRH Upgrades
+                                Services and Strengthens Mother & Child Care</h3>
+                            <p class="article-card-excerpt">The Vihiga Teaching and Referral Hospital (VTRH) continues
+                                to position itself as a pillar of quality healthcare in the Western region following key
+                                improvements that are set to transform service delivery.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1106,35 +1245,45 @@
 
 
 
-              <article class="article-card">
-                    <a href="/local-news/corruption-behind-bursary-disbursement-in-vihiga/index.html" class="article-card-link">
+                <article class="article-card">
+                    <a href="/local-news/corruption-behind-bursary-disbursement-in-vihiga/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/stollen%20bursary%20money.png" alt="Corruption Behind Bursary Disbursement in Vihiga: Missing Millions, Ghost Students,and a System Failing the Needy" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/stollen%20bursary%20money.png"
+                                alt="Corruption Behind Bursary Disbursement in Vihiga: Missing Millions, Ghost Students,and a System Failing the Needy"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Corruption Behind Bursary Disbursement in Vihiga: Missing Millions, "Ghost Students," and a System Failing the Needy</h3>
-                            <p class="article-card-excerpt">Serious questions are emerging over how bursaries are being distributed in Vihiga County, with audit reports and fresh complaints from parents pointing to a system that may be broken — or being abused.</p>
+                            <h3 class="article-card-title">Corruption Behind Bursary Disbursement in Vihiga: Missing
+                                Millions, "Ghost Students," and a System Failing the Needy</h3>
+                            <p class="article-card-excerpt">Serious questions are emerging over how bursaries are being
+                                distributed in Vihiga County, with audit reports and fresh complaints from parents
+                                pointing to a system that may be broken — or being abused.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
-                  <article class="article-card">
+                <article class="article-card">
                     <a href="/local-news/herman-otondo-social-media-clash-vihiga/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Herman%20vs%20Otondo.jpeg?updatedAt=1775071277215" alt="Online Clash Between Herman and Otondo Sparks Debate in Vihiga" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Herman%20vs%20Otondo.jpeg?updatedAt=1775071277215"
+                                alt="Online Clash Between Herman and Otondo Sparks Debate in Vihiga" loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Online Clash Between Herman and Otondo Sparks Debate in Vihiga</h3>
-                            <p class="article-card-excerpt">An online exchange between Herman G. Kamariki and Yitzack Otondo has drawn public attention, with both sides presenting strong accusations and defending their actions. </p>
+                            <h3 class="article-card-title">Online Clash Between Herman and Otondo Sparks Debate in
+                                Vihiga</h3>
+                            <p class="article-card-excerpt">An online exchange between Herman G. Kamariki and Yitzack
+                                Otondo has drawn public attention, with both sides presenting strong accusations and
+                                defending their actions. </p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1144,18 +1293,22 @@
 
 
 
-             <article class="article-card">
+                <article class="article-card">
                     <a href="/local-news/accident-in-manyatta-claims-one-life/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-mnyattaa-accident.jpeg?updatedAt=1774887986854" alt="Accident in Manyatta Claims One Life, Residents Protest over Road Safety" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-mnyattaa-accident.jpeg?updatedAt=1774887986854"
+                                alt="Accident in Manyatta Claims One Life, Residents Protest over Road Safety"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Accident in Manyatta Claims One Life, Residents Protest over Road Safety</h3>
-                            <p class="article-card-excerpt">:  Residents of Manyatta woke up to a painful morning after a tragic road accident claimed a life along the busy Kisumu–Kakamega Highway.</p>
+                            <h3 class="article-card-title">Accident in Manyatta Claims One Life, Residents Protest over
+                                Road Safety</h3>
+                            <p class="article-card-excerpt">: Residents of Manyatta woke up to a painful morning after a
+                                tragic road accident claimed a life along the busy Kisumu–Kakamega Highway.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1166,36 +1319,46 @@
 
 
 
-              <article class="article-card">
-                    <a href="/local-news/bunyore-vs-lowland-match-postponed-after-team-involved-in-road-accident/index.html" class="article-card-link">
+                <article class="article-card">
+                    <a href="/local-news/bunyore-vs-lowland-match-postponed-after-team-involved-in-road-accident/index.html"
+                        class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-scarlets-accident.jpeg?updatedAt=1774887969694" alt="Bunyore vs Lowland Match Postponed After Team Involved in Road Accident" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-scarlets-accident.jpeg?updatedAt=1774887969694"
+                                alt="Bunyore vs Lowland Match Postponed After Team Involved in Road Accident"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Bunyore vs Lowland Match Postponed After Team Involved in Road Accident</h3>
-                            <p class="article-card-excerpt">Football fans in Vihiga County were left shocked and saddened after a highly anticipated match between Bunyore Starlets and Lowland Starlets was abruptly postponed following a tragic road accident.</p>
+                            <h3 class="article-card-title">Bunyore vs Lowland Match Postponed After Team Involved in
+                                Road Accident</h3>
+                            <p class="article-card-excerpt">Football fans in Vihiga County were left shocked and
+                                saddened after a highly anticipated match between Bunyore Starlets and Lowland Starlets
+                                was abruptly postponed following a tragic road accident.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
                 </article>
 
 
-               <article class="article-card">
+                <article class="article-card">
                     <a href="/local-news/vihiga-woman-riding-motorcyle/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-woman-riding-motocycle.jpeg" alt="Vihiga's 'Iron Lady' Stuns Region With Unforgettable Final Ride" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/vihiga-woman-riding-motocycle.jpeg"
+                                alt="Vihiga's 'Iron Lady' Stuns Region With Unforgettable Final Ride" loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Vihiga's 'Iron Lady' Stuns Region With Unforgettable Final Ride</h3>
-                            <p class="article-card-excerpt">VIHIGA, KENYA — Residents of Vihiga are still talking about a dramatic and emotional scene that unfolded on their streets this March—one that has quickly spread across Western Kenya and sparked widespread conversation online.</p>
+                            <h3 class="article-card-title">Vihiga's 'Iron Lady' Stuns Region With Unforgettable Final
+                                Ride</h3>
+                            <p class="article-card-excerpt">VIHIGA, KENYA — Residents of Vihiga are still talking about
+                                a dramatic and emotional scene that unfolded on their streets this March—one that has
+                                quickly spread across Western Kenya and sparked widespread conversation online.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
-                               
+
                             </div>
                         </div>
                     </a>
@@ -1226,12 +1389,17 @@
                 <article class="article-card">
                     <a href="form-three-student-at-vokoli-girls-dies/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/adisas-death.jpg?updatedAt=1774127193761" alt="Tragedy at Vokoli Girls: Form Three Student Found Dead After Night in Dormitory" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/adisas-death.jpg?updatedAt=1774127193761"
+                                alt="Tragedy at Vokoli Girls: Form Three Student Found Dead After Night in Dormitory"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Tragedy at Vokoli Girls: Form Three Student Found Dead After Night in Dormitory</h3>
-                            <p class="article-card-excerpt">A cloud of grief and unanswered questions hangs over Vokoli Girls High School following the sudden death of a Form Three student under mysterious circumstances.</p>
+                            <h3 class="article-card-title">Tragedy at Vokoli Girls: Form Three Student Found Dead After
+                                Night in Dormitory</h3>
+                            <p class="article-card-excerpt">A cloud of grief and unanswered questions hangs over Vokoli
+                                Girls High School following the sudden death of a Form Three student under mysterious
+                                circumstances.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
                                 <span class="article-card-date">2026-03-28</span>
@@ -1243,12 +1411,17 @@
                 <article class="article-card">
                     <a href="plane-crash-lands-at-wilson-airport/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/plane%20crash.png?updatedAt=1774040165190" alt="Vihiga Senator Godfrey Osotsi Escapes Unhurt After Plane Crash-Lands at Wilson Airport" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/plane%20crash.png?updatedAt=1774040165190"
+                                alt="Vihiga Senator Godfrey Osotsi Escapes Unhurt After Plane Crash-Lands at Wilson Airport"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Vihiga Senator Godfrey Osotsi Escapes Unhurt After Plane Crash-Lands at Wilson Airport</h3>
-                            <p class="article-card-excerpt">Vihiga Senator Godfrey Osotsi was among 39 passengers who survived a scary moment this evening when their plane crash-landed at Wilson Airport in Nairobi.</p>
+                            <h3 class="article-card-title">Vihiga Senator Godfrey Osotsi Escapes Unhurt After Plane
+                                Crash-Lands at Wilson Airport</h3>
+                            <p class="article-card-excerpt">Vihiga Senator Godfrey Osotsi was among 39 passengers who
+                                survived a scary moment this evening when their plane crash-landed at Wilson Airport in
+                                Nairobi.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
                                 <span class="article-card-date">2026-03-27</span>
@@ -1260,12 +1433,17 @@
                 <article class="article-card">
                     <a href="ruto-supports-vihiga-football-teams/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/ruto%20gives%20out%20money.jpg?updatedAt=1773947441076" alt="Boost for Vihiga Football: President Ruto Donates Sh2.5M and Team Bus to Local Clubs" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/ruto%20gives%20out%20money.jpg?updatedAt=1773947441076"
+                                alt="Boost for Vihiga Football: President Ruto Donates Sh2.5M and Team Bus to Local Clubs"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Boost for Vihiga Football: President Ruto Donates Sh2.5M and Team Bus to Local Clubs</h3>
-                            <p class="article-card-excerpt">In a major win for grassroots sports, President William Ruto has delivered a multi-million shilling boost to five premier football clubs in Vihiga County.</p>
+                            <h3 class="article-card-title">Boost for Vihiga Football: President Ruto Donates Sh2.5M and
+                                Team Bus to Local Clubs</h3>
+                            <p class="article-card-excerpt">In a major win for grassroots sports, President William Ruto
+                                has delivered a multi-million shilling boost to five premier football clubs in Vihiga
+                                County.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
                                 <span class="article-card-date">2026-03-26</span>
@@ -1277,12 +1455,17 @@
                 <article class="article-card">
                     <a href="vihiga-community-projects-2026/index.html" class="article-card-link">
                         <div class="article-card-image">
-                            <img src="https://ik.imagekit.io/vihigatimes/National/kaimosi.jpeg?updatedAt=1774290566620" alt="Education Gold Rush: How Boyani and Kaimosi Are Transforming Vihiga into a Knowledge Powerhouse" loading="lazy">
+                            <img src="https://ik.imagekit.io/vihigatimes/National/kaimosi.jpeg?updatedAt=1774290566620"
+                                alt="Education Gold Rush: How Boyani and Kaimosi Are Transforming Vihiga into a Knowledge Powerhouse"
+                                loading="lazy">
                         </div>
                         <div class="article-card-content">
                             <span class="article-card-category">Local News</span>
-                            <h3 class="article-card-title">Education Gold Rush: How Boyani and Kaimosi Are Transforming Vihiga into a Knowledge Powerhouse</h3>
-                            <p class="article-card-excerpt">Vihiga County is undergoing a quiet but powerful transformation. Once known mainly as a place people left in search of opportunities, it is now rapidly becoming a destination.</p>
+                            <h3 class="article-card-title">Education Gold Rush: How Boyani and Kaimosi Are Transforming
+                                Vihiga into a Knowledge Powerhouse</h3>
+                            <p class="article-card-excerpt">Vihiga County is undergoing a quiet but powerful
+                                transformation. Once known mainly as a place people left in search of opportunities, it
+                                is now rapidly becoming a destination.</p>
                             <div class="article-card-meta">
                                 <span class="article-card-author">By Vihiga Times Reporter</span>
                                 <span class="article-card-date">2026-03-25</span>
@@ -1304,12 +1487,29 @@
                         <span class="logo-text">Vihiga Times</span>
                     </a>
                     <p class="footer-tagline">Authentic • Hyper-Local • Trusted</p>
-                    <p class="footer-description">Your premier source for news, stories, and insights from Vihiga County and beyond.</p>
+                    <p class="footer-description">Your premier source for news, stories, and insights from Vihiga County
+                        and beyond.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1346,7 +1546,7 @@
 
     <script>
         // Simple JavaScript for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set current date
             const dateElement = document.getElementById('current-date');
             if (dateElement) {
@@ -1376,7 +1576,7 @@
             const searchClose = document.getElementById('search-close');
 
             if (searchToggle && searchOverlay) {
-                searchToggle.addEventListener('click', function() {
+                searchToggle.addEventListener('click', function () {
                     searchOverlay.classList.toggle('active');
                     if (searchOverlay.classList.contains('active')) {
                         document.getElementById('search-input').focus();
@@ -1385,11 +1585,12 @@
             }
 
             if (searchClose && searchOverlay) {
-                searchClose.addEventListener('click', function() {
+                searchClose.addEventListener('click', function () {
                     searchOverlay.classList.remove('active');
                 });
             }
         });
     </script>
 </body>
+
 </html>
