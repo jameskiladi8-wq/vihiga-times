@@ -1999,6 +1999,108 @@ One performance, in particular, is drawing unexpected attention from judges and 
         </div>
       </div>
     </section>
+    
+    <div class="ad-container">
+        <!-- Advertisement Card -->
+        <div class="ad-card">
+            <span class="ad-card__badge">Sponsored</span>
+            <p class="ad-card__message">We reach voters in Vihiga daily.</p>
+            <p class="ad-card__hint">Your advertisement could be here</p>
+        </div>
+
+        <!-- CTA Buttons - Side by Side Compact -->
+        <div class="cta-container">
+            <a href="https://wa.me/254769882553?text=Hello%20Vihiga%20Times,%20I'm%20interested%20in%20advertising%20with%20you.%20Please%20share%20more%20details%20on%20how%20to%20get%20started." 
+               class="cta-btn cta-btn--primary" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                Advertise Now
+            </a>
+            <button class="cta-btn cta-btn--secondary" onclick="openModal()">
+                View Packages
+            </button>
+        </div>
+
+        <!-- Positioning Line -->
+        <p class="positioning-line">
+            Affordable campaign visibility packages for leaders across Vihiga County.
+        </p>
+    </div>
+
+    <!-- Modal -->
+    <div id="packagesModal" class="modal-overlay" onclick="closeModalOutside(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">💼 Vihiga Times Advertising Packages</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Basic Package -->
+                <div class="package package--basic">
+                    <div class="package-header">
+                        <div class="package-name">
+                            <span class="indicator indicator--green"></span>
+                            1. Basic Visibility
+                        </div>
+                        <div class="package-price">Ksh 500/2wks</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>1 sidebar poster placement</li>
+                        <li>Visible on mobile & desktop</li>
+                        <li>"Sponsored" label included</li>
+                        <li>Basic exposure across news pages</li>
+                    </ul>
+                    <div class="package-best-for">
+                        👉 Best for: small campaign starters, MCA aspirants testing visibility
+                    </div>
+                    <span class="package-slots">⚡ Limited: 5 slots</span>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="package package--standard">
+                    <div class="package-header">
+                        <div class="package-name">
+                            <span class="indicator indicator--blue"></span>
+                            2. Standard Reach
+                        </div>
+                        <div class="package-price">Ksh 2,000/mo</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Homepage banner placement</li>
+                        <li>Sidebar rotation inclusion</li>
+                        <li>Better visibility across articles</li>
+                        <li>Priority over basic ads</li>
+                    </ul>
+                    <div class="package-best-for">
+                        👉 Best for: MCA candidates building steady recognition
+                    </div>
+                    <span class="package-slots">⚡ Limited: 3 slots</span>
+                </div>
+
+                <!-- Boost Package -->
+                <div class="package package--boost">
+                    <div class="package-header">
+                        <div class="package-name">
+                            <span class="indicator indicator--purple"></span>
+                            3. Campaign Boost
+                        </div>
+                        <div class="package-price">Ksh 4,000/mo</div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Prime homepage banner (top)</li>
+                        <li>Featured sponsored article (1/mo)</li>
+                        <li>Poster shown across multiple pages</li>
+                        <li>Highest priority placement</li>
+                    </ul>
+                    <div class="package-best-for">
+                        👉 Best for: serious MCA/MP aspirants wanting strong visibility
+                    </div>
+                    <span class="package-slots">⚡ Limited: 2 slots</span>
+                </div>
+            </div>
+        </div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -2090,7 +2192,29 @@ One performance, in particular, is drawing unexpected attention from judges and 
       </div>
     </div>
   </footer>
+   <script>
+        function openModal() {
+            document.getElementById('packagesModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
+        function closeModal() {
+            document.getElementById('packagesModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOutside(event) {
+            if (event.target === event.currentTarget) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
   <script src="main.js"></script>
 </body>
 
