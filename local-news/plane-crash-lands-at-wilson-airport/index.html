@@ -419,6 +419,7 @@
             <video class="article__media-item video" 
                    id="mediaVideo" 
                    controls 
+                   playsinline
                    poster="https://ik.imagekit.io/vihigatimes/Local%20news/plane%20crash.png">
               <source src="https://ik.imagekit.io/vihigatimes/Local%20news/plane%20crash.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -448,19 +449,19 @@
 
         <!-- REACTION SYSTEM -->
         <div class="reaction-system" id="reactionSystem">
-          <button class="reaction-btn" data-reaction="love" data-initial="1028">
+          <button class="reaction-btn" data-reaction="love" data-initial="128">
             <span class="reaction-btn__emoji">❤️</span>
             <span class="reaction-btn__count">128</span>
           </button>
-          <button class="reaction-btn" data-reaction="shock" data-initial="305">
+          <button class="reaction-btn" data-reaction="shock" data-initial="359">
             <span class="reaction-btn__emoji">😱</span>
             <span class="reaction-btn__count">359</span>
           </button>
-          <button class="reaction-btn" data-reaction="sad" data-initial="120">
+          <button class="reaction-btn" data-reaction="sad" data-initial="12">
             <span class="reaction-btn__emoji">😢</span>
             <span class="reaction-btn__count">12</span>
           </button>
-          <button class="reaction-btn" data-reaction="angry" data-initial="0">
+          <button class="reaction-btn" data-reaction="angry" data-initial="8">
             <span class="reaction-btn__emoji">😡</span>
             <span class="reaction-btn__count">8</span>
           </button>
@@ -696,7 +697,7 @@
 
       reactionButtons.forEach(btn => {
         const reactionType = btn.dataset.reaction;
-        const initialCount = parseInt(btn.dataset.initial) || 0;
+        const initialCount = parseInt(btn.dataset.initial, 10) || 0;
         const countEl = btn.querySelector('.reaction-btn__count');
         
         let currentCount = initialCount;
@@ -710,7 +711,7 @@
 
         btn.addEventListener('click', function() {
           const isActive = this.classList.contains('active');
-          let count = parseInt(countEl.textContent);
+          let count = parseInt(countEl.textContent, 10);
           
           if (isActive) {
             this.classList.remove('active');
