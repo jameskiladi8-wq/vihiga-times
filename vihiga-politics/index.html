@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Vihiga Times Political Campaigns - Your trusted source for local political news and candidate profiles in Vihiga County.">
+    <title>Political Campaigns | Vihiga Times</title>
+
+    <style>
+        :root {
+            --color-primary: #1a365d;
+            --color-primary-dark: #0f2744;
+            --color-accent: #d4af37;
+            --color-accent-light: #f4d03f;
+            --color-bg: #f8fafc;
+            --color-surface: #ffffff;
+            --color-text: #1e293b;
+            --color-text-muted: #64748b;
+            --color-border: #e2e8f0;
+            --color-success: #059669;
+            --color-success-light: #d1fae5;
+            --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+            --space-sm: clamp(0.75rem, 2vw, 1rem);
+            --space-md: clamp(1rem, 3vw, 1.5rem);
+            --space-lg: clamp(1.5rem, 4vw, 2.5rem);
+            --space-xl: clamp(2rem, 6vw, 4rem);
+            --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+            --text-sm: clamp(0.875rem, 1.8vw, 1rem);
+            --text-base: clamp(1rem, 2vw, 1.125rem);
+            --text-lg: clamp(1.125rem, 2.5vw, 1.5rem);
+            --text-xl: clamp(1.5rem, 4vw, 2.25rem);
+            --text-2xl: clamp(2rem, 5vw, 3.5rem);
+            --text-3xl: clamp(2.5rem, 7vw, 5rem);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --max-width: 1280px;
+            --header-height: 70px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-featured: 0 0 0 2px var(--color-accent), 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --transition-fast: 150ms ease;
+            --transition-base: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; color: var(--color-text); background-color: var(--color-bg);
+            overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        }
+        body.modal-open { overflow: hidden; touch-action: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        button { cursor: pointer; border: none; background: none; font-family: inherit; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
+        .section-padding { padding: var(--space-xl) 0; }
+        .section-title {
+            font-size: var(--text-xl); font-weight: 800; color: var(--color-primary);
+            margin-bottom: var(--space-lg); position: relative; display: inline-block;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -8px; left: 0;
+            width: 60px; height: 4px; background: var(--color-accent); border-radius: 2px;
+        }
+
+        .site-header {
+            position: sticky; top: 0; z-index: 900;
+            background: linear-gradient(135deg, var(--color-surface) 0%, #f1f5f9 100%);
+            border-bottom: 1px solid var(--color-border); box-shadow: var(--shadow-sm);
+            height: var(--header-height); display: flex; align-items: center;
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .brand { display: flex; align-items: center; gap: var(--space-sm); }
+        .brand-logo {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 1.2rem;
+        }
+        .brand-name { font-size: var(--text-lg); font-weight: 800; color: var(--color-primary); line-height: 1.2; }
+        .brand-name span { color: var(--color-accent); }
+
+        .nav-desktop { display: none; }
+        .nav-desktop a {
+            font-weight: 600; color: var(--color-text-muted);
+            padding: var(--space-xs) var(--space-sm); transition: all var(--transition-fast);
+            border-radius: var(--radius-sm); font-size: var(--text-sm);
+        }
+        .nav-desktop a:hover, .nav-desktop a.active {
+            color: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+
+        .menu-toggle { display: flex; flex-direction: column; gap: 5px; padding: var(--space-xs); background: none; border: none; }
+        .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; transition: all var(--transition-fast); }
+
+        @media (max-width: 767px) {
+            .nav-desktop.mobile-open {
+                display: flex; position: fixed; top: var(--header-height); left: 0; right: 0;
+                background: linear-gradient(180deg, var(--color-surface) 0%, #f8fafc 100%);
+                flex-direction: column; padding: var(--space-md); box-shadow: var(--shadow-lg);
+                border-bottom: 1px solid var(--color-border); z-index: 899; gap: var(--space-xs);
+            }
+        }
+
+        .hero-slider {
+            position: relative; width: 100%; height: 70vh; min-height: 500px; max-height: 800px;
+            overflow: hidden; background: var(--color-primary-dark);
+        }
+        .slider-container { position: relative; width: 100%; height: 100%; }
+        .slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; transition: opacity var(--transition-slow); z-index: 1; cursor: pointer;
+        }
+        .slide.active { opacity: 1; z-index: 2; }
+        .slide-bg {
+            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+            opacity: 0.7; transform: scale(1.05); transition: transform 6s ease-out;
+        }
+        .slide.active .slide-bg { transform: scale(1); }
+        .slide-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(15, 39, 68, 0.95) 0%, rgba(15, 39, 68, 0.7) 40%, rgba(15, 39, 68, 0.3) 100%);
+            z-index: 2;
+        }
+        .slide-content {
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
+            padding: var(--space-xl) var(--space-md); max-width: var(--max-width); margin: 0 auto;
+            transform: translateY(20px); opacity: 0; transition: all var(--transition-slow) 0.2s;
+        }
+        .slide.active .slide-content { transform: translateY(0); opacity: 1; }
+        .slide-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark); font-size: var(--text-xs); font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.75rem;
+            border-radius: 100px; margin-bottom: var(--space-sm);
+        }
+        .slide-title { font-size: var(--text-3xl); font-weight: 900; color: white; line-height: 1.1; margin-bottom: var(--space-sm); max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .slide-hook { font-size: var(--text-base); color: rgba(255, 255, 255, 0.9); max-width: 600px; margin-bottom: var(--space-md); line-height: 1.6; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);
+            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
+            border: 2px solid transparent; cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); }
+        .btn-outline { background: transparent; color: white; border-color: rgba(255, 255, 255, 0.5); }
+        .btn-outline:hover { background: white; color: var(--color-primary); border-color: white; }
+
+        .slider-nav { position: absolute; bottom: var(--space-lg); right: var(--space-md); z-index: 10; display: flex; align-items: center; gap: var(--space-md); }
+        .slider-dots { display: flex; gap: 0.5rem; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); cursor: pointer; transition: all var(--transition-fast); border: none; }
+        .dot:hover, .dot.active { background: var(--color-accent); transform: scale(1.2); }
+        .slider-arrows { display: none; gap: var(--space-xs); }
+        .arrow-btn {
+            width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px); color: white; display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; transition: all var(--transition-fast); border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .arrow-btn:hover { background: var(--color-accent); color: var(--color-primary-dark); border-color: var(--color-accent); }
+
+        .featured-section { background: linear-gradient(180deg, var(--color-bg) 0%, white 100%); }
+        .featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+        .candidate-card {
+            background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
+            border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);
+            transition: all var(--transition-base); position: relative; display: flex; flex-direction: column;
+            height: 100%; cursor: pointer;
+        }
+        .candidate-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
+        .candidate-card.featured { box-shadow: var(--shadow-featured); }
+        .candidate-card.featured:hover { box-shadow: 0 0 0 2px var(--color-accent), var(--shadow-xl); }
+        .card-badge {
+            position: absolute; top: var(--space-sm); right: var(--space-sm);
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark); font-size: 0.65rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.75rem;
+            border-radius: 100px; z-index: 5; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .card-image-wrapper { position: relative; width: 100%; padding-top: 100%; overflow: hidden; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
+        .card-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+        .candidate-card:hover .card-image { transform: scale(1.05); }
+        .card-body { padding: var(--space-md); display: flex; flex-direction: column; flex-grow: 1; }
+        .card-position { font-size: var(--text-xs); font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .card-name { font-size: var(--text-base); font-weight: 800; color: var(--color-primary); margin-bottom: var(--space-xs); line-height: 1.3; }
+        .card-hook { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-sm); flex-grow: 1; }
+        .card-btn { width: 100%; justify-content: center; padding: var(--space-xs) var(--space-sm); font-size: var(--text-xs); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white; border-radius: var(--radius-md); transition: all var(--transition-fast); pointer-events: none; }
+        .candidate-card:hover .card-btn { opacity: 0.9; }
+
+        .trending-section { background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+        .trending-scroll {
+            display: flex; gap: var(--space-md); overflow-x: auto; scroll-snap-type: x mandatory;
+            scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: var(--space-sm);
+            margin: 0 calc(-1 * var(--space-md)); padding-left: var(--space-md); padding-right: var(--space-md);
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .trending-scroll::-webkit-scrollbar { display: none; }
+        .trending-card { flex: 0 0 auto; width: 160px; scroll-snap-align: start; text-align: center; cursor: pointer; }
+        .trending-image-wrapper {
+            width: 120px; height: 120px; margin: 0 auto var(--space-sm); border-radius: 50%;
+            overflow: hidden; border: 3px solid var(--color-border); transition: all var(--transition-base);
+            position: relative; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+        .trending-card:hover .trending-image-wrapper { border-color: var(--color-accent); transform: scale(1.05); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2); }
+        .trending-image { width: 100%; height: 100%; object-fit: cover; }
+        .trending-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .trending-position { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; }
+        .scroll-hint { text-align: center; margin-top: var(--space-sm); font-size: var(--text-xs); color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+
+        .directory-section { background: linear-gradient(180deg, white 0%, var(--color-bg) 100%); }
+        .directory-controls {
+            display: flex; flex-direction: column; gap: var(--space-sm); margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--color-surface) 0%, #f8fafc 100%);
+            padding: var(--space-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);
+        }
+        .search-box { position: relative; flex: 1; }
+        .search-box input {
+            width: 100%; padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
+            border: 2px solid var(--color-border); border-radius: var(--radius-md);
+            font-size: var(--text-sm); font-family: inherit; transition: all var(--transition-fast); background: var(--color-bg);
+        }
+        .search-box input:focus { outline: none; border-color: var(--color-accent); background: white; box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
+        .search-icon { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); font-size: 1rem; }
+        .filter-group { display: flex; gap: var(--space-sm); }
+        .filter-select {
+            flex: 1; padding: var(--space-sm); border: 2px solid var(--color-border);
+            border-radius: var(--radius-md); font-size: var(--text-sm); font-family: inherit;
+            background: var(--color-bg); color: var(--color-text); cursor: pointer; transition: all var(--transition-fast);
+        }
+        .filter-select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
+        .directory-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+        .directory-card {
+            background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
+            border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast); border: 1px solid var(--color-border);
+            position: relative; cursor: pointer;
+        }
+        .directory-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--color-accent); }
+        .directory-card.hidden { display: none; }
+        .directory-card.featured-card { order: -1; border: 2px solid var(--color-accent); }
+        .directory-card.featured-card::before {
+            content: '★ Featured'; position: absolute; top: 0; right: 0;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark); font-size: 0.6rem; font-weight: 800;
+            padding: 0.25rem 0.5rem; border-bottom-left-radius: var(--radius-sm); z-index: 2;
+        }
+        .directory-image-wrapper { width: 100%; padding-top: 100%; position: relative; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
+        .directory-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .directory-info { padding: var(--space-sm); text-align: center; }
+        .directory-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.2rem; }
+        .directory-position { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; }
+        .no-results { grid-column: 1 / -1; text-align: center; padding: var(--space-xl); color: var(--color-text-muted); font-size: var(--text-base); }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            position: relative; overflow: hidden; padding: var(--space-xl) 0;
+        }
+        .cta-section::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-section::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-content { position: relative; z-index: 2; text-align: center; max-width: 700px; margin: 0 auto; }
+        .cta-label { display: inline-block; font-size: var(--text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: var(--space-sm); }
+        .cta-headline { font-size: var(--text-2xl); font-weight: 900; color: white; margin-bottom: var(--space-sm); line-height: 1.2; }
+        .cta-subtext { font-size: var(--text-base); color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-lg); line-height: 1.6; }
+        .cta-btn {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark); font-size: var(--text-lg);
+            padding: var(--space-sm) var(--space-xl); border-radius: var(--radius-xl);
+            font-weight: 800; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); transition: all var(--transition-base);
+        }
+        .cta-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4); }
+
+        .sticky-mobile-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(180deg, var(--color-surface) 0%, #f8fafc 100%);
+            border-top: 1px solid var(--color-border); box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            padding: var(--space-sm) var(--space-md); z-index: 950;
+            display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm);
+            transform: translateY(100%); transition: transform var(--transition-base);
+        }
+        .sticky-mobile-bar.visible { transform: translateY(0); }
+        .sticky-info { display: flex; align-items: center; gap: var(--space-sm); min-width: 0; }
+        .sticky-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent); flex-shrink: 0; }
+        .sticky-text { min-width: 0; }
+        .sticky-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em; }
+        .sticky-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sticky-btn { flex-shrink: 0; padding: var(--space-xs) var(--space-md); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white; font-size: var(--text-xs); font-weight: 700; border-radius: var(--radius-md); white-space: nowrap; }
+
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(15, 39, 68, 0.85);
+            backdrop-filter: blur(4px); z-index: 1000; display: flex;
+            align-items: center; justify-content: center; padding: 0;
+            opacity: 0; visibility: hidden;
+            transition: opacity var(--transition-base), visibility var(--transition-base);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-container {
+            width: 97vw; height: 95vh; max-width: 900px;
+            background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
+            border-radius: var(--radius-lg); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex; flex-direction: column; overflow: hidden; position: relative;
+            transform: scale(0.95); transition: transform var(--transition-base);
+        }
+        .modal-overlay.active .modal-container { transform: scale(1); }
+        .modal-close {
+            position: absolute; top: var(--space-sm); right: var(--space-sm);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95); color: var(--color-primary);
+            font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+            z-index: 10; cursor: pointer; border: none; box-shadow: var(--shadow-md); transition: all var(--transition-fast);
+        }
+        .modal-close:hover { background: var(--color-accent); color: var(--color-primary-dark); transform: rotate(90deg); }
+        .modal-content { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
+        .modal-content::-webkit-scrollbar { width: 6px; }
+        .modal-content::-webkit-scrollbar-track { background: transparent; }
+        .modal-content::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+        .modal-gallery { position: relative; width: 100%; background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); overflow: hidden; }
+        .gallery-scroll { display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
+        .gallery-scroll::-webkit-scrollbar { display: none; }
+        .gallery-slide { flex: 0 0 100%; scroll-snap-align: start; position: relative; padding-top: 56.25%; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
+        .gallery-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .gallery-nav { position: absolute; bottom: var(--space-sm); left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 5; }
+        .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); border: none; cursor: pointer; transition: all var(--transition-fast); padding: 0; }
+        .gallery-dot.active { background: var(--color-accent); width: 24px; border-radius: 4px; }
+        .gallery-counter { position: absolute; top: var(--space-sm); left: var(--space-sm); background: rgba(0, 0, 0, 0.6); color: white; font-size: var(--text-xs); font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 100px; z-index: 5; }
+        .modal-body { padding: var(--space-lg); }
+        .modal-header-info { margin-bottom: var(--space-lg); padding-bottom: var(--space-md); border-bottom: 2px solid var(--color-border); }
+        .modal-position {
+            display: inline-block; font-size: var(--text-xs); font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            padding: 0.35rem 0.75rem; border-radius: 100px; margin-bottom: var(--space-sm);
+        }
+        .modal-name { font-size: var(--text-2xl); font-weight: 900; color: var(--color-primary); line-height: 1.2; margin-bottom: var(--space-sm); }
+        .modal-intro { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-md); }
+        .modal-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-sm); }
+        .btn-support {
+            display: inline-flex; align-items: center; gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-xl);
+            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
+            border: 2px solid var(--color-accent); background: white; color: var(--color-primary); cursor: pointer;
+        }
+        .btn-support:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3); }
+        .btn-support.supported { background: linear-gradient(135deg, var(--color-success) 0%, #047857 100%); color: white; border-color: var(--color-success); }
+        .btn-support.supported:hover { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); border-color: #dc2626; }
+        .support-count { font-weight: 800; font-size: 1.1em; }
+        .btn-share {
+            display: inline-flex; align-items: center; gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-xl);
+            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
+            border: 2px solid var(--color-border); background: white; color: var(--color-text-muted); cursor: pointer;
+        }
+        .btn-share:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
+        .modal-section { margin-bottom: var(--space-lg); }
+        .modal-section:last-child { margin-bottom: 0; }
+        .modal-section-title { font-size: var(--text-lg); font-weight: 800; color: var(--color-primary); margin-bottom: var(--space-sm); display: flex; align-items: center; gap: var(--space-xs); }
+        .modal-section-title::before { content: ''; display: block; width: 4px; height: 24px; background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-light) 100%); border-radius: 2px; }
+        .vision-text { font-size: var(--text-base); color: var(--color-text); line-height: 1.8; background: linear-gradient(135deg, var(--color-bg) 0%, #f1f5f9 100%); padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid var(--color-accent); }
+        .agenda-list { display: flex; flex-direction: column; gap: var(--space-md); }
+        .agenda-item {
+            font-size: var(--text-sm); color: var(--color-text); line-height: 1.7;
+            padding: var(--space-sm) var(--space-md); background: linear-gradient(135deg, var(--color-bg) 0%, white 100%);
+            border-radius: var(--radius-md); border: 1px solid var(--color-border);
+            position: relative; padding-left: 2.5rem;
+        }
+        .agenda-item::before {
+            content: attr(data-index); position: absolute; left: var(--space-sm); top: var(--space-sm);
+            width: 24px; height: 24px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.75rem;
+        }
+        .achievements-grid { display: grid; gap: var(--space-sm); }
+        .achievement-card {
+            background: linear-gradient(135deg, var(--color-bg) 0%, white 100%);
+            padding: var(--space-md); border-radius: var(--radius-md);
+            border: 1px solid var(--color-border); transition: all var(--transition-fast);
+        }
+        .achievement-card:hover { border-color: var(--color-accent); box-shadow: var(--shadow-sm); }
+        .achievement-year { font-size: var(--text-xs); font-weight: 800; color: var(--color-accent); margin-bottom: 0.25rem; }
+        .achievement-title { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.25rem; }
+        .achievement-desc { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; }
+        .modal-loading { display: none; text-align: center; padding: var(--space-xl); color: var(--color-text-muted); }
+
+        .site-footer {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: rgba(255, 255, 255, 0.7); padding: var(--space-lg) 0;
+            text-align: center; font-size: var(--text-sm); margin-bottom: 60px;
+        }
+        .footer-brand { font-weight: 800; color: white; font-size: var(--text-lg); margin-bottom: var(--space-xs); }
+        .footer-brand span { color: var(--color-accent); }
+
+        @media (min-width: 640px) {
+            .featured-grid { grid-template-columns: repeat(3, 1fr); }
+            .directory-grid { grid-template-columns: repeat(3, 1fr); }
+            .slider-arrows { display: flex; }
+            .modal-body { padding: var(--space-xl); }
+            .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 768px) {
+            .nav-desktop { display: flex; gap: var(--space-xs); align-items: center; }
+            .menu-toggle { display: none; }
+            .directory-controls { flex-direction: row; align-items: center; }
+            .search-box { max-width: 400px; }
+            .filter-group { flex-shrink: 0; }
+            .filter-select { min-width: 160px; }
+            .sticky-mobile-bar { display: none; }
+            .site-footer { margin-bottom: 0; }
+            .modal-container { border-radius: var(--radius-xl); }
+        }
+        @media (min-width: 1024px) {
+            .featured-grid { grid-template-columns: repeat(4, 1fr); }
+            .directory-grid { grid-template-columns: repeat(4, 1fr); }
+            .slide-content { padding: var(--space-xl) var(--space-lg); }
+            .slider-nav { right: var(--space-lg); }
+        }
+
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
+        .stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
+        .stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
+        .stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
+        img { opacity: 1; transition: opacity 0.3s; }
+        img[loading="lazy"] { opacity: 0; }
+        img.loaded { opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand">
+                <div class="brand-logo">VT</div>
+                <div class="brand-name">Vihiga <span>Times</span></div>
+            </a>
+            <nav class="nav-desktop" id="mainNav">
+                <a href="#hero">Home</a>
+                <a href="#featured" class="active">Campaigns</a>
+                <a href="#directory">Directory</a>
+                <a href="#cta">Support Us</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-slider">
+            <div class="slider-container" id="sliderContainer">
+                <div class="slide active" data-index="0" data-candidate="ottichilo">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80" alt="Campaign rally background" class="slide-bg" loading="eager">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-label">Gubernatorial Race</span>
+                        <h1 class="slide-title">Dr. Wilber Ottichilo</h1>
+                        <p class="slide-hook">Leading the charge for transformative leadership and sustainable development across Vihiga County. Experience that delivers results.</p>
+                        <span class="btn btn-primary">View Profile →</span>
+                    </div>
+                </div>
+                <div class="slide" data-index="1" data-candidate="khaniri">
+                    <img src="https://images.unsplash.com/photo-1575320181282-9afab399332c?w=1200&q=80" alt="Community meeting" class="slide-bg" loading="lazy">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-label">Senatorial Campaign</span>
+                        <h1 class="slide-title">Senator George Khaniri</h1>
+                        <p class="slide-hook">A voice for the people. Advocating for youth empowerment, infrastructure development, and equal representation at the national level.</p>
+                        <span class="btn btn-primary">View Profile →</span>
+                    </div>
+                </div>
+                <div class="slide" data-index="2" data-candidate="adagala">
+                    <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1200&q=80" alt="Political debate" class="slide-bg" loading="lazy">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-label">Women Representative</span>
+                        <h1 class="slide-title">Beatrice Adagala</h1>
+                        <p class="slide-hook">Championing women's rights and economic empowerment. Building bridges for the next generation of female leaders in Vihiga.</p>
+                        <span class="btn btn-primary">View Profile →</span>
+                    </div>
+                </div>
+                <div class="slide" data-index="3" data-candidate="gimose">
+                    <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1200&q=80" alt="Campaign trail" class="slide-bg" loading="lazy">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-label">Parliamentary Seat</span>
+                        <h1 class="slide-title">Charles Gimose</h1>
+                        <p class="slide-hook">Hamisi Constituency deserves bold leadership. Focused on education reform, healthcare access, and agricultural modernization.</p>
+                        <span class="btn btn-primary">View Profile →</span>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dots">
+                        <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+                        <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+                    </div>
+                    <div class="slider-arrows">
+                        <button class="arrow-btn" id="prevSlide" aria-label="Previous slide">‹</button>
+                        <button class="arrow-btn" id="nextSlide" aria-label="Next slide">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-section section-padding">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Featured Candidates</h2>
+                <div class="featured-grid stagger-children">
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="ottichilo">
+                        <span class="card-badge">Featured</span>
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Dr. Wilber Ottichilo" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-position">Governor</span>
+                            <h3 class="card-name">Dr. Wilber Ottichilo</h3>
+                            <p class="card-hook">Transformative leadership for Vihiga County with a focus on infrastructure and healthcare.</p>
+                            <span class="btn card-btn">View Profile</span>
+                        </div>
+                    </article>
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="khaniri">
+                        <span class="card-badge">Featured</span>
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="George Khaniri" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-position">Senator</span>
+                            <h3 class="card-name">George Khaniri</h3>
+                            <p class="card-hook">Experienced legislator fighting for county rights and national representation.</p>
+                            <span class="btn card-btn">View Profile</span>
+                        </div>
+                    </article>
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="adagala">
+                        <span class="card-badge">Featured</span>
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Beatrice Adagala" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-position">Women Rep</span>
+                            <h3 class="card-name">Beatrice Adagala</h3>
+                            <p class="card-hook">Empowering women and girls through education and economic opportunity programs.</p>
+                            <span class="btn card-btn">View Profile</span>
+                        </div>
+                    </article>
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="gimose">
+                        <span class="card-badge">Featured</span>
+                        <div class="card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Charles Gimose" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-position">MP - Hamisi</span>
+                            <h3 class="card-name">Charles Gimose</h3>
+                            <p class="card-hook">Dedicated to agricultural modernization and youth employment initiatives.</p>
+                            <span class="btn card-btn">View Profile</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="trending-section section-padding">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Trending Now</h2>
+                <div class="trending-scroll" id="trendingScroll">
+                    <div class="trending-card" data-candidate="chanzu">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Yusuf Chanzu" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Yusuf Chanzu</h4><span class="trending-position">MP - Vihiga</span>
+                    </div>
+                    <div class="trending-card" data-candidate="atieno">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Gladys Atieno" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Gladys Atieno</h4><span class="trending-position">MCA - Central</span>
+                    </div>
+                    <div class="trending-card" data-candidate="kilonzo">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Peter Kilonzo" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Peter Kilonzo</h4><span class="trending-position">MCA - West</span>
+                    </div>
+                    <div class="trending-card" data-candidate="omboko">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Mary Omboko" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Mary Omboko</h4><span class="trending-position">MCA - East</span>
+                    </div>
+                    <div class="trending-card" data-candidate="wesonga">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=200&q=80" alt="James Wesonga" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">James Wesonga</h4><span class="trending-position">MCA - North</span>
+                    </div>
+                    <div class="trending-card" data-candidate="wakhungu">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80" alt="Grace Wakhungu" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Grace Wakhungu</h4><span class="trending-position">MCA - South</span>
+                    </div>
+                    <div class="trending-card" data-candidate="amayi">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&q=80" alt="Henry Amayi" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Henry Amayi</h4><span class="trending-position">MCA - Luanda</span>
+                    </div>
+                    <div class="trending-card" data-candidate="nabwire">
+                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80" alt="Linet Nabwire" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Linet Nabwire</h4><span class="trending-position">MCA - Sabatia</span>
+                    </div>
+                </div>
+                <p class="scroll-hint"><span>←</span> Swipe to explore <span>→</span></p>
+            </div>
+        </section>
+
+        <section id="directory" class="directory-section section-padding">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">All Candidates</h2>
+                <div class="directory-controls animate-on-scroll">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" placeholder="Search candidates by name..." aria-label="Search candidates">
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select" id="positionFilter" aria-label="Filter by position">
+                            <option value="all">All Positions</option>
+                            <option value="governor">Governor</option>
+                            <option value="senator">Senator</option>
+                            <option value="women-rep">Women Rep</option>
+                            <option value="mp">MP</option>
+                            <option value="mca">MCA</option>
+                        </select>
+                        <select class="filter-select" id="wardFilter" aria-label="Filter by ward">
+                            <option value="all">All Wards</option>
+                            <option value="luanda">Luanda</option>
+                            <option value="sabatia">Sabatia</option>
+                            <option value="hamisi">Hamisi</option>
+                            <option value="vihiga">Vihiga</option>
+                            <option value="emuhaya">Emuhaya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="directory-grid" id="directoryGrid">
+                    <div class="directory-card featured-card" data-candidate="ottichilo" data-name="wilber ottichilo" data-position="governor" data-ward="all">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Dr. Wilber Ottichilo" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Dr. Wilber Ottichilo</h4><p class="directory-position">Governor</p></div>
+                    </div>
+                    <div class="directory-card featured-card" data-candidate="khaniri" data-name="george khaniri" data-position="senator" data-ward="all">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="George Khaniri" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">George Khaniri</h4><p class="directory-position">Senator</p></div>
+                    </div>
+                    <div class="directory-card featured-card" data-candidate="adagala" data-name="beatrice adagala" data-position="women-rep" data-ward="all">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Beatrice Adagala" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Beatrice Adagala</h4><p class="directory-position">Women Rep</p></div>
+                    </div>
+                    <div class="directory-card featured-card" data-candidate="gimose" data-name="charles gimose" data-position="mp" data-ward="hamisi">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80" alt="Charles Gimose" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Charles Gimose</h4><p class="directory-position">MP - Hamisi</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="chanzu" data-name="yusuf chanzu" data-position="mp" data-ward="vihiga">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Yusuf Chanzu" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Yusuf Chanzu</h4><p class="directory-position">MP - Vihiga</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="atieno" data-name="gladys atieno" data-position="mca" data-ward="vihiga">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="Gladys Atieno" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Gladys Atieno</h4><p class="directory-position">MCA - Central</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="kilonzo" data-name="peter kilonzo" data-position="mca" data-ward="luanda">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80" alt="Peter Kilonzo" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Peter Kilonzo</h4><p class="directory-position">MCA - West</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="omboko" data-name="mary omboko" data-position="mca" data-ward="sabatia">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Mary Omboko" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Mary Omboko</h4><p class="directory-position">MCA - East</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="wesonga" data-name="james wesonga" data-position="mca" data-ward="emuhaya">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=300&q=80" alt="James Wesonga" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">James Wesonga</h4><p class="directory-position">MCA - North</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="wakhungu" data-name="grace wakhungu" data-position="mca" data-ward="luanda">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Grace Wakhungu" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Grace Wakhungu</h4><p class="directory-position">MCA - South</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="amayi" data-name="henry amayi" data-position="mca" data-ward="luanda">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&q=80" alt="Henry Amayi" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Henry Amayi</h4><p class="directory-position">MCA - Luanda</p></div>
+                    </div>
+                    <div class="directory-card" data-candidate="nabwire" data-name="linet nabwire" data-position="mca" data-ward="sabatia">
+                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&q=80" alt="Linet Nabwire" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info"><h4 class="directory-name">Linet Nabwire</h4><p class="directory-position">MCA - Sabatia</p></div>
+                    </div>
+                    <div class="no-results" id="noResults" style="display: none;"><p>No candidates found matching your criteria.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section section-padding">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <span class="cta-label">Premium Visibility</span>
+                    <h2 class="cta-headline">Promote Your Campaign on Vihiga Times</h2>
+                    <p class="cta-subtext">Reach voters across Vihiga County with premium visibility. Featured placement, banner ads, and sponsored content packages available.</p>
+                    <button class="btn cta-btn">Get Featured Today</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">Vihiga <span>Times</span></div>
+            <p>Your trusted source for local political news and candidate information.</p>
+            <p style="margin-top: var(--space-sm); opacity: 0.6;">© 2026 Vihiga Times. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="sticky-mobile-bar" id="stickyBar">
+        <div class="sticky-info">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="Featured candidate" class="sticky-avatar">
+            <div class="sticky-text">
+                <div class="sticky-label">Featured Candidate</div>
+                <div class="sticky-name">Dr. Wilber Ottichilo</div>
+            </div>
+        </div>
+        <button class="btn sticky-btn" data-candidate="ottichilo">View Profile</button>
+    </div>
+
+    <div class="modal-overlay" id="candidateModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-container" role="document">
+            <button class="modal-close" id="modalClose" aria-label="Close profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <div class="modal-loading" id="modalLoading"><p>Loading profile...</p></div>
+                <div class="modal-gallery" id="modalGallery">
+                    <div class="gallery-counter" id="galleryCounter">1 / 4</div>
+                    <div class="gallery-scroll" id="galleryScroll">
+                        <div class="gallery-slide"><img id="galleryImg1" src="" alt="Campaign photo 1" loading="eager"></div>
+                        <div class="gallery-slide"><img id="galleryImg2" src="" alt="Campaign photo 2" loading="lazy"></div>
+                        <div class="gallery-slide"><img id="galleryImg3" src="" alt="Campaign photo 3" loading="lazy"></div>
+                        <div class="gallery-slide"><img id="galleryImg4" src="" alt="Campaign photo 4" loading="lazy"></div>
+                    </div>
+                    <div class="gallery-nav" id="galleryNav">
+                        <button class="gallery-dot active" data-index="0" aria-label="Image 1"></button>
+                        <button class="gallery-dot" data-index="1" aria-label="Image 2"></button>
+                        <button class="gallery-dot" data-index="2" aria-label="Image 3"></button>
+                        <button class="gallery-dot" data-index="3" aria-label="Image 4"></button>
+                    </div>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <div class="modal-header-info">
+                        <span class="modal-position" id="modalPosition">Governor</span>
+                        <h2 class="modal-name" id="modalName">Dr. Wilber Ottichilo</h2>
+                        <p class="modal-intro" id="modalIntro">Loading...</p>
+                        <div class="modal-actions">
+                            <button class="btn-support" id="btnSupport" data-candidate="">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <span id="supportText">Support</span>
+                                <span class="support-count" id="supportCount">0</span>
+                            </button>
+                            <button class="btn-share" id="btnShare">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                                Share Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <h3 class="modal-section-title">Vision</h3>
+                        <p class="vision-text" id="modalVision">Loading vision...</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3 class="modal-section-title">Agenda & Promises</h3>
+                        <div class="agenda-list" id="modalAgenda"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h3 class="modal-section-title">Track Record</h3>
+                        <div class="achievements-grid" id="modalAchievements"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // EMBEDDED CANDIDATE DATA (ALL PROFILES)
+        // ==========================================
+        const CANDIDATES_DATA = {
+            "ottichilo": {
+                "id": "ottichilo",
+                "name": "Dr. Wilber Ottichilo",
+                "position": "Governor",
+                "intro": "Dr. Wilber Ottichilo brings decades of public service experience to his gubernatorial campaign. With a background in environmental science and governance, he aims to transform Vihiga County through sustainable development and infrastructure modernization.",
+                "vision": "To make Vihiga County a model of sustainable development in Kenya, where every citizen has access to quality healthcare, education, and economic opportunities through innovative leadership and prudent resource management.",
+                "supporters": 12450,
+                "images": [
+                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80",
+                    "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80"
+                ],
+                "agenda": [
+                    "Revitalize the county healthcare system by upgrading all sub-county hospitals with modern equipment and ensuring a steady supply of essential medicines to every dispensary.",
+                    "Construct and rehabilitate 200 kilometers of rural roads to improve market access for farmers and reduce post-harvest losses across all five sub-counties.",
+                    "Establish a County Youth Empowerment Fund that provides zero-interest loans and mentorship to young entrepreneurs in technology, agriculture, and trade.",
+                    "Implement a comprehensive early childhood education program by building 50 new ECD centers and training 200 teachers to improve foundational learning outcomes."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "County Healthcare Upgrade", "desc": "Spearheaded the renovation of 12 health centers and procurement of modern diagnostic equipment, reducing patient referrals to external facilities by 40%." },
+                    { "year": "2022", "title": "Road Infrastructure Project", "desc": "Launched the Vihiga Rural Roads Program which opened up 85 kilometers of agricultural roads, directly benefiting over 15,000 farming households." },
+                    { "year": "2021", "title": "Youth Skills Initiative", "desc": "Established partnerships with TVET institutions to train 3,000 youth in carpentry, masonry, and digital skills, with 60% securing immediate employment." },
+                    { "year": "2020", "title": "Environmental Conservation", "desc": "Led the county's reforestation campaign that saw 500,000 indigenous tree seedlings planted across degraded water catchment areas." }
+                ]
+            },
+            "khaniri": {
+                "id": "khaniri",
+                "name": "Senator George Khaniri",
+                "position": "Senator",
+                "intro": "Senator George Khaniri is a seasoned legislator with a proven track record of advocating for devolution and county rights at the national level. His experience spans over two decades of public service.",
+                "vision": "To ensure Vihiga County receives its fair share of national resources while championing legislation that promotes youth employment, infrastructure development, and social justice for all residents.",
+                "supporters": 8320,
+                "images": [
+                    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
+                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80",
+                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+                    "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=800&q=80"
+                ],
+                "agenda": [
+                    "Champion the Vihiga County Revenue Allocation Bill to ensure equitable distribution of national funds to all wards and marginalized communities.",
+                    "Establish a Senatorial Bursary Fund targeting 5,000 bright but needy students across the county to access secondary and tertiary education.",
+                    "Push for the construction of the Vihiga-Majengo highway to ease transportation and boost trade between the county and neighboring regions.",
+                    "Introduce legislation protecting local farmers from exploitative middlemen by creating a County Agricultural Marketing Authority."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Devolution Advocacy Award", "desc": "Recognized by the Senate for outstanding contribution to devolution debates, resulting in increased county allocation by 15%." },
+                    { "year": "2022", "title": "Education Bursary Program", "desc": "Disbursed over KSh 12 million in bursaries to 2,400 students across Vihiga County, achieving a 95% secondary school transition rate." },
+                    { "year": "2021", "title": "Health Committee Leadership", "desc": "As chair of the Senate Health Committee, facilitated the deployment of 45 specialist doctors to county referral hospitals." },
+                    { "year": "2020", "title": "COVID-19 Relief Coordination", "desc": "Coordinated the distribution of KSh 8 million in relief food and medical supplies to vulnerable families during the pandemic." }
+                ]
+            },
+            "adagala": {
+                "id": "adagala",
+                "name": "Beatrice Adagala",
+                "position": "Women Representative",
+                "intro": "Beatrice Adagala is a passionate advocate for gender equality and women's economic empowerment. Her grassroots approach has mobilized thousands of women across Vihiga to participate in leadership and enterprise.",
+                "vision": "A Vihiga County where every woman and girl has equal opportunity to thrive through access to education, capital, and leadership platforms that amplify their voices in decision-making.",
+                "supporters": 9180,
+                "images": [
+                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                    "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80",
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80"
+                ],
+                "agenda": [
+                    "Launch the Women Enterprise Fund providing micro-loans and business training to 10,000 women entrepreneurs in the next three years.",
+                    "Establish 20 Safe Spaces centers across the county offering counseling, legal aid, and shelter for survivors of gender-based violence.",
+                    "Implement a sanitary pad distribution program ensuring no girl misses school due to lack of menstrual hygiene products.",
+                    "Create a Women in Leadership Mentorship Program pairing aspiring female leaders with experienced mentors in politics and business."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Women Enterprise Hub", "desc": "Opened the first county-owned Women Enterprise Hub in Mbale, providing training and market linkages to over 800 women-led businesses." },
+                    { "year": "2022", "title": "GBV Response Network", "desc": "Established a 24-hour gender-based violence hotline and response team that has assisted over 1,200 women since inception." },
+                    { "year": "2021", "title": "Girls Education Campaign", "desc": "Partnered with NGOs to distribute 50,000 sanitary pads annually, reducing girl-child school absenteeism by 35%." },
+                    { "year": "2020", "title": "Leadership Academy", "desc": "Founded the Vihiga Women Leadership Academy which has trained 150 women who have since won elective and appointive positions." }
+                ]
+            },
+            "gimose": {
+                "id": "gimose",
+                "name": "Charles Gimose",
+                "position": "MP - Hamisi",
+                "intro": "Charles Gimose is a dedicated servant of Hamisi Constituency with deep roots in agricultural advocacy. He brings practical experience in community development and a clear plan for modernization.",
+                "vision": "To transform Hamisi into a model constituency with modern infrastructure, thriving agribusiness, and empowered youth who drive local economic growth and innovation.",
+                "supporters": 5640,
+                "images": [
+                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+                    "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=800&q=80",
+                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80"
+                ],
+                "agenda": [
+                    "Modernize agricultural practices by introducing drip irrigation systems and greenhouses to 500 farmers, increasing crop yields by 60%.",
+                    "Construct 10 new classrooms and 5 laboratories in underserved areas to improve the quality of education in Hamisi Constituency.",
+                    "Establish a Constituency Youth Innovation Hub equipped with computers and internet to train youth in digital skills and remote work.",
+                    "Upgrade all major feeder roads to all-weather standards to ensure farmers can transport produce to markets throughout the year."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Agricultural Extension Program", "desc": "Trained 1,200 farmers on modern farming techniques, resulting in a 45% increase in tea and maize production in Hamisi." },
+                    { "year": "2022", "title": "Classroom Construction", "desc": "Built 8 new classrooms and rehabilitated 12 others, reducing the pupil-to-classroom ratio from 65:1 to 40:1." },
+                    { "year": "2021", "title": "Youth Employment Drive", "desc": "Facilitated the employment of 320 youth in the Kazi Mtaani program and connected 150 others with private sector jobs." },
+                    { "year": "2020", "title": "Health Center Upgrade", "desc": "Equipped Shamakhokho Health Center with a maternity wing and laboratory, reducing maternal referral cases by 60%." }
+                ]
+            },
+            "chanzu": {
+                "id": "chanzu",
+                "name": "Yusuf Chanzu",
+                "position": "MP - Vihiga",
+                "intro": "Yusuf Chanzu is a committed leader representing Vihiga Constituency with a focus on infrastructure development and youth empowerment. His pragmatic approach has delivered tangible results for his constituents.",
+                "vision": "To build a prosperous Vihiga Constituency where infrastructure connects people to opportunities, and where every young person has a pathway to meaningful employment.",
+                "supporters": 4210,
+                "images": [
+                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
+                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80"
+                ],
+                "agenda": [
+                    "Complete the tarmacking of the Vihiga-Luanda road to ease transport and attract investors to the constituency's commercial centers.",
+                    "Establish a Constituency Skills Center offering certified courses in plumbing, electrical work, and ICT to 2,000 youth annually.",
+                    "Implement a water piping project connecting 5,000 households to clean and reliable piped water within the next term.",
+                    "Support local traders through a Constituency Market Development Fund to modernize trading centers and construct permanent market stalls."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Road Rehabilitation", "desc": "Rehabilitated 35 kilometers of rural roads using constituency development funds, benefiting over 8,000 residents." },
+                    { "year": "2022", "title": "Bursary Program", "desc": "Awarded KSh 6 million in bursaries to 1,800 students, achieving the highest secondary enrollment rate in the constituency's history." },
+                    { "year": "2021", "title": "Water Project", "desc": "Drilled 10 boreholes and installed solar pumps, providing clean water to 3,500 households previously dependent on unsafe sources." },
+                    { "year": "2020", "title": "Market Construction", "desc": "Constructed a modern market shed in Chavakali with 120 stalls, generating revenue and improving trading conditions." }
+                ]
+            },
+            "atieno": {
+                "id": "atieno",
+                "name": "Gladys Atieno",
+                "position": "MCA - Central",
+                "intro": "Gladys Atieno is a grassroots mobilizer and community organizer serving the Central Ward. Her hands-on approach to leadership has made her a trusted voice for local development issues.",
+                "vision": "A Central Ward that leads in community-led development, where residents actively participate in decision-making and benefit from transparent, accountable leadership.",
+                "supporters": 850,
+                "images": [
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80"
+                ],
+                "agenda": [
+                    "Establish a Ward Development Committee comprising residents to prioritize and oversee local projects ensuring transparency.",
+                    "Construct street lighting along major trading centers to improve security and extend business hours for local traders.",
+                    "Build a modern community library and resource center to support students and provide adult literacy programs.",
+                    "Implement a garbage collection and recycling program to keep Central Ward clean and generate income from waste management."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Security Lighting", "desc": "Installed 45 solar street lights across Central Ward trading centers, reducing night-time crime by 50%." },
+                    { "year": "2022", "title": "Road Grading", "desc": "Graded 18 kilometers of feeder roads using ward funds, improving access to farms and markets during rainy seasons." },
+                    { "year": "2021", "title": "Youth Sports Program", "desc": "Organized inter-village tournaments and donated sports equipment to 12 youth teams, reducing idleness and drug abuse." },
+                    { "year": "2020", "title": "COVID-19 Support", "desc": "Distributed food parcels and sanitizers to 600 vulnerable families and installed hand-washing stations at public places." }
+                ]
+            },
+            "kilonzo": {
+                "id": "kilonzo",
+                "name": "Peter Kilonzo",
+                "position": "MCA - West",
+                "intro": "Peter Kilonzo is a development-focused leader representing West Ward. His background in community development drives his passion for inclusive growth and social infrastructure.",
+                "vision": "To transform West Ward into a beacon of rural development where modern infrastructure, quality education, and thriving small businesses uplift every household.",
+                "supporters": 1230,
+                "images": [
+                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
+                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80"
+                ],
+                "agenda": [
+                    "Construct a modern dispensary with maternity facilities to reduce the distance residents travel for basic healthcare services.",
+                    "Launch a West Ward Farmers Cooperative to bulk purchase inputs and negotiate better prices for agricultural produce.",
+                    "Build 6 new Early Childhood Development classrooms and provide learning materials to improve early education outcomes.",
+                    "Establish a Ward Emergency Fund to assist families affected by fire, floods, and other disasters within 24 hours."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Dispensary Construction", "desc": "Completed construction of a fully equipped dispensary serving 4,000 residents who previously walked 8km for treatment." },
+                    { "year": "2022", "title": "Farmers Cooperative", "desc": "Registered the West Ward Farmers Cooperative with 600 members, securing bulk fertilizer at 30% below market price." },
+                    { "year": "2021", "title": "School Infrastructure", "desc": "Built 4 new classrooms and donated desks to 3 schools, eliminating learning under trees and reducing overcrowding." },
+                    { "year": "2020", "title": "Relief Distribution", "desc": "Responded to flash floods by distributing relief supplies worth KSh 1.2 million to 200 affected families within 48 hours." }
+                ]
+            },
+            "omboko": {
+                "id": "omboko",
+                "name": "Mary Omboko",
+                "position": "MCA - East",
+                "intro": "Mary Omboko is a champion of women's rights and community health representing East Ward. Her nursing background informs her practical approach to solving local health and social challenges.",
+                "vision": "An East Ward where community health is prioritized, women are economically empowered, and every child has access to quality early education regardless of their background.",
+                "supporters": 980,
+                "images": [
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80"
+                ],
+                "agenda": [
+                    "Establish a community health outreach program with monthly mobile clinics reaching every village in East Ward.",
+                    "Launch a women table banking initiative capitalized with ward funds to provide interest-free loans to women groups.",
+                    "Construct modern toilet facilities in all public schools to improve sanitation and reduce disease outbreaks.",
+                    "Create a Ward Sports and Arts Academy to nurture talent among youth and keep them constructively engaged."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Mobile Clinics", "desc": "Organized 24 mobile clinics that provided free screening and treatment to 3,500 residents in remote villages." },
+                    { "year": "2022", "title": "Women Table Banking", "desc": "Capitalized 15 women groups with KSh 750,000, enabling members to start small businesses and pay school fees." },
+                    { "year": "2021", "title": "School Toilets", "desc": "Constructed 20 modern toilet blocks in 8 schools, improving sanitation for 2,400 pupils and reducing absenteeism." },
+                    { "year": "2020", "title": "Talent Search", "desc": "Organized the first East Ward Talent Search, identifying and sponsoring 30 youth in music, sports, and drama." }
+                ]
+            },
+            "wesonga": {
+                "id": "wesonga",
+                "name": "James Wesonga",
+                "position": "MCA - North",
+                "intro": "James Wesonga is a pragmatic leader representing North Ward with a strong focus on infrastructure and education. His engineering background shapes his methodical approach to solving community problems.",
+                "vision": "A connected and educated North Ward where good roads open markets, modern schools produce skilled graduates, and infrastructure supports sustainable economic growth.",
+                "supporters": 1560,
+                "images": [
+                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
+                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80"
+                ],
+                "agenda": [
+                    "Culvert and bridge all major seasonal rivers to ensure all-weather road connectivity across North Ward.",
+                    "Establish a Ward Technical Training Center offering vocational courses in masonry, welding, and automotive repair.",
+                    "Implement a school feeding program in all public primary schools to improve nutrition and academic performance.",
+                    "Construct a modern market with cold storage facilities to help farmers preserve produce and fetch better prices."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Bridge Construction", "desc": "Constructed 8 reinforced concrete culverts and 2 bridges, eliminating seasonal road disconnections affecting 6,000 residents." },
+                    { "year": "2022", "title": "Technical Training", "desc": "Partnered with the county to establish a satellite technical training center enrolling 120 youth in vocational courses." },
+                    { "year": "2021", "title": "School Feeding", "desc": "Launched a pilot school feeding program in 5 schools, improving attendance by 25% and exam performance by 15%." },
+                    { "year": "2020", "title": "Market Sheds", "desc": "Built 80 modern market stalls with corrugated iron sheets, protecting traders from weather and increasing market days." }
+                ]
+            },
+            "wakhungu": {
+                "id": "wakhungu",
+                "name": "Grace Wakhungu",
+                "position": "MCA - South",
+                "intro": "Grace Wakhungu is a dedicated community servant representing South Ward. Her background in social work drives her commitment to vulnerable populations and inclusive development.",
+                "vision": "A compassionate South Ward where the elderly and vulnerable are cared for, youth are employed, and community resources are managed transparently for the benefit of all.",
+                "supporters": 1120,
+                "images": [
+                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80"
+                ],
+                "agenda": [
+                    "Establish a Ward Elderly Care Program providing monthly stipends and free medical checkups to residents over 70 years.",
+                    "Launch a South Ward Clean Energy Initiative distributing subsidized solar lamps and cookstoves to 2,000 households.",
+                    "Construct a modern community hall for meetings, weddings, and cultural events that generates revenue for ward projects.",
+                    "Create a Persons Living with Disabilities Empowerment Fund to support assistive devices and income-generating activities."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Elderly Registration", "desc": "Registered 450 elderly residents for the national cash transfer program and facilitated access to NHIF coverage." },
+                    { "year": "2022", "title": "Solar Distribution", "desc": "Partnered with an NGO to distribute 800 solar lamps to off-grid households, reducing kerosene expenses by 70%." },
+                    { "year": "2021", "title": "Community Hall", "desc": "Initiated construction of a multi-purpose community hall now 70% complete, serving as a venue for public gatherings." },
+                    { "year": "2020", "title": "PWD Support", "desc": "Distributed 60 wheelchairs and 30 hearing aids to persons living with disabilities across South Ward." }
+                ]
+            },
+            "amayi": {
+                "id": "amayi",
+                "name": "Henry Amayi",
+                "position": "MCA - Luanda",
+                "intro": "Henry Amayi is a dynamic leader representing Luanda Ward with a vision of modernizing the largest commercial center in Vihiga County. His business acumen informs his development agenda.",
+                "vision": "To transform Luanda into a modern municipal town with organized markets, reliable infrastructure, and a business-friendly environment that attracts investment and creates jobs.",
+                "supporters": 2340,
+                "images": [
+                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80",
+                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
+                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80"
+                ],
+                "agenda": [
+                    "Modernize Luanda Market with paved floors, drainage, permanent stalls, and cold storage to accommodate 2,000 traders.",
+                    "Install a centralized sewerage system in the town center to improve sanitation and prevent waterborne diseases.",
+                    "Establish a Luanda Business Incubation Center supporting 500 startups with co-working space, internet, and mentorship.",
+                    "Construct a modern bus park with passenger waiting bays, toilets, and security to decongest the town center."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Market Expansion", "desc": "Expanded Luanda Market by 40% adding 300 new stalls and improving drainage, benefiting over 1,500 traders." },
+                    { "year": "2022", "title": "Street Paving", "desc": "Paved 2.5 kilometers of town center streets with concrete pavers, eliminating dust and mud during rainy seasons." },
+                    { "year": "2021", "title": "Business Registration", "desc": "Facilitated the formal registration of 800 small businesses, enabling them to access county procurement opportunities." },
+                    { "year": "2020", "title": "Security Enhancement", "desc": "Installed CCTV cameras and improved street lighting in the town center, reducing petty theft by 45%." }
+                ]
+            },
+            "nabwire": {
+                "id": "nabwire",
+                "name": "Linet Nabwire",
+                "position": "MCA - Sabatia",
+                "intro": "Linet Nabwire is an emerging leader representing Sabatia Ward with fresh ideas and energy. Her background in education makes her a strong advocate for school improvement and youth programs.",
+                "vision": "A Sabatia Ward where every child attends a well-equipped school, every youth has a skill, and every community has access to clean water and reliable infrastructure.",
+                "supporters": 1670,
+                "images": [
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
+                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80"
+                ],
+                "agenda": [
+                    "Renovate all dilapidated classrooms in Sabatia Ward and equip them with desks, books, and digital learning devices.",
+                    "Drill 15 boreholes in water-scarce areas to ensure every village has access to clean drinking water within 500 meters.",
+                    "Establish a Sabatia Ward Talent Academy nurturing skills in athletics, football, and traditional music for national competitions.",
+                    "Create a Ward Environmental Brigade to plant trees, protect water springs, and enforce anti-pollution bylaws."
+                ],
+                "achievements": [
+                    { "year": "2023", "title": "Classroom Renovation", "desc": "Renovated 12 classrooms and donated 400 desks across 6 schools, eliminating double sessions and floor sitting." },
+                    { "year": "2022", "title": "Water Access", "desc": "Drilled 8 boreholes and protected 5 springs, giving 6,000 residents access to clean water within walking distance." },
+                    { "year": "2021", "title": "Sports Development", "desc": "Sponsored Sabatia Ward football team to county league finals and identified 5 athletes for county athletics training." },
+                    { "year": "2020", "title": "Tree Planting", "desc": "Mobilized schools and churches to plant 30,000 tree seedlings, earning Sabatia the County Green Ward Award." }
+                ]
+            }
+        };
+
+        // ==========================================
+        // UTILITY FUNCTIONS
+        // ==========================================
+        function formatCount(num) {
+            if (num >= 1000) {
+                return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+            }
+            return num.toString();
+        }
+
+        function getSupportedCandidates() {
+            try {
+                const data = localStorage.getItem('vihiga_supported');
+                return data ? JSON.parse(data) : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function setSupportedCandidates(ids) {
+            localStorage.setItem('vihiga_supported', JSON.stringify(ids));
+        }
+
+        function isSupported(candidateId) {
+            return getSupportedCandidates().includes(candidateId);
+        }
+
+        function toggleSupport(candidateId) {
+            const supported = getSupportedCandidates();
+            const index = supported.indexOf(candidateId);
+            if (index > -1) {
+                supported.splice(index, 1);
+            } else {
+                supported.push(candidateId);
+            }
+            setSupportedCandidates(supported);
+            return index === -1;
+        }
+
+        function hasEmailedSupport(candidateId) {
+            try {
+                const data = localStorage.getItem('vihiga_emailed');
+                const emailed = data ? JSON.parse(data) : [];
+                return emailed.includes(candidateId);
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function markEmailedSupport(candidateId) {
+            try {
+                const data = localStorage.getItem('vihiga_emailed');
+                const emailed = data ? JSON.parse(data) : [];
+                if (!emailed.includes(candidateId)) {
+                    emailed.push(candidateId);
+                    localStorage.setItem('vihiga_emailed', JSON.stringify(emailed));
+                }
+            } catch (e) {}
+        }
+
+        // ==========================================
+        // 1. HERO SLIDER COMPONENT
+        // ==========================================
+        const Slider = {
+            slides: document.querySelectorAll('.slide'),
+            dots: document.querySelectorAll('.dot'),
+            prevBtn: document.getElementById('prevSlide'),
+            nextBtn: document.getElementById('nextSlide'),
+            container: document.getElementById('sliderContainer'),
+            currentSlide: 0,
+            autoPlayInterval: null,
+            isDragging: false,
+            startPos: 0,
+            currentTranslate: 0,
+
+            init() {
+                this.bindEvents();
+                this.startAutoPlay();
+                this.updateSlide(0);
+            },
+
+            bindEvents() {
+                this.prevBtn?.addEventListener('click', () => this.prev());
+                this.nextBtn?.addEventListener('click', () => this.next());
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+                this.container.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: true });
+                this.container.addEventListener('touchmove', this.handleTouchMove.bind(this), { passive: true });
+                this.container.addEventListener('touchend', this.handleTouchEnd.bind(this));
+                this.container.addEventListener('touchcancel', this.handleTouchEnd.bind(this));
+                this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
+                this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+            },
+
+            updateSlide(index) {
+                this.slides[this.currentSlide].classList.remove('active');
+                this.dots[this.currentSlide].classList.remove('active');
+                this.currentSlide = index;
+                if (this.currentSlide < 0) this.currentSlide = this.slides.length - 1;
+                if (this.currentSlide >= this.slides.length) this.currentSlide = 0;
+                this.slides[this.currentSlide].classList.add('active');
+                this.dots[this.currentSlide].classList.add('active');
+            },
+
+            next() { this.updateSlide(this.currentSlide + 1); this.resetAutoPlay(); },
+            prev() { this.updateSlide(this.currentSlide - 1); this.resetAutoPlay(); },
+            goToSlide(index) { this.updateSlide(index); this.resetAutoPlay(); },
+            startAutoPlay() {
+                this.stopAutoPlay();
+                this.autoPlayInterval = setInterval(() => this.next(), 5000);
+            },
+            stopAutoPlay() {
+                if (this.autoPlayInterval) { clearInterval(this.autoPlayInterval); this.autoPlayInterval = null; }
+            },
+            resetAutoPlay() { this.stopAutoPlay(); this.startAutoPlay(); },
+            handleTouchStart(e) {
+                this.isDragging = true;
+                this.startPos = e.touches[0].clientX;
+                this.stopAutoPlay();
+            },
+            handleTouchMove(e) {
+                if (!this.isDragging) return;
+                this.currentTranslate = e.touches[0].clientX - this.startPos;
+            },
+            handleTouchEnd() {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                if (Math.abs(this.currentTranslate) > 50) {
+                    this.currentTranslate > 0 ? this.prev() : this.next();
+                }
+                this.currentTranslate = 0;
+                this.startAutoPlay();
+            }
+        };
+
+        // ==========================================
+        // 2. MODAL SYSTEM
+        // ==========================================
+        const Modal = {
+            overlay: document.getElementById('candidateModal'),
+            closeBtn: document.getElementById('modalClose'),
+            content: document.getElementById('modalContent'),
+            gallery: document.getElementById('modalGallery'),
+            galleryScroll: document.getElementById('galleryScroll'),
+            galleryDots: document.querySelectorAll('.gallery-dot'),
+            galleryCounter: document.getElementById('galleryCounter'),
+            loading: document.getElementById('modalLoading'),
+            body: document.getElementById('modalBody'),
+            currentCandidateId: null,
+            currentGallerySlide: 0,
+            currentData: null,
+
+            init() {
+                this.bindTriggers();
+                this.bindEvents();
+                this.bindGallery();
+            },
+
+            bindTriggers() {
+                document.addEventListener('click', (e) => {
+                    const trigger = e.target.closest('[data-candidate]');
+                    if (trigger) {
+                        const candidateId = trigger.dataset.candidate;
+                        this.open(candidateId);
+                    }
+                });
+            },
+
+            bindEvents() {
+                this.closeBtn.addEventListener('click', () => this.close());
+                this.overlay.addEventListener('click', (e) => {
+                    if (e.target === this.overlay) this.close();
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.overlay.classList.contains('active')) {
+                        this.close();
+                    }
+                });
+
+                document.getElementById('btnSupport').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.handleSupport();
+                });
+
+                document.getElementById('btnShare').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.handleShare();
+                });
+            },
+
+            bindGallery() {
+                this.galleryDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.scrollToGallerySlide(index));
+                });
+
+                let scrollTimeout;
+                this.galleryScroll.addEventListener('scroll', () => {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => this.updateGalleryDots(), 100);
+                }, { passive: true });
+            },
+
+            open(candidateId) {
+                this.currentCandidateId = candidateId;
+
+                this.loading.style.display = 'block';
+                this.body.style.display = 'none';
+                this.gallery.style.display = 'none';
+
+                this.overlay.classList.add('active');
+                document.body.classList.add('modal-open');
+                this.overlay.setAttribute('aria-hidden', 'false');
+
+                const data = CANDIDATES_DATA[candidateId];
+                if (data) {
+                    this.currentData = data;
+                    // Small timeout to allow modal transition to start
+                    setTimeout(() => this.render(data), 50);
+                } else {
+                    this.renderError(candidateId);
+                }
+            },
+
+            render(data) {
+                document.getElementById('modalName').textContent = data.name;
+                document.getElementById('modalPosition').textContent = data.position;
+                document.getElementById('modalIntro').textContent = data.intro;
+                document.getElementById('modalVision').textContent = data.vision;
+
+                this.updateSupportButton(data.id, data.supporters);
+
+                data.images.forEach((src, i) => {
+                    const img = document.getElementById(`galleryImg${i + 1}`);
+                    if (img) {
+                        img.src = src;
+                        img.alt = `${data.name} - Photo ${i + 1}`;
+                    }
+                });
+
+                const agendaContainer = document.getElementById('modalAgenda');
+                agendaContainer.innerHTML = data.agenda.map((item, i) => `
+                    <div class="agenda-item" data-index="${i + 1}">${item}</div>
+                `).join('');
+
+                const achievementsContainer = document.getElementById('modalAchievements');
+                achievementsContainer.innerHTML = data.achievements.map(ach => `
+                    <div class="achievement-card">
+                        <div class="achievement-year">${ach.year}</div>
+                        <div class="achievement-title">${ach.title}</div>
+                        <div class="achievement-desc">${ach.desc}</div>
+                    </div>
+                `).join('');
+
+                this.galleryScroll.scrollLeft = 0;
+                this.currentGallerySlide = 0;
+                this.updateGalleryDots();
+
+                this.loading.style.display = 'none';
+                this.body.style.display = 'block';
+                this.gallery.style.display = 'block';
+            },
+
+            renderError(candidateId) {
+                document.getElementById('modalName').textContent = 'Error Loading Profile';
+                document.getElementById('modalIntro').textContent = 'Unable to load candidate data. Please try again later.';
+                document.getElementById('modalVision').textContent = '';
+                document.getElementById('modalAgenda').innerHTML = '';
+                document.getElementById('modalAchievements').innerHTML = '';
+                this.loading.style.display = 'none';
+                this.body.style.display = 'block';
+                this.gallery.style.display = 'none';
+            },
+
+            close() {
+                this.overlay.classList.remove('active');
+                document.body.classList.remove('modal-open');
+                this.overlay.setAttribute('aria-hidden', 'true');
+                this.currentCandidateId = null;
+                this.currentData = null;
+            },
+
+            updateSupportButton(candidateId, baseCount) {
+                const btn = document.getElementById('btnSupport');
+                const text = document.getElementById('supportText');
+                const count = document.getElementById('supportCount');
+                const supported = isSupported(candidateId);
+
+                btn.dataset.candidate = candidateId;
+                let displayCount = baseCount + (supported ? 1 : 0);
+                count.textContent = formatCount(displayCount);
+
+                if (supported) {
+                    btn.classList.add('supported');
+                    text.textContent = 'Supported';
+                } else {
+                    btn.classList.remove('supported');
+                    text.textContent = 'Support';
+                }
+            },
+
+            handleSupport() {
+                if (!this.currentCandidateId || !this.currentData) return;
+
+                const candidateId = this.currentCandidateId;
+                const data = this.currentData;
+                const nowSupported = toggleSupport(candidateId);
+
+                this.updateSupportButton(candidateId, data.supporters);
+
+                if (nowSupported && !hasEmailedSupport(candidateId)) {
+                    this.sendSupportEmail(data);
+                }
+            },
+
+            sendSupportEmail(data) {
+                const formData = new FormData();
+                formData.append('name', 'Vihiga Times Support System');
+                formData.append('email', 'noreply@vihigatimes.com');
+                formData.append('subject', `New Support: ${data.name} - ${data.position}`);
+                formData.append('message', `Someone has supported ${data.name} (${data.position}) on Vihiga Times.
+
+Candidate ID: ${data.id}
+Name: ${data.name}
+Position: ${data.position}
+Time: ${new Date().toLocaleString()}`);
+
+                fetch('https://formsubmit.co/ajax/jameskiladi@gmail.com', {
+                    method: 'POST',
+                    body: formData
+                }).then(() => {
+                    markEmailedSupport(data.id);
+                }).catch(err => console.error('Email send failed:', err));
+            },
+
+            handleShare() {
+                if (!this.currentData) return;
+
+                const data = this.currentData;
+                const shareData = {
+                    title: `${data.name} - Vihiga Times Campaign`,
+                    text: `Support ${data.name} for ${data.position}. View their campaign profile on Vihiga Times.`,
+                    url: `${window.location.origin}${window.location.pathname}?candidate=${data.id}`
+                };
+
+                if (navigator.share) {
+                    navigator.share(shareData).catch(() => {});
+                } else {
+                    navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`).then(() => {
+                        alert('Profile link copied to clipboard!');
+                    }).catch(() => {
+                        alert('Share: ' + shareData.url);
+                    });
+                }
+            },
+
+            scrollToGallerySlide(index) {
+                const slideWidth = this.galleryScroll.offsetWidth;
+                this.galleryScroll.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
+                this.currentGallerySlide = index;
+                this.updateGalleryDots();
+            },
+
+            updateGalleryDots() {
+                const slideWidth = this.galleryScroll.offsetWidth;
+                const scrollPos = this.galleryScroll.scrollLeft;
+                const activeIndex = Math.round(scrollPos / slideWidth);
+
+                this.galleryDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+
+                this.galleryCounter.textContent = `${activeIndex + 1} / ${this.galleryDots.length}`;
+                this.currentGallerySlide = activeIndex;
+            }
+        };
+
+        // ==========================================
+        // 3. CANDIDATE DIRECTORY - SEARCH & FILTER
+        // ==========================================
+        const Directory = {
+            searchInput: document.getElementById('searchInput'),
+            positionFilter: document.getElementById('positionFilter'),
+            wardFilter: document.getElementById('wardFilter'),
+            cards: document.querySelectorAll('.directory-card'),
+            noResults: document.getElementById('noResults'),
+
+            init() {
+                this.bindEvents();
+            },
+
+            bindEvents() {
+                this.searchInput.addEventListener('input', () => this.filter());
+                this.positionFilter.addEventListener('change', () => this.filter());
+                this.wardFilter.addEventListener('change', () => this.filter());
+            },
+
+            filter() {
+                const searchTerm = this.searchInput.value.toLowerCase().trim();
+                const position = this.positionFilter.value;
+                const ward = this.wardFilter.value;
+                let visibleCount = 0;
+
+                this.cards.forEach(card => {
+                    const name = card.dataset.name || '';
+                    const cardPosition = card.dataset.position || '';
+                    const cardWard = card.dataset.ward || '';
+
+                    const matchesSearch = name.includes(searchTerm);
+                    const matchesPosition = position === 'all' || cardPosition === position;
+                    const matchesWard = ward === 'all' || cardWard === ward;
+
+                    if (matchesSearch && matchesPosition && matchesWard) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                this.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+        };
+
+        // ========================================== 
+        // 4. SCROLL ANIMATIONS
+        // ==========================================
+        const ScrollAnimations = {
+            init() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+
+                document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            }
+        };
+
+        // ==========================================
+        // 5. STICKY MOBILE BAR
+        // ==========================================
+        const StickyBar = {
+            bar: document.getElementById('stickyBar'),
+            heroSection: document.getElementById('hero'),
+
+            init() {
+                if (!this.bar) return;
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach(entry => {
+                            if (!entry.isIntersecting) {
+                                this.bar.classList.add('visible');
+                            } else {
+                                this.bar.classList.remove('visible');
+                            }
+                        });
+                    },
+                    { threshold: 0.1 }
+                );
+                observer.observe(this.heroSection);
+            }
+        };
+
+        // ==========================================
+        // 6. HORIZONTAL SCROLL ENHANCEMENTS
+        // ==========================================
+        const HorizontalScroll = {
+            init() {
+                const scrollContainer = document.getElementById('trendingScroll');
+                if (!scrollContainer) return;
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                scrollContainer.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    scrollContainer.style.cursor = 'grabbing';
+                    startX = e.pageX - scrollContainer.offsetLeft;
+                    scrollLeft = scrollContainer.scrollLeft;
+                });
+
+                scrollContainer.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    scrollContainer.style.cursor = 'grab';
+                });
+
+                scrollContainer.addEventListener('mouseup', () => {
+                    isDown = false;
+                    scrollContainer.style.cursor = 'grab';
+                });
+
+                scrollContainer.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - scrollContainer.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    scrollContainer.scrollLeft = scrollLeft - walk;
+                });
+
+                scrollContainer.style.cursor = 'grab';
+            }
+        };
+
+        // ==========================================
+        // 7. LAZY LOADING IMAGE HANDLER
+        // ==========================================
+        const LazyImages = {
+            init() {
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    } else {
+                        img.addEventListener('load', () => img.classList.add('loaded'));
+                        img.addEventListener('error', () => img.classList.add('loaded'));
+                    }
+                });
+            }
+        };
+
+        // ==========================================
+        // 8. MOBILE MENU TOGGLE
+        // ==========================================
+        const MobileMenu = {
+            init() {
+                const toggle = document.getElementById('menuToggle');
+                const nav = document.getElementById('mainNav');
+                if (!toggle || !nav) return;
+
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('mobile-open');
+                });
+
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('mobile-open');
+                    });
+                });
+            }
+        };
+
+        // ==========================================
+        // 9. HANDLE URL PARAMS (Direct profile links)
+        // ==========================================
+        function handleUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const candidateId = params.get('candidate');
+            if (candidateId && CANDIDATES_DATA[candidateId]) {
+                setTimeout(() => {
+                    Modal.open(candidateId);
+                }, 500);
+            }
+        }
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            Slider.init();
+            Modal.init();
+            Directory.init();
+            ScrollAnimations.init();
+            StickyBar.init();
+            HorizontalScroll.init();
+            LazyImages.init();
+            MobileMenu.init();
+            handleUrlParams();
+        });
+
+        // Handle reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.style.setProperty('--transition-fast', '0ms');
+            document.documentElement.style.setProperty('--transition-base', '0ms');
+            document.documentElement.style.setProperty('--transition-slow', '0ms');
+        }
+    </script>
+</body>
+</html>

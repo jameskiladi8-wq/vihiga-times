@@ -2514,3 +2514,288 @@ color: #fff;
                 max-width: 380px;
             }
         }
+
+
+
+
+
+
+
+
+
+
+  .politics-spotlight {
+      padding: clamp(1.5rem, 4vw, 2.5rem) 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .politics-header {
+      text-align: center;
+      margin-bottom: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    .politics-title {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--politics-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .politics-subtitle {
+      font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+      color: var(--politics-muted);
+    }
+
+    /* =========================================
+       SLIDER WRAPPER & ARROWS
+       ========================================= */
+    .politics-slider-wrap {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .politics-slider {
+      display: flex;
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 0.5rem 0.25rem 1.25rem;
+      scrollbar-width: none;
+    }
+
+    .politics-slider::-webkit-scrollbar { display: none; }
+
+    .politics-arrow {
+      display: none;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--politics-card-bg);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--politics-shadow);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      color: var(--politics-primary);
+      transition: var(--politics-transition);
+      z-index: 5;
+    }
+
+    .politics-arrow:hover { background: var(--politics-primary); color: #fff; }
+    .politics-arrow--prev { left: -16px; }
+    .politics-arrow--next { right: -16px; }
+
+    .politics-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* =========================================
+       LEADER CARDS
+       ========================================= */
+    .politics-card {
+      flex: 0 0 auto;
+      width: clamp(190px, 40vw, 260px);
+      scroll-snap-align: start;
+      background: var(--politics-card-bg);
+      border-radius: var(--politics-radius);
+      overflow: hidden;
+      box-shadow: var(--politics-shadow);
+      transition: var(--politics-transition);
+      border: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .politics-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--politics-shadow-hover);
+    }
+
+    .politics-card__image-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .politics-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .politics-card:hover .politics-card__image {
+      transform: scale(1.06);
+    }
+
+    /* Labels: Trending / Most Supported */
+    .politics-card__label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0.25rem 0.6rem;
+      border-radius: 100px;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      z-index: 2;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .politics-card__label--trending {
+      background: rgba(217, 119, 6, 0.12);
+      color: #92400e;
+    }
+
+    .politics-card__label--top {
+      background: rgba(22, 101, 52, 0.1);
+      color: var(--politics-primary);
+    }
+
+    .politics-card__body {
+      padding: clamp(0.75rem, 1.8vw, 1rem);
+    }
+
+    .politics-card__name {
+      font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+      font-weight: 700;
+      color: var(--politics-text);
+      line-height: 1.25;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .politics-card__role {
+      font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+      color: var(--politics-muted);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .politics-card__dot {
+      width: 5px;
+      height: 5px;
+      background: var(--politics-primary-light);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .politics-card__support {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0.7rem;
+      background: rgba(22, 101, 52, 0.06);
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--politics-primary);
+    }
+
+    .politics-card__support .politics-icon {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+    /* =========================================
+       DOT NAVIGATION
+       ========================================= */
+    .politics-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .politics-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(22, 101, 52, 0.2);
+      cursor: pointer;
+      padding: 0;
+      transition: var(--politics-transition);
+    }
+
+    .politics-dot--active {
+      background: var(--politics-primary);
+      width: 18px;
+      border-radius: 100px;
+    }
+
+    /* =========================================
+       CTA BUTTON
+       ========================================= */
+    .politics-cta {
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    .politics-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.75rem 2rem;
+      background: var(--politics-primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: var(--politics-transition);
+      box-shadow: 0 3px 12px rgba(22, 101, 52, 0.22);
+    }
+
+    .politics-btn:hover {
+      background: var(--politics-primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(22, 101, 52, 0.32);
+    }
+
+    /* =========================================
+       RESPONSIVE BREAKPOINTS
+       ========================================= */
+    @media (min-width: 640px) {
+      .politics-arrow { display: flex; }
+      .politics-card { width: clamp(200px, 30vw, 250px); }
+    }
+
+    @media (min-width: 1024px) {
+      .politics-card { width: clamp(210px, 22vw, 260px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+        

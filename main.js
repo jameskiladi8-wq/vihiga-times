@@ -22,15 +22,7 @@
     'entertainment': 'entertainment-culture',
     'culture': 'entertainment-culture',
     'fashion': 'fashion-style',
-    'style': 'fashion-style',
-    'tech': 'tech-digital-life',
-    'technology': 'tech-digital-life',
-    'digital': 'tech-digital-life',
-    'talent': 'talent-showcase',
-    'events': 'events',
-    'youth': 'youth-lifestyle',
-    'lifestyle': 'youth-lifestyle',
-    'youth and lifestyle': 'youth-lifestyle',
+    
     'trending': 'trending-picks-section',
     'latest': 'latest-stories',
     'stories': 'latest-stories',
@@ -617,3 +609,6 @@
     init();
   }
 })();
+
+
+
