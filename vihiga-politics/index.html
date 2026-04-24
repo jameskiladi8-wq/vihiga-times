@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Vihiga Times Political Campaigns - Your trusted source for local political news and candidate profiles in Vihiga County.">
-    <title>Political Campaigns | Vihiga Times</title>
+
+    <meta name="description"
+        content="Vihiga Upcoming Leaders Spotlight featuring Hillary Adolwa Kijana (MP Vihiga Constituency), Dr. Beatrice Adagala (Governor Candidate), Yitzack Otondo (MCA Tambua Ward), and other emerging leaders including Indimuli Kahi, Kane Onamu Kamadi, Odanga Oliver, Damaris Kayugira, Michael Lijondo Mwale, Newton Hinga, and George Odanga. Explore their visions, agendas, and development promises shaping the future of Vihiga County.">
+
+    <meta name="keywords"
+        content="Vihiga upcoming leaders, Vihiga County leaders, Vihiga political candidates, Vihiga elections 2026, Vihiga MP candidates, Vihiga governor candidates, Hillary Adolwa Kijana MP Vihiga, Dr Beatrice Adagala governor Vihiga, Yitzack Otondo MCA Tambua Ward, Indimuli Kahi Vihiga, Kane Onamu Kamadi Vihiga, Odanga Oliver Vihiga, Damaris Kayugira Vihiga, Michael Lijondo Mwale Vihiga, Newton Hinga Vihiga, George Odanga Vihiga, Vihiga leadership spotlight, Vihiga political news, emerging leaders Vihiga County, Vihiga Times campaigns">
+
+    <title>Vihiga Upcoming Leaders Spotlight | Political Campaigns | Vihiga Times</title>
 
     <style>
         :root {
@@ -47,407 +55,1383 @@
             --transition-slow: 350ms ease;
         }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6; color: var(--color-text); background-color: var(--color-bg);
-            overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        body.modal-open { overflow: hidden; touch-action: none; }
-        img { max-width: 100%; height: auto; display: block; }
-        button { cursor: pointer; border: none; background: none; font-family: inherit; }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
 
-        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
-        .section-padding { padding: var(--space-xl) 0; }
-        .section-title {
-            font-size: var(--text-xl); font-weight: 800; color: var(--color-primary);
-            margin-bottom: var(--space-lg); position: relative; display: inline-block;
+        body.modal-open {
+            overflow: hidden;
+            touch-action: none;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .section-padding {
+            padding: var(--space-xl) 0;
+        }
+
+        .section-title {
+            font-size: var(--text-xl);
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            display: inline-block;
+        }
+
         .section-title::after {
-            content: ''; position: absolute; bottom: -8px; left: 0;
-            width: 60px; height: 4px; background: var(--color-accent); border-radius: 2px;
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--color-accent);
+            border-radius: 2px;
         }
 
         .site-header {
-            position: sticky; top: 0; z-index: 900;
+            position: sticky;
+            top: 0;
+            z-index: 900;
             background: linear-gradient(135deg, var(--color-surface) 0%, #f1f5f9 100%);
-            border-bottom: 1px solid var(--color-border); box-shadow: var(--shadow-sm);
-            height: var(--header-height); display: flex; align-items: center;
+            border-bottom: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
         }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .brand { display: flex; align-items: center; gap: var(--space-sm); }
-        .brand-logo {
-            width: 40px; height: 40px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-            border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
-            color: white; font-weight: 800; font-size: 1.2rem;
-        }
-        .brand-name { font-size: var(--text-lg); font-weight: 800; color: var(--color-primary); line-height: 1.2; }
-        .brand-name span { color: var(--color-accent); }
 
-        .nav-desktop { display: none; }
-        .nav-desktop a {
-            font-weight: 600; color: var(--color-text-muted);
-            padding: var(--space-xs) var(--space-sm); transition: all var(--transition-fast);
-            border-radius: var(--radius-sm); font-size: var(--text-sm);
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
-        .nav-desktop a:hover, .nav-desktop a.active {
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .brand-name {
+            font-size: var(--text-lg);
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1.2;
+        }
+
+        .brand-name span {
+            color: var(--color-accent);
+        }
+
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-desktop a {
+            font-weight: 600;
+            color: var(--color-text-muted);
+            padding: var(--space-xs) var(--space-sm);
+            transition: all var(--transition-fast);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+        }
+
+        .nav-desktop a:hover,
+        .nav-desktop a.active {
             color: var(--color-primary);
             background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
         }
 
-        .menu-toggle { display: flex; flex-direction: column; gap: 5px; padding: var(--space-xs); background: none; border: none; }
-        .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; transition: all var(--transition-fast); }
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: var(--space-xs);
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-primary);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+        }
 
         @media (max-width: 767px) {
             .nav-desktop.mobile-open {
-                display: flex; position: fixed; top: var(--header-height); left: 0; right: 0;
+                display: flex;
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
                 background: linear-gradient(180deg, var(--color-surface) 0%, #f8fafc 100%);
-                flex-direction: column; padding: var(--space-md); box-shadow: var(--shadow-lg);
-                border-bottom: 1px solid var(--color-border); z-index: 899; gap: var(--space-xs);
+                flex-direction: column;
+                padding: var(--space-md);
+                box-shadow: var(--shadow-lg);
+                border-bottom: 1px solid var(--color-border);
+                z-index: 899;
+                gap: var(--space-xs);
             }
         }
 
         .hero-slider {
-            position: relative; width: 100%; height: 70vh; min-height: 500px; max-height: 800px;
-            overflow: hidden; background: var(--color-primary-dark);
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            background: var(--color-primary-dark);
         }
-        .slider-container { position: relative; width: 100%; height: 100%; }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
         .slide {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; transition: opacity var(--transition-slow); z-index: 1; cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity var(--transition-slow);
+            z-index: 1;
+            cursor: pointer;
         }
-        .slide.active { opacity: 1; z-index: 2; }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
         .slide-bg {
-            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-            opacity: 0.7; transform: scale(1.05); transition: transform 6s ease-out;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transform: scale(1.05);
+            transition: transform 6s ease-out;
         }
-        .slide.active .slide-bg { transform: scale(1); }
+
+        .slide.active .slide-bg {
+            transform: scale(1);
+        }
+
         .slide-overlay {
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             background: linear-gradient(to top, rgba(15, 39, 68, 0.95) 0%, rgba(15, 39, 68, 0.7) 40%, rgba(15, 39, 68, 0.3) 100%);
             z-index: 2;
         }
+
         .slide-content {
-            position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
-            padding: var(--space-xl) var(--space-md); max-width: var(--max-width); margin: 0 auto;
-            transform: translateY(20px); opacity: 0; transition: all var(--transition-slow) 0.2s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            padding: var(--space-xl) var(--space-md);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all var(--transition-slow) 0.2s;
         }
-        .slide.active .slide-content { transform: translateY(0); opacity: 1; }
+
+        .slide.active .slide-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         .slide-label {
             display: inline-block;
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            color: var(--color-primary-dark); font-size: var(--text-xs); font-weight: 700;
-            text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.75rem;
-            border-radius: 100px; margin-bottom: var(--space-sm);
+            color: var(--color-primary-dark);
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: var(--space-sm);
         }
-        .slide-title { font-size: var(--text-3xl); font-weight: 900; color: white; line-height: 1.1; margin-bottom: var(--space-sm); max-width: 700px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .slide-hook { font-size: var(--text-base); color: rgba(255, 255, 255, 0.9); max-width: 600px; margin-bottom: var(--space-md); line-height: 1.6; }
+
+        .slide-title {
+            font-size: var(--text-3xl);
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: var(--space-sm);
+            max-width: 700px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-hook {
+            font-size: var(--text-base);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
 
         .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);
-            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
-            border: 2px solid transparent; cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: var(--text-sm);
+            transition: all var(--transition-fast);
+            border: 2px solid transparent;
+            cursor: pointer;
         }
+
         .btn-primary {
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
             color: var(--color-primary-dark);
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); }
-        .btn-outline { background: transparent; color: white; border-color: rgba(255, 255, 255, 0.5); }
-        .btn-outline:hover { background: white; color: var(--color-primary); border-color: white; }
 
-        .slider-nav { position: absolute; bottom: var(--space-lg); right: var(--space-md); z-index: 10; display: flex; align-items: center; gap: var(--space-md); }
-        .slider-dots { display: flex; gap: 0.5rem; }
-        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); cursor: pointer; transition: all var(--transition-fast); border: none; }
-        .dot:hover, .dot.active { background: var(--color-accent); transform: scale(1.2); }
-        .slider-arrows { display: none; gap: var(--space-xs); }
-        .arrow-btn {
-            width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(4px); color: white; display: flex; align-items: center; justify-content: center;
-            font-size: 1rem; transition: all var(--transition-fast); border: 1px solid rgba(255, 255, 255, 0.2);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
         }
-        .arrow-btn:hover { background: var(--color-accent); color: var(--color-primary-dark); border-color: var(--color-accent); }
 
-        .featured-section { background: linear-gradient(180deg, var(--color-bg) 0%, white 100%); }
-        .featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--color-primary);
+            border-color: white;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: var(--space-lg);
+            right: var(--space-md);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: none;
+        }
+
+        .dot:hover,
+        .dot.active {
+            background: var(--color-accent);
+            transform: scale(1.2);
+        }
+
+        .slider-arrows {
+            display: none;
+            gap: var(--space-xs);
+        }
+
+        .arrow-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .arrow-btn:hover {
+            background: var(--color-accent);
+            color: var(--color-primary-dark);
+            border-color: var(--color-accent);
+        }
+
+        .featured-section {
+            background: linear-gradient(180deg, var(--color-bg) 0%, white 100%);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
         .candidate-card {
             background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
-            border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);
-            transition: all var(--transition-base); position: relative; display: flex; flex-direction: column;
-            height: 100%; cursor: pointer;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            cursor: pointer;
         }
-        .candidate-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
-        .candidate-card.featured { box-shadow: var(--shadow-featured); }
-        .candidate-card.featured:hover { box-shadow: 0 0 0 2px var(--color-accent), var(--shadow-xl); }
+
+        .candidate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .candidate-card.featured {
+            box-shadow: var(--shadow-featured);
+        }
+
+        .candidate-card.featured:hover {
+            box-shadow: 0 0 0 2px var(--color-accent), var(--shadow-xl);
+        }
+
         .card-badge {
-            position: absolute; top: var(--space-sm); right: var(--space-sm);
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            color: var(--color-primary-dark); font-size: 0.65rem; font-weight: 800;
-            text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.75rem;
-            border-radius: 100px; z-index: 5; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            color: var(--color-primary-dark);
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            z-index: 5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
-        .card-image-wrapper { position: relative; width: 100%; padding-top: 100%; overflow: hidden; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
-        .card-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
-        .candidate-card:hover .card-image { transform: scale(1.05); }
-        .card-body { padding: var(--space-md); display: flex; flex-direction: column; flex-grow: 1; }
-        .card-position { font-size: var(--text-xs); font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-        .card-name { font-size: var(--text-base); font-weight: 800; color: var(--color-primary); margin-bottom: var(--space-xs); line-height: 1.3; }
-        .card-hook { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-sm); flex-grow: 1; }
-        .card-btn { width: 100%; justify-content: center; padding: var(--space-xs) var(--space-sm); font-size: var(--text-xs); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white; border-radius: var(--radius-md); transition: all var(--transition-fast); pointer-events: none; }
-        .candidate-card:hover .card-btn { opacity: 0.9; }
 
-        .trending-section { background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .candidate-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: var(--space-md);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-position {
+            font-size: var(--text-xs);
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-name {
+            font-size: var(--text-base);
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: var(--space-xs);
+            line-height: 1.3;
+        }
+
+        .card-hook {
+            font-size: var(--text-xs);
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: var(--space-sm);
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            width: 100%;
+            justify-content: center;
+            padding: var(--space-xs) var(--space-sm);
+            font-size: var(--text-xs);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            pointer-events: none;
+        }
+
+        .candidate-card:hover .card-btn {
+            opacity: 0.9;
+        }
+
+        .trending-section {
+            background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
         .trending-scroll {
-            display: flex; gap: var(--space-md); overflow-x: auto; scroll-snap-type: x mandatory;
-            scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: var(--space-sm);
-            margin: 0 calc(-1 * var(--space-md)); padding-left: var(--space-md); padding-right: var(--space-md);
-            scrollbar-width: none; -ms-overflow-style: none;
+            display: flex;
+            gap: var(--space-md);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: var(--space-sm);
+            margin: 0 calc(-1 * var(--space-md));
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
-        .trending-scroll::-webkit-scrollbar { display: none; }
-        .trending-card { flex: 0 0 auto; width: 160px; scroll-snap-align: start; text-align: center; cursor: pointer; }
-        .trending-image-wrapper {
-            width: 120px; height: 120px; margin: 0 auto var(--space-sm); border-radius: 50%;
-            overflow: hidden; border: 3px solid var(--color-border); transition: all var(--transition-base);
-            position: relative; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
-        }
-        .trending-card:hover .trending-image-wrapper { border-color: var(--color-accent); transform: scale(1.05); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2); }
-        .trending-image { width: 100%; height: 100%; object-fit: cover; }
-        .trending-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .trending-position { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; }
-        .scroll-hint { text-align: center; margin-top: var(--space-sm); font-size: var(--text-xs); color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
 
-        .directory-section { background: linear-gradient(180deg, white 0%, var(--color-bg) 100%); }
+        .trending-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .trending-card {
+            flex: 0 0 auto;
+            width: 160px;
+            scroll-snap-align: start;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .trending-image-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto var(--space-sm);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--color-border);
+            transition: all var(--transition-base);
+            position: relative;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+
+        .trending-card:hover .trending-image-wrapper {
+            border-color: var(--color-accent);
+            transform: scale(1.05);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+
+        .trending-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .trending-name {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .trending-position {
+            font-size: var(--text-xs);
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .scroll-hint {
+            text-align: center;
+            margin-top: var(--space-sm);
+            font-size: var(--text-xs);
+            color: var(--color-text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .directory-section {
+            background: linear-gradient(180deg, white 0%, var(--color-bg) 100%);
+        }
+
         .directory-controls {
-            display: flex; flex-direction: column; gap: var(--space-sm); margin-bottom: var(--space-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
             background: linear-gradient(135deg, var(--color-surface) 0%, #f8fafc 100%);
-            padding: var(--space-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
         }
-        .search-box { position: relative; flex: 1; }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+        }
+
         .search-box input {
-            width: 100%; padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
-            border: 2px solid var(--color-border); border-radius: var(--radius-md);
-            font-size: var(--text-sm); font-family: inherit; transition: all var(--transition-fast); background: var(--color-bg);
+            width: 100%;
+            padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            font-family: inherit;
+            transition: all var(--transition-fast);
+            background: var(--color-bg);
         }
-        .search-box input:focus { outline: none; border-color: var(--color-accent); background: white; box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
-        .search-icon { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); font-size: 1rem; }
-        .filter-group { display: flex; gap: var(--space-sm); }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-text-muted);
+            font-size: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
         .filter-select {
-            flex: 1; padding: var(--space-sm); border: 2px solid var(--color-border);
-            border-radius: var(--radius-md); font-size: var(--text-sm); font-family: inherit;
-            background: var(--color-bg); color: var(--color-text); cursor: pointer; transition: all var(--transition-fast);
+            flex: 1;
+            padding: var(--space-sm);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            font-family: inherit;
+            background: var(--color-bg);
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all var(--transition-fast);
         }
-        .filter-select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
-        .directory-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
         .directory-card {
             background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
-            border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);
-            transition: all var(--transition-fast); border: 1px solid var(--color-border);
-            position: relative; cursor: pointer;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast);
+            border: 1px solid var(--color-border);
+            position: relative;
+            cursor: pointer;
         }
-        .directory-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--color-accent); }
-        .directory-card.hidden { display: none; }
-        .directory-card.featured-card { order: -1; border: 2px solid var(--color-accent); }
+
+        .directory-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: var(--color-accent);
+        }
+
+        .directory-card.hidden {
+            display: none;
+        }
+
+        .directory-card.featured-card {
+            order: -1;
+            border: 2px solid var(--color-accent);
+        }
+
         .directory-card.featured-card::before {
-            content: '★ Featured'; position: absolute; top: 0; right: 0;
+            content: '★ Featured';
+            position: absolute;
+            top: 0;
+            right: 0;
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            color: var(--color-primary-dark); font-size: 0.6rem; font-weight: 800;
-            padding: 0.25rem 0.5rem; border-bottom-left-radius: var(--radius-sm); z-index: 2;
+            color: var(--color-primary-dark);
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 0.25rem 0.5rem;
+            border-bottom-left-radius: var(--radius-sm);
+            z-index: 2;
         }
-        .directory-image-wrapper { width: 100%; padding-top: 100%; position: relative; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
-        .directory-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .directory-info { padding: var(--space-sm); text-align: center; }
-        .directory-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.2rem; }
-        .directory-position { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; }
-        .no-results { grid-column: 1 / -1; text-align: center; padding: var(--space-xl); color: var(--color-text-muted); font-size: var(--text-base); }
+
+        .directory-image-wrapper {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+
+        .directory-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .directory-info {
+            padding: var(--space-sm);
+            text-align: center;
+        }
+
+        .directory-name {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .directory-position {
+            font-size: var(--text-xs);
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--color-text-muted);
+            font-size: var(--text-base);
+        }
 
         .cta-section {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-            position: relative; overflow: hidden; padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+            padding: var(--space-xl) 0;
         }
+
         .cta-section::before {
-            content: ''; position: absolute; top: -50%; right: -20%;
-            width: 600px; height: 600px;
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .cta-section::after {
-            content: ''; position: absolute; bottom: -30%; left: -10%;
-            width: 400px; height: 400px;
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
             pointer-events: none;
         }
-        .cta-content { position: relative; z-index: 2; text-align: center; max-width: 700px; margin: 0 auto; }
-        .cta-label { display: inline-block; font-size: var(--text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: var(--space-sm); }
-        .cta-headline { font-size: var(--text-2xl); font-weight: 900; color: white; margin-bottom: var(--space-sm); line-height: 1.2; }
-        .cta-subtext { font-size: var(--text-base); color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-lg); line-height: 1.6; }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-label {
+            display: inline-block;
+            font-size: var(--text-xs);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .cta-headline {
+            font-size: var(--text-2xl);
+            font-weight: 900;
+            color: white;
+            margin-bottom: var(--space-sm);
+            line-height: 1.2;
+        }
+
+        .cta-subtext {
+            font-size: var(--text-base);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
         .cta-btn {
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            color: var(--color-primary-dark); font-size: var(--text-lg);
-            padding: var(--space-sm) var(--space-xl); border-radius: var(--radius-xl);
-            font-weight: 800; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); transition: all var(--transition-base);
+            color: var(--color-primary-dark);
+            font-size: var(--text-lg);
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: var(--radius-xl);
+            font-weight: 800;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            transition: all var(--transition-base);
         }
-        .cta-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4); }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+        }
 
         .sticky-mobile-bar {
-            position: fixed; bottom: 0; left: 0; right: 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background: linear-gradient(180deg, var(--color-surface) 0%, #f8fafc 100%);
-            border-top: 1px solid var(--color-border); box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            padding: var(--space-sm) var(--space-md); z-index: 950;
-            display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm);
-            transform: translateY(100%); transition: transform var(--transition-base);
+            border-top: 1px solid var(--color-border);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            padding: var(--space-sm) var(--space-md);
+            z-index: 950;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-sm);
+            transform: translateY(100%);
+            transition: transform var(--transition-base);
         }
-        .sticky-mobile-bar.visible { transform: translateY(0); }
-        .sticky-info { display: flex; align-items: center; gap: var(--space-sm); min-width: 0; }
-        .sticky-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent); flex-shrink: 0; }
-        .sticky-text { min-width: 0; }
-        .sticky-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em; }
-        .sticky-name { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .sticky-btn { flex-shrink: 0; padding: var(--space-xs) var(--space-md); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white; font-size: var(--text-xs); font-weight: 700; border-radius: var(--radius-md); white-space: nowrap; }
+
+        .sticky-mobile-bar.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-info {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            min-width: 0;
+        }
+
+        .sticky-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-accent);
+            flex-shrink: 0;
+        }
+
+        .sticky-text {
+            min-width: 0;
+        }
+
+        .sticky-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            letter-spacing: 0.05em;
+        }
+
+        .sticky-name {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--color-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sticky-btn {
+            flex-shrink: 0;
+            padding: var(--space-xs) var(--space-md);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            font-size: var(--text-xs);
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            white-space: nowrap;
+        }
 
         .modal-overlay {
-            position: fixed; inset: 0; background: rgba(15, 39, 68, 0.85);
-            backdrop-filter: blur(4px); z-index: 1000; display: flex;
-            align-items: center; justify-content: center; padding: 0;
-            opacity: 0; visibility: hidden;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 39, 68, 0.85);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
             transition: opacity var(--transition-base), visibility var(--transition-base);
         }
-        .modal-overlay.active { opacity: 1; visibility: visible; }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .modal-container {
-            width: 97vw; height: 95vh; max-width: 900px;
+            width: 97vw;
+            height: 95vh;
+            max-width: 900px;
             background: linear-gradient(180deg, var(--color-surface) 0%, #fafafa 100%);
-            border-radius: var(--radius-lg); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            display: flex; flex-direction: column; overflow: hidden; position: relative;
-            transform: scale(0.95); transition: transform var(--transition-base);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform var(--transition-base);
         }
-        .modal-overlay.active .modal-container { transform: scale(1); }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
         .modal-close {
-            position: absolute; top: var(--space-sm); right: var(--space-sm);
-            width: 44px; height: 44px; border-radius: 50%;
-            background: rgba(255, 255, 255, 0.95); color: var(--color-primary);
-            font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
-            z-index: 10; cursor: pointer; border: none; box-shadow: var(--shadow-md); transition: all var(--transition-fast);
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-fast);
         }
-        .modal-close:hover { background: var(--color-accent); color: var(--color-primary-dark); transform: rotate(90deg); }
-        .modal-content { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
-        .modal-content::-webkit-scrollbar { width: 6px; }
-        .modal-content::-webkit-scrollbar-track { background: transparent; }
-        .modal-content::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
-        .modal-gallery { position: relative; width: 100%; background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); overflow: hidden; }
-        .gallery-scroll { display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
-        .gallery-scroll::-webkit-scrollbar { display: none; }
-        .gallery-slide { flex: 0 0 100%; scroll-snap-align: start; position: relative; padding-top: 56.25%; background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%); }
-        .gallery-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .gallery-nav { position: absolute; bottom: var(--space-sm); left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 5; }
-        .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); border: none; cursor: pointer; transition: all var(--transition-fast); padding: 0; }
-        .gallery-dot.active { background: var(--color-accent); width: 24px; border-radius: 4px; }
-        .gallery-counter { position: absolute; top: var(--space-sm); left: var(--space-sm); background: rgba(0, 0, 0, 0.6); color: white; font-size: var(--text-xs); font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 100px; z-index: 5; }
-        .modal-body { padding: var(--space-lg); }
-        .modal-header-info { margin-bottom: var(--space-lg); padding-bottom: var(--space-md); border-bottom: 2px solid var(--color-border); }
+
+        .modal-close:hover {
+            background: var(--color-accent);
+            color: var(--color-primary-dark);
+            transform: rotate(90deg);
+        }
+
+        .modal-content {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: var(--color-border);
+            border-radius: 3px;
+        }
+
+        .modal-gallery {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            overflow: hidden;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            position: relative;
+            padding-top: 56.25%;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e2e8f0 100%);
+        }
+
+        .gallery-slide img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            bottom: var(--space-sm);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 5;
+        }
+
+        .gallery-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            padding: 0;
+        }
+
+        .gallery-dot.active {
+            background: var(--color-accent);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .gallery-counter {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            z-index: 5;
+        }
+
+        .modal-body {
+            padding: var(--space-lg);
+        }
+
+        .modal-header-info {
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-md);
+            border-bottom: 2px solid var(--color-border);
+        }
+
         .modal-position {
-            display: inline-block; font-size: var(--text-xs); font-weight: 800;
-            text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent);
+            display: inline-block;
+            font-size: var(--text-xs);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
-            padding: 0.35rem 0.75rem; border-radius: 100px; margin-bottom: var(--space-sm);
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: var(--space-sm);
         }
-        .modal-name { font-size: var(--text-2xl); font-weight: 900; color: var(--color-primary); line-height: 1.2; margin-bottom: var(--space-sm); }
-        .modal-intro { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-md); }
-        .modal-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-sm); }
+
+        .modal-name {
+            font-size: var(--text-2xl);
+            font-weight: 900;
+            color: var(--color-primary);
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+
+        .modal-intro {
+            font-size: var(--text-base);
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: var(--space-md);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            margin-top: var(--space-sm);
+        }
+
         .btn-support {
-            display: inline-flex; align-items: center; gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-xl);
-            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
-            border: 2px solid var(--color-accent); background: white; color: var(--color-primary); cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            font-size: var(--text-sm);
+            transition: all var(--transition-fast);
+            border: 2px solid var(--color-accent);
+            background: white;
+            color: var(--color-primary);
+            cursor: pointer;
         }
-        .btn-support:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3); }
-        .btn-support.supported { background: linear-gradient(135deg, var(--color-success) 0%, #047857 100%); color: white; border-color: var(--color-success); }
-        .btn-support.supported:hover { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); border-color: #dc2626; }
-        .support-count { font-weight: 800; font-size: 1.1em; }
+
+        .btn-support:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-support.supported {
+            background: linear-gradient(135deg, var(--color-success) 0%, #047857 100%);
+            color: white;
+            border-color: var(--color-success);
+        }
+
+        .btn-support.supported:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            border-color: #dc2626;
+        }
+
+        .support-count {
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+
         .btn-share {
-            display: inline-flex; align-items: center; gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-md); border-radius: var(--radius-xl);
-            font-weight: 700; font-size: var(--text-sm); transition: all var(--transition-fast);
-            border: 2px solid var(--color-border); background: white; color: var(--color-text-muted); cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            font-size: var(--text-sm);
+            transition: all var(--transition-fast);
+            border: 2px solid var(--color-border);
+            background: white;
+            color: var(--color-text-muted);
+            cursor: pointer;
         }
-        .btn-share:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
-        .modal-section { margin-bottom: var(--space-lg); }
-        .modal-section:last-child { margin-bottom: 0; }
-        .modal-section-title { font-size: var(--text-lg); font-weight: 800; color: var(--color-primary); margin-bottom: var(--space-sm); display: flex; align-items: center; gap: var(--space-xs); }
-        .modal-section-title::before { content: ''; display: block; width: 4px; height: 24px; background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-light) 100%); border-radius: 2px; }
-        .vision-text { font-size: var(--text-base); color: var(--color-text); line-height: 1.8; background: linear-gradient(135deg, var(--color-bg) 0%, #f1f5f9 100%); padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid var(--color-accent); }
-        .agenda-list { display: flex; flex-direction: column; gap: var(--space-md); }
+
+        .btn-share:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .modal-section {
+            margin-bottom: var(--space-lg);
+        }
+
+        .modal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .modal-section-title {
+            font-size: var(--text-lg);
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .modal-section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            border-radius: 2px;
+        }
+
+        .vision-text {
+            font-size: var(--text-base);
+            color: var(--color-text);
+            line-height: 1.8;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #f1f5f9 100%);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .agenda-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
         .agenda-item {
-            font-size: var(--text-sm); color: var(--color-text); line-height: 1.7;
-            padding: var(--space-sm) var(--space-md); background: linear-gradient(135deg, var(--color-bg) 0%, white 100%);
-            border-radius: var(--radius-md); border: 1px solid var(--color-border);
-            position: relative; padding-left: 2.5rem;
-        }
-        .agenda-item::before {
-            content: attr(data-index); position: absolute; left: var(--space-sm); top: var(--space-sm);
-            width: 24px; height: 24px;
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            color: var(--color-primary-dark); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 800; font-size: 0.75rem;
-        }
-        .achievements-grid { display: grid; gap: var(--space-sm); }
-        .achievement-card {
+            font-size: var(--text-sm);
+            color: var(--color-text);
+            line-height: 1.7;
+            padding: var(--space-sm) var(--space-md);
             background: linear-gradient(135deg, var(--color-bg) 0%, white 100%);
-            padding: var(--space-md); border-radius: var(--radius-md);
-            border: 1px solid var(--color-border); transition: all var(--transition-fast);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+            position: relative;
+            padding-left: 2.5rem;
         }
-        .achievement-card:hover { border-color: var(--color-accent); box-shadow: var(--shadow-sm); }
-        .achievement-year { font-size: var(--text-xs); font-weight: 800; color: var(--color-accent); margin-bottom: 0.25rem; }
-        .achievement-title { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); margin-bottom: 0.25rem; }
-        .achievement-desc { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; }
-        .modal-loading { display: none; text-align: center; padding: var(--space-xl); color: var(--color-text-muted); }
+
+        .agenda-item::before {
+            content: attr(data-index);
+            position: absolute;
+            left: var(--space-sm);
+            top: var(--space-sm);
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: var(--color-primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.75rem;
+        }
+
+        .modal-loading {
+            display: none;
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--color-text-muted);
+        }
 
         .site-footer {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-            color: rgba(255, 255, 255, 0.7); padding: var(--space-lg) 0;
-            text-align: center; font-size: var(--text-sm); margin-bottom: 60px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: var(--space-lg) 0;
+            text-align: center;
+            font-size: var(--text-sm);
+            margin-bottom: 60px;
         }
-        .footer-brand { font-weight: 800; color: white; font-size: var(--text-lg); margin-bottom: var(--space-xs); }
-        .footer-brand span { color: var(--color-accent); }
+
+        .footer-brand {
+            font-weight: 800;
+            color: white;
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-brand span {
+            color: var(--color-accent);
+        }
 
         @media (min-width: 640px) {
-            .featured-grid { grid-template-columns: repeat(3, 1fr); }
-            .directory-grid { grid-template-columns: repeat(3, 1fr); }
-            .slider-arrows { display: flex; }
-            .modal-body { padding: var(--space-xl); }
-            .achievements-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (min-width: 768px) {
-            .nav-desktop { display: flex; gap: var(--space-xs); align-items: center; }
-            .menu-toggle { display: none; }
-            .directory-controls { flex-direction: row; align-items: center; }
-            .search-box { max-width: 400px; }
-            .filter-group { flex-shrink: 0; }
-            .filter-select { min-width: 160px; }
-            .sticky-mobile-bar { display: none; }
-            .site-footer { margin-bottom: 0; }
-            .modal-container { border-radius: var(--radius-xl); }
-        }
-        @media (min-width: 1024px) {
-            .featured-grid { grid-template-columns: repeat(4, 1fr); }
-            .directory-grid { grid-template-columns: repeat(4, 1fr); }
-            .slide-content { padding: var(--space-xl) var(--space-lg); }
-            .slider-nav { right: var(--space-lg); }
+            .featured-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .directory-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .slider-arrows {
+                display: flex;
+            }
+
+            .modal-body {
+                padding: var(--space-xl);
+            }
         }
 
-        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
-        .stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
-        .stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
-        .stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
-        .stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
-        img { opacity: 1; transition: opacity 0.3s; }
-        img[loading="lazy"] { opacity: 0; }
-        img.loaded { opacity: 1; }
+        @media (min-width: 768px) {
+            .nav-desktop {
+                display: flex;
+                gap: var(--space-xs);
+                align-items: center;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .directory-controls {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .search-box {
+                max-width: 400px;
+            }
+
+            .filter-group {
+                flex-shrink: 0;
+            }
+
+            .filter-select {
+                min-width: 160px;
+            }
+
+            .sticky-mobile-bar {
+                display: none;
+            }
+
+            .site-footer {
+                margin-bottom: 0;
+            }
+
+            .modal-container {
+                border-radius: var(--radius-xl);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .featured-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .directory-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .slide-content {
+                padding: var(--space-xl) var(--space-lg);
+            }
+
+            .slider-nav {
+                right: var(--space-lg);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-children>*:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-children>*:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-children>*:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-children>*:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        img {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+
+        img.loaded {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -473,43 +1457,51 @@
     <main>
         <section id="hero" class="hero-slider">
             <div class="slider-container" id="sliderContainer">
-                <div class="slide active" data-index="0" data-candidate="ottichilo">
-                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80" alt="Campaign rally background" class="slide-bg" loading="eager">
+                <div class="slide active" data-index="0" data-candidate="newton-hinga">
+                    <img src="https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629"
+                        alt="Newton Hinga" class="slide-bg" loading="eager">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <span class="slide-label">Gubernatorial Race</span>
-                        <h1 class="slide-title">Dr. Wilber Ottichilo</h1>
-                        <p class="slide-hook">Leading the charge for transformative leadership and sustainable development across Vihiga County. Experience that delivers results.</p>
+                        <h1 class="slide-title">Newton Hinga</h1>
+                        <p class="slide-hook">A committed leader focused on building a better future for Vihiga County
+                            through steady leadership, practical solutions, and real change.</p>
                         <span class="btn btn-primary">View Profile →</span>
                     </div>
                 </div>
-                <div class="slide" data-index="1" data-candidate="khaniri">
-                    <img src="https://images.unsplash.com/photo-1575320181282-9afab399332c?w=1200&q=80" alt="Community meeting" class="slide-bg" loading="lazy">
+                <div class="slide" data-index="1" data-candidate="indimuli-kahi">
+                    <img src="https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/profile.jpeg?updatedAt=1777055571935"
+                        alt="Indimuli Kahi" class="slide-bg" loading="lazy">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <span class="slide-label">Senatorial Campaign</span>
-                        <h1 class="slide-title">Senator George Khaniri</h1>
-                        <p class="slide-hook">A voice for the people. Advocating for youth empowerment, infrastructure development, and equal representation at the national level.</p>
+                        <span class="slide-label">Gubernatorial Race</span>
+                        <h1 class="slide-title">Indimuli Kahi</h1>
+                        <p class="slide-hook">Dedicated to building a better and more inclusive Vihiga County through
+                            listening, teamwork, and delivering results that improve everyday life.</p>
                         <span class="btn btn-primary">View Profile →</span>
                     </div>
                 </div>
-                <div class="slide" data-index="2" data-candidate="adagala">
-                    <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1200&q=80" alt="Political debate" class="slide-bg" loading="lazy">
+                <div class="slide" data-index="2" data-candidate="beatrice-adagala">
+                    <img src="https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/profile.jpeg?updatedAt=1777054921915"
+                        alt="Dr. Beatrice Adagala" class="slide-bg" loading="lazy">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <span class="slide-label">Gubernatorial Race</span>
+                        <h1 class="slide-title">Dr. Beatrice Adagala</h1>
+                        <p class="slide-hook">Known as "Mama County," she brings over 20 years of experience and a
+                            people-focused approach to drive Vihiga into a new era of inclusive development.</p>
+                        <span class="btn btn-primary">View Profile →</span>
+                    </div>
+                </div>
+                <div class="slide" data-index="3" data-candidate="damaris-kayugira">
+                    <img src="https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/profile.jpeg?updatedAt=1777055262433"
+                        alt="Damaris Kayugira" class="slide-bg" loading="lazy">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <span class="slide-label">Women Representative</span>
-                        <h1 class="slide-title">Beatrice Adagala</h1>
-                        <p class="slide-hook">Championing women's rights and economic empowerment. Building bridges for the next generation of female leaders in Vihiga.</p>
-                        <span class="btn btn-primary">View Profile →</span>
-                    </div>
-                </div>
-                <div class="slide" data-index="3" data-candidate="gimose">
-                    <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1200&q=80" alt="Campaign trail" class="slide-bg" loading="lazy">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <span class="slide-label">Parliamentary Seat</span>
-                        <h1 class="slide-title">Charles Gimose</h1>
-                        <p class="slide-hook">Hamisi Constituency deserves bold leadership. Focused on education reform, healthcare access, and agricultural modernization.</p>
+                        <h1 class="slide-title">Damaris Kayugira</h1>
+                        <p class="slide-hook">Bold, caring leadership focused on family support, women empowerment, and
+                            unity across Vihiga County.</p>
                         <span class="btn btn-primary">View Profile →</span>
                     </div>
                 </div>
@@ -532,51 +1524,59 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Featured Candidates</h2>
                 <div class="featured-grid stagger-children">
-                    <article class="candidate-card featured animate-on-scroll" data-candidate="ottichilo">
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="newton-hinga">
                         <span class="card-badge">Featured</span>
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Dr. Wilber Ottichilo" class="card-image" loading="lazy">
+                            <img src="https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629"
+                                alt="Newton Hinga" class="card-image" loading="lazy">
                         </div>
                         <div class="card-body">
                             <span class="card-position">Governor</span>
-                            <h3 class="card-name">Dr. Wilber Ottichilo</h3>
-                            <p class="card-hook">Transformative leadership for Vihiga County with a focus on infrastructure and healthcare.</p>
+                            <h3 class="card-name">Newton Hinga</h3>
+                            <p class="card-hook">Committed to building a united and growing Vihiga County with strong
+                                communities and equal opportunities for all.</p>
                             <span class="btn card-btn">View Profile</span>
                         </div>
                     </article>
-                    <article class="candidate-card featured animate-on-scroll" data-candidate="khaniri">
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="indimuli-kahi">
                         <span class="card-badge">Featured</span>
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="George Khaniri" class="card-image" loading="lazy">
+                            <img src="https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/profile.jpeg?updatedAt=1777055571935"
+                                alt="Indimuli Kahi" class="card-image" loading="lazy">
                         </div>
                         <div class="card-body">
-                            <span class="card-position">Senator</span>
-                            <h3 class="card-name">George Khaniri</h3>
-                            <p class="card-hook">Experienced legislator fighting for county rights and national representation.</p>
+                            <span class="card-position">Governor</span>
+                            <h3 class="card-name">Indimuli Kahi</h3>
+                            <p class="card-hook">Working together with the people to bring real and lasting change
+                                through steady, inclusive development.</p>
                             <span class="btn card-btn">View Profile</span>
                         </div>
                     </article>
-                    <article class="candidate-card featured animate-on-scroll" data-candidate="adagala">
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="beatrice-adagala">
                         <span class="card-badge">Featured</span>
                         <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Beatrice Adagala" class="card-image" loading="lazy">
+                            <img src="https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/profile.jpeg?updatedAt=1777054921915"
+                                alt="Dr. Beatrice Adagala" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-position">Governor</span>
+                            <h3 class="card-name">Dr. Beatrice Adagala</h3>
+                            <p class="card-hook">Mama County brings corporate discipline and legislative experience to
+                                drive inclusive and sustainable development.</p>
+                            <span class="btn card-btn">View Profile</span>
+                        </div>
+                    </article>
+                    <article class="candidate-card featured animate-on-scroll" data-candidate="damaris-kayugira">
+                        <span class="card-badge">Featured</span>
+                        <div class="card-image-wrapper">
+                            <img src="https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/profile.jpeg?updatedAt=1777055262433"
+                                alt="Damaris Kayugira" class="card-image" loading="lazy">
                         </div>
                         <div class="card-body">
                             <span class="card-position">Women Rep</span>
-                            <h3 class="card-name">Beatrice Adagala</h3>
-                            <p class="card-hook">Empowering women and girls through education and economic opportunity programs.</p>
-                            <span class="btn card-btn">View Profile</span>
-                        </div>
-                    </article>
-                    <article class="candidate-card featured animate-on-scroll" data-candidate="gimose">
-                        <span class="card-badge">Featured</span>
-                        <div class="card-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Charles Gimose" class="card-image" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-position">MP - Hamisi</span>
-                            <h3 class="card-name">Charles Gimose</h3>
-                            <p class="card-hook">Dedicated to agricultural modernization and youth employment initiatives.</p>
+                            <h3 class="card-name">Damaris Kayugira</h3>
+                            <p class="card-hook">Bold, caring leadership focused on family support, women empowerment,
+                                and unity across Vihiga County.</p>
                             <span class="btn card-btn">View Profile</span>
                         </div>
                     </article>
@@ -588,37 +1588,45 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Trending Now</h2>
                 <div class="trending-scroll" id="trendingScroll">
-                    <div class="trending-card" data-candidate="chanzu">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Yusuf Chanzu" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Yusuf Chanzu</h4><span class="trending-position">MP - Vihiga</span>
+                    <div class="trending-card" data-candidate="george-odanga">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/profile.jpeg?updatedAt=1777056341400"
+                                alt="George Odanga" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">George Odanga</h4><span class="trending-position">MP - Sabatia</span>
                     </div>
-                    <div class="trending-card" data-candidate="atieno">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Gladys Atieno" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Gladys Atieno</h4><span class="trending-position">MCA - Central</span>
+                    <div class="trending-card" data-candidate="michael-mwale">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/prifile.jpeg?updatedAt=1777056114419"
+                                alt="Michael Lijondo Mwale" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Michael Lijondo Mwale</h4><span class="trending-position">MP -
+                            Sabatia</span>
                     </div>
-                    <div class="trending-card" data-candidate="kilonzo">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Peter Kilonzo" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Peter Kilonzo</h4><span class="trending-position">MCA - West</span>
+                    <div class="trending-card" data-candidate="hillary-kijana">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/profile.jpeg?updatedAt=1777055108288"
+                                alt="Hillary Adolwa Kijana" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Hillary Adolwa Kijana</h4><span class="trending-position">MP -
+                            Vihiga</span>
                     </div>
-                    <div class="trending-card" data-candidate="omboko">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Mary Omboko" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Mary Omboko</h4><span class="trending-position">MCA - East</span>
+                    <div class="trending-card" data-candidate="odanga-oliver">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.31%20PM.jpeg?updatedAt=1777055938199"
+                                alt="Odanga Oliver" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Odanga Oliver</h4><span class="trending-position">MCA - Central
+                            Maragoli</span>
                     </div>
-                    <div class="trending-card" data-candidate="wesonga">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=200&q=80" alt="James Wesonga" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">James Wesonga</h4><span class="trending-position">MCA - North</span>
+                    <div class="trending-card" data-candidate="kane-kamadi">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/profile.jpeg?updatedAt=1777055836385"
+                                alt="Kane Onamu Kamadi" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Kane Onamu Kamadi</h4><span class="trending-position">MCA -
+                            Mungoma</span>
                     </div>
-                    <div class="trending-card" data-candidate="wakhungu">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80" alt="Grace Wakhungu" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Grace Wakhungu</h4><span class="trending-position">MCA - South</span>
-                    </div>
-                    <div class="trending-card" data-candidate="amayi">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&q=80" alt="Henry Amayi" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Henry Amayi</h4><span class="trending-position">MCA - Luanda</span>
-                    </div>
-                    <div class="trending-card" data-candidate="nabwire">
-                        <div class="trending-image-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80" alt="Linet Nabwire" class="trending-image" loading="lazy"></div>
-                        <h4 class="trending-name">Linet Nabwire</h4><span class="trending-position">MCA - Sabatia</span>
+                    <div class="trending-card" data-candidate="yitzack-otondo">
+                        <div class="trending-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/profile.jpeg?updatedAt=1777055490719"
+                                alt="Yitzack Otondo" class="trending-image" loading="lazy"></div>
+                        <h4 class="trending-name">Yitzack Otondo</h4><span class="trending-position">MCA - Tambua</span>
                     </div>
                 </div>
                 <p class="scroll-hint"><span>←</span> Swipe to explore <span>→</span></p>
@@ -631,77 +1639,131 @@
                 <div class="directory-controls animate-on-scroll">
                     <div class="search-box">
                         <span class="search-icon">🔍</span>
-                        <input type="text" id="searchInput" placeholder="Search candidates by name..." aria-label="Search candidates">
+                        <input type="text" id="searchInput" placeholder="Search candidates by name..."
+                            aria-label="Search candidates">
                     </div>
                     <div class="filter-group">
                         <select class="filter-select" id="positionFilter" aria-label="Filter by position">
                             <option value="all">All Positions</option>
                             <option value="governor">Governor</option>
-                            <option value="senator">Senator</option>
                             <option value="women-rep">Women Rep</option>
                             <option value="mp">MP</option>
                             <option value="mca">MCA</option>
                         </select>
                         <select class="filter-select" id="wardFilter" aria-label="Filter by ward">
                             <option value="all">All Wards</option>
-                            <option value="luanda">Luanda</option>
                             <option value="sabatia">Sabatia</option>
-                            <option value="hamisi">Hamisi</option>
                             <option value="vihiga">Vihiga</option>
-                            <option value="emuhaya">Emuhaya</option>
+                            <option value="central-maragoli">Central Maragoli</option>
+                            <option value="mungoma">Mungoma</option>
+                            <option value="tambua">Tambua</option>
                         </select>
                     </div>
                 </div>
                 <div class="directory-grid" id="directoryGrid">
-                    <div class="directory-card featured-card" data-candidate="ottichilo" data-name="wilber ottichilo" data-position="governor" data-ward="all">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Dr. Wilber Ottichilo" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Dr. Wilber Ottichilo</h4><p class="directory-position">Governor</p></div>
+                    <div class="directory-card featured-card" data-candidate="newton-hinga" data-name="newton hinga"
+                        data-position="governor" data-ward="all">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629"
+                                alt="Newton Hinga" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Newton Hinga</h4>
+                            <p class="directory-position">Governor</p>
+                        </div>
                     </div>
-                    <div class="directory-card featured-card" data-candidate="khaniri" data-name="george khaniri" data-position="senator" data-ward="all">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="George Khaniri" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">George Khaniri</h4><p class="directory-position">Senator</p></div>
+                    <div class="directory-card featured-card" data-candidate="indimuli-kahi" data-name="indimuli kahi"
+                        data-position="governor" data-ward="all">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/profile.jpeg?updatedAt=1777055571935"
+                                alt="Indimuli Kahi" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Indimuli Kahi</h4>
+                            <p class="directory-position">Governor</p>
+                        </div>
                     </div>
-                    <div class="directory-card featured-card" data-candidate="adagala" data-name="beatrice adagala" data-position="women-rep" data-ward="all">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Beatrice Adagala" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Beatrice Adagala</h4><p class="directory-position">Women Rep</p></div>
+                    <div class="directory-card featured-card" data-candidate="beatrice-adagala"
+                        data-name="beatrice adagala" data-position="governor" data-ward="all">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/profile.jpeg?updatedAt=1777054921915"
+                                alt="Dr. Beatrice Adagala" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Dr. Beatrice Adagala</h4>
+                            <p class="directory-position">Governor</p>
+                        </div>
                     </div>
-                    <div class="directory-card featured-card" data-candidate="gimose" data-name="charles gimose" data-position="mp" data-ward="hamisi">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80" alt="Charles Gimose" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Charles Gimose</h4><p class="directory-position">MP - Hamisi</p></div>
+                    <div class="directory-card featured-card" data-candidate="damaris-kayugira"
+                        data-name="damaris kayugira" data-position="women-rep" data-ward="all">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/profile.jpeg?updatedAt=1777055262433"
+                                alt="Damaris Kayugira" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Damaris Kayugira</h4>
+                            <p class="directory-position">Women Rep</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="chanzu" data-name="yusuf chanzu" data-position="mp" data-ward="vihiga">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Yusuf Chanzu" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Yusuf Chanzu</h4><p class="directory-position">MP - Vihiga</p></div>
+                    <div class="directory-card" data-candidate="george-odanga" data-name="george odanga"
+                        data-position="mp" data-ward="sabatia">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/profile.jpeg?updatedAt=1777056341400"
+                                alt="George Odanga" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">George Odanga</h4>
+                            <p class="directory-position">MP - Sabatia</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="atieno" data-name="gladys atieno" data-position="mca" data-ward="vihiga">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="Gladys Atieno" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Gladys Atieno</h4><p class="directory-position">MCA - Central</p></div>
+                    <div class="directory-card" data-candidate="michael-mwale" data-name="michael lijondo mwale"
+                        data-position="mp" data-ward="sabatia">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/prifile.jpeg?updatedAt=1777056114419"
+                                alt="Michael Lijondo Mwale" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Michael Lijondo Mwale</h4>
+                            <p class="directory-position">MP - Sabatia</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="kilonzo" data-name="peter kilonzo" data-position="mca" data-ward="luanda">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80" alt="Peter Kilonzo" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Peter Kilonzo</h4><p class="directory-position">MCA - West</p></div>
+                    <div class="directory-card" data-candidate="hillary-kijana" data-name="hillary adolwa kijana"
+                        data-position="mp" data-ward="vihiga">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/profile.jpeg?updatedAt=1777055108288"
+                                alt="Hillary Adolwa Kijana" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Hillary Adolwa Kijana</h4>
+                            <p class="directory-position">MP - Vihiga</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="omboko" data-name="mary omboko" data-position="mca" data-ward="sabatia">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Mary Omboko" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Mary Omboko</h4><p class="directory-position">MCA - East</p></div>
+                    <div class="directory-card" data-candidate="odanga-oliver" data-name="odanga oliver"
+                        data-position="mca" data-ward="central-maragoli">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.31%20PM.jpeg?updatedAt=1777055938199"
+                                alt="Odanga Oliver" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Odanga Oliver</h4>
+                            <p class="directory-position">MCA - Central Maragoli</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="wesonga" data-name="james wesonga" data-position="mca" data-ward="emuhaya">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=300&q=80" alt="James Wesonga" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">James Wesonga</h4><p class="directory-position">MCA - North</p></div>
+                    <div class="directory-card" data-candidate="kane-kamadi" data-name="kane onamu kamadi"
+                        data-position="mca" data-ward="mungoma">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/profile.jpeg?updatedAt=1777055836385"
+                                alt="Kane Onamu Kamadi" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Kane Onamu Kamadi</h4>
+                            <p class="directory-position">MCA - Mungoma</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="wakhungu" data-name="grace wakhungu" data-position="mca" data-ward="luanda">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Grace Wakhungu" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Grace Wakhungu</h4><p class="directory-position">MCA - South</p></div>
+                    <div class="directory-card" data-candidate="yitzack-otondo" data-name="yitzack otondo"
+                        data-position="mca" data-ward="tambua">
+                        <div class="directory-image-wrapper"><img
+                                src="https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/profile.jpeg?updatedAt=1777055490719"
+                                alt="Yitzack Otondo" class="directory-image" loading="lazy"></div>
+                        <div class="directory-info">
+                            <h4 class="directory-name">Yitzack Otondo</h4>
+                            <p class="directory-position">MCA - Tambua</p>
+                        </div>
                     </div>
-                    <div class="directory-card" data-candidate="amayi" data-name="henry amayi" data-position="mca" data-ward="luanda">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&q=80" alt="Henry Amayi" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Henry Amayi</h4><p class="directory-position">MCA - Luanda</p></div>
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <p>No candidates found matching your criteria.</p>
                     </div>
-                    <div class="directory-card" data-candidate="nabwire" data-name="linet nabwire" data-position="mca" data-ward="sabatia">
-                        <div class="directory-image-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&q=80" alt="Linet Nabwire" class="directory-image" loading="lazy"></div>
-                        <div class="directory-info"><h4 class="directory-name">Linet Nabwire</h4><p class="directory-position">MCA - Sabatia</p></div>
-                    </div>
-                    <div class="no-results" id="noResults" style="display: none;"><p>No candidates found matching your criteria.</p></div>
                 </div>
             </div>
         </section>
@@ -711,8 +1773,10 @@
                 <div class="cta-content animate-on-scroll">
                     <span class="cta-label">Premium Visibility</span>
                     <h2 class="cta-headline">Promote Your Campaign on Vihiga Times</h2>
-                    <p class="cta-subtext">Reach voters across Vihiga County with premium visibility. Featured placement, banner ads, and sponsored content packages available.</p>
-                    <button class="btn cta-btn">Get Featured Today</button>
+                    <p class="cta-subtext">Reach voters across Vihiga County with premium visibility. Featured
+                        placement, banner ads, and sponsored content packages available.</p>
+                    <a href="https://wa.me/254769882553?text=Hello%20Vihiga%20Times%2C%20I%20am%20interested%20in%20the%20Premium%20Visibility%20package%20for%20political%20campaigns.%20I%20would%20like%20to%20get%20featured%20on%20your%20platform."
+                        class="btn cta-btn" target="_blank" rel="noopener noreferrer">Get Featured Today</a>
                 </div>
             </div>
         </section>
@@ -728,29 +1792,40 @@
 
     <div class="sticky-mobile-bar" id="stickyBar">
         <div class="sticky-info">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="Featured candidate" class="sticky-avatar">
+            <img src="https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629"
+                alt="Featured candidate" class="sticky-avatar">
             <div class="sticky-text">
                 <div class="sticky-label">Featured Candidate</div>
-                <div class="sticky-name">Dr. Wilber Ottichilo</div>
+                <div class="sticky-name">Newton Hinga</div>
             </div>
         </div>
-        <button class="btn sticky-btn" data-candidate="ottichilo">View Profile</button>
+        <button class="btn sticky-btn" data-candidate="newton-hinga">View Profile</button>
     </div>
 
     <div class="modal-overlay" id="candidateModal" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="modal-container" role="document">
             <button class="modal-close" id="modalClose" aria-label="Close profile">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </button>
             <div class="modal-content" id="modalContent">
-                <div class="modal-loading" id="modalLoading"><p>Loading profile...</p></div>
+                <div class="modal-loading" id="modalLoading">
+                    <p>Loading profile...</p>
+                </div>
                 <div class="modal-gallery" id="modalGallery">
                     <div class="gallery-counter" id="galleryCounter">1 / 4</div>
                     <div class="gallery-scroll" id="galleryScroll">
-                        <div class="gallery-slide"><img id="galleryImg1" src="" alt="Campaign photo 1" loading="eager"></div>
-                        <div class="gallery-slide"><img id="galleryImg2" src="" alt="Campaign photo 2" loading="lazy"></div>
-                        <div class="gallery-slide"><img id="galleryImg3" src="" alt="Campaign photo 3" loading="lazy"></div>
-                        <div class="gallery-slide"><img id="galleryImg4" src="" alt="Campaign photo 4" loading="lazy"></div>
+                        <div class="gallery-slide"><img id="galleryImg1" src="" alt="Campaign photo 1" loading="eager">
+                        </div>
+                        <div class="gallery-slide"><img id="galleryImg2" src="" alt="Campaign photo 2" loading="lazy">
+                        </div>
+                        <div class="gallery-slide"><img id="galleryImg3" src="" alt="Campaign photo 3" loading="lazy">
+                        </div>
+                        <div class="gallery-slide"><img id="galleryImg4" src="" alt="Campaign photo 4" loading="lazy">
+                        </div>
                     </div>
                     <div class="gallery-nav" id="galleryNav">
                         <button class="gallery-dot active" data-index="0" aria-label="Image 1"></button>
@@ -762,16 +1837,26 @@
                 <div class="modal-body" id="modalBody">
                     <div class="modal-header-info">
                         <span class="modal-position" id="modalPosition">Governor</span>
-                        <h2 class="modal-name" id="modalName">Dr. Wilber Ottichilo</h2>
+                        <h2 class="modal-name" id="modalName">Candidate Name</h2>
                         <p class="modal-intro" id="modalIntro">Loading...</p>
                         <div class="modal-actions">
                             <button class="btn-support" id="btnSupport" data-candidate="">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
                                 <span id="supportText">Support</span>
                                 <span class="support-count" id="supportCount">0</span>
                             </button>
                             <button class="btn-share" id="btnShare">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                    <polyline points="16 6 12 2 8 6"></polyline>
+                                    <line x1="12" y1="2" x2="12" y2="15"></line>
+                                </svg>
                                 Share Profile
                             </button>
                         </div>
@@ -784,10 +1869,6 @@
                         <h3 class="modal-section-title">Agenda & Promises</h3>
                         <div class="agenda-list" id="modalAgenda"></div>
                     </div>
-                    <div class="modal-section">
-                        <h3 class="modal-section-title">Track Record</h3>
-                        <div class="achievements-grid" id="modalAchievements"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -798,316 +1879,214 @@
         // EMBEDDED CANDIDATE DATA (ALL PROFILES)
         // ==========================================
         const CANDIDATES_DATA = {
-            "ottichilo": {
-                "id": "ottichilo",
-                "name": "Dr. Wilber Ottichilo",
+            "george-odanga": {
+                "id": "george-odanga",
+                "name": "George Odanga",
+                "position": "MP - Sabatia",
+                "intro": "George Odanga is stepping forward as a focused and people-driven leader ready to serve the people of Sabatia with purpose and commitment. Guided by the belief that leadership should reflect real needs—not empty promises—he aims to bring practical solutions that uplift the community. His approach is rooted in unity, accountability, and delivering meaningful progress that touches every household.",
+                "vision": "To create a progressive and empowered Sabatia where leadership is responsive, development is inclusive, and every citizen has access to opportunities that improve their quality of life. George Odanga envisions a future where words are matched with action, and the needs of the people remain the top priority.",
+                "supporters": 1240,
+                "images": [
+                    "https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/profile.jpeg?updatedAt=1777056341400",
+                    "https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM.jpeg?updatedAt=1777056341620",
+                    "https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/profile.jpeg?updatedAt=1777056341400",
+                    "https://ik.imagekit.io/vyb2nyqfv/George%20Odanga/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM.jpeg?updatedAt=1777056341620"
+                ],
+                "agenda": [
+                    "Education Development: Strengthen schools by improving learning facilities, supporting students, and ensuring access to quality education for all.",
+                    "Healthcare Improvement: Enhance healthcare services by upgrading local facilities, increasing accessibility, and ensuring essential medical support reaches every resident.",
+                    "Youth Empowerment & Sports: Create opportunities for young people through skills programs, talent development, and investment in sports as a pathway to growth.",
+                    "Infrastructure Growth: Improve roads, markets, and public infrastructure to boost connectivity and economic activity across Sabatia.",
+                    "Security & Community Safety: Promote a safer environment by supporting community-based security initiatives and strengthening collaboration with security agencies."
+                ]
+            },
+            "newton-hinga": {
+                "id": "newton-hinga",
+                "name": "Newton Hinga",
                 "position": "Governor",
-                "intro": "Dr. Wilber Ottichilo brings decades of public service experience to his gubernatorial campaign. With a background in environmental science and governance, he aims to transform Vihiga County through sustainable development and infrastructure modernization.",
-                "vision": "To make Vihiga County a model of sustainable development in Kenya, where every citizen has access to quality healthcare, education, and economic opportunities through innovative leadership and prudent resource management.",
-                "supporters": 12450,
+                "intro": "Newton Hinga is a committed leader focused on building a better future for the people of Vihiga County. He believes leadership should listen to the people and respond to their real needs. By working closely with the community, he aims to ensure every voice is heard and respected. His goal is to bring steady leadership, practical solutions, and real change that improves daily life.",
+                "vision": "To build a united and growing Vihiga County where every person has a chance to succeed. Newton Hinga envisions a future with strong communities, stable development, and equal opportunities for all. His focus is on simple, practical progress that brings lasting benefits to the people.",
+                "supporters": 8930,
                 "images": [
-                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
-                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
-                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80",
-                    "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80"
+                    "https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629",
+                    "https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM%20(2).jpeg?updatedAt=1777056221269",
+                    "https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM%20(1).jpeg?updatedAt=1777056220786",
+                    "https://ik.imagekit.io/vyb2nyqfv/Newton%20Hinga/profile.jpeg?updatedAt=1777056220629"
                 ],
                 "agenda": [
-                    "Revitalize the county healthcare system by upgrading all sub-county hospitals with modern equipment and ensuring a steady supply of essential medicines to every dispensary.",
-                    "Construct and rehabilitate 200 kilometers of rural roads to improve market access for farmers and reduce post-harvest losses across all five sub-counties.",
-                    "Establish a County Youth Empowerment Fund that provides zero-interest loans and mentorship to young entrepreneurs in technology, agriculture, and trade.",
-                    "Implement a comprehensive early childhood education program by building 50 new ECD centers and training 200 teachers to improve foundational learning outcomes."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "County Healthcare Upgrade", "desc": "Spearheaded the renovation of 12 health centers and procurement of modern diagnostic equipment, reducing patient referrals to external facilities by 40%." },
-                    { "year": "2022", "title": "Road Infrastructure Project", "desc": "Launched the Vihiga Rural Roads Program which opened up 85 kilometers of agricultural roads, directly benefiting over 15,000 farming households." },
-                    { "year": "2021", "title": "Youth Skills Initiative", "desc": "Established partnerships with TVET institutions to train 3,000 youth in carpentry, masonry, and digital skills, with 60% securing immediate employment." },
-                    { "year": "2020", "title": "Environmental Conservation", "desc": "Led the county's reforestation campaign that saw 500,000 indigenous tree seedlings planted across degraded water catchment areas." }
+                    "Economic Growth & Jobs: Support small businesses, boost local trade, and create more job opportunities for residents.",
+                    "Leadership That Listens: Promote honest and open leadership where the community is involved in decisions.",
+                    "Unity and Peace: Encourage harmony among residents to create a strong and stable environment for growth.",
+                    "Better Infrastructure: Improve roads, transport, and essential services to make life easier and support development.",
+                    "Youth and Women Empowerment: Provide training, support, and opportunities to help young people and women succeed."
                 ]
             },
-            "khaniri": {
-                "id": "khaniri",
-                "name": "Senator George Khaniri",
-                "position": "Senator",
-                "intro": "Senator George Khaniri is a seasoned legislator with a proven track record of advocating for devolution and county rights at the national level. His experience spans over two decades of public service.",
-                "vision": "To ensure Vihiga County receives its fair share of national resources while championing legislation that promotes youth employment, infrastructure development, and social justice for all residents.",
-                "supporters": 8320,
+            "michael-mwale": {
+                "id": "michael-mwale",
+                "name": "Michael Lijondo Mwale",
+                "position": "MP - Sabatia",
+                "intro": "Michael Lijondo Mwale is a caring and dedicated leader who is committed to serving the people of Sabatia. He believes in honest leadership that puts the needs of the community first. Guided by strong values and a desire to help others, he works to ensure every resident feels heard, supported, and represented. His goal is to bring leadership that is steady, fair, and focused on real results.",
+                "vision": "To build a strong and united Sabatia where everyone has the chance to grow and succeed. Michael Lijondo Mwale envisions a future where communities work together, opportunities are shared, and development benefits all people. His focus is on steady progress that improves lives now and for future generations.",
+                "supporters": 2150,
                 "images": [
-                    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
-                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80",
-                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
-                    "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=800&q=80"
+                    "https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/prifile.jpeg?updatedAt=1777056114419",
+                    "https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM.jpeg?updatedAt=1777056115349",
+                    "https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/prifile.jpeg?updatedAt=1777056114419",
+                    "https://ik.imagekit.io/vyb2nyqfv/Michael%20Lijondo%20Mwale/WhatsApp%20Image%202026-04-24%20at%206.56.42%20PM.jpeg?updatedAt=1777056115349"
                 ],
                 "agenda": [
-                    "Champion the Vihiga County Revenue Allocation Bill to ensure equitable distribution of national funds to all wards and marginalized communities.",
-                    "Establish a Senatorial Bursary Fund targeting 5,000 bright but needy students across the county to access secondary and tertiary education.",
-                    "Push for the construction of the Vihiga-Majengo highway to ease transportation and boost trade between the county and neighboring regions.",
-                    "Introduce legislation protecting local farmers from exploitative middlemen by creating a County Agricultural Marketing Authority."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Devolution Advocacy Award", "desc": "Recognized by the Senate for outstanding contribution to devolution debates, resulting in increased county allocation by 15%." },
-                    { "year": "2022", "title": "Education Bursary Program", "desc": "Disbursed over KSh 12 million in bursaries to 2,400 students across Vihiga County, achieving a 95% secondary school transition rate." },
-                    { "year": "2021", "title": "Health Committee Leadership", "desc": "As chair of the Senate Health Committee, facilitated the deployment of 45 specialist doctors to county referral hospitals." },
-                    { "year": "2020", "title": "COVID-19 Relief Coordination", "desc": "Coordinated the distribution of KSh 8 million in relief food and medical supplies to vulnerable families during the pandemic." }
+                    "Empowering the Community: Support programs that help people improve their lives and become financially independent.",
+                    "Better Education: Improve schools, support students, and create more opportunities for learning and growth.",
+                    "Improved Infrastructure: Upgrade roads and public facilities to make movement easier and improve daily life.",
+                    "Accessible Healthcare: Strengthen local health centers to provide affordable and reliable services to everyone.",
+                    "Youth Development: Support young people by helping them grow their skills and talents for a better future."
                 ]
             },
-            "adagala": {
-                "id": "adagala",
-                "name": "Beatrice Adagala",
+            "damaris-kayugira": {
+                "id": "damaris-kayugira",
+                "name": "Damaris Kayugira",
                 "position": "Women Representative",
-                "intro": "Beatrice Adagala is a passionate advocate for gender equality and women's economic empowerment. Her grassroots approach has mobilized thousands of women across Vihiga to participate in leadership and enterprise.",
-                "vision": "A Vihiga County where every woman and girl has equal opportunity to thrive through access to education, capital, and leadership platforms that amplify their voices in decision-making.",
-                "supporters": 9180,
+                "intro": "Damaris Kayugira is a dedicated leader focused on bringing real change to the people of Vihiga County. She believes in leadership that listens, cares, and delivers practical solutions that improve everyday life. With a strong focus on unity and service, she works to ensure every family feels supported and included. Her goal is to provide leadership that is bold, caring, and focused on results.",
+                "vision": "To build a strong and united Vihiga County where every family has the support and opportunities they need to grow. Damaris Kayugira envisions a future where development is shared by all and where communities work together for lasting progress.",
+                "supporters": 5670,
                 "images": [
-                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
-                    "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80"
+                    "https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/profile.jpeg?updatedAt=1777055262433",
+                    "https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/WhatsApp%20Image%202026-04-24%20at%206.56.33%20PM.jpeg?updatedAt=1777055262026",
+                    "https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/profile.jpeg?updatedAt=1777055262433",
+                    "https://ik.imagekit.io/vyb2nyqfv/Damaris%20Kayugira/WhatsApp%20Image%202026-04-24%20at%206.56.33%20PM.jpeg?updatedAt=1777055262026"
                 ],
                 "agenda": [
-                    "Launch the Women Enterprise Fund providing micro-loans and business training to 10,000 women entrepreneurs in the next three years.",
-                    "Establish 20 Safe Spaces centers across the county offering counseling, legal aid, and shelter for survivors of gender-based violence.",
-                    "Implement a sanitary pad distribution program ensuring no girl misses school due to lack of menstrual hygiene products.",
-                    "Create a Women in Leadership Mentorship Program pairing aspiring female leaders with experienced mentors in politics and business."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Women Enterprise Hub", "desc": "Opened the first county-owned Women Enterprise Hub in Mbale, providing training and market linkages to over 800 women-led businesses." },
-                    { "year": "2022", "title": "GBV Response Network", "desc": "Established a 24-hour gender-based violence hotline and response team that has assisted over 1,200 women since inception." },
-                    { "year": "2021", "title": "Girls Education Campaign", "desc": "Partnered with NGOs to distribute 50,000 sanitary pads annually, reducing girl-child school absenteeism by 35%." },
-                    { "year": "2020", "title": "Leadership Academy", "desc": "Founded the Vihiga Women Leadership Academy which has trained 150 women who have since won elective and appointive positions." }
+                    "Family Support and Welfare: Introduce programs that support families and improve the well-being of every home.",
+                    "Women Empowerment: Create opportunities for women to access funding, training, and business support.",
+                    "Youth Skills and Leadership: Support young people through training, mentorship, and opportunities to grow their talents.",
+                    "Better Healthcare: Improve access to quality healthcare, with special support for mothers and children.",
+                    "Unity and Strong Representation: Promote unity and ensure all voices in Vihiga County are heard and represented."
                 ]
             },
-            "gimose": {
-                "id": "gimose",
-                "name": "Charles Gimose",
-                "position": "MP - Hamisi",
-                "intro": "Charles Gimose is a dedicated servant of Hamisi Constituency with deep roots in agricultural advocacy. He brings practical experience in community development and a clear plan for modernization.",
-                "vision": "To transform Hamisi into a model constituency with modern infrastructure, thriving agribusiness, and empowered youth who drive local economic growth and innovation.",
-                "supporters": 5640,
+            "odanga-oliver": {
+                "id": "odanga-oliver",
+                "name": "Odanga Oliver",
+                "position": "MCA - Central Maragoli",
+                "intro": "Odanga Oliver is an energetic and committed leader focused on serving the people of Central Maragoli Ward. He believes in honest leadership, open communication, and working closely with the community. His goal is to bridge the gap between the people and local government, ensuring that every voice is heard and respected. He is passionate about bringing real development and empowering residents at the grassroots level.",
+                "vision": "To build a strong and growing Central Maragoli Ward where development is driven by the needs of the people. Odanga Oliver envisions a community with better infrastructure, improved services, and opportunities for everyone to succeed.",
+                "supporters": 890,
                 "images": [
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=800&q=80",
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80"
+                    "https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.31%20PM.jpeg?updatedAt=1777055938199",
+                    "https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.43%20PM%20(2).jpeg?updatedAt=1777055940118",
+                    "https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.43%20PM%20(1).jpeg?updatedAt=1777055940464",
+                    "https://ik.imagekit.io/vyb2nyqfv/Odanga%20Oliver/WhatsApp%20Image%202026-04-24%20at%206.56.31%20PM.jpeg?updatedAt=1777055938199"
                 ],
                 "agenda": [
-                    "Modernize agricultural practices by introducing drip irrigation systems and greenhouses to 500 farmers, increasing crop yields by 60%.",
-                    "Construct 10 new classrooms and 5 laboratories in underserved areas to improve the quality of education in Hamisi Constituency.",
-                    "Establish a Constituency Youth Innovation Hub equipped with computers and internet to train youth in digital skills and remote work.",
-                    "Upgrade all major feeder roads to all-weather standards to ensure farmers can transport produce to markets throughout the year."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Agricultural Extension Program", "desc": "Trained 1,200 farmers on modern farming techniques, resulting in a 45% increase in tea and maize production in Hamisi." },
-                    { "year": "2022", "title": "Classroom Construction", "desc": "Built 8 new classrooms and rehabilitated 12 others, reducing the pupil-to-classroom ratio from 65:1 to 40:1." },
-                    { "year": "2021", "title": "Youth Employment Drive", "desc": "Facilitated the employment of 320 youth in the Kazi Mtaani program and connected 150 others with private sector jobs." },
-                    { "year": "2020", "title": "Health Center Upgrade", "desc": "Equipped Shamakhokho Health Center with a maternity wing and laboratory, reducing maternal referral cases by 60%." }
+                    "Community-Driven Leadership: Ensure development projects reflect the real needs and priorities of the people.",
+                    "Better Infrastructure: Improve roads, drainage, and local facilities to make movement easier and safer.",
+                    "Youth Development: Support young people through training programs, skills development, and sports initiatives.",
+                    "Support for Small Businesses: Create a better environment for traders by improving markets and offering business support.",
+                    "Social Welfare and Security: Work with local leaders to improve security and support vulnerable groups in the community."
                 ]
             },
-            "chanzu": {
-                "id": "chanzu",
-                "name": "Yusuf Chanzu",
+            "kane-kamadi": {
+                "id": "kane-kamadi",
+                "name": "Kane Onamu Kamadi",
+                "position": "MCA - Mungoma",
+                "intro": "Kane Onamu Kamadi is a committed leader focused on bringing real change to the people of Mungoma Ward. He believes in putting people first and making decisions that reflect the needs of the community. With a strong focus on honesty and accountability, he aims to provide leadership that is open, reliable, and easy for residents to connect with. His goal is to serve with dedication and deliver practical results.",
+                "vision": "To build a united and developing Mungoma Ward where every family has access to better services and opportunities. Kane Onamu Kamadi envisions a future where progress is steady, meaningful, and benefits everyone in the community.",
+                "supporters": 720,
+                "images": [
+                    "https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/profile.jpeg?updatedAt=1777055836385",
+                    "https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/WhatsApp%20Image%202026-04-24%20at%206.56.43%20PM.jpeg?updatedAt=1777055837173",
+                    "https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/WhatsApp%20Image%202026-04-24%20at%206.56.44%20PM.jpeg?updatedAt=1777055837248",
+                    "https://ik.imagekit.io/vyb2nyqfv/Kane%20Onamu%20Kamadi/profile.jpeg?updatedAt=1777055836385"
+                ],
+                "agenda": [
+                    "Real Development: Focus on projects that directly improve daily life, including better public spaces and local services.",
+                    "Transparent Leadership: Ensure resources are used honestly and for the benefit of the people.",
+                    "Community Empowerment: Support local businesses and community groups to promote growth and self-reliance.",
+                    "Better Infrastructure: Improve roads and water access to make life easier and healthier for residents.",
+                    "Youth and Education Support: Invest in training and education to help young people build a better future."
+                ]
+            },
+            "indimuli-kahi": {
+                "id": "indimuli-kahi",
+                "name": "Indimuli Kahi",
+                "position": "Governor",
+                "intro": "Indimuli Kahi is a dedicated leader focused on building a better and more inclusive Vihiga County. He believes in working together with the people to bring real and lasting change. His leadership style is based on listening, teamwork, and delivering results that improve everyday life. He is committed to creating a county where families are supported, youth are empowered, and everyone has a fair chance to succeed.",
+                "vision": "To build a strong and growing Vihiga where every child gets a good education, every family has access to healthcare, and the environment is protected. Indimuli Kahi envisions a future where development is steady, inclusive, and benefits everyone in the county.",
+                "supporters": 7650,
+                "images": [
+                    "https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/profile.jpeg?updatedAt=1777055571935",
+                    "https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/WhatsApp%20Image%202026-04-24%20at%206.56.44%20PM.jpeg?updatedAt=1777055572057",
+                    "https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/profile.jpeg?updatedAt=1777055571935",
+                    "https://ik.imagekit.io/vyb2nyqfv/Indimuli%20Kahi/WhatsApp%20Image%202026-04-24%20at%206.56.44%20PM.jpeg?updatedAt=1777055572057"
+                ],
+                "agenda": [
+                    "Quality Education: Improve early education and expand training programs to give people useful skills.",
+                    "Better Healthcare: Ensure affordable and accessible healthcare services for all families.",
+                    "Youth Opportunities: Support young people through sports, arts, and business opportunities.",
+                    "Environmental Protection: Promote a clean and green environment for a healthier future.",
+                    "Economic Growth: Support local businesses and create opportunities for economic development."
+                ]
+            },
+            "yitzack-otondo": {
+                "id": "yitzack-otondo",
+                "name": "Yitzack Otondo",
+                "position": "MCA - Tambua",
+                "intro": "Yitzack Otondo is a dedicated and forward-looking leader committed to serving the people of Tambua Ward. He believes in leadership that listens, involves the community, and delivers real results. With a strong focus on openness and service, he works to connect residents with the opportunities and support they need. His goal is to build a stronger ward through teamwork and practical development.",
+                "vision": "To create a growing and empowered Tambua Ward where everyone has access to opportunities and better services. Yitzack Otondo envisions a future where development is steady, inclusive, and improves the lives of all residents.",
+                "supporters": 640,
+                "images": [
+                    "https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/profile.jpeg?updatedAt=1777055490719",
+                    "https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/WhatsApp%20Image%202026-04-24%20at%206.56.45%20PM.jpeg?updatedAt=1777055490895",
+                    "https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/WhatsApp%20Image%202026-04-24%20at%206.56.46%20PM.jpeg?updatedAt=1777055490397",
+                    "https://ik.imagekit.io/vyb2nyqfv/Yitzack%20Otondo/WhatsApp%20Image%202026-04-24%20at%206.56.45%20PM%20(1).jpeg?updatedAt=1777055489833"
+                ],
+                "agenda": [
+                    "Inclusive Leadership: Encourage community involvement through regular meetings and open discussions on development.",
+                    "Better Infrastructure: Improve roads and water systems to support easier movement and healthier living.",
+                    "Youth Empowerment: Support young people with training programs and opportunities to develop their skills and talents.",
+                    "Support for Small Businesses: Help local traders and farmers grow by improving access to resources and markets.",
+                    "Improved Social Services: Upgrade clinics and schools to provide better and more accessible services for families."
+                ]
+            },
+            "beatrice-adagala": {
+                "id": "beatrice-adagala",
+                "name": "Dr. Beatrice Adagala",
+                "position": "Governor",
+                "intro": "Hon. Dr. Beatrice Adagala is a respected and results-driven leader currently serving her second term as the Woman Representative of Vihiga County. She brings over 20 years of experience in the telecommunications sector, combined with strong academic training in International Studies and Theology. Her leadership blends corporate discipline with deep legislative experience, giving her a practical and people-focused approach to governance. Widely known as 'Mama County,' she has built her reputation on grassroots engagement, compassion, and a strong commitment to uplifting vulnerable communities. She now seeks to serve as Governor to expand her impact and drive Vihiga County into a new era of inclusive and sustainable development.",
+                "vision": "To transform Vihiga County into a model of inclusive and sustainable development where every household is empowered, and every citizen has a voice in shaping their future. Through the 'Better Vihiga Together' approach, her vision focuses on unlocking the county's full economic potential through innovation, transparent leadership, and environmental responsibility. This vision is anchored on long-term socio-economic stability and aims to build a county where dignity, opportunity, and hope are accessible to all generations.",
+                "supporters": 11200,
+                "images": [
+                    "https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/profile.jpeg?updatedAt=1777054921915",
+                    "https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/WhatsApp%20Image%202026-04-24%20at%206.56.44%20PM.jpeg?updatedAt=1777054922099",
+                    "https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/profile.jpeg?updatedAt=1777054921915",
+                    "https://ik.imagekit.io/vyb2nyqfv/Dr.%20Beatrice%20Adagala/WhatsApp%20Image%202026-04-24%20at%206.56.44%20PM.jpeg?updatedAt=1777054922099"
+                ],
+                "agenda": [
+                    "Economic Empowerment: Introduce a hybrid economic framework that supports both small-scale entrepreneurs and established industries to stimulate job creation, innovation, and local economic resilience.",
+                    "Quality Education & Skills Development: Expand access to scholarships, strengthen Early Childhood Development (ECDE) programs, and grow vocational training centers to equip young people with practical, market-ready skills.",
+                    "Healthcare & Social Welfare: Improve community healthcare systems and establish dedicated support and rescue centers for survivors of gender-based violence, ensuring dignity, protection, and recovery services.",
+                    "Transparent Resource Management: Strengthen accountability in the use of public funds, including NGAAF and other county resources, ensuring equitable distribution and full transparency from county to grassroots level.",
+                    "Infrastructure & Digital Transformation: Modernize road networks across the county while advancing digital government systems to improve service delivery, efficiency, and accessibility—especially for the youth and business community."
+                ]
+            },
+            "hillary-kijana": {
+                "id": "hillary-kijana",
+                "name": "Hillary Adolwa Kijana",
                 "position": "MP - Vihiga",
-                "intro": "Yusuf Chanzu is a committed leader representing Vihiga Constituency with a focus on infrastructure development and youth empowerment. His pragmatic approach has delivered tangible results for his constituents.",
-                "vision": "To build a prosperous Vihiga Constituency where infrastructure connects people to opportunities, and where every young person has a pathway to meaningful employment.",
-                "supporters": 4210,
+                "intro": "Hillary Adolwa Kijana is a visionary and dynamic leader widely recognized as 'The Game Changer' for his commitment to redefining leadership in Vihiga Constituency. His leadership philosophy is grounded in strong moral values, servant leadership, and a deep spiritual connection to the community he serves. He is driven by a passion for integrity, accountability, and people-centered governance. Through his approach, he seeks to restore hope, inspire unity, and deliver meaningful transformation that directly improves the lives of constituents. He stands as a dedicated advocate of the people, committed to leading with clarity of purpose and compassion for all.",
+                "vision": "To usher Vihiga Constituency into a new era of renewal, shared prosperity, and sustainable development through innovative, value-based leadership. This vision focuses on building a resilient and inclusive constituency where development is practical, visible, and equally distributed. It emphasizes collective responsibility, community empowerment, and long-term progress that benefits present and future generations.",
+                "supporters": 3890,
                 "images": [
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-                    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
-                    "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
-                    "https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80"
+                    "https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/profile.jpeg?updatedAt=1777055108288",
+                    "https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/WhatsApp%20Image%202026-04-24%20at%206.56.41%20PM.jpeg?updatedAt=1777055107702",
+                    "https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/WhatsApp%20Image%202026-04-24%20at%206.56.41%20PM%20(2).jpeg?updatedAt=1777055108296",
+                    "https://ik.imagekit.io/vyb2nyqfv/Hillary%20Adolwa%20Kijana/WhatsApp%20Image%202026-04-24%20at%206.56.41%20PM%20(1).jpeg?updatedAt=1777055108749"
                 ],
                 "agenda": [
-                    "Complete the tarmacking of the Vihiga-Luanda road to ease transport and attract investors to the constituency's commercial centers.",
-                    "Establish a Constituency Skills Center offering certified courses in plumbing, electrical work, and ICT to 2,000 youth annually.",
-                    "Implement a water piping project connecting 5,000 households to clean and reliable piped water within the next term.",
-                    "Support local traders through a Constituency Market Development Fund to modernize trading centers and construct permanent market stalls."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Road Rehabilitation", "desc": "Rehabilitated 35 kilometers of rural roads using constituency development funds, benefiting over 8,000 residents." },
-                    { "year": "2022", "title": "Bursary Program", "desc": "Awarded KSh 6 million in bursaries to 1,800 students, achieving the highest secondary enrollment rate in the constituency's history." },
-                    { "year": "2021", "title": "Water Project", "desc": "Drilled 10 boreholes and installed solar pumps, providing clean water to 3,500 households previously dependent on unsafe sources." },
-                    { "year": "2020", "title": "Market Construction", "desc": "Constructed a modern market shed in Chavakali with 120 stalls, generating revenue and improving trading conditions." }
-                ]
-            },
-            "atieno": {
-                "id": "atieno",
-                "name": "Gladys Atieno",
-                "position": "MCA - Central",
-                "intro": "Gladys Atieno is a grassroots mobilizer and community organizer serving the Central Ward. Her hands-on approach to leadership has made her a trusted voice for local development issues.",
-                "vision": "A Central Ward that leads in community-led development, where residents actively participate in decision-making and benefit from transparent, accountable leadership.",
-                "supporters": 850,
-                "images": [
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
-                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80"
-                ],
-                "agenda": [
-                    "Establish a Ward Development Committee comprising residents to prioritize and oversee local projects ensuring transparency.",
-                    "Construct street lighting along major trading centers to improve security and extend business hours for local traders.",
-                    "Build a modern community library and resource center to support students and provide adult literacy programs.",
-                    "Implement a garbage collection and recycling program to keep Central Ward clean and generate income from waste management."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Security Lighting", "desc": "Installed 45 solar street lights across Central Ward trading centers, reducing night-time crime by 50%." },
-                    { "year": "2022", "title": "Road Grading", "desc": "Graded 18 kilometers of feeder roads using ward funds, improving access to farms and markets during rainy seasons." },
-                    { "year": "2021", "title": "Youth Sports Program", "desc": "Organized inter-village tournaments and donated sports equipment to 12 youth teams, reducing idleness and drug abuse." },
-                    { "year": "2020", "title": "COVID-19 Support", "desc": "Distributed food parcels and sanitizers to 600 vulnerable families and installed hand-washing stations at public places." }
-                ]
-            },
-            "kilonzo": {
-                "id": "kilonzo",
-                "name": "Peter Kilonzo",
-                "position": "MCA - West",
-                "intro": "Peter Kilonzo is a development-focused leader representing West Ward. His background in community development drives his passion for inclusive growth and social infrastructure.",
-                "vision": "To transform West Ward into a beacon of rural development where modern infrastructure, quality education, and thriving small businesses uplift every household.",
-                "supporters": 1230,
-                "images": [
-                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
-                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80"
-                ],
-                "agenda": [
-                    "Construct a modern dispensary with maternity facilities to reduce the distance residents travel for basic healthcare services.",
-                    "Launch a West Ward Farmers Cooperative to bulk purchase inputs and negotiate better prices for agricultural produce.",
-                    "Build 6 new Early Childhood Development classrooms and provide learning materials to improve early education outcomes.",
-                    "Establish a Ward Emergency Fund to assist families affected by fire, floods, and other disasters within 24 hours."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Dispensary Construction", "desc": "Completed construction of a fully equipped dispensary serving 4,000 residents who previously walked 8km for treatment." },
-                    { "year": "2022", "title": "Farmers Cooperative", "desc": "Registered the West Ward Farmers Cooperative with 600 members, securing bulk fertilizer at 30% below market price." },
-                    { "year": "2021", "title": "School Infrastructure", "desc": "Built 4 new classrooms and donated desks to 3 schools, eliminating learning under trees and reducing overcrowding." },
-                    { "year": "2020", "title": "Relief Distribution", "desc": "Responded to flash floods by distributing relief supplies worth KSh 1.2 million to 200 affected families within 48 hours." }
-                ]
-            },
-            "omboko": {
-                "id": "omboko",
-                "name": "Mary Omboko",
-                "position": "MCA - East",
-                "intro": "Mary Omboko is a champion of women's rights and community health representing East Ward. Her nursing background informs her practical approach to solving local health and social challenges.",
-                "vision": "An East Ward where community health is prioritized, women are economically empowered, and every child has access to quality early education regardless of their background.",
-                "supporters": 980,
-                "images": [
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
-                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80"
-                ],
-                "agenda": [
-                    "Establish a community health outreach program with monthly mobile clinics reaching every village in East Ward.",
-                    "Launch a women table banking initiative capitalized with ward funds to provide interest-free loans to women groups.",
-                    "Construct modern toilet facilities in all public schools to improve sanitation and reduce disease outbreaks.",
-                    "Create a Ward Sports and Arts Academy to nurture talent among youth and keep them constructively engaged."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Mobile Clinics", "desc": "Organized 24 mobile clinics that provided free screening and treatment to 3,500 residents in remote villages." },
-                    { "year": "2022", "title": "Women Table Banking", "desc": "Capitalized 15 women groups with KSh 750,000, enabling members to start small businesses and pay school fees." },
-                    { "year": "2021", "title": "School Toilets", "desc": "Constructed 20 modern toilet blocks in 8 schools, improving sanitation for 2,400 pupils and reducing absenteeism." },
-                    { "year": "2020", "title": "Talent Search", "desc": "Organized the first East Ward Talent Search, identifying and sponsoring 30 youth in music, sports, and drama." }
-                ]
-            },
-            "wesonga": {
-                "id": "wesonga",
-                "name": "James Wesonga",
-                "position": "MCA - North",
-                "intro": "James Wesonga is a pragmatic leader representing North Ward with a strong focus on infrastructure and education. His engineering background shapes his methodical approach to solving community problems.",
-                "vision": "A connected and educated North Ward where good roads open markets, modern schools produce skilled graduates, and infrastructure supports sustainable economic growth.",
-                "supporters": 1560,
-                "images": [
-                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
-                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80"
-                ],
-                "agenda": [
-                    "Culvert and bridge all major seasonal rivers to ensure all-weather road connectivity across North Ward.",
-                    "Establish a Ward Technical Training Center offering vocational courses in masonry, welding, and automotive repair.",
-                    "Implement a school feeding program in all public primary schools to improve nutrition and academic performance.",
-                    "Construct a modern market with cold storage facilities to help farmers preserve produce and fetch better prices."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Bridge Construction", "desc": "Constructed 8 reinforced concrete culverts and 2 bridges, eliminating seasonal road disconnections affecting 6,000 residents." },
-                    { "year": "2022", "title": "Technical Training", "desc": "Partnered with the county to establish a satellite technical training center enrolling 120 youth in vocational courses." },
-                    { "year": "2021", "title": "School Feeding", "desc": "Launched a pilot school feeding program in 5 schools, improving attendance by 25% and exam performance by 15%." },
-                    { "year": "2020", "title": "Market Sheds", "desc": "Built 80 modern market stalls with corrugated iron sheets, protecting traders from weather and increasing market days." }
-                ]
-            },
-            "wakhungu": {
-                "id": "wakhungu",
-                "name": "Grace Wakhungu",
-                "position": "MCA - South",
-                "intro": "Grace Wakhungu is a dedicated community servant representing South Ward. Her background in social work drives her commitment to vulnerable populations and inclusive development.",
-                "vision": "A compassionate South Ward where the elderly and vulnerable are cared for, youth are employed, and community resources are managed transparently for the benefit of all.",
-                "supporters": 1120,
-                "images": [
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
-                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80"
-                ],
-                "agenda": [
-                    "Establish a Ward Elderly Care Program providing monthly stipends and free medical checkups to residents over 70 years.",
-                    "Launch a South Ward Clean Energy Initiative distributing subsidized solar lamps and cookstoves to 2,000 households.",
-                    "Construct a modern community hall for meetings, weddings, and cultural events that generates revenue for ward projects.",
-                    "Create a Persons Living with Disabilities Empowerment Fund to support assistive devices and income-generating activities."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Elderly Registration", "desc": "Registered 450 elderly residents for the national cash transfer program and facilitated access to NHIF coverage." },
-                    { "year": "2022", "title": "Solar Distribution", "desc": "Partnered with an NGO to distribute 800 solar lamps to off-grid households, reducing kerosene expenses by 70%." },
-                    { "year": "2021", "title": "Community Hall", "desc": "Initiated construction of a multi-purpose community hall now 70% complete, serving as a venue for public gatherings." },
-                    { "year": "2020", "title": "PWD Support", "desc": "Distributed 60 wheelchairs and 30 hearing aids to persons living with disabilities across South Ward." }
-                ]
-            },
-            "amayi": {
-                "id": "amayi",
-                "name": "Henry Amayi",
-                "position": "MCA - Luanda",
-                "intro": "Henry Amayi is a dynamic leader representing Luanda Ward with a vision of modernizing the largest commercial center in Vihiga County. His business acumen informs his development agenda.",
-                "vision": "To transform Luanda into a modern municipal town with organized markets, reliable infrastructure, and a business-friendly environment that attracts investment and creates jobs.",
-                "supporters": 2340,
-                "images": [
-                    "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80",
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-                    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80",
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80"
-                ],
-                "agenda": [
-                    "Modernize Luanda Market with paved floors, drainage, permanent stalls, and cold storage to accommodate 2,000 traders.",
-                    "Install a centralized sewerage system in the town center to improve sanitation and prevent waterborne diseases.",
-                    "Establish a Luanda Business Incubation Center supporting 500 startups with co-working space, internet, and mentorship.",
-                    "Construct a modern bus park with passenger waiting bays, toilets, and security to decongest the town center."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Market Expansion", "desc": "Expanded Luanda Market by 40% adding 300 new stalls and improving drainage, benefiting over 1,500 traders." },
-                    { "year": "2022", "title": "Street Paving", "desc": "Paved 2.5 kilometers of town center streets with concrete pavers, eliminating dust and mud during rainy seasons." },
-                    { "year": "2021", "title": "Business Registration", "desc": "Facilitated the formal registration of 800 small businesses, enabling them to access county procurement opportunities." },
-                    { "year": "2020", "title": "Security Enhancement", "desc": "Installed CCTV cameras and improved street lighting in the town center, reducing petty theft by 45%." }
-                ]
-            },
-            "nabwire": {
-                "id": "nabwire",
-                "name": "Linet Nabwire",
-                "position": "MCA - Sabatia",
-                "intro": "Linet Nabwire is an emerging leader representing Sabatia Ward with fresh ideas and energy. Her background in education makes her a strong advocate for school improvement and youth programs.",
-                "vision": "A Sabatia Ward where every child attends a well-equipped school, every youth has a skill, and every community has access to clean water and reliable infrastructure.",
-                "supporters": 1670,
-                "images": [
-                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80"
-                ],
-                "agenda": [
-                    "Renovate all dilapidated classrooms in Sabatia Ward and equip them with desks, books, and digital learning devices.",
-                    "Drill 15 boreholes in water-scarce areas to ensure every village has access to clean drinking water within 500 meters.",
-                    "Establish a Sabatia Ward Talent Academy nurturing skills in athletics, football, and traditional music for national competitions.",
-                    "Create a Ward Environmental Brigade to plant trees, protect water springs, and enforce anti-pollution bylaws."
-                ],
-                "achievements": [
-                    { "year": "2023", "title": "Classroom Renovation", "desc": "Renovated 12 classrooms and donated 400 desks across 6 schools, eliminating double sessions and floor sitting." },
-                    { "year": "2022", "title": "Water Access", "desc": "Drilled 8 boreholes and protected 5 springs, giving 6,000 residents access to clean water within walking distance." },
-                    { "year": "2021", "title": "Sports Development", "desc": "Sponsored Sabatia Ward football team to county league finals and identified 5 athletes for county athletics training." },
-                    { "year": "2020", "title": "Tree Planting", "desc": "Mobilized schools and churches to plant 30,000 tree seedlings, earning Sabatia the County Green Ward Award." }
+                    "Transformative Leadership: Introduce a new governance approach centered on accountability, measurable results, and active citizen participation in decision-making processes.",
+                    "Economic Opportunity & Youth Empowerment: Establish programs that support entrepreneurship, innovation, and skills development, ensuring young people have access to opportunities in a modern and competitive economy.",
+                    "Infrastructure Development: Improve and expand essential infrastructure, including road networks and public utilities, to enhance mobility, trade, and everyday living standards.",
+                    "Educational Support: Invest in strengthening schools, bursary programs, and vocational training centers to equip learners with relevant skills for future employment and self-reliance.",
+                    "Community Welfare & Healthcare: Strengthen healthcare systems and social support structures to ensure every family has access to quality, affordable, and reliable services."
                 ]
             }
         };
@@ -1169,7 +2148,7 @@
                     emailed.push(candidateId);
                     localStorage.setItem('vihiga_emailed', JSON.stringify(emailed));
                 }
-            } catch (e) {}
+            } catch (e) { }
         }
 
         // ==========================================
@@ -1329,7 +2308,6 @@
                 const data = CANDIDATES_DATA[candidateId];
                 if (data) {
                     this.currentData = data;
-                    // Small timeout to allow modal transition to start
                     setTimeout(() => this.render(data), 50);
                 } else {
                     this.renderError(candidateId);
@@ -1357,15 +2335,6 @@
                     <div class="agenda-item" data-index="${i + 1}">${item}</div>
                 `).join('');
 
-                const achievementsContainer = document.getElementById('modalAchievements');
-                achievementsContainer.innerHTML = data.achievements.map(ach => `
-                    <div class="achievement-card">
-                        <div class="achievement-year">${ach.year}</div>
-                        <div class="achievement-title">${ach.title}</div>
-                        <div class="achievement-desc">${ach.desc}</div>
-                    </div>
-                `).join('');
-
                 this.galleryScroll.scrollLeft = 0;
                 this.currentGallerySlide = 0;
                 this.updateGalleryDots();
@@ -1380,7 +2349,6 @@
                 document.getElementById('modalIntro').textContent = 'Unable to load candidate data. Please try again later.';
                 document.getElementById('modalVision').textContent = '';
                 document.getElementById('modalAgenda').innerHTML = '';
-                document.getElementById('modalAchievements').innerHTML = '';
                 this.loading.style.display = 'none';
                 this.body.style.display = 'block';
                 this.gallery.style.display = 'none';
@@ -1451,20 +2419,37 @@ Time: ${new Date().toLocaleString()}`);
                 if (!this.currentData) return;
 
                 const data = this.currentData;
+                const profileUrl = `${window.location.origin}${window.location.pathname}?candidate=${data.id}`;
+                const shareText = `Support ${data.name} (ID: ${data.id}) for ${data.position} on Vihiga Times. View their full campaign profile here: ${profileUrl}`;
+
                 const shareData = {
                     title: `${data.name} - Vihiga Times Campaign`,
-                    text: `Support ${data.name} for ${data.position}. View their campaign profile on Vihiga Times.`,
-                    url: `${window.location.origin}${window.location.pathname}?candidate=${data.id}`
+                    text: shareText,
+                    url: profileUrl
+                };
+
+                const tryClipboard = () => {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(shareText).then(() => {
+                            alert('Share link copied to clipboard! You can now paste it anywhere to share.');
+                        }).catch(() => {
+                            alert('Copy this to share:\n\n' + shareText);
+                        });
+                    } else {
+                        alert('Copy this to share:\n\n' + shareText);
+                    }
                 };
 
                 if (navigator.share) {
-                    navigator.share(shareData).catch(() => {});
-                } else {
-                    navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`).then(() => {
-                        alert('Profile link copied to clipboard!');
-                    }).catch(() => {
-                        alert('Share: ' + shareData.url);
+                    navigator.share(shareData).then(() => {
+                        console.log('Profile shared successfully');
+                    }).catch((err) => {
+                        if (err.name !== 'AbortError') {
+                            tryClipboard();
+                        }
                     });
+                } else {
+                    tryClipboard();
                 }
             },
 
@@ -1693,4 +2678,5 @@ Time: ${new Date().toLocaleString()}`);
         }
     </script>
 </body>
+
 </html>

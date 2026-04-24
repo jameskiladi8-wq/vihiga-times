@@ -2577,18 +2577,18 @@ color: #fff;
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--politics-card-bg);
+      background: #00000044;
       border: 1px solid rgba(0,0,0,0.06);
       box-shadow: var(--politics-shadow);
       cursor: pointer;
       align-items: center;
       justify-content: center;
-      color: var(--politics-primary);
+      color: white;
       transition: var(--politics-transition);
       z-index: 5;
     }
 
-    .politics-arrow:hover { background: var(--politics-primary); color: #fff; }
+    .politics-arrow:hover { background: #fa0d0d; color: #fff; }
     .politics-arrow--prev { left: -16px; }
     .politics-arrow--next { right: -16px; }
 
@@ -2755,8 +2755,8 @@ color: #fff;
       align-items: center;
       gap: 0.45rem;
       padding: 0.75rem 2rem;
-      background: var(--politics-primary);
-      color: #fff;
+      background: #31aff4;
+      color: #fffdfde0;
       text-decoration: none;
       border-radius: 100px;
       font-weight: 700;
