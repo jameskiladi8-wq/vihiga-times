@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR9W5VH1T1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-PR9W5VH1T1');
-</script>
+        gtag('config', 'G-PR9W5VH1T1');
+    </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2240223869325087"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2240223869325087"
+        crossorigin="anonymous"></script>
 
-     
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entertainment & Culture | Vihiga Times</title>
-    <meta name="description" content="Latest updates on movies, music, arts, cultural events, and entertainment news from Vihiga County and across Kenya.">
+    <meta name="description"
+        content="Latest updates on movies, music, arts, cultural events, and entertainment news from Vihiga County and across Kenya.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* CSS Reset & Base Styles */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -33,19 +39,21 @@
         :root {
             /* Color Palette - Sophisticated News Editorial */
             --color-primary: #1a1a1a;
-            --color-secondary: #c9a227; /* Gold accent */
-            --color-accent: #1e40af; /* National navy blue accent */
+            --color-secondary: #c9a227;
+            /* Gold accent */
+            --color-accent: #1e40af;
+            /* National navy blue accent */
             --color-bg: #fafafa;
             --color-surface: #ffffff;
             --color-text: #1a1a1a;
             --color-text-muted: #666666;
             --color-border: #e0e0e0;
             --color-border-light: #f0f0f0;
-            
+
             /* Typography Scale */
             --font-serif: 'Playfair Display', Georgia, serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            
+
             /* Spacing Scale */
             --space-xs: 0.25rem;
             --space-sm: 0.5rem;
@@ -54,7 +62,7 @@
             --space-xl: 2rem;
             --space-2xl: 3rem;
             --space-3xl: 4rem;
-            
+
             /* Transitions */
             --transition-fast: 150ms ease;
             --transition-base: 300ms ease;
@@ -258,7 +266,7 @@
             background-color: var(--color-surface);
             border-bottom: 1px solid var(--color-border);
             padding: var(--space-xl) 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
@@ -324,7 +332,7 @@
             z-index: 1001;
             transform: translateX(-100%);
             transition: transform var(--transition-base);
-            box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
         }
 
@@ -381,7 +389,7 @@
         .mobile-overlay {
             position: fixed;
             inset: 0;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             opacity: 0;
             visibility: hidden;
@@ -446,8 +454,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 70px);
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.03) 35px, rgba(255, 255, 255, 0.03) 70px);
             pointer-events: none;
         }
 
@@ -495,14 +503,14 @@
             background-color: var(--color-surface);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transition: transform var(--transition-base), box-shadow var(--transition-base);
             height: 100%;
         }
 
         .article-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         }
 
         .article-card-link {
@@ -704,7 +712,7 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: var(--space-xl);
             text-align: center;
             font-size: 0.875rem;
@@ -716,7 +724,7 @@
             .nav-list {
                 gap: var(--space-lg);
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: var(--space-xl);
@@ -790,7 +798,12 @@
 
         /* Print Styles */
         @media print {
-            .header, .footer, .mobile-menu, .mobile-overlay, .search-overlay {
+
+            .header,
+            .footer,
+            .mobile-menu,
+            .mobile-overlay,
+            .search-overlay {
                 display: none;
             }
 
@@ -809,18 +822,22 @@
 
         /* Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-            
+
             html {
                 scroll-behavior: auto;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -831,9 +848,21 @@
                     <div class="header-meta">
                         <span class="header-date" id="current-date"></span>
                         <div class="header-social">
-                            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                            <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
-                            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg></a>
+                            <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg></a>
+                            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg></a>
                         </div>
                     </div>
                 </div>
@@ -854,16 +883,17 @@
                         <ul class="nav-list">
                             <li><a href="../local-news/index.html">Local News</a></li>
                             <li><a href="../national/index.html">National</a></li>
-                            
+
                             <li><a href="../hustle-business/index.html">Hustle & Business</a></li>
                             <li><a href="../entertainment-culture/index.html">Entertainment</a></li>
-                            
+
                             <li><a href="../crime-safety/index.html">Crime</a></li>
-                            
+
                         </ul>
                     </nav>
                     <button class="search-toggle" id="search-toggle" aria-label="Toggle search">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
@@ -876,7 +906,8 @@
                 <div class="search-content">
                     <input type="text" class="search-input" id="search-input" placeholder="Search articles...">
                     <button class="search-close" id="search-close" aria-label="Close search">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M18 6 6 18M6 6l12 12"></path>
                         </svg>
                     </button>
@@ -900,12 +931,12 @@
             <ul class="mobile-nav-list">
                 <li><a href="../local-news/index.html">Local News</a></li>
                 <li><a href="../national/index.html">National</a></li>
-               
+
                 <li><a href="../hustle-business/index.html">Hustle & Business</a></li>
                 <li><a href="../entertainment-culture/index.html">Entertainment & Culture</a></li>
-               
+
                 <li><a href="../crime-safety/index.html">Crime & Safety</a></li>
-                
+
             </ul>
         </nav>
     </div>
@@ -925,7 +956,8 @@
     <section class="category-header">
         <div class="container">
             <h1 class="category-title">Entertainment & Culture</h1>
-            <p class="category-description">Exploring the vibrant arts, music, film, and cultural heritage that shape our community and celebrate our creative spirit.</p>
+            <p class="category-description">Exploring the vibrant arts, music, film, and cultural heritage that shape
+                our community and celebrate our creative spirit.</p>
         </div>
     </section>
 
@@ -935,111 +967,171 @@
             <div class="articles-grid">
 
 
-                <article class="article-card">
-                        <a href="../../entertainment-culture/vihiga-students-dominate-nyeri-drama-festival/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20represents.png" alt="Students from Vihiga County performing on stage at the Kenya National Drama and Film Festival in Nyeri, showcasing cultural dance, spoken word, and film presentations with colorful costumes and energetic movement." loading="lazy">
-                            </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Entertainment</span>
-                                <h3 class="article-card-title">Vihiga's Young Performers Leave Judges Stunned in Nyeri — But One Entry Has Everyone Talking</h3>
-                                <p class="article-card-excerpt">Something unusual is unfolding in Nyeri as Vihiga schools quietly dominate the national stage.
-One performance, in particular, is drawing unexpected attention from judges and audiences alike… </p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By Vihiga Times</span>
-                                   
-                                </div>
-                            </div>
-                        </a>
-                    </article>
 
 
 
                 <article class="article-card">
-                        <a href="../../entertainment-culture/reggae-na-lami-msafara-culture-is-driving-jobs/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Reggae%20Defenders%20Defy%20Ban.jpeg?updatedAt=1775163126792" alt="Reggae na Lami (Msafara): How Boda Boda Culture Is Driving Jobs, Unity and Street Vibes" loading="lazy">
+                    <a href="/entertainment-culture/mike-sonko-promises-to-adopt-daughter-of-anita-mugweru-killed-by-kdf-hubby/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/mike%20sonko.jpeg"
+                                alt="Mike Sonko Promises to Adopt Daughter of Anita Mugweru Killed by KDF Hubby"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Entertainment & Culture</span>
+                            <h3 class="article-card-title">Mike Sonko Promises to Adopt Daughter of Anita Mugweru Killed
+                                by KDF Hubby</h3>
+                            <p class="article-card-excerpt">A heartbreaking case of alleged domestic violence takes a
+                                new turn after a bold promise is made. But behind the grief, one detail about the child
+                                has left many deeply shaken.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
                             </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Entertainment</span>
-                                <h3 class="article-card-title">Reggae na Lami (Msafara): How Boda Boda Culture Is Driving Jobs, Unity and Street Vibes</h3>
-                                <p class="article-card-excerpt">What many people simply see as loud music and long lines of motorbikes is, for others, a powerful symbol of culture, hustle, and community. Popularly known as Reggae na Lami or Msafara, this growing street movement is becoming a defining part of urban youth life—especially among boda boda riders. </p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By Vihiga Times</span>
-                                   
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+                        </div>
+                    </a>
+                </article>
 
 
-                    <article class="article-card">
-                        <a href="../../entertainment-culture/traditional-meals-in-vihiga/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20foods.jpeg?updatedAt=1774482276664" alt="Top 3 Must-Try Traditional Meals in Vihiga" loading="lazy">
-                            </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Entertainment</span>
-                                <h3 class="article-card-title">Top 3 Must-Try Traditional Meals in Vihiga</h3>
-                                <p class="article-card-excerpt">Vihiga's cuisine is rich, authentic, and deeply rooted in Luhya culture. </p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By Vihiga Times</span>
-                                    <span class="article-card-date">2026-03-25</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
 
-                    <article class="article-card">
-                        <a href="../../entertainment-culture/the-maragoli-hills/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/maragolihiking.png?updatedAt=1774480845264" alt="The Maragoli Hills- vihiga times" loading="lazy">
-                            </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Culture</span>
-                                <h3 class="article-card-title">The Maragoli Hills: Where Legend, Identity, and Adventure Meet</h3>
-                                <p class="article-card-excerpt">Rising quietly above the landscapes of Vihiga County, the Maragoli Hills are more than a scenic backdrop—they are a living story.</p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By Vihiga Times</span>
-                                    <span class="article-card-date">2026-03-24</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
 
-                    <article class="article-card">
-                        <a href="../../entertainment-culture/omboko-milemba-talent-show/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/Omboko%20Milemba%20Talent%20Show.jpg?updatedAt=1774480845483" alt="How the Omboko Milemba Talent Show is Transforming Youth in Vihiga- vihiga times" loading="lazy">
-                            </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Entertainment</span>
-                                <h3 class="article-card-title">How the Omboko Milemba Talent Show is Transforming Youth in Vihiga</h3>
-                                <p class="article-card-excerpt">Every year, a wave of excitement sweeps across Vihiga County as young people prepare to step into the spotlight for one of the region's most anticipated grassroots events—the Omboko Milemba Talent Show.</p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By Vihiga Times</span>
-                                    <span class="article-card-date">2026-03-23</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
 
-                    <article class="article-card">
-                        <a href="../../entertainment-culture/vihiga-tourist-attractions/index.html" class="article-card-link">
-                            <div class="article-card-image">
-                                <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20tourist%20attraction.jpeg?updatedAt=1774482262621" alt=" Inside Vihiga's Sacred Sites of Wagevere Rocks and Kaimosi Mission- vihiga times" loading="lazy">
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/vihiga-students-dominate-nyeri-drama-festival/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20represents.png"
+                                alt="Students from Vihiga County performing on stage at the Kenya National Drama and Film Festival in Nyeri, showcasing cultural dance, spoken word, and film presentations with colorful costumes and energetic movement."
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Entertainment</span>
+                            <h3 class="article-card-title">Vihiga's Young Performers Leave Judges Stunned in Nyeri — But
+                                One Entry Has Everyone Talking</h3>
+                            <p class="article-card-excerpt">Something unusual is unfolding in Nyeri as Vihiga schools
+                                quietly dominate the national stage.
+                                One performance, in particular, is drawing unexpected attention from judges and
+                                audiences alike… </p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
+
                             </div>
-                            <div class="article-card-content">
-                                <span class="article-card-category">Culture</span>
-                                <h3 class="article-card-title">Inside Vihiga's Sacred Sites of Wagevere Rocks and Kaimosi Mission</h3>
-                                <p class="article-card-excerpt">In the quiet hills of Vihiga County, two remarkable landmarks stand as powerful symbols of faith, history, and cultural identity.</p>
-                                <div class="article-card-meta">
-                                    <span class="article-card-author">By vihiga times</span>
-                                    <span class="article-card-date">2026-03-22</span>
-                                </div>
+                        </div>
+                    </a>
+                </article>
+
+
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/reggae-na-lami-msafara-culture-is-driving-jobs/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Local%20news/Reggae%20Defenders%20Defy%20Ban.jpeg?updatedAt=1775163126792"
+                                alt="Reggae na Lami (Msafara): How Boda Boda Culture Is Driving Jobs, Unity and Street Vibes"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Entertainment</span>
+                            <h3 class="article-card-title">Reggae na Lami (Msafara): How Boda Boda Culture Is Driving
+                                Jobs, Unity and Street Vibes</h3>
+                            <p class="article-card-excerpt">What many people simply see as loud music and long lines of
+                                motorbikes is, for others, a powerful symbol of culture, hustle, and community.
+                                Popularly known as Reggae na Lami or Msafara, this growing street movement is becoming a
+                                defining part of urban youth life—especially among boda boda riders. </p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
+
                             </div>
-                        </a>
-                    </article>
+                        </div>
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/traditional-meals-in-vihiga/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20foods.jpeg?updatedAt=1774482276664"
+                                alt="Top 3 Must-Try Traditional Meals in Vihiga" loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Entertainment</span>
+                            <h3 class="article-card-title">Top 3 Must-Try Traditional Meals in Vihiga</h3>
+                            <p class="article-card-excerpt">Vihiga's cuisine is rich, authentic, and deeply rooted in
+                                Luhya culture. </p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
+                                <span class="article-card-date">2026-03-25</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/the-maragoli-hills/index.html" class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/maragolihiking.png?updatedAt=1774480845264"
+                                alt="The Maragoli Hills- vihiga times" loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Culture</span>
+                            <h3 class="article-card-title">The Maragoli Hills: Where Legend, Identity, and Adventure
+                                Meet</h3>
+                            <p class="article-card-excerpt">Rising quietly above the landscapes of Vihiga County, the
+                                Maragoli Hills are more than a scenic backdrop—they are a living story.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
+                                <span class="article-card-date">2026-03-24</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/omboko-milemba-talent-show/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/Omboko%20Milemba%20Talent%20Show.jpg?updatedAt=1774480845483"
+                                alt="How the Omboko Milemba Talent Show is Transforming Youth in Vihiga- vihiga times"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Entertainment</span>
+                            <h3 class="article-card-title">How the Omboko Milemba Talent Show is Transforming Youth in
+                                Vihiga</h3>
+                            <p class="article-card-excerpt">Every year, a wave of excitement sweeps across Vihiga County
+                                as young people prepare to step into the spotlight for one of the region's most
+                                anticipated grassroots events—the Omboko Milemba Talent Show.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By Vihiga Times</span>
+                                <span class="article-card-date">2026-03-23</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="../../entertainment-culture/vihiga-tourist-attractions/index.html"
+                        class="article-card-link">
+                        <div class="article-card-image">
+                            <img src="https://ik.imagekit.io/vihigatimes/Entertainment%20&%20Culture/vihiga%20tourist%20attraction.jpeg?updatedAt=1774482262621"
+                                alt=" Inside Vihiga's Sacred Sites of Wagevere Rocks and Kaimosi Mission- vihiga times"
+                                loading="lazy">
+                        </div>
+                        <div class="article-card-content">
+                            <span class="article-card-category">Culture</span>
+                            <h3 class="article-card-title">Inside Vihiga's Sacred Sites of Wagevere Rocks and Kaimosi
+                                Mission</h3>
+                            <p class="article-card-excerpt">In the quiet hills of Vihiga County, two remarkable
+                                landmarks stand as powerful symbols of faith, history, and cultural identity.</p>
+                            <div class="article-card-meta">
+                                <span class="article-card-author">By vihiga times</span>
+                                <span class="article-card-date">2026-03-22</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
 
             </div>
         </div>
@@ -1054,11 +1146,20 @@ One performance, in particular, is drawing unexpected attention from judges and 
                         <span class="logo-text">Vihiga Times</span>
                     </a>
                     <p class="footer-tagline">Authentic • Hyper-Local • Trusted</p>
-                    <p class="footer-description">Your premier source for news, stories, and insights from Vihiga County and beyond.</p>
+                    <p class="footer-description">Your premier source for news, stories, and insights from Vihiga County
+                        and beyond.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                     
-                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg></a>
+
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1066,7 +1167,7 @@ One performance, in particular, is drawing unexpected attention from judges and 
                     <ul>
                         <li><a href="../local-news/index.html">Local News</a></li>
                         <li><a href="../national/index.html">National</a></li>
-                       
+
                         <li><a href="../hustle-business/index.html">Hustle & Business</a></li>
                         <li><a href="../entertainment-culture/index.html">Entertainment</a></li>
                     </ul>
@@ -1074,9 +1175,9 @@ One performance, in particular, is drawing unexpected attention from judges and 
                 <div class="footer-links">
                     <h4 class="footer-heading">More</h4>
                     <ul>
-                        
+
                         <li><a href="../crime-safety/index.html">Crime & Safety</a></li>
-                       
+
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -1098,7 +1199,7 @@ One performance, in particular, is drawing unexpected attention from judges and 
 
     <script>
         // Simple JavaScript for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set current date
             const dateElement = document.getElementById('current-date');
             if (dateElement) {
@@ -1128,7 +1229,7 @@ One performance, in particular, is drawing unexpected attention from judges and 
             const searchClose = document.getElementById('search-close');
 
             if (searchToggle && searchOverlay) {
-                searchToggle.addEventListener('click', function() {
+                searchToggle.addEventListener('click', function () {
                     searchOverlay.classList.toggle('active');
                     if (searchOverlay.classList.contains('active')) {
                         document.getElementById('search-input').focus();
@@ -1137,11 +1238,12 @@ One performance, in particular, is drawing unexpected attention from judges and 
             }
 
             if (searchClose && searchOverlay) {
-                searchClose.addEventListener('click', function() {
+                searchClose.addEventListener('click', function () {
                     searchOverlay.classList.remove('active');
                 });
             }
         });
     </script>
 </body>
+
 </html>
