@@ -1,261 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://vihigatimes.co.ke/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/entertainment-culture/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/hustle-business/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/chavakali-kapsabet-road-crash-kaptik-student/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/privacy-policy.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/terms-of-service.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/cookie-policy.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/disclaimer.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/omboko‑milemba‑vihiga‑governorship/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/gambogi-transformer-theft-power-outage/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/vihiga‑trh‑healthcare‑debate/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/luanda‑motorbike‑seizure‑crackdown/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/vihiga‑labour‑day‑rail‑project/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/local-news/mudavadi‑son‑wedding‑ceremony/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/about-us.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/contact.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/vihiga-ebola-guidance-2026/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/vokoli-girls-student-mitchell-death/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/ishieyu-mob-killing/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/vihiga-police-recovery-stolen-items-operation/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/lunyerere-bridge-crash/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/rongai-chef-murder-girlfriend-investigation/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/mhedwe-trailer-crash/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/vihiga-bhang-farm-busted-mpaka-village-police-raid/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/crime-safety/kilifi-panga-attacks-youth/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/vihiga-tvet-graduation-gowns-removed/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/kalonzo-sifuna-2027-running-mate/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/gachagua-impeachment-upheld-ksh50m/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/vihiga-fuel-shortage/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/helicopter-climb-arrest-sentence/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/seven-day-marriage-collapse/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/national/ruai-househelp-child-death-salary-dispute/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/entertainment-culture/omboko-milemba-talent-show-vihiga/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/entertainment-culture/vihiga-traditional-meals/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/entertainment-culture/reggae-na-lami-msafara/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/entertainment-culture/vihiga-drama-festival-nyeri/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/hustle-business/mbale-mega-market-vihiga/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/hustle-business/vihiga-agripreneurship-farming-business/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vihigatimes.co.ke/hustle-business/vihiga-small-scale-gold-mining/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://vihigatimes.co.ke/</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/entertainment-culture/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/hustle-business/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/chavakali-kapsabet-road-crash-kaptik-student/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/omboko%E2%80%91milemba%E2%80%91vihiga%E2%80%91governorship/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/vtrh-medds-7-5m-medical-supplies/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/gambogi-transformer-theft-power-outage/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/vihiga%E2%80%91trh%E2%80%91healthcare%E2%80%91debate/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/luanda%E2%80%91motorbike%E2%80%91seizure%E2%80%91crackdown/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/vihiga%E2%80%91labour%E2%80%91day%E2%80%91rail%E2%80%91project/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/local-news/mudavadi%E2%80%91son%E2%80%91wedding%E2%80%91ceremony/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/vihiga-ebola-guidance-2026/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/vokoli-girls-student-mitchell-death/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/ishieyu-mob-killing/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/lunyerere-bridge-crash/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/mhedwe-trailer-crash/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/crime-safety/kilifi-panga-attacks-youth/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/vihiga-tvet-graduation-gowns-removed/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/kalonzo-sifuna-2027-running-mate/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/gachagua-impeachment-upheld-ksh50m/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/vihiga-fuel-shortage/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/helicopter-climb-arrest-sentence/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/national/seven-day-marriage-collapse/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/entertainment-culture/omboko-milemba-talent-show-vihiga/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/entertainment-culture/vihiga-traditional-meals/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/entertainment-culture/reggae-na-lami-msafara/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/entertainment-culture/vihiga-drama-festival-nyeri/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/hustle-business/mbale-mega-market-vihiga/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/hustle-business/vihiga-agripreneurship-farming-business/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vihigatimes.co.ke/hustle-business/vihiga-small-scale-gold-mining/index.html</loc>
+  <lastmod>2026-06-19T20:06:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 </urlset>
