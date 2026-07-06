@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Vihiga Times - your trusted source for authentic hyperlocal news across Vihiga County. Discover our story, mission, vision, and the community we serve.">
+    <meta name="keywords" content="Vihiga Times, About Us, Vihiga County News, Local News Kenya, Community Journalism">
+    <meta name="author" content="Vihiga Times">
+    <meta property="og:title" content="About Us | Vihiga Times">
+    <meta property="og:description" content="More than a news website. We are a home for the stories, people, culture, businesses, and future of Vihiga County.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vihigatimes.co.ke/about">
+    <title>About Us | Vihiga Times</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0d7a5e;
+            --primary-dark: #095c47;
+            --primary-light: #e8f5f1;
+            --accent: #d4a017;
+            --accent-light: #fdf6e3;
+            --text-dark: #1a1a2e;
+            --text-body: #4a4a5a;
+            --text-light: #6b6b7b;
+            --text-muted: #8a8a9a;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafb;
+            --bg-warm: #faf9f7;
+            --border: #e8e8ec;
+            --border-light: #f0f0f4;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --max-width: 1200px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-body);
+            background: var(--bg-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        ul { list-style: none; }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 96px 0; }
+        .section-header { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
+        .btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+        .btn-white { background: white; color: var(--primary); border-color: white; }
+        .btn-white:hover { background: var(--primary-light); color: var(--primary-dark); transform: translateY(-2px); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-sm); }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: var(--primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .nav-desktop { display: flex; align-items: center; gap: 8px; }
+        .nav-desktop a {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-body);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        .nav-desktop a:hover, .nav-desktop a.active { color: var(--primary); background: var(--primary-light); }
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+        .search-btn {
+            width: 40px; height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            background: var(--bg-light);
+            color: var(--text-body);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .search-btn:hover { background: var(--primary-light); color: var(--primary); }
+        .mobile-menu-btn {
+            display: none;
+            width: 40px; height: 40px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--text-dark); transition: var(--transition); border-radius: 2px; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 72px; left: 0; right: 0; bottom: 0;
+            background: white;
+            z-index: 999;
+            padding: 24px;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav a {
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+        .mobile-nav a:hover, .mobile-nav a.active { background: var(--primary-light); color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 24px 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #0a5a44 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--bg-white), transparent);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: var(--transition);
+        }
+        .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+        .hero-btn svg { transition: transform 0.3s ease; }
+        .hero-btn:hover svg { transform: translateY(3px); }
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            animation: float 8s ease-in-out infinite;
+        }
+        .hero-shape-1 { width: 300px; height: 300px; top: 10%; left: -5%; animation-delay: 0s; }
+        .hero-shape-2 { width: 200px; height: 200px; bottom: 20%; right: 5%; animation-delay: 2s; }
+        .hero-shape-3 { width: 150px; height: 150px; top: 40%; right: 20%; animation-delay: 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Story Section */
+        .story-section { background: var(--bg-white); }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .story-image-wrapper { position: relative; }
+        .story-image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        .story-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .story-image:hover img { transform: scale(1.03); }
+        .story-image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--accent);
+            color: white;
+            padding: 20px 28px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+        .story-image-badge .number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .story-image-badge .label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+        .story-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        .story-content p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .story-content .highlight { color: var(--primary); font-weight: 600; }
+        .story-content .closing {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 20px;
+            background: var(--primary-light);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin-top: 24px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+        .timeline-item:hover {
+            background: var(--primary-light);
+            transform: translateX(4px);
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px var(--primary-light);
+        }
+        .timeline-text { font-size: 0.95rem; color: var(--text-body); line-height: 1.6; }
+        .timeline-text strong { color: var(--text-dark); }
+
+        /* Mission & Vision */
+        .mission-section {
+            background: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        .mission-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            position: relative;
+            z-index: 1;
+        }
+        .mission-card, .vision-card {
+            background: var(--bg-white);
+            padding: 48px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .mission-card .icon, .vision-card .icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+        .mission-card h2, .vision-card h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .mission-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .mission-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+        .mission-list li svg {
+            flex-shrink: 0;
+            margin-top: 3px;
+            color: var(--primary);
+        }
+        .vision-card p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.8;
+        }
+
+        /* Impact Stats */
+        .impact-section { background: var(--bg-white); }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .stat-card {
+            background: var(--bg-light);
+            padding: 40px 24px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+        }
+        .stat-card:hover {
+            background: var(--primary);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        .stat-card:hover .stat-number,
+        .stat-card:hover .stat-label,
+        .stat-card:hover .stat-desc { color: white; }
+        .stat-card:hover .stat-icon {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .stat-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        .stat-desc {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            transition: var(--transition);
+        }
+
+        /* Support Section */
+        .support-section {
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-white) 100%);
+        }
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .support-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .support-content > p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        .support-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .support-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: var(--transition);
+        }
+        .support-item:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+        .support-item svg { flex-shrink: 0; color: var(--primary); }
+        .support-image { position: relative; }
+        .support-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        .support-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-xl);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Marketplace */
+        .marketplace-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .marketplace-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .marketplace-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .marketplace-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: white;
+            margin-bottom: 20px;
+        }
+        .marketplace-content > p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        .marketplace-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .marketplace-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+        }
+        .marketplace-list li svg { flex-shrink: 0; color: var(--accent); }
+        .marketplace-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .marketplace-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .marketplace-image-inner {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .marketplace-image-inner svg {
+            color: rgba(255,255,255,0.9);
+        }
+        .marketplace-image-inner::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-xl);
+        }
+
+        /* Values */
+        .values-section { background: var(--bg-white); }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .value-card {
+            background: var(--bg-light);
+            padding: 36px 28px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .value-card:hover {
+            background: var(--bg-white);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+            border-color: transparent;
+        }
+        .value-card:hover::before { transform: scaleX(1); }
+        .value-card:nth-child(2)::before { background: var(--accent); }
+        .value-card:nth-child(3)::before { background: #3b82f6; }
+        .value-card:nth-child(4)::before { background: #8b5cf6; }
+        .value-card:nth-child(5)::before { background: #ef4444; }
+        .value-card:nth-child(6)::before { background: #10b981; }
+        .value-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .value-card:nth-child(2) .value-icon { background: var(--accent-light); color: var(--accent); }
+        .value-card:nth-child(3) .value-icon { background: #eff6ff; color: #3b82f6; }
+        .value-card:nth-child(4) .value-icon { background: #f5f3ff; color: #8b5cf6; }
+        .value-card:nth-child(5) .value-icon { background: #fef2f2; color: #ef4444; }
+        .value-card:nth-child(6) .value-icon { background: #ecfdf5; color: #10b981; }
+        .value-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* Founder */
+        .founder-section {
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .founder-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .founder-image-wrapper {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+        .founder-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: var(--shadow-lg);
+        }
+        .founder-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .founder-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -10px;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        .founder-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .founder-title {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        .founder-content p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .founder-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        .founder-contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: var(--transition);
+        }
+        .founder-contact a:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .founder-contact a svg { flex-shrink: 0; }
+
+        /* Testimonials */
+        .testimonials-section { background: var(--bg-white); }
+        .testimonials-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 8px 4px 32px;
+            scrollbar-width: none;
+        }
+        .testimonials-track::-webkit-scrollbar { display: none; }
+        .testimonial-card {
+            flex: 0 0 360px;
+            scroll-snap-align: start;
+            background: var(--bg-light);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            background: var(--bg-white);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        .testimonial-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        .testimonial-quote::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.2;
+            line-height: 0.5;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .testimonials-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .testimonials-nav button {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg-white);
+            color: var(--text-body);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .testimonials-nav button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .newsletter-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: white;
+            margin-bottom: 16px;
+        }
+        .newsletter-content p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            color: white;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            outline: none;
+            transition: var(--transition);
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+        .newsletter-form input:focus {
+            border-color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.15);
+        }
+        .newsletter-form button {
+            padding: 16px 28px;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .newsletter-form button:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .newsletter-success {
+            display: none;
+            padding: 16px 24px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius-md);
+            color: white;
+            font-weight: 500;
+            margin-top: 20px;
+            backdrop-filter: blur(8px);
+        }
+        .newsletter-success.active { display: block; }
+
+        /* CTA */
+        .cta-section {
+            background: var(--bg-warm);
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            max-width: 640px;
+            margin: 0 auto 36px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Floating Home Button */
+        .floating-home {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(13,122,94,0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+            pointer-events: none;
+        }
+        .floating-home.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .floating-home:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(13,122,94,0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-brand .logo-icon { background: var(--primary); }
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.6);
+            max-width: 300px;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .footer-social a svg { color: white; }
+        .footer-column h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .footer-column a:hover {
+            color: white;
+            transform: translateX(4px);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .story-grid, .mission-grid, .support-grid, .marketplace-grid, .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .story-image img, .support-image img { height: 350px; }
+            .story-image-badge { right: 10px; bottom: -10px; padding: 16px 20px; }
+            .support-image::before { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding { padding: 64px 0; }
+            .section-header { margin-bottom: 40px; }
+            .nav-desktop, .search-btn { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .mobile-nav { display: flex; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .values-grid { grid-template-columns: 1fr; }
+            .support-list { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .founder-image-wrapper { width: 240px; height: 240px; }
+            .testimonial-card { flex: 0 0 300px; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; }
+            .hero { min-height: 70vh; padding: 120px 20px 60px; }
+            .hero-shape { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat-card { padding: 32px 20px; }
+            .testimonial-card { flex: 0 0 280px; padding: 24px; }
+            .founder-contact { flex-direction: column; }
+            .founder-contact a { justify-content: center; }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="Vihiga Times Home">
+                <span class="logo-icon">VT</span>
+                <span>Vihiga Times</span>
+            </a>
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/news">News</a>
+                <a href="/categories">Categories</a>
+                <a href="/about" class="active">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <a href="/">Home</a>
+            <a href="/news">News</a>
+            <a href="/categories">Categories</a>
+            <a href="/about" class="active">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/disclaimer">Disclaimer</a>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" aria-label="About Vihiga Times">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Vihiga County's Trusted Voice
+            </div>
+            <h1>About Vihiga Times</h1>
+            <p>More than a news website. We are a home for the stories, people, culture, businesses, and future of Vihiga County.</p>
+            <a href="#story" class="hero-btn">
+                Discover Our Story
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         OUR STORY
+         ============================================ -->
+    <section class="story-section section-padding" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image-wrapper reveal">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop" alt="Community gathering in Vihiga County representing local culture and togetherness" loading="lazy">
+                        <div class="story-image-badge">
+                            <div class="number">2025</div>
+                            <div class="label">Our Journey Began</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-content reveal reveal-delay-1">
+                    <h2>Our Story</h2>
+                    <p>The idea for Vihiga Times began in <span class="highlight">June 2025</span>. The vision was simple but powerful: to build a trusted digital home for the people of Vihiga County.</p>
+                    <p>The first public version was published on <span class="highlight">18 March 2026</span>, and Vihiga Times officially launched on <span class="highlight">17 May 2026</span>. From the very beginning, the goal has been to inform, educate, preserve culture, and celebrate the people of Vihiga County.</p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-text"><strong>June 2025</strong> — The vision for Vihiga Times was born.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-text"><strong>18 March 2026</strong> — First public version published.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-text"><strong>17 May 2026</strong> — Official launch of Vihiga Times.</div>
+                        </div>
+                    </div>
+
+                    <p>Vihiga Times is more than a news website. It is a digital record of the county's history, traditions, achievements, businesses, schools, churches, fundraising events, youth, sports, and everyday life. The mission is to make sure every important local story has a place to be remembered.</p>
+
+                    <div class="closing">
+                        Every community deserves a trusted voice. Vihiga Times is ours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         OUR MISSION & VISION
+         ============================================ -->
+    <section class="mission-section section-padding" id="mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card reveal">
+                    <div class="icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <ul class="mission-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Deliver accurate local news that our community can trust.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Keep the community informed about what matters most.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Preserve local history and culture for future generations.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Support local businesses and help them grow.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Give every resident a voice in our shared story.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Celebrate achievements and promote development across Vihiga County.
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Connect people through trustworthy journalism that brings us together.
+                        </li>
+                    </ul>
+                </div>
+                <div class="vision-card reveal reveal-delay-1">
+                    <div class="icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to become the most trusted digital news and community platform in Vihiga County. We want to be the first place people turn to when they need to know what is happening in their community.</p>
+                    <p style="margin-top:16px;">While we grow, we remain focused on what matters most: <strong>local people and local stories.</strong> We believe that every neighbourhood, every school, every church, every business, and every family in Vihiga County has a story worth telling.</p>
+                    <p style="margin-top:16px;">We envision a future where Vihiga Times is not just a news source, but a living digital archive of our county's journey — a place where the past is preserved, the present is documented, and the future is shaped by an informed and connected community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         OUR IMPACT
+         ============================================ -->
+    <section class="impact-section section-padding" id="impact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Impact</h2>
+                <p>Numbers that tell the story of our growing community and the trust we have built together.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card reveal reveal-delay-1">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="stat-number">3,000+</div>
+                    <div class="stat-label">Weekly Readers</div>
+                    <div class="stat-desc">A growing community of engaged readers who trust us for their local news.</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-2">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Published Stories</div>
+                    <div class="stat-desc">Stories that capture the heartbeat of Vihiga County's communities.</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-3">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <div class="stat-number">Growing</div>
+                    <div class="stat-label">Every Single Day</div>
+                    <div class="stat-desc">Our readership, stories, and impact continue to expand across the county.</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-4">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="stat-number">Countywide</div>
+                    <div class="stat-label">Vihiga County</div>
+                    <div class="stat-desc">Serving every corner of our county, from town centres to rural villages.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SUPPORTING OUR COMMUNITY
+         ============================================ -->
+    <section class="support-section section-padding" id="support">
+        <div class="container">
+            <div class="support-grid">
+                <div class="support-content reveal">
+                    <h2>Supporting Our Community</h2>
+                    <p>Vihiga Times is deeply committed to the growth and prosperity of our community. We believe that when local businesses thrive, schools succeed, and community projects flourish, everyone benefits.</p>
+                    <div class="support-list">
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            Small Businesses
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            Large Businesses
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 4 3 9 3s9-1.34 9-3v-5"/></svg>
+                            Schools
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            Churches
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            Fundraising Campaigns
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Local Organizations
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            Youth Initiatives
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            Sports Clubs
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            Community Projects
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            Public Notices
+                        </div>
+                        <div class="support-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            Local Entrepreneurs
+                        </div>
+                    </div>
+                    <p style="margin-top:28px; font-size:1rem; color:var(--text-light);">Advertising with Vihiga Times helps strengthen the local economy while supporting independent community journalism. When you advertise with us, you are investing in both your business and the future of our county.</p>
+                </div>
+                <div class="support-image reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop" alt="Community support and local business growth in Vihiga County" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMING SOON: VIHIGA MARKETPLACE
+         ============================================ -->
+    <section class="marketplace-section section-padding" id="marketplace">
+        <div class="container">
+            <div class="marketplace-grid">
+                <div class="marketplace-content reveal">
+                    <div class="marketplace-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Coming Soon
+                    </div>
+                    <h2>Vihiga Marketplace</h2>
+                    <p>We are building something exciting for our community. The Vihiga Marketplace will be an online platform where local sellers and buyers can connect directly.</p>
+                    <ul class="marketplace-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Buy local products from trusted sellers
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sell your products to a growing local audience
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Discover businesses across Vihiga County
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Connect directly with sellers — no middlemen
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Support local entrepreneurs and keep money in our community
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Shop from anywhere while supporting businesses in Vihiga County
+                        </li>
+                    </ul>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.95rem;">This feature is currently under development. Stay tuned for updates!</p>
+                </div>
+                <div class="marketplace-image reveal reveal-delay-1">
+                    <div class="marketplace-image-inner">
+                        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         THE VALUES THAT GUIDE US
+         ============================================ -->
+    <section class="values-section section-padding" id="values">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>The Values That Guide Us</h2>
+                <p>These principles are the foundation of everything we do at Vihiga Times. They shape our decisions, our stories, and our relationship with you.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card reveal reveal-delay-1">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3>Radical Accuracy</h3>
+                    <p>Every story is carefully checked before publication. Facts come before speed. If mistakes happen, we correct them openly and honestly. Our readers deserve nothing less than the truth.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-2">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Community First</h3>
+                    <p>Every decision starts with one question: "What is best for our community?" The needs of the people always come first. We are here to serve, not to exploit.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-3">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>Accessible Truth</h3>
+                    <p>We do not spread rumours, misinformation, hate speech, or gossip. Every important story deserves fairness. Every person deserves to be heard. Both sides are considered before publication whenever possible.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-1">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>Youth Amplification</h3>
+                    <p>Young people are the future of Vihiga County. We give special attention to education, innovation, talent, employment, sports, creativity, leadership, and youth success stories.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-2">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>Honesty, fairness, transparency, and accountability guide every story we publish. We hold ourselves to the highest standards because our community deserves nothing less.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-3">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Respect</h3>
+                    <p>Every individual, family, organization, religion, and culture is treated with dignity and respect. We believe in building bridges, not walls, within our community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MEET THE FOUNDER
+         ============================================ -->
+    <section class="founder-section section-padding" id="founder">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image reveal">
+                    <div class="founder-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="James Kiladi, Founder of Vihiga Times" loading="lazy">
+                    </div>
+                </div>
+                <div class="founder-content reveal reveal-delay-1">
+                    <h2>James Kiladi</h2>
+                    <div class="founder-title">Founder &bull; Owner &bull; Developer &bull; Editor &bull; Publisher &bull; Reporter &bull; Website Manager</div>
+                    <p>James Kiladi created Vihiga Times from a deep passion for technology, storytelling, community development, and preserving the rich history and culture of Vihiga County.</p>
+                    <p>He personally manages the website, develops its features, writes and edits stories, oversees publishing, and continues improving the platform every single day. What started as a vision has become a living platform that serves thousands of readers across the county.</p>
+                    <p>While Vihiga Times has grown tremendously since its launch, James believes the journey is just beginning. He is committed to working alongside the community to make the platform even stronger, more useful, and more impactful for everyone in Vihiga County.</p>
+                    <div class="founder-contact">
+                        <a href="mailto:jameskiladi@gmail.com">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            jameskiladi@gmail.com
+                        </a>
+                        <a href="tel:+254769882553">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            0769 882 553
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COMMUNITY VOICES
+         ============================================ -->
+    <section class="testimonials-section section-padding" id="voices">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Community Voices</h2>
+                <p>Hear from the people who make Vihiga Times what it is — our readers, our community, our family.</p>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Grace Mmbone" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Grace Mmbone</div>
+                                <div class="testimonial-location">Luanda, Vihiga County</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">Vihiga Times keeps me connected to what is happening in my community. I no longer miss important events, announcements, or local news. It feels like having a trusted neighbour who always knows what is going on.</div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-2">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Peter Wekesa" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Peter Wekesa</div>
+                                <div class="testimonial-location">Emuhaya, Vihiga County</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">As a small business owner, advertising on Vihiga Times has helped me reach customers I never thought I could reach. The platform genuinely supports local businesses and understands what our community needs.</div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-3">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Mercy Ombima" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Mercy Ombima</div>
+                                <div class="testimonial-location">Sabatia, Vihiga County</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">I love how Vihiga Times celebrates our youth. My son's football team was featured, and it gave the boys so much confidence. This platform truly believes in the next generation of Vihiga County.</div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Johnstone Akala" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Johnstone Akala</div>
+                                <div class="testimonial-location">Hamisi, Vihiga County</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">Our church fundraising campaign was a success thanks to Vihiga Times. The reach and engagement we got were incredible. This platform is a blessing to our community.</div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-2">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Agnes Luseno" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">Agnes Luseno</div>
+                                <div class="testimonial-location">Vihiga Town</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">Finally, a news source that understands our county. Vihiga Times tells the stories that matter to us — stories about our schools, our markets, our traditions, and our people. It is about time we had our own voice.</div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-3">
+                        <div class="testimonial-header">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" alt="David Muchela" class="testimonial-avatar" loading="lazy">
+                            <div>
+                                <div class="testimonial-name">David Muchela</div>
+                                <div class="testimonial-location">Luanda, Vihiga County</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">The accuracy and fairness of Vihiga Times reporting is something I deeply respect. In a world full of rumours, it is refreshing to have a platform that values truth and integrity above all else.</div>
+                    </div>
+                </div>
+                <div class="testimonials-nav">
+                    <button id="scrollLeft" aria-label="Scroll testimonials left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button id="scrollRight" aria-label="Scroll testimonials right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         NEWSLETTER
+         ============================================ -->
+    <section class="newsletter-section section-padding" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <h2>Stay Connected with Vihiga Times</h2>
+                <p>Never miss important news, community updates, and inspiring local stories. Join thousands of readers who stay informed every week.</p>
+                <form class="newsletter-form" id="newsletterForm" action="https://formsubmit.co/jameskiladi@gmail.com" method="POST" novalidate>
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription - Vihiga Times">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://vihigatimes.co.ke/about?subscribed=1">
+                    <input type="email" name="email" id="newsletterEmail" placeholder="Enter your email address" required aria-required="true" aria-label="Email address for newsletter subscription">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="newsletter-success" id="newsletterSuccess" role="status" aria-live="polite">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:8px;"><polyline points="20 6 9 17 4 12"/></svg>
+                    Thank you for subscribing! You will receive our next community update soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CALL TO ACTION
+         ============================================ -->
+    <section class="cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="reveal">
+                <h2>Every Great Community Deserves a Trusted Voice</h2>
+                <p>Thank you for being part of the Vihiga Times family. Together, we are preserving our stories, celebrating our achievements, supporting local businesses, and building a stronger future for Vihiga County.</p>
+                <div class="cta-buttons">
+                    <a href="/" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Read Today's News
+                    </a>
+                    <a href="/contact" class="btn btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FLOATING BACK TO HOME BUTTON
+         ============================================ -->
+    <a href="/" class="floating-home" id="floatingHome" aria-label="Back to homepage">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Back to Home
+    </a>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">VT</span>
+                        <span>Vihiga Times</span>
+                    </a>
+                    <p>Vihiga Times is your trusted source for authentic hyperlocal news across Vihiga County and beyond, built by the community for the community.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/category/local-news">Local News</a></li>
+                        <li><a href="/category/national">National</a></li>
+                        <li><a href="/category/politics">Politics</a></li>
+                        <li><a href="/category/crime-safety">Crime & Safety</a></li>
+                        <li><a href="/category/business">Hustle & Business</a></li>
+                        <li><a href="/category/entertainment">Entertainment</a></li>
+                        <li><a href="/category/sports">Sports</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/advertise">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:jameskiladi@gmail.com">jameskiladi@gmail.com</a></li>
+                        <li><a href="tel:+254769882553">+254 769 882 553</a></li>
+                        <li><a href="/contact">Vihiga County, Kenya</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Vihiga Times. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // ============================================
+        // Mobile Menu Toggle
+        // ============================================
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
+        });
+
+        // Close mobile menu on link click
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ============================================
+        // Header Scroll Effect
+        // ============================================
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // ============================================
+        // Scroll Reveal Animation (Intersection Observer)
+        // ============================================
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ============================================
+        // Testimonials Scroll Navigation
+        // ============================================
+        const testimonialsTrack = document.getElementById('testimonialsTrack');
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+
+        scrollLeftBtn.addEventListener('click', () => {
+            testimonialsTrack.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            testimonialsTrack.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+
+        // ============================================
+        // Newsletter Form Validation & Success
+        // ============================================
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterEmail = document.getElementById('newsletterEmail');
+        const newsletterSuccess = document.getElementById('newsletterSuccess');
+
+        newsletterForm.addEventListener('submit', function(e) {
+            const email = newsletterEmail.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!email || !emailRegex.test(email)) {
+                e.preventDefault();
+                newsletterEmail.style.borderColor = '#ef4444';
+                newsletterEmail.setAttribute('aria-invalid', 'true');
+                newsletterEmail.focus();
+                return;
+            }
+
+            newsletterEmail.style.borderColor = '';
+            newsletterEmail.setAttribute('aria-invalid', 'false');
+        });
+
+        // Show success message if URL has subscribed param
+        if (window.location.search.includes('subscribed=1')) {
+            newsletterSuccess.classList.add('active');
+            newsletterForm.style.display = 'none';
+        }
+
+        // ============================================
+        // Floating Home Button Visibility
+        // ============================================
+        const floatingHome = document.getElementById('floatingHome');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 600) {
+                floatingHome.classList.add('visible');
+            } else {
+                floatingHome.classList.remove('visible');
+            }
+        });
+
+        // ============================================
+        // Smooth Scroll for Anchor Links
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

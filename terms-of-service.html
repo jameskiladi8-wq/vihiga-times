@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vihiga Times Terms of Service - Read the rules, responsibilities, and legal conditions governing use of our website.">
+    <meta name="keywords" content="Vihiga Times, terms of service, terms and conditions, Kenya, Vihiga County">
+    <title>Terms of Service | Vihiga Times</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           CSS CUSTOM PROPERTIES
+           ============================================ */
+        :root {
+            --bg-deep: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --bg-glass-hover: rgba(255, 255, 255, 0.08);
+            --neon-green: #00d26a;
+            --neon-green-dim: rgba(0, 210, 106, 0.15);
+            --neon-green-glow: rgba(0, 210, 106, 0.4);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-dim: rgba(0, 240, 255, 0.1);
+            --neon-purple: #a855f7;
+            --neon-purple-dim: rgba(168, 85, 247, 0.15);
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glass-hover: rgba(0, 210, 106, 0.3);
+            --shadow-glow: 0 0 30px rgba(0, 210, 106, 0.15);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-deep);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        ::selection {
+            background: var(--neon-green-dim);
+            color: var(--neon-green);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+        :focus-visible {
+            outline: 2px solid var(--neon-green);
+            outline-offset: 3px;
+        }
+
+        /* ============================================
+           ANIMATED BACKGROUND ORBS & GRID
+           ============================================ */
+        .bg-orbs {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: -10%; left: -5%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: 40%; right: -10%;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        .orb-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            bottom: 10%; left: 20%;
+            animation-delay: -10s;
+            animation-duration: 22s;
+        }
+
+        .orb-4 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: 60%; left: 60%;
+            animation-delay: -15s;
+            animation-duration: 28s;
+            opacity: 0.2;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 10px) scale(1.05); }
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ============================================
+           UTILITIES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-padding { padding: 5rem 0; }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-label::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), transparent);
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .glass-card:hover {
+            background: var(--bg-glass-hover);
+            border-color: var(--border-glass-hover);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 8, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: all var(--transition-base);
+        }
+
+        .site-header.scrolled {
+            background: rgba(5, 5, 8, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-deep);
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 0 20px var(--neon-green-dim);
+            transition: box-shadow var(--transition-base);
+        }
+
+        .logo:hover .logo-icon {
+            box-shadow: 0 0 30px var(--neon-green-glow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--text-primary); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 72px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 4rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: var(--neon-green-dim);
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neon-green);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        /* ============================================
+           TERMS CONTENT SECTION
+           ============================================ */
+        .terms-section {
+            padding: 4rem 0 6rem;
+            position: relative;
+        }
+
+        .terms-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms-toc {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            position: sticky;
+            top: 90px;
+        }
+
+        .terms-toc h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terms-toc h3 svg {
+            color: var(--neon-green);
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+        }
+
+        .toc-list a::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--border-glass);
+            transition: all var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .toc-list a:hover,
+        .toc-list a:focus {
+            color: var(--neon-green);
+            background: rgba(0, 210, 106, 0.05);
+        }
+
+        .toc-list a:hover::before,
+        .toc-list a:focus::before {
+            background: var(--neon-green);
+            box-shadow: 0 0 8px var(--neon-green-glow);
+        }
+
+        .terms-article {
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-article h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            scroll-margin-top: 90px;
+        }
+
+        .terms-article h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 8px;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px var(--neon-green-dim);
+        }
+
+        .terms-article p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .terms-article p:last-child {
+            margin-bottom: 0;
+        }
+
+        .terms-article ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .terms-article ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .terms-article ul li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0.6rem;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--neon-green);
+            box-shadow: 0 0 6px var(--neon-green-glow);
+        }
+
+        .terms-article strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .terms-article a {
+            color: var(--neon-green);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-fast);
+        }
+
+        .terms-article a:hover {
+            color: var(--neon-cyan);
+            border-bottom-color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-green-glow);
+        }
+
+        .terms-article .highlight-box {
+            background: rgba(0, 210, 106, 0.05);
+            border: 1px solid rgba(0, 210, 106, 0.15);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .terms-article .highlight-box strong {
+            color: var(--neon-green);
+        }
+
+        .terms-article h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        /* Two-column lists for allowed/not allowed */
+        .two-col-lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .col-list {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .col-list.allowed {
+            border-left: 3px solid var(--neon-green);
+        }
+
+        .col-list.not-allowed {
+            border-left: 3px solid #ff4757;
+        }
+
+        .col-list h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .col-list.allowed h4 {
+            color: var(--neon-green);
+        }
+
+        .col-list.not-allowed h4 {
+            color: #ff4757;
+        }
+
+        .col-list ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .col-list ul li {
+            padding-left: 0;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .col-list ul li::before {
+            display: none;
+        }
+
+        .col-list ul li::before {
+            content: '—';
+            color: var(--text-muted);
+            margin-right: 0.5rem;
+        }
+
+        /* Acknowledgement block */
+        .acknowledgement {
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.05), rgba(0, 240, 255, 0.03));
+        }
+
+        .acknowledgement p {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .acknowledgement p strong {
+            color: var(--neon-green);
+        }
+
+        /* Contact info card */
+        .contact-info-card {
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: all var(--transition-base);
+        }
+
+        .contact-detail-item:hover {
+            border-color: var(--border-glass-hover);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .contact-detail-item svg {
+            color: var(--neon-green);
+            flex-shrink: 0;
+        }
+
+        .contact-detail-item a {
+            color: var(--neon-green);
+            transition: color var(--transition-fast);
+        }
+
+        .contact-detail-item a:hover {
+            color: var(--neon-cyan);
+        }
+
+        /* ============================================
+           FLOATING HOME BUTTON
+           ============================================ */
+        .floating-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 100px;
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+
+        .floating-home.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .floating-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px var(--neon-green-glow);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .site-footer {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #020203 100%);
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            padding: 5rem 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand .logo {
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand .logo-icon {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-desc {
+            line-height: 1.8;
+            max-width: 320px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .footer-heading {
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: all var(--transition-fast);
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 1px;
+            background: var(--neon-green);
+            transition: width var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--neon-green);
+            transform: translateX(4px);
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 42px; height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+            color: var(--text-muted);
+        }
+
+        .social-links a:hover {
+            background: var(--neon-green-dim);
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(5, 5, 8, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active { display: flex; }
+            .nav-links a { font-size: 1.5rem; font-family: var(--font-display); }
+            .menu-toggle { display: flex; }
+
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .floating-home {
+                bottom: 20px; right: 20px;
+                padding: 0.875rem;
+                border-radius: 50%;
+            }
+            .floating-home span { display: none; }
+            .contact-details { flex-direction: column; align-items: stretch; }
+            .contact-detail-item { justify-content: center; }
+            .two-col-lists { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .section-padding { padding: 4rem 0; }
+            .hero-content { padding: 2rem 1rem; }
+            .terms-article { padding: 1.5rem; }
+            .terms-toc { padding: 1.5rem; }
+        }
+
+        /* ============================================
+           ACCESSIBILITY
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .orb { animation: none; }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px; left: 0;
+            background: var(--neon-green);
+            color: var(--bg-deep);
+            padding: 0.5rem 1rem;
+            z-index: 10000;
+            transition: top var(--transition-fast);
+            font-weight: 600;
+        }
+
+        .skip-link:focus { top: 0; }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                <div class="logo-icon" aria-hidden="true">VT</div>
+                <span>Vihiga Times</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="news.html" role="menuitem">News</a></li>
+                    <li role="none"><a href="categories.html" role="menuitem">Categories</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="hero" aria-label="Terms of Service hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Last Updated: July 06, 2026</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Terms of Service</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Please read these Terms of Service carefully before using the Vihiga Times website. 
+                    These terms explain your rights, responsibilities, and the conditions governing your 
+                    access to and use of our services.
+                </p>
+            </div>
+            <div class="hero-line" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============================================
+             TERMS CONTENT
+             ============================================ -->
+        <section class="terms-section" aria-label="Terms of Service content">
+            <div class="container">
+                <div class="terms-wrapper">
+
+                    <!-- Table of Contents -->
+                    <nav class="terms-toc glass-card reveal" aria-label="Table of contents">
+                        <h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                            Contents
+                        </h3>
+                        <ul class="toc-list">
+                            <li><a href="#section-1">1. Acceptance of Terms</a></li>
+                            <li><a href="#section-2">2. About Vihiga Times</a></li>
+                            <li><a href="#section-3">3. Eligibility</a></li>
+                            <li><a href="#section-4">4. Use of the Website</a></li>
+                            <li><a href="#section-5">5. Prohibited Conduct</a></li>
+                            <li><a href="#section-6">6. Intellectual Property</a></li>
+                            <li><a href="#section-7">7. Copyright and Content Usage</a></li>
+                            <li><a href="#section-8">8. Copyright Infringement</a></li>
+                            <li><a href="#section-9">9. User Submissions</a></li>
+                            <li><a href="#section-10">10. Editorial Independence</a></li>
+                            <li><a href="#section-11">11. Accuracy of Information</a></li>
+                            <li><a href="#section-12">12. External Links</a></li>
+                            <li><a href="#section-13">13. Advertising</a></li>
+                            <li><a href="#section-14">14. Disclaimer of Warranties</a></li>
+                            <li><a href="#section-15">15. Limitation of Liability</a></li>
+                            <li><a href="#section-16">16. Privacy</a></li>
+                            <li><a href="#section-17">17. Security</a></li>
+                            <li><a href="#section-18">18. Suspension or Termination</a></li>
+                            <li><a href="#section-19">19. Changes to the Terms</a></li>
+                            <li><a href="#section-20">20. Governing Law</a></li>
+                            <li><a href="#section-21">21. Contact Information</a></li>
+                            <li><a href="#section-22">22. Acknowledgement</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Section 1 -->
+                    <article class="terms-article glass-card reveal" id="section-1">
+                        <h2><span class="section-num">1</span> Acceptance of Terms</h2>
+                        <p>By accessing, browsing, or using the Vihiga Times website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. These terms constitute a legally binding agreement between you and Vihiga Times regarding your use of our website and services.</p>
+                        <p>If you do not agree with any part of these Terms of Service, you must discontinue using the website immediately. Your continued use of the website following any changes to these terms constitutes your acceptance of those changes.</p>
+                    </article>
+
+                    <!-- Section 2 -->
+                    <article class="terms-article glass-card reveal" id="section-2">
+                        <h2><span class="section-num">2</span> About Vihiga Times</h2>
+                        <p>Vihiga Times is an independent digital news platform dedicated to delivering accurate, timely, and community-focused news, information, and public interest content relating to Vihiga County and beyond. We are committed to journalistic integrity, transparency, and serving the informational needs of our community.</p>
+                        <p>Our platform provides free access to news articles, local updates, event coverage, and community stories. We operate as a community-driven news service, built by the people of Vihiga County for the people of Vihiga County.</p>
+                    </article>
+
+                    <!-- Section 3 -->
+                    <article class="terms-article glass-card reveal" id="section-3">
+                        <h2><span class="section-num">3</span> Eligibility</h2>
+                        <p>By using the Vihiga Times website, you represent that you are legally permitted to access and use the website under the laws of your jurisdiction. You are responsible for ensuring that your use of the website complies with all applicable local, national, and international laws.</p>
+                        <p>If you are a minor (under the age required by applicable law in your jurisdiction), you should use this website only under the supervision of a parent or legal guardian. By allowing a minor to use the website, the parent or guardian agrees to these Terms of Service on behalf of the minor.</p>
+                    </article>
+
+                    <!-- Section 4 -->
+                    <article class="terms-article glass-card reveal" id="section-4">
+                        <h2><span class="section-num">4</span> Use of the Website</h2>
+                        <p>You may use the Vihiga Times website for lawful personal and informational purposes. Permitted uses include:</p>
+                        <ul>
+                            <li>Reading and accessing news articles and published content</li>
+                            <li>Sharing article links through social media, email, or other communication channels</li>
+                            <li>Contacting Vihiga Times through the provided contact form or contact details</li>
+                            <li>Browsing publicly available content for personal, non-commercial purposes</li>
+                            <li>Submitting news tips, story ideas, corrections, or feedback through appropriate channels</li>
+                        </ul>
+                        <p>All use must be in compliance with these Terms of Service and applicable laws. You may not use the website for any purpose that is unlawful, harmful, or prohibited by these terms.</p>
+                    </article>
+
+                    <!-- Section 5 -->
+                    <article class="terms-article glass-card reveal" id="section-5">
+                        <h2><span class="section-num">5</span> Prohibited Conduct</h2>
+                        <p>You agree not to engage in any conduct that violates these Terms of Service or applicable law. Specifically, you are prohibited from:</p>
+                        <ul>
+                            <li>Violating any applicable local, national, or international law or regulation</li>
+                            <li>Posting, transmitting, or distributing illegal, abusive, threatening, defamatory, hateful, discriminatory, or misleading content</li>
+                            <li>Attempting to gain unauthorized access to any part of the website, server, or connected systems</li>
+                            <li>Introducing malware, viruses, worms, trojans, bots, or any other harmful or malicious code</li>
+                            <li>Interfering with or disrupting the functionality, security, or integrity of the website</li>
+                            <li>Scraping, harvesting, data mining, or extracting content or data without express written permission</li>
+                            <li>Copying, reproducing, or redistributing large portions of website content without authorization</li>
+                            <li>Misrepresenting your identity or affiliation with any person or organization</li>
+                            <li>Impersonating Vihiga Times staff, editors, or representatives</li>
+                            <li>Attempting to bypass, disable, or interfere with any security features of the website</li>
+                            <li>Using automated tools, bots, spiders, or crawlers that negatively affect website performance or availability</li>
+                            <li>Engaging in any activity that could damage, disable, overburden, or impair the website</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Violation of these prohibitions</strong> may result in immediate suspension or termination of access, and may also subject you to civil or criminal liability under applicable law.
+                        </div>
+                    </article>
+
+                    <!-- Section 6 -->
+                    <article class="terms-article glass-card reveal" id="section-6">
+                        <h2><span class="section-num">6</span> Intellectual Property</h2>
+                        <p>All content on the Vihiga Times website, including but not limited to the following, is protected by copyright, trademark, and other intellectual property laws:</p>
+                        <ul>
+                            <li>Articles, news stories, and editorial content</li>
+                            <li>Photographs, images, graphics, and illustrations</li>
+                            <li>Logos, branding, and trade names</li>
+                            <li>Videos and audio content</li>
+                            <li>Website design, layout, and user interface</li>
+                            <li>Icons, symbols, and visual elements</li>
+                            <li>Source code and technical infrastructure (where applicable)</li>
+                        </ul>
+                        <p>Ownership of all such content remains with Vihiga Times or its respective licensors. Nothing in these Terms of Service grants you any license, right, or interest in any intellectual property owned by Vihiga Times, except as expressly permitted herein.</p>
+                    </article>
+
+                    <!-- Section 7 -->
+                    <article class="terms-article glass-card reveal" id="section-7">
+                        <h2><span class="section-num">7</span> Copyright and Content Usage</h2>
+                        <p>We want to make clear what you may and may not do with Vihiga Times content:</p>
+
+                        <div class="two-col-lists">
+                            <div class="col-list allowed">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Allowed
+                                </h4>
+                                <ul>
+                                    <li>Read and access articles for personal use</li>
+                                    <li>Share article links and URLs</li>
+                                    <li>Quote brief excerpts with proper attribution</li>
+                                    <li>Print articles for personal reference</li>
+                                </ul>
+                            </div>
+                            <div class="col-list not-allowed">
+                                <h4>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    Not Allowed
+                                </h4>
+                                <ul>
+                                    <li>Copy full articles without permission</li>
+                                    <li>Republish content on other platforms</li>
+                                    <li>Sell or monetize Vihiga Times content</li>
+                                    <li>Modify articles and claim ownership</li>
+                                    <li>Remove copyright notices or watermarks</li>
+                                    <li>Redistribute media without authorization</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p>If you wish to use Vihiga Times content in a manner not permitted above, please <a href="contact.html">contact us</a> to request permission. Unauthorized use may constitute copyright infringement.</p>
+                    </article>
+
+                    <!-- Section 8 -->
+                    <article class="terms-article glass-card reveal" id="section-8">
+                        <h2><span class="section-num">8</span> Copyright Infringement</h2>
+                        <p>Vihiga Times respects the intellectual property rights of others and expects its users to do the same. We take claims of copyright infringement seriously.</p>
+                        <p>If you believe that any material on our website infringes your copyright or the copyright of someone you represent, please contact us with the following information:</p>
+                        <ul>
+                            <li>A description of the copyrighted work you claim has been infringed</li>
+                            <li>The specific location (URL) of the allegedly infringing material on our website</li>
+                            <li>Your contact information (name, address, email, phone)</li>
+                            <li>A statement that you have a good faith belief that the use is not authorized</li>
+                            <li>A statement that the information provided is accurate and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner</li>
+                        </ul>
+                        <p>Upon receiving a valid notice, we will investigate the claim and take appropriate action, which may include removing the allegedly infringing material.</p>
+                    </article>
+
+                    <!-- Section 9 -->
+                    <article class="terms-article glass-card reveal" id="section-9">
+                        <h2><span class="section-num">9</span> User Submissions</h2>
+                        <p>Vihiga Times welcomes submissions from our community, including news tips, story ideas, corrections, feedback, and general inquiries. By submitting content to us, you confirm and agree that:</p>
+                        <ul>
+                            <li>You own the material you are submitting, or you have obtained all necessary permissions and rights to submit it</li>
+                            <li>Your submission does not violate any applicable law or regulation</li>
+                            <li>Your submission does not infringe upon the rights of any third party, including copyright, trademark, privacy, or publicity rights</li>
+                            <li>Your submission is truthful and accurate to the best of your knowledge</li>
+                            <li>You grant Vihiga Times a non-exclusive, royalty-free license to use, reproduce, modify, and publish your submission for editorial purposes</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Important:</strong> Submitting content to Vihiga Times does not guarantee publication. We reserve full editorial discretion over whether to publish, edit, or decline any submitted material.
+                        </div>
+                    </article>
+
+                    <!-- Section 10 -->
+                    <article class="terms-article glass-card reveal" id="section-10">
+                        <h2><span class="section-num">10</span> Editorial Independence</h2>
+                        <p>Vihiga Times maintains full editorial independence in all its content decisions. Our editorial team reserves the right to:</p>
+                        <ul>
+                            <li>Edit submitted content for clarity, accuracy, grammar, style, and length</li>
+                            <li>Correct factual errors in published material</li>
+                            <li>Update articles to reflect new information or developments</li>
+                            <li>Remove published content that is found to be inaccurate, defamatory, or in violation of our standards</li>
+                            <li>Decline publication of submitted material that does not meet our editorial standards</li>
+                        </ul>
+                        <p>These editorial decisions are made in the interest of serving our community with accurate, fair, and responsible journalism. We are not obligated to publish any submitted material, and we are not liable for editorial decisions made in good faith.</p>
+                    </article>
+
+                    <!-- Section 11 -->
+                    <article class="terms-article glass-card reveal" id="section-11">
+                        <h2><span class="section-num">11</span> Accuracy of Information</h2>
+                        <p>Vihiga Times strives to provide accurate, timely, and reliable information to our readers. However, we cannot guarantee that every article will always be complete, current, or entirely free from error.</p>
+                        <p>News and information are dynamic and subject to change as new facts emerge. Information published on our website may become outdated over time. We encourage readers to verify important information independently, particularly when making decisions based on the content we publish.</p>
+                        <p>If you believe an article contains an error, please <a href="contact.html">contact us</a> with the details, and we will investigate and make corrections where appropriate.</p>
+                    </article>
+
+                    <!-- Section 12 -->
+                    <article class="terms-article glass-card reveal" id="section-12">
+                        <h2><span class="section-num">12</span> External Links</h2>
+                        <p>The Vihiga Times website may contain links to external websites, including news sources, government agencies, community organizations, and social media platforms. These links are provided for your convenience and informational purposes.</p>
+                        <p>Vihiga Times is not responsible for:</p>
+                        <ul>
+                            <li>The content, accuracy, or reliability of third-party websites</li>
+                            <li>The privacy practices or data handling of external websites</li>
+                            <li>The availability or uptime of linked websites</li>
+                            <li>Any products, services, or claims made by third parties</li>
+                        </ul>
+                        <p>We encourage you to review the terms of service and privacy policies of any external websites you visit through links on our platform.</p>
+                    </article>
+
+                    <!-- Section 13 -->
+                    <article class="terms-article glass-card reveal" id="section-13">
+                        <h2><span class="section-num">13</span> Advertising</h2>
+                        <p>Vihiga Times may display advertisements on our website to support our operations. We want to be transparent about our relationship with advertisers:</p>
+                        <ul>
+                            <li>Advertisements displayed on the website do not constitute endorsements by Vihiga Times</li>
+                            <li>We are not responsible for the accuracy, quality, or legality of advertised products or services</li>
+                            <li>Advertisers are solely responsible for their own content, claims, and business practices</li>
+                            <li>Any transactions or interactions between you and advertisers are solely between you and the advertiser</li>
+                        </ul>
+                        <p>We strive to ensure that advertisements are clearly distinguishable from editorial content. Sponsored or paid content will be labeled as such where required.</p>
+                    </article>
+
+                    <!-- Section 14 -->
+                    <article class="terms-article glass-card reveal" id="section-14">
+                        <h2><span class="section-num">14</span> Disclaimer of Warranties</h2>
+                        <p>The Vihiga Times website and all content, services, and features provided through it are offered on an <strong>"As Is"</strong> and <strong>"As Available"</strong> basis. To the fullest extent permitted by law, Vihiga Times makes no representations or warranties of any kind, express or implied, including but not limited to:</p>
+                        <ul>
+                            <li>Continuous, uninterrupted, or error-free availability of the website</li>
+                            <li>The accuracy, completeness, or reliability of any content</li>
+                            <li>The security of the website or freedom from viruses or harmful components</li>
+                            <li>That the website will meet your specific requirements or expectations</li>
+                            <li>Fitness for a particular purpose or merchantability</li>
+                        </ul>
+                        <p>Your use of the website is at your sole risk. We do not guarantee that any defects will be corrected, or that the website will be compatible with your specific device or browser configuration.</p>
+                    </article>
+
+                    <!-- Section 15 -->
+                    <article class="terms-article glass-card reveal" id="section-15">
+                        <h2><span class="section-num">15</span> Limitation of Liability</h2>
+                        <p>To the fullest extent permitted by applicable law, Vihiga Times, its owners, editors, contributors, and affiliates shall not be liable for any damages arising from or related to your use of the website, including but not limited to:</p>
+                        <ul>
+                            <li>Direct, indirect, incidental, or consequential damages</li>
+                            <li>Loss of data, revenue, profits, or business opportunities</li>
+                            <li>Business interruption or loss of goodwill</li>
+                            <li>Damages resulting from reliance on website content</li>
+                            <li>Damages arising from unauthorized access to or alteration of your transmissions or data</li>
+                            <li>Any other losses, whether based on contract, tort, strict liability, or otherwise</li>
+                        </ul>
+                        <p>This limitation applies even if Vihiga Times has been advised of the possibility of such damages. In jurisdictions where limitations of liability are not permitted, our liability shall be limited to the maximum extent allowed by law.</p>
+                    </article>
+
+                    <!-- Section 16 -->
+                    <article class="terms-article glass-card reveal" id="section-16">
+                        <h2><span class="section-num">16</span> Privacy</h2>
+                        <p>Your privacy is important to us. Your use of the Vihiga Times website is also governed by our <a href="privacy.html">Privacy Policy</a>, which explains how we collect, use, protect, and handle your personal information.</p>
+                        <p>By using our website, you acknowledge that you have read and understood our Privacy Policy and consent to the practices described therein. We encourage you to review the Privacy Policy regularly, as it may be updated from time to time.</p>
+                        <p>If you have any questions about our privacy practices, please <a href="contact.html">contact us</a> or refer to the Privacy Policy for detailed information.</p>
+                    </article>
+
+                    <!-- Section 17 -->
+                    <article class="terms-article glass-card reveal" id="section-17">
+                        <h2><span class="section-num">17</span> Security</h2>
+                        <p>You agree not to attempt to compromise the security of the Vihiga Times website or any associated systems. Prohibited activities include, but are not limited to:</p>
+                        <ul>
+                            <li>Attempting to gain unauthorized access to any part of the website, server, or database</li>
+                            <li>Probing, scanning, or testing the vulnerability of the website</li>
+                            <li>Bypassing or circumventing security measures or authentication systems</li>
+                            <li>Interfering with the proper functioning of the website or its services</li>
+                            <li>Accessing data not intended for you</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Warning:</strong> Unauthorized access attempts may result in immediate termination of access, reporting to law enforcement authorities, and pursuit of civil or criminal legal action to the fullest extent permitted by law.
+                        </div>
+                    </article>
+
+                    <!-- Section 18 -->
+                    <article class="terms-article glass-card reveal" id="section-18">
+                        <h2><span class="section-num">18</span> Suspension or Termination</h2>
+                        <p>Vihiga Times reserves the right, at its sole discretion, to suspend or terminate your access to the website, or any part thereof, at any time and without prior notice, for any reason, including but not limited to:</p>
+                        <ul>
+                            <li>Violation of these Terms of Service</li>
+                            <li>Misuse or abuse of the website or its services</li>
+                            <li>Engagement in fraudulent, illegal, or harmful activities</li>
+                            <li>Conduct that disrupts the website or harms other users</li>
+                            <li>Failure to comply with applicable laws or regulations</li>
+                        </ul>
+                        <p>Upon suspension or termination, your right to use the website ceases immediately. All provisions of these Terms of Service that by their nature should survive termination shall survive, including intellectual property rights, disclaimers, indemnities, and limitations of liability.</p>
+                    </article>
+
+                    <!-- Section 19 -->
+                    <article class="terms-article glass-card reveal" id="section-19">
+                        <h2><span class="section-num">19</span> Changes to the Terms</h2>
+                        <p>Vihiga Times reserves the right to modify, update, or replace these Terms of Service at any time. Changes may be made to reflect:</p>
+                        <ul>
+                            <li>Changes in our business practices or website functionality</li>
+                            <li>Updates to applicable laws and regulations</li>
+                            <li>Feedback from our community and users</li>
+                            <li>Improvements to our legal protections and user rights</li>
+                        </ul>
+                        <p>When significant changes are made, the "Last Updated" date at the top of this page will be revised. Your continued use of the website after changes are posted constitutes your acceptance of the revised terms. We encourage you to review these Terms of Service periodically.</p>
+                    </article>
+
+                    <!-- Section 20 -->
+                    <article class="terms-article glass-card reveal" id="section-20">
+                        <h2><span class="section-num">20</span> Governing Law</h2>
+                        <p>These Terms of Service are governed by and construed in accordance with the laws of the <strong>Republic of Kenya</strong>, without regard to its conflict of law principles.</p>
+                        <p>Any disputes arising out of or relating to these Terms of Service or your use of the website shall be resolved in accordance with Kenyan law. You agree to submit to the exclusive jurisdiction of the courts located in Kenya for the resolution of any such disputes.</p>
+                        <p>If any provision of these Terms of Service is found to be invalid or unenforceable under applicable law, that provision shall be modified or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.</p>
+                    </article>
+
+                    <!-- Section 21 -->
+                    <article class="terms-article glass-card reveal" id="section-21">
+                        <h2><span class="section-num">21</span> Contact Information</h2>
+                        <p>If you have any questions, concerns, or comments regarding these Terms of Service, or if you need to report a violation, please contact us using the information below. We are committed to addressing your inquiries promptly and professionally.</p>
+                    </article>
+
+                    <!-- Contact Info Card -->
+                    <div class="contact-info-card glass-card reveal">
+                        <h3>Vihiga Times</h3>
+                        <p>We are here to answer your questions about our Terms of Service.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:jameskiladi@gmail.com">jameskiladi@gmail.com</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <a href="tel:0769882553">0769 882 553</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Mbale, Jebrockali Road, Vihiga County, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 22 -->
+                    <article class="terms-article glass-card reveal" id="section-22">
+                        <h2><span class="section-num">22</span> Acknowledgement</h2>
+                        <p>By continuing to access or use the Vihiga Times website, you acknowledge that you have read, understood, and agreed to these Terms of Service in their entirety. You understand that these terms form a binding legal agreement between you and Vihiga Times.</p>
+                        <p>If you do not agree to these terms, you must discontinue use of the website immediately. Your continued use of the website constitutes ongoing acceptance of these Terms of Service and any future modifications.</p>
+                    </article>
+
+                    <!-- Acknowledgement Banner -->
+                    <div class="acknowledgement glass-card reveal">
+                        <p>By continuing to access or use the Vihiga Times website, you acknowledge that you have <strong>read</strong>, <strong>understood</strong>, and <strong>agreed</strong> to these Terms of Service.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FLOATING HOME BUTTON
+         ============================================ -->
+    <a href="index.html" class="floating-home" id="floating-home" aria-label="Back to homepage">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                        <div class="logo-icon" aria-hidden="true">VT</div>
+                        <span>Vihiga Times</span>
+                    </a>
+                    <p class="footer-desc">
+                        Vihiga Times is your premier source for authentic hyperlocal news across Vihiga County and beyond, 
+                        built by the community for the community.
+                    </p>
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.37 29 29 0 0 0-.46-5.29z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="local-news.html">Local News</a></li>
+                        <li><a href="national.html">National</a></li>
+                        <li><a href="crime-safety.html">Crime &amp; Safety</a></li>
+                        <li><a href="hustle-business.html">Hustle &amp; Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vihiga Times. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            const header = document.getElementById('site-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const floatingHome = document.getElementById('floating-home');
+            const revealElements = document.querySelectorAll('.reveal');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+
+            // ========================================
+            // SCROLL REVEAL (Intersection Observer)
+            // ========================================
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ========================================
+            // HEADER SCROLL EFFECT
+            // ========================================
+            function handleHeaderScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            }
+
+            // ========================================
+            // MOBILE MENU
+            // ========================================
+            function toggleMobileMenu() {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isExpanded ? '' : 'hidden';
+            }
+
+            function closeMobileMenu() {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // ========================================
+            // FLOATING HOME BUTTON
+            // ========================================
+            function handleFloatingButton() {
+                const threshold = window.innerHeight * 0.6;
+                floatingHome.classList.toggle('visible', window.scrollY > threshold);
+            }
+
+            // ========================================
+            // SMOOTH SCROLL FOR TOC LINKS
+            // ========================================
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.pageYOffset - 90,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ========================================
+            // EVENT LISTENERS
+            // ========================================
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        handleHeaderScroll();
+                        handleFloatingButton();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            menuToggle.addEventListener('click', toggleMobileMenu);
+            navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+            // ========================================
+            // INIT
+            // ========================================
+            handleHeaderScroll();
+            handleFloatingButton();
+
+        })();
+    </script>
+</body>
+</html>

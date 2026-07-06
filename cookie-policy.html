@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vihiga Times Privacy Policy - Learn how we collect, use, and protect your personal information.">
+    <meta name="keywords" content="Vihiga Times, privacy policy, data protection, Kenya, Vihiga County">
+    <title>Privacy Policy | Vihiga Times</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           CSS CUSTOM PROPERTIES (Shared with Contact)
+           ============================================ */
+        :root {
+            --bg-deep: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --bg-glass-hover: rgba(255, 255, 255, 0.08);
+            --neon-green: #00d26a;
+            --neon-green-dim: rgba(0, 210, 106, 0.15);
+            --neon-green-glow: rgba(0, 210, 106, 0.4);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-dim: rgba(0, 240, 255, 0.1);
+            --neon-purple: #a855f7;
+            --neon-purple-dim: rgba(168, 85, 247, 0.15);
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glass-hover: rgba(0, 210, 106, 0.3);
+            --shadow-glow: 0 0 30px rgba(0, 210, 106, 0.15);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-deep);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        ::selection {
+            background: var(--neon-green-dim);
+            color: var(--neon-green);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+        :focus-visible {
+            outline: 2px solid var(--neon-green);
+            outline-offset: 3px;
+        }
+
+        /* ============================================
+           ANIMATED BACKGROUND ORBS & GRID
+           ============================================ */
+        .bg-orbs {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: -10%; left: -5%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: 40%; right: -10%;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        .orb-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            bottom: 10%; left: 20%;
+            animation-delay: -10s;
+            animation-duration: 22s;
+        }
+
+        .orb-4 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: 60%; left: 60%;
+            animation-delay: -15s;
+            animation-duration: 28s;
+            opacity: 0.2;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 10px) scale(1.05); }
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ============================================
+           UTILITIES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-padding { padding: 5rem 0; }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-label::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), transparent);
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .glass-card:hover {
+            background: var(--bg-glass-hover);
+            border-color: var(--border-glass-hover);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 8, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: all var(--transition-base);
+        }
+
+        .site-header.scrolled {
+            background: rgba(5, 5, 8, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-deep);
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 0 20px var(--neon-green-dim);
+            transition: box-shadow var(--transition-base);
+        }
+
+        .logo:hover .logo-icon {
+            box-shadow: 0 0 30px var(--neon-green-glow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--text-primary); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 72px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 4rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: var(--neon-green-dim);
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neon-green);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        /* ============================================
+           POLICY CONTENT SECTION
+           ============================================ */
+        .policy-section {
+            padding: 4rem 0 6rem;
+            position: relative;
+        }
+
+        .policy-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .policy-toc {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            position: sticky;
+            top: 90px;
+        }
+
+        .policy-toc h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .policy-toc h3 svg {
+            color: var(--neon-green);
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+        }
+
+        .toc-list a::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--border-glass);
+            transition: all var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .toc-list a:hover,
+        .toc-list a:focus {
+            color: var(--neon-green);
+            background: rgba(0, 210, 106, 0.05);
+        }
+
+        .toc-list a:hover::before,
+        .toc-list a:focus::before {
+            background: var(--neon-green);
+            box-shadow: 0 0 8px var(--neon-green-glow);
+        }
+
+        .policy-article {
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-article h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            scroll-margin-top: 90px;
+        }
+
+        .policy-article h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 8px;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px var(--neon-green-dim);
+        }
+
+        .policy-article p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .policy-article p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-article ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .policy-article ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .policy-article ul li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0.6rem;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--neon-green);
+            box-shadow: 0 0 6px var(--neon-green-glow);
+        }
+
+        .policy-article strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .policy-article a {
+            color: var(--neon-green);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-fast);
+        }
+
+        .policy-article a:hover {
+            color: var(--neon-cyan);
+            border-bottom-color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-green-glow);
+        }
+
+        .policy-article .highlight-box {
+            background: rgba(0, 210, 106, 0.05);
+            border: 1px solid rgba(0, 210, 106, 0.15);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .policy-article .highlight-box strong {
+            color: var(--neon-green);
+        }
+
+        .policy-article h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        /* Contact info card at bottom */
+        .contact-info-card {
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-info-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: all var(--transition-base);
+        }
+
+        .contact-detail-item:hover {
+            border-color: var(--border-glass-hover);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .contact-detail-item svg {
+            color: var(--neon-green);
+            flex-shrink: 0;
+        }
+
+        .contact-detail-item a {
+            color: var(--neon-green);
+            transition: color var(--transition-fast);
+        }
+
+        .contact-detail-item a:hover {
+            color: var(--neon-cyan);
+        }
+
+        /* ============================================
+           FLOATING HOME BUTTON
+           ============================================ */
+        .floating-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 100px;
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+
+        .floating-home.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .floating-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px var(--neon-green-glow);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .site-footer {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #020203 100%);
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            padding: 5rem 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand .logo {
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand .logo-icon {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-desc {
+            line-height: 1.8;
+            max-width: 320px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .footer-heading {
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: all var(--transition-fast);
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 1px;
+            background: var(--neon-green);
+            transition: width var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--neon-green);
+            transform: translateX(4px);
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 42px; height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+            color: var(--text-muted);
+        }
+
+        .social-links a:hover {
+            background: var(--neon-green-dim);
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(5, 5, 8, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active { display: flex; }
+            .nav-links a { font-size: 1.5rem; font-family: var(--font-display); }
+            .menu-toggle { display: flex; }
+
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .floating-home {
+                bottom: 20px; right: 20px;
+                padding: 0.875rem;
+                border-radius: 50%;
+            }
+            .floating-home span { display: none; }
+            .contact-details { flex-direction: column; align-items: stretch; }
+            .contact-detail-item { justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .section-padding { padding: 4rem 0; }
+            .hero-content { padding: 2rem 1rem; }
+            .policy-article { padding: 1.5rem; }
+            .policy-toc { padding: 1.5rem; }
+        }
+
+        /* ============================================
+           ACCESSIBILITY
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .orb { animation: none; }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px; left: 0;
+            background: var(--neon-green);
+            color: var(--bg-deep);
+            padding: 0.5rem 1rem;
+            z-index: 10000;
+            transition: top var(--transition-fast);
+            font-weight: 600;
+        }
+
+        .skip-link:focus { top: 0; }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                <div class="logo-icon" aria-hidden="true">VT</div>
+                <span>Vihiga Times</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="news.html" role="menuitem">News</a></li>
+                    <li role="none"><a href="categories.html" role="menuitem">Categories</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="hero" aria-label="Privacy Policy hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Last Updated: July 06, 2026</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Privacy Policy</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Your privacy matters to us. This Privacy Policy explains what information Vihiga Times collects, 
+                    how it is used, protected, and your rights regarding your information when using our website.
+                </p>
+            </div>
+            <div class="hero-line" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============================================
+             POLICY CONTENT
+             ============================================ -->
+        <section class="policy-section" aria-label="Privacy Policy content">
+            <div class="container">
+                <div class="policy-wrapper">
+
+                    <!-- Table of Contents -->
+                    <nav class="policy-toc glass-card reveal" aria-label="Table of contents">
+                        <h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                            Contents
+                        </h3>
+                        <ul class="toc-list">
+                            <li><a href="#section-1">1. Introduction</a></li>
+                            <li><a href="#section-2">2. Information We Collect</a></li>
+                            <li><a href="#section-3">3. Automatically Collected Information</a></li>
+                            <li><a href="#section-4">4. How We Use Information</a></li>
+                            <li><a href="#section-5">5. Legal Basis for Processing</a></li>
+                            <li><a href="#section-6">6. Cookies and Tracking Technologies</a></li>
+                            <li><a href="#section-7">7. Third-Party Services</a></li>
+                            <li><a href="#section-8">8. Data Sharing</a></li>
+                            <li><a href="#section-9">9. Data Retention</a></li>
+                            <li><a href="#section-10">10. Data Security</a></li>
+                            <li><a href="#section-11">11. Children's Privacy</a></li>
+                            <li><a href="#section-12">12. Your Privacy Rights</a></li>
+                            <li><a href="#section-13">13. International Data Transfers</a></li>
+                            <li><a href="#section-14">14. Legal Compliance</a></li>
+                            <li><a href="#section-15">15. Business Transfers</a></li>
+                            <li><a href="#section-16">16. External Links</a></li>
+                            <li><a href="#section-17">17. Changes to This Policy</a></li>
+                            <li><a href="#section-18">18. Contact Us</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Section 1 -->
+                    <article class="policy-article glass-card reveal" id="section-1">
+                        <h2><span class="section-num">1</span> Introduction</h2>
+                        <p>Vihiga Times respects the privacy of every individual who visits our website. This Privacy Policy outlines how we collect, use, store, and protect your information. It applies to all visitors, users, and anyone who accesses our website or submits information through our contact form.</p>
+                        <p>By using the Vihiga Times website, you acknowledge that you have read and understood this Privacy Policy and agree to its terms. If you do not agree with any part of this policy, please discontinue use of our website immediately.</p>
+                        <p>We are committed to handling your information responsibly and transparently, in line with applicable data protection laws and best practices.</p>
+                    </article>
+
+                    <!-- Section 2 -->
+                    <article class="policy-article glass-card reveal" id="section-2">
+                        <h2><span class="section-num">2</span> Information We Collect</h2>
+                        <p>Vihiga Times does not intentionally collect personally identifiable information from visitors unless they voluntarily provide it. The only personal information we collect is what you choose to share with us when contacting our team.</p>
+                        <p>When you use our <a href="contact.html">contact form</a> or reach out to us directly, you may voluntarily provide the following information:</p>
+                        <ul>
+                            <li>Your full name (first and last)</li>
+                            <li>Email address</li>
+                            <li>Phone number</li>
+                            <li>The content of your message or inquiry</li>
+                            <li>The subject category you select (e.g., News Tip, Advertising, Correction)</li>
+                        </ul>
+                        <p>This information is collected solely for the purpose of responding to your inquiry and is never collected without your explicit action. We do not require visitors to create accounts or provide personal information to browse our news content.</p>
+                    </article>
+
+                    <!-- Section 3 -->
+                    <article class="policy-article glass-card reveal" id="section-3">
+                        <h2><span class="section-num">3</span> Automatically Collected Information</h2>
+                        <p>Like most websites, some technical information may be collected automatically by your browser, our web server, or trusted service providers to operate and secure the website. This information is collected in aggregate and is not intended to personally identify individual visitors.</p>
+                        <p>Examples of automatically collected information include:</p>
+                        <ul>
+                            <li>IP address and approximate geographic location (derived from IP)</li>
+                            <li>Browser type and version</li>
+                            <li>Operating system and device type</li>
+                            <li>Mobile network information (if applicable)</li>
+                            <li>Date and time of visits</li>
+                            <li>Pages visited and time spent on each page</li>
+                            <li>Referring websites or search terms</li>
+                            <li>Clickstream data and navigation patterns</li>
+                            <li>Cookie and browser preference information</li>
+                        </ul>
+                        <p>This data helps us understand how visitors interact with our website, identify technical issues, improve performance, and protect against spam, abuse, and security threats.</p>
+                    </article>
+
+                    <!-- Section 4 -->
+                    <article class="policy-article glass-card reveal" id="section-4">
+                        <h2><span class="section-num">4</span> How We Use Information</h2>
+                        <p>Any information collected by Vihiga Times is used only for legitimate website operations and to serve our community better. Specifically, we use information for the following purposes:</p>
+                        <ul>
+                            <li>Providing and maintaining our news service and website</li>
+                            <li>Responding to inquiries submitted through the contact form</li>
+                            <li>Personalizing content and improving user experience</li>
+                            <li>Analyzing website traffic and performance through aggregate analytics</li>
+                            <li>Detecting and preventing spam, abuse, fraud, or security threats</li>
+                            <li>Complying with applicable legal obligations</li>
+                            <li>Sending newsletters or promotional communications <strong>only when you have explicitly agreed to receive them</strong></li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>Important:</strong> Vihiga Times does not sell, rent, or trade your personal information to third parties under any circumstances. Your information is used solely for the purposes outlined above.
+                        </div>
+                    </article>
+
+                    <!-- Section 5 -->
+                    <article class="policy-article glass-card reveal" id="section-5">
+                        <h2><span class="section-num">5</span> Legal Basis for Processing</h2>
+                        <p>We process personal information only when we have a lawful basis to do so. The legal grounds for processing your information may include:</p>
+                        <ul>
+                            <li><strong>Consent:</strong> When you voluntarily submit information through our contact form, you consent to our processing of that information to respond to your inquiry.</li>
+                            <li><strong>Performance of a contract:</strong> Where applicable, processing may be necessary to fulfill an agreement or service request.</li>
+                            <li><strong>Compliance with legal obligations:</strong> We may process information when required to comply with applicable laws, regulations, or court orders.</li>
+                            <li><strong>Legitimate interests:</strong> We may process information to improve website functionality, ensure security, and analyze usage patterns, provided these interests do not override your fundamental rights.</li>
+                            <li><strong>Protection of vital interests:</strong> In rare cases, processing may be necessary to protect your vital interests or those of another person.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Section 6 -->
+                    <article class="policy-article glass-card reveal" id="section-6">
+                        <h2><span class="section-num">6</span> Cookies and Tracking Technologies</h2>
+                        <p>Vihiga Times may use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us remember your preferences and improve website performance.</p>
+                        <p>Types of cookies we may use include:</p>
+                        <ul>
+                            <li><strong>Essential cookies:</strong> Necessary for the website to function properly (e.g., maintaining your session).</li>
+                            <li><strong>Preference cookies:</strong> Remember your settings and preferences for a better experience.</li>
+                            <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website through anonymous data.</li>
+                        </ul>
+                        <p>You can disable or manage cookies through your browser settings at any time. Please note that disabling certain cookies may affect the functionality of some website features.</p>
+                    </article>
+
+                    <!-- Section 7 -->
+                    <article class="policy-article glass-card reveal" id="section-7">
+                        <h2><span class="section-num">7</span> Third-Party Services</h2>
+                        <p>We rely on trusted third-party services to operate and improve the Vihiga Times website. These providers may have access to certain technical information to perform their functions, but they are contractually obligated to protect your information and use it only for the purposes we specify.</p>
+
+                        <h3>Hosting and Infrastructure</h3>
+                        <p>Our website is hosted on GitHub Pages, which provides the infrastructure necessary to serve our content to visitors worldwide.</p>
+
+                        <h3>Analytics</h3>
+                        <p>We may use analytics tools to understand website performance and visitor behavior. These tools collect aggregate, anonymous data and do not identify individual users.</p>
+
+                        <h3>Email Services</h3>
+                        <p>When you submit our contact form, your message is sent via FormSubmit, a secure form-handling service that delivers emails to our team. FormSubmit processes your submission solely for the purpose of delivering your message to us.</p>
+
+                        <div class="highlight-box">
+                            <strong>Note:</strong> Vihiga Times currently does not use payment processors because no online payments are collected through the website.
+                        </div>
+                    </article>
+
+                    <!-- Section 8 -->
+                    <article class="policy-article glass-card reveal" id="section-8">
+                        <h2><span class="section-num">8</span> Data Sharing</h2>
+                        <p>We do not share your personal information with third parties except in the following limited circumstances:</p>
+                        <ul>
+                            <li>With trusted service providers who assist in operating our website (as described in Section 7)</li>
+                            <li>When required by law, court order, or government authority</li>
+                            <li>To protect our legal rights, property, or safety, or the rights of our users</li>
+                            <li>To detect, prevent, or address fraud, abuse, or security issues</li>
+                        </ul>
+                        <p>We want to emphasize again: <strong>Vihiga Times does not sell, rent, or trade your personal information to any third party for marketing or commercial purposes.</strong></p>
+                    </article>
+
+                    <!-- Section 9 -->
+                    <article class="policy-article glass-card reveal" id="section-9">
+                        <h2><span class="section-num">9</span> Data Retention</h2>
+                        <p>Information submitted through our contact form is retained only for as long as reasonably necessary to fulfill the purpose for which it was collected. This includes:</p>
+                        <ul>
+                            <li>Responding to your inquiry or request</li>
+                            <li>Complying with legal obligations</li>
+                            <li>Maintaining records for legitimate business purposes</li>
+                            <li>Resolving disputes or enforcing our agreements</li>
+                        </ul>
+                        <p>Once the information is no longer needed for these purposes, we will securely delete or anonymize it. We do not retain personal information indefinitely.</p>
+                    </article>
+
+                    <!-- Section 10 -->
+                    <article class="policy-article glass-card reveal" id="section-10">
+                        <h2><span class="section-num">10</span> Data Security</h2>
+                        <p>We take reasonable and appropriate measures to protect the information we collect from unauthorized access, alteration, disclosure, or destruction. Our security practices include:</p>
+                        <ul>
+                            <li>Secure hosting infrastructure provided by reputable platforms</li>
+                            <li>Access controls to limit who can view submitted information</li>
+                            <li>Encryption of data in transit (HTTPS/SSL)</li>
+                            <li>Regular software updates and security patches</li>
+                            <li>Protection against unauthorized access and cyber threats</li>
+                        </ul>
+                        <p>However, it is important to understand that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.</p>
+                    </article>
+
+                    <!-- Section 11 -->
+                    <article class="policy-article glass-card reveal" id="section-11">
+                        <h2><span class="section-num">11</span> Children's Privacy</h2>
+                        <p>Vihiga Times does not knowingly collect personal information from children under the age required by applicable law without appropriate parental or guardian consent. Our website is intended for a general audience and is not directed at children.</p>
+                        <p>If we discover that we have inadvertently collected personal information from a child without proper consent, we will take immediate steps to delete that information from our records where practical.</p>
+                        <p>If you believe we may have collected information from a child, please <a href="contact.html">contact us</a> immediately so we can address the situation.</p>
+                    </article>
+
+                    <!-- Section 12 -->
+                    <article class="policy-article glass-card reveal" id="section-12">
+                        <h2><span class="section-num">12</span> Your Privacy Rights</h2>
+                        <p>Depending on your location and applicable laws, you may have the following rights regarding your personal information:</p>
+                        <ul>
+                            <li><strong>Right to access:</strong> Request a copy of the personal information we hold about you.</li>
+                            <li><strong>Right to correction:</strong> Request that we correct inaccurate or incomplete information.</li>
+                            <li><strong>Right to deletion:</strong> Request that we delete your personal information where applicable.</li>
+                            <li><strong>Right to object:</strong> Object to certain types of processing, such as direct marketing.</li>
+                            <li><strong>Right to withdraw consent:</strong> Withdraw any previously given consent at any time.</li>
+                            <li><strong>Right to data portability:</strong> Request your information in a structured, commonly used format.</li>
+                        </ul>
+                        <p>To exercise any of these rights, please contact us using the information provided in Section 18. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.</p>
+                    </article>
+
+                    <!-- Section 13 -->
+                    <article class="policy-article glass-card reveal" id="section-13">
+                        <h2><span class="section-num">13</span> International Data Transfers</h2>
+                        <p>Information collected through our website may be processed on servers located outside your country of residence, including through our hosting and service providers. While we strive to ensure appropriate safeguards are in place, data protection laws may vary between jurisdictions.</p>
+                        <p>By using our website, you acknowledge and consent to the transfer of your information to servers located in other countries, subject to the protections described in this Privacy Policy.</p>
+                    </article>
+
+                    <!-- Section 14 -->
+                    <article class="policy-article glass-card reveal" id="section-14">
+                        <h2><span class="section-num">14</span> Legal Compliance</h2>
+                        <p>We may disclose your information when we believe in good faith that such disclosure is necessary to:</p>
+                        <ul>
+                            <li>Comply with a court order, subpoena, or other legal process</li>
+                            <li>Respond to requests from government authorities or law enforcement</li>
+                            <li>Enforce our terms of service or other agreements</li>
+                            <li>Protect our rights, property, or safety, or the rights of our users</li>
+                            <li>Investigate and prevent fraud, abuse, or illegal activities</li>
+                        </ul>
+                        <p>We will only disclose the minimum amount of information necessary to comply with the legal requirement.</p>
+                    </article>
+
+                    <!-- Section 15 -->
+                    <article class="policy-article glass-card reveal" id="section-15">
+                        <h2><span class="section-num">15</span> Business Transfers</h2>
+                        <p>In the event that Vihiga Times undergoes a merger, acquisition, restructuring, reorganization, or transfer of ownership, your personal information may be transferred as part of that business transaction. In such cases, we will ensure that your information remains protected under this Privacy Policy or an equivalent privacy policy that provides at least the same level of protection.</p>
+                        <p>We will notify you of any such change in ownership or control of your personal information through a prominent notice on our website.</p>
+                    </article>
+
+                    <!-- Section 16 -->
+                    <article class="policy-article glass-card reveal" id="section-16">
+                        <h2><span class="section-num">16</span> External Links</h2>
+                        <p>The Vihiga Times website may contain links to external websites, including social media platforms, news sources, and partner organizations. These third-party websites operate independently and have their own privacy policies.</p>
+                        <p>Vihiga Times is not responsible for the privacy practices, content, or security of any third-party websites. We encourage you to review the privacy policies of any external sites you visit through links on our website.</p>
+                        <p>We are not liable for any loss or damage that may arise from your use of third-party websites linked from our platform.</p>
+                    </article>
+
+                    <!-- Section 17 -->
+                    <article class="policy-article glass-card reveal" id="section-17">
+                        <h2><span class="section-num">17</span> Changes to This Privacy Policy</h2>
+                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or website functionality. When significant changes are made:</p>
+                        <ul>
+                            <li>The "Last Updated" date at the top of this page will be revised</li>
+                            <li>We may post a notice on our website to inform visitors of the changes</li>
+                            <li>Continued use of the website after changes are posted constitutes acceptance of the revised policy</li>
+                        </ul>
+                        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+                    </article>
+
+                    <!-- Section 18 -->
+                    <article class="policy-article glass-card reveal" id="section-18">
+                        <h2><span class="section-num">18</span> Contact Us</h2>
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please do not hesitate to reach out to us. We are committed to addressing your privacy-related inquiries promptly and transparently.</p>
+                    </article>
+
+                    <!-- Contact Info Card -->
+                    <div class="contact-info-card glass-card reveal">
+                        <h3>Vihiga Times</h3>
+                        <p>We are here to help with any privacy-related questions or requests.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:jameskiladi@gmail.com">jameskiladi@gmail.com</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <a href="tel:0769882553">0769 882 553</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Mbale, Jebrockali Road, Vihiga County, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FLOATING HOME BUTTON
+         ============================================ -->
+    <a href="index.html" class="floating-home" id="floating-home" aria-label="Back to homepage">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                        <div class="logo-icon" aria-hidden="true">VT</div>
+                        <span>Vihiga Times</span>
+                    </a>
+                    <p class="footer-desc">
+                        Vihiga Times is your premier source for authentic hyperlocal news across Vihiga County and beyond, 
+                        built by the community for the community.
+                    </p>
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.37 29 29 0 0 0-.46-5.29z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="local-news.html">Local News</a></li>
+                        <li><a href="national.html">National</a></li>
+                        <li><a href="crime-safety.html">Crime &amp; Safety</a></li>
+                        <li><a href="hustle-business.html">Hustle &amp; Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vihiga Times. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            const header = document.getElementById('site-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const floatingHome = document.getElementById('floating-home');
+            const revealElements = document.querySelectorAll('.reveal');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+
+            // ========================================
+            // SCROLL REVEAL (Intersection Observer)
+            // ========================================
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ========================================
+            // HEADER SCROLL EFFECT
+            // ========================================
+            function handleHeaderScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            }
+
+            // ========================================
+            // MOBILE MENU
+            // ========================================
+            function toggleMobileMenu() {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isExpanded ? '' : 'hidden';
+            }
+
+            function closeMobileMenu() {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // ========================================
+            // FLOATING HOME BUTTON
+            // ========================================
+            function handleFloatingButton() {
+                const threshold = window.innerHeight * 0.6;
+                floatingHome.classList.toggle('visible', window.scrollY > threshold);
+            }
+
+            // ========================================
+            // SMOOTH SCROLL FOR TOC LINKS
+            // ========================================
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.pageYOffset - 90,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ========================================
+            // EVENT LISTENERS
+            // ========================================
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        handleHeaderScroll();
+                        handleFloatingButton();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            menuToggle.addEventListener('click', toggleMobileMenu);
+            navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+            // ========================================
+            // INIT
+            // ========================================
+            handleHeaderScroll();
+            handleFloatingButton();
+
+        })();
+    </script>
+</body>
+</html>

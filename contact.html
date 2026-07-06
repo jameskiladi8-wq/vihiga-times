@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Vihiga Times - Submit news tips, advertising inquiries, corrections, and partnership proposals. Reach us via phone, email, or WhatsApp.">
+    <meta name="keywords" content="Vihiga Times, contact, news tip, advertising, Vihiga County, Kenya">
+    <title>Contact Vihiga Times | Get in Touch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           CSS CUSTOM PROPERTIES
+           ============================================ */
+        :root {
+            /* Futuristic Dark Palette */
+            --bg-deep: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+            /* Neon Accents */
+            --neon-green: #00d26a;
+            --neon-green-dim: rgba(0, 210, 106, 0.15);
+            --neon-green-glow: rgba(0, 210, 106, 0.4);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-dim: rgba(0, 240, 255, 0.1);
+            --neon-purple: #a855f7;
+            --neon-purple-dim: rgba(168, 85, 247, 0.15);
+
+            /* Text Colors */
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --text-dark: #1a1a2e;
+
+            /* Borders & Shadows */
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glass-hover: rgba(0, 210, 106, 0.3);
+            --shadow-glow: 0 0 30px rgba(0, 210, 106, 0.15);
+            --shadow-glow-strong: 0 0 50px rgba(0, 210, 106, 0.25);
+
+            /* Typography */
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+
+            /* Spacing */
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+
+            /* Transitions */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-deep);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        ::selection {
+            background: var(--neon-green-dim);
+            color: var(--neon-green);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        input, textarea, select { font-family: inherit; font-size: 1rem; }
+
+        :focus-visible {
+            outline: 2px solid var(--neon-green);
+            outline-offset: 3px;
+        }
+
+        /* ============================================
+           ANIMATED BACKGROUND ORBS
+           ============================================ */
+        .bg-orbs {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: -10%; left: -5%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: 40%; right: -10%;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        .orb-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            bottom: 10%; left: 20%;
+            animation-delay: -10s;
+            animation-duration: 22s;
+        }
+
+        .orb-4 {
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            top: 60%; left: 60%;
+            animation-delay: -15s;
+            animation-duration: 28s;
+            opacity: 0.2;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 10px) scale(1.05); }
+        }
+
+        /* Grid overlay for tech feel */
+        .grid-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-padding { padding: 6rem 0; }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-label::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), transparent);
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ============================================
+           GLASSMORPHISM CARD UTILITY
+           ============================================ */
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .glass-card:hover {
+            background: var(--bg-glass-hover);
+            border-color: var(--border-glass-hover);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-4px);
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 8, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: all var(--transition-base);
+        }
+
+        .site-header.scrolled {
+            background: rgba(5, 5, 8, 0.9);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-deep);
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 0 20px var(--neon-green-dim);
+            transition: box-shadow var(--transition-base);
+        }
+
+        .logo:hover .logo-icon {
+            box-shadow: 0 0 30px var(--neon-green-glow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+            transition: width var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition-base);
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 72px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: var(--neon-green-dim);
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neon-green);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.8); }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-radius: 100px;
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            transition: all var(--transition-base);
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px var(--neon-green-glow);
+        }
+
+        .hero-cta svg {
+            transition: transform var(--transition-base);
+        }
+
+        .hero-cta:hover svg {
+            transform: translateY(3px);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Decorative line */
+        .hero-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        /* ============================================
+           CONTACT CARDS
+           ============================================ */
+        .contact-cards {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .contact-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 64px; height: 64px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .card-icon::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.3;
+            transition: opacity var(--transition-base);
+        }
+
+        .contact-card:hover .card-icon::before {
+            opacity: 1;
+        }
+
+        .card-icon.phone {
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.1), rgba(0, 210, 106, 0.05));
+            color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 210, 106, 0.1);
+        }
+
+        .card-icon.email {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(0, 240, 255, 0.05));
+            color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+        }
+
+        .card-icon.whatsapp {
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.1), rgba(0, 210, 106, 0.05));
+            color: #25d366;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.1);
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .card-link {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--neon-green);
+            margin-bottom: 0.5rem;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .card-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 2px;
+            background: var(--neon-green);
+            transition: width var(--transition-base);
+        }
+
+        .card-link:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px var(--neon-green-glow);
+        }
+
+        .card-link:hover::after {
+            width: 100%;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .card-hours {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 0.5rem;
+            font-family: var(--font-display);
+        }
+
+        /* ============================================
+           CONTACT FORM
+           ============================================ */
+        .contact-form-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .form-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem;
+            position: relative;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-xl);
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.3), rgba(0, 240, 255, 0.1), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .form-label .required {
+            color: #ff4757;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 210, 106, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6b7b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            color: var(--text-secondary);
+        }
+
+        .form-select option {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-display);
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--neon-green-glow);
+        }
+
+        .form-status {
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-weight: 500;
+            display: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-status.success {
+            display: block;
+            background: rgba(0, 210, 106, 0.1);
+            color: var(--neon-green);
+            border: 1px solid rgba(0, 210, 106, 0.2);
+        }
+
+        .form-status.error {
+            display: block;
+            background: rgba(255, 71, 87, 0.1);
+            color: #ff4757;
+            border: 1px solid rgba(255, 71, 87, 0.2);
+        }
+
+        /* ============================================
+           VISIT OFFICE
+           ============================================ */
+        .visit-office {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .office-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .office-info {
+            padding: 2.5rem;
+        }
+
+        .office-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .office-info h3 svg {
+            color: var(--neon-green);
+        }
+
+        .office-address {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-glass);
+            transition: all var(--transition-base);
+        }
+
+        .office-address:hover {
+            border-color: var(--border-glass-hover);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .office-address svg {
+            flex-shrink: 0;
+            color: var(--neon-green);
+            margin-top: 2px;
+            filter: drop-shadow(0 0 8px var(--neon-green-dim));
+        }
+
+        .office-address p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .office-address strong {
+            color: var(--text-primary);
+            font-family: var(--font-display);
+        }
+
+        .directions-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            background: transparent;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all var(--transition-base);
+            box-shadow: 0 0 15px var(--neon-green-dim);
+        }
+
+        .directions-btn:hover {
+            background: var(--neon-green);
+            color: var(--bg-deep);
+            box-shadow: 0 0 30px var(--neon-green-glow);
+            transform: translateY(-2px);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid var(--border-glass);
+            transition: background var(--transition-fast);
+        }
+
+        .hours-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+        }
+
+        .hours-table th {
+            font-weight: 500;
+            color: var(--text-secondary);
+            width: 40%;
+            font-family: var(--font-display);
+        }
+
+        .hours-table td {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .hours-table .closed {
+            color: #ff4757;
+        }
+
+        .office-map {
+            padding: 2.5rem;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .office-map::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(0, 210, 106, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(0, 240, 255, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .map-icon {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.1), rgba(0, 210, 106, 0.05));
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--neon-green);
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-icon svg {
+            filter: drop-shadow(0 0 10px var(--neon-green-glow));
+        }
+
+        .map-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-address {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-link {
+            color: var(--neon-green);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-link:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 15px var(--neon-green-glow);
+        }
+
+        /* ============================================
+           FAQ ACCORDION
+           ============================================ */
+        .faq-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all var(--transition-base);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 210, 106, 0.15);
+        }
+
+        .faq-item.active {
+            border-color: rgba(0, 210, 106, 0.3);
+            background: rgba(0, 210, 106, 0.03);
+            box-shadow: 0 0 30px rgba(0, 210, 106, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            background: transparent;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-align: left;
+            transition: color var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            color: var(--neon-green);
+        }
+
+        .faq-icon {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all var(--transition-base);
+            border: 1px solid var(--border-glass);
+        }
+
+        .faq-item.active .faq-icon {
+            background: var(--neon-green-dim);
+            border-color: var(--neon-green);
+            transform: rotate(180deg);
+        }
+
+        .faq-icon svg {
+            color: var(--text-secondary);
+            transition: color var(--transition-fast);
+        }
+
+        .faq-item.active .faq-icon svg {
+            color: var(--neon-green);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-slow), padding var(--transition-slow);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 2rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           FLOATING HOME BUTTON
+           ============================================ */
+        .floating-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--neon-green), #00a854);
+            color: var(--bg-deep);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 100px;
+            box-shadow: 0 0 30px var(--neon-green-dim);
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+
+        .floating-home.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .floating-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px var(--neon-green-glow);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .site-footer {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #020203 100%);
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            padding: 5rem 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            opacity: 0.5;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand .logo {
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand .logo-icon {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-desc {
+            line-height: 1.8;
+            max-width: 320px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .footer-heading {
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: all var(--transition-fast);
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 1px;
+            background: var(--neon-green);
+            transition: width var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--neon-green);
+            transform: translateX(4px);
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 42px; height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+            color: var(--text-muted);
+        }
+
+        .social-links a:hover {
+            background: var(--neon-green-dim);
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(5, 5, 8, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                font-family: var(--font-display);
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .cards-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .office-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .floating-home {
+                bottom: 20px; right: 20px;
+                padding: 0.875rem;
+                border-radius: 50%;
+            }
+
+            .floating-home span {
+                display: none;
+            }
+
+            .form-container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-padding { padding: 4rem 0; }
+            .hero-content { padding: 2rem 1rem; }
+        }
+
+        /* ============================================
+           ACCESSIBILITY
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .orb { animation: none; }
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px; left: 0;
+            background: var(--neon-green);
+            color: var(--bg-deep);
+            padding: 0.5rem 1rem;
+            z-index: 10000;
+            transition: top var(--transition-fast);
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                <div class="logo-icon" aria-hidden="true">VT</div>
+                <span>Vihiga Times</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="news.html" role="menuitem">News</a></li>
+                    <li role="none"><a href="categories.html" role="menuitem">Categories</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="contact.html" class="active" role="menuitem" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="hero" aria-label="Contact hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>We're Here to Help</span>
+                </div>
+                <h1 class="hero-title">
+                    Contact <span class="gradient-text">Vihiga Times</span>
+                </h1>
+                <p class="hero-subtitle">
+                    We'd love to hear from you. Whether you have a news tip, a correction, 
+                    an advertising inquiry, a partnership proposal, or simply want to get in touch, 
+                    our team is ready to help.
+                </p>
+                <a href="#contact-form" class="hero-cta" aria-label="Scroll to contact form">
+                    Send a Message
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-line" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============================================
+             CONTACT CARDS
+             ============================================ -->
+        <section class="contact-cards" aria-label="Contact methods">
+            <div class="container">
+                <div class="text-center" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-label reveal">Get in Touch</span>
+                    <h2 class="section-title reveal reveal-delay-1">Choose Your Channel</h2>
+                    <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Multiple ways to reach our team. Pick what works best for you.</p>
+                </div>
+
+                <div class="cards-wrapper">
+                    <article class="contact-card glass-card reveal reveal-delay-1" role="listitem">
+                        <div class="card-icon phone" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Call Us</h3>
+                        <a href="tel:0769882553" class="card-link">0769 882 553</a>
+                        <p class="card-meta">Monday &ndash; Friday</p>
+                        <p class="card-hours">8:00 AM &ndash; 6:00 PM</p>
+                    </article>
+
+                    <article class="contact-card glass-card reveal reveal-delay-2" role="listitem">
+                        <div class="card-icon email" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Email Us</h3>
+                        <a href="mailto:jameskiladi@gmail.com" class="card-link">jameskiladi@gmail.com</a>
+                        <p class="card-meta">We usually reply within 24 hours.</p>
+                    </article>
+
+                    <article class="contact-card glass-card reveal reveal-delay-3" role="listitem">
+                        <div class="card-icon whatsapp" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Chat on WhatsApp</h3>
+                        <a href="https://wa.me/254769882553" target="_blank" rel="noopener noreferrer" class="card-link">0769 882 553</a>
+                        <p class="card-meta">Get quick responses by chatting with our team.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CONTACT FORM
+             ============================================ -->
+        <section class="contact-form-section" id="contact-form" aria-label="Contact form">
+            <div class="container">
+                <div class="text-center" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-label reveal">Write to Us</span>
+                    <h2 class="section-title reveal reveal-delay-1">Send Us a Message</h2>
+                    <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+
+                <div class="form-container glass-card reveal reveal-delay-3">
+                    <form 
+                        action="https://formsubmit.co/jameskiladi@gmail.com" 
+                        method="POST" 
+                        id="message-form"
+                        novalidate
+                    >
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Message from Vihiga Times Contact Page">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">
+                                    First Name <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required autocomplete="given-name" aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">
+                                    Last Name <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required autocomplete="family-name" aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+254 7XX XXX XXX" autocomplete="tel">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="subject" class="form-label">
+                                    Subject <span class="required" aria-label="required">*</span>
+                                </label>
+                                <select id="subject" name="subject" class="form-select" required aria-required="true">
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="News Tip">News Tip</option>
+                                    <option value="Story Idea">Story Idea</option>
+                                    <option value="Advertising">Advertising</option>
+                                    <option value="Correction">Correction</option>
+                                    <option value="Technical Issue">Technical Issue</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="message" class="form-label">
+                                    Message <span class="required" aria-label="required">*</span>
+                                </label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help you..." required aria-required="true" minlength="10"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;" aria-hidden="true">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 13 13 2 9 22 2"/>
+                            </svg>
+                            Send Message
+                        </button>
+
+                        <div class="form-status success" id="form-success" role="alert" aria-live="polite">
+                            Thank you! Your message has been sent successfully. We'll be in touch soon.
+                        </div>
+                        <div class="form-status error" id="form-error" role="alert" aria-live="polite">
+                            Please fill in all required fields correctly before submitting.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             VISIT OFFICE
+             ============================================ -->
+        <section class="visit-office" aria-label="Office location">
+            <div class="container">
+                <div class="text-center" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-label reveal">Find Us</span>
+                    <h2 class="section-title reveal reveal-delay-1">Visit Our Office</h2>
+                    <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Come say hello at our headquarters in Vihiga County.</p>
+                </div>
+
+                <div class="office-grid">
+                    <div class="office-info glass-card reveal">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Office Location
+                        </h3>
+
+                        <div class="office-address">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p><strong>Mbale, Jebrockali Road</strong><br>Vihiga County, Kenya</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mbale+Jebrockali+Road+Vihiga+County+Kenya" target="_blank" rel="noopener noreferrer" class="directions-btn" aria-label="Get directions to our office on Google Maps">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                            Get Directions
+                        </a>
+
+                        <h3 style="margin-top: 2.5rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            Business Hours
+                        </h3>
+                        <table class="hours-table" role="table" aria-label="Business hours">
+                            <tbody>
+                                <tr><th scope="row">Monday &ndash; Friday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                                <tr><th scope="row">Saturday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+                                <tr><th scope="row">Sunday</th><td class="closed">Closed</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="office-map glass-card reveal reveal-delay-2" aria-label="Map showing office location">
+                        <div class="map-icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h4 class="map-title">Vihiga Times Office</h4>
+                        <p class="map-address">Mbale, Jebrockali Road<br>Vihiga County, Kenya</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mbale+Jebrockali+Road+Vihiga+County+Kenya" target="_blank" rel="noopener noreferrer" class="map-link">
+                            View on Google Maps &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FAQ ACCORDION
+             ============================================ -->
+        <section class="faq-section" aria-label="Frequently asked questions">
+            <div class="container">
+                <div class="text-center" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-label reveal">Questions</span>
+                    <h2 class="section-title reveal reveal-delay-1">Frequently Asked</h2>
+                    <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Find quick answers to common questions about contacting us.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item reveal" data-faq>
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>How do I submit a news tip?</span>
+                            <span class="faq-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <div class="faq-answer-inner">
+                                You can submit a news tip through our contact form by selecting "News Tip" from the subject dropdown, 
+                                or reach out to us directly via WhatsApp for quick submissions. Include as much detail as possible, 
+                                including location, date, and any relevant photos or documents. Our editorial team reviews all tips 
+                                promptly and may follow up for additional information.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal" data-faq>
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>How can I advertise on Vihiga Times?</span>
+                            <span class="faq-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <div class="faq-answer-inner">
+                                Businesses and organizations can contact our advertising department through the contact form by selecting 
+                                "Advertising" as the subject. We offer a variety of advertising options including banner placements, 
+                                sponsored content, and newsletter features. Our team will provide you with our media kit and rate card 
+                                within 24 hours of your inquiry.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal" data-faq>
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>Do you cover events across the entire Vihiga County?</span>
+                            <span class="faq-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <div class="faq-answer-inner">
+                                Yes, Vihiga Times covers news and events from all parts of Vihiga County, including Mbale, Luanda, 
+                                Emuhaya, Sabatia, Hamisi, and Vihiga town. Our network of citizen journalists and contributors ensures 
+                                that stories from every corner of the county reach our readers. If you have a story from a remote area, 
+                                don't hesitate to reach out.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal" data-faq>
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                            <span>How quickly do you respond to messages?</span>
+                            <span class="faq-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <div class="faq-answer-inner">
+                                Most inquiries receive a response within 24 hours during business days (Monday to Friday). 
+                                WhatsApp messages are typically answered faster, often within a few hours. For urgent news tips, 
+                                we recommend using WhatsApp for the quickest response. Weekend inquiries are addressed on the following 
+                                business day.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FLOATING HOME BUTTON
+         ============================================ -->
+    <a href="index.html" class="floating-home" id="floating-home" aria-label="Back to homepage">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="Vihiga Times Home">
+                        <div class="logo-icon" aria-hidden="true">VT</div>
+                        <span>Vihiga Times</span>
+                    </a>
+                    <p class="footer-desc">
+                        Vihiga Times is your premier source for authentic hyperlocal news across Vihiga County and beyond, 
+                        built by the community for the community.
+                    </p>
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.08C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.37 29 29 0 0 0-.46-5.29z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="local-news.html">Local News</a></li>
+                        <li><a href="national.html">National</a></li>
+                        <li><a href="crime-safety.html">Crime &amp; Safety</a></li>
+                        <li><a href="hustle-business.html">Hustle &amp; Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vihiga Times. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            const header = document.getElementById('site-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const floatingHome = document.getElementById('floating-home');
+            const faqItems = document.querySelectorAll('[data-faq]');
+            const contactForm = document.getElementById('message-form');
+            const formSuccess = document.getElementById('form-success');
+            const formError = document.getElementById('form-error');
+            const revealElements = document.querySelectorAll('.reveal');
+
+            // ========================================
+            // SCROLL REVEAL (Intersection Observer)
+            // ========================================
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ========================================
+            // HEADER SCROLL EFFECT
+            // ========================================
+            function handleHeaderScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            }
+
+            // ========================================
+            // MOBILE MENU
+            // ========================================
+            function toggleMobileMenu() {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isExpanded ? '' : 'hidden';
+            }
+
+            function closeMobileMenu() {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // ========================================
+            // FLOATING HOME BUTTON
+            // ========================================
+            function handleFloatingButton() {
+                const threshold = window.innerHeight * 0.8;
+                floatingHome.classList.toggle('visible', window.scrollY > threshold);
+            }
+
+            // ========================================
+            // FAQ ACCORDION
+            // ========================================
+            function initAccordion() {
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+                    question.addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        faqItems.forEach(otherItem => {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        });
+                        if (!isActive) {
+                            item.classList.add('active');
+                            question.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+            }
+
+            // ========================================
+            // FORM VALIDATION
+            // ========================================
+            function validateForm(event) {
+                event.preventDefault();
+                formSuccess.classList.remove('success');
+                formError.classList.remove('error');
+
+                const fields = {
+                    firstName: document.getElementById('firstName'),
+                    lastName: document.getElementById('lastName'),
+                    email: document.getElementById('email'),
+                    subject: document.getElementById('subject'),
+                    message: document.getElementById('message')
+                };
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let isValid = true;
+
+                function setFieldError(field, hasError) {
+                    field.style.borderColor = hasError ? '#ff4757' : '';
+                    if (hasError) isValid = false;
+                }
+
+                setFieldError(fields.firstName, !fields.firstName.value.trim());
+                setFieldError(fields.lastName, !fields.lastName.value.trim());
+                setFieldError(fields.email, !fields.email.value.trim() || !emailRegex.test(fields.email.value.trim()));
+                setFieldError(fields.subject, !fields.subject.value);
+                setFieldError(fields.message, !fields.message.value.trim() || fields.message.value.trim().length < 10);
+
+                if (isValid) {
+                    contactForm.submit();
+                } else {
+                    formError.classList.add('error');
+                    const firstError = contactForm.querySelector('[style*="border-color: rgb(255, 71, 87)"]');
+                    if (firstError) {
+                        firstError.focus();
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+
+            function clearFieldError(e) {
+                e.target.style.borderColor = '';
+            }
+
+            // ========================================
+            // SMOOTH SCROLL
+            // ========================================
+            function initSmoothScroll() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: target.getBoundingClientRect().top + window.pageYOffset - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
+            // ========================================
+            // EVENT LISTENERS
+            // ========================================
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        handleHeaderScroll();
+                        handleFloatingButton();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            menuToggle.addEventListener('click', toggleMobileMenu);
+            navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+            contactForm.addEventListener('submit', validateForm);
+            contactForm.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('input', clearFieldError);
+                field.addEventListener('change', clearFieldError);
+            });
+
+            // ========================================
+            // INIT
+            // ========================================
+            initAccordion();
+            initSmoothScroll();
+            handleHeaderScroll();
+            handleFloatingButton();
+
+        })();
+    </script>
+</body>
+</html>
