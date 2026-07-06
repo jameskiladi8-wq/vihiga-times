@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advertise with Vihiga Times. Reach thousands of local readers. Start with a FREE 7-day trial.">
+    <meta name="keywords" content="Advertise Vihiga Times, Vihiga County Advertising, Local Business Promotion">
+    <meta name="author" content="Vihiga Times">
+    <title>Advertise With Us | Vihiga Times</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00d4aa;
+            --primary-glow: rgba(0, 212, 170, 0.4);
+            --primary-dark: #00b894;
+            --accent: #f59e0b;
+            --accent-glow: rgba(245, 158, 11, 0.3);
+            --bg-deep: #0a0f0e;
+            --bg-card: rgba(15, 23, 22, 0.7);
+            --bg-card-border: rgba(0, 212, 170, 0.08);
+            --bg-input: rgba(255, 255, 255, 0.03);
+            --text-bright: #ffffff;
+            --text-main: #e2e8e6;
+            --text-dim: #94a3a0;
+            --text-muted: #647470;
+            --error: #ef4444;
+            --error-glow: rgba(239, 68, 68, 0.2);
+            --success: #22c55e;
+            --success-glow: rgba(34, 197, 94, 0.2);
+            --shadow-glow: 0 0 40px rgba(0, 212, 170, 0.1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            --max-width: 1200px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background: var(--bg-deep);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        ul { list-style: none; }
+
+        /* ========== ANIMATED BACKGROUND ========== */
+        .bg-mesh {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .bg-mesh::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(0,212,170,0.07) 0%, transparent 70%);
+            animation: meshFloat 12s ease-in-out infinite;
+        }
+        .bg-mesh::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 70%);
+            animation: meshFloat 15s ease-in-out infinite reverse;
+        }
+        @keyframes meshFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -20px) scale(1.1); }
+            66% { transform: translate(-20px, 30px) scale(0.95); }
+        }
+
+        .grid-lines {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image: 
+                linear-gradient(rgba(0,212,170,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,212,170,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        /* ========== UTILITIES ========== */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+        .section-padding { padding: 120px 0; }
+        .section-header { text-align: center; max-width: 640px; margin: 0 auto 72px; }
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            color: var(--text-bright);
+            margin-bottom: 16px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        .section-header p { font-size: 1.15rem; color: var(--text-dim); line-height: 1.7; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        .btn:hover::before { transform: translateX(100%); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            box-shadow: 0 4px 24px var(--primary-glow);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 40px var(--primary-glow); }
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: #000;
+            box-shadow: 0 4px 24px var(--accent-glow);
+        }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 8px 40px var(--accent-glow); }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1.5px solid var(--primary);
+            box-shadow: inset 0 0 20px rgba(0,212,170,0.05);
+        }
+        .btn-outline:hover {
+            background: rgba(0,212,170,0.1);
+            box-shadow: 0 0 30px var(--primary-glow), inset 0 0 20px rgba(0,212,170,0.1);
+            transform: translateY(-2px);
+        }
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+        }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 8px 40px rgba(37,211,102,0.4); }
+        .btn-lg { padding: 18px 44px; font-size: 1.05rem; }
+
+        /* ========== REVEAL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+        .reveal-delay-4 { transition-delay: 0.6s; }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(10, 15, 14, 0.8);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            border-bottom: 1px solid rgba(0,212,170,0.06);
+            transition: var(--transition);
+        }
+        .header.scrolled {
+            background: rgba(10, 15, 14, 0.95);
+            border-bottom-color: rgba(0,212,170,0.12);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-bright);
+        }
+        .logo-icon {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 20px var(--primary-glow);
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+        @keyframes logoPulse {
+            0%, 100% { box-shadow: 0 0 15px var(--primary-glow); }
+            50% { box-shadow: 0 0 30px var(--primary-glow); }
+        }
+        .nav-desktop { display: flex; align-items: center; gap: 8px; }
+        .nav-desktop a {
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 60%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+        .nav-desktop a:hover, .nav-desktop a.active {
+            color: var(--primary);
+            background: rgba(0,212,170,0.06);
+        }
+        .nav-desktop a:hover::after, .nav-desktop a.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+        .search-btn {
+            width: 42px; height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            background: rgba(255,255,255,0.03);
+            color: var(--text-dim);
+            border: 1px solid rgba(255,255,255,0.06);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .search-btn:hover {
+            background: rgba(0,212,170,0.1);
+            color: var(--primary);
+            border-color: rgba(0,212,170,0.2);
+            box-shadow: 0 0 20px rgba(0,212,170,0.1);
+        }
+        .mobile-menu-btn {
+            display: none;
+            width: 42px; height: 42px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--text-bright); transition: var(--transition); border-radius: 2px; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 76px; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 15, 14, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            padding: 32px;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav a {
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background: rgba(0,212,170,0.08);
+            color: var(--primary);
+            border-color: rgba(0,212,170,0.15);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 160px 24px 100px;
+            overflow: hidden;
+        }
+        .hero-glow {
+            position: absolute;
+            top: 20%; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,212,170,0.12) 0%, transparent 60%);
+            pointer-events: none;
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+        @keyframes heroGlow {
+            0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            background: rgba(0,212,170,0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,212,170,0.15);
+            border-radius: 100px;
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 36px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero-badge svg { animation: spinSlow 8s linear infinite; }
+        @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            color: var(--text-bright);
+            line-height: 1.05;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        .hero-scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ========== GLASS CARD ========== */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(24px) saturate(1.2);
+            -webkit-backdrop-filter: blur(24px) saturate(1.2);
+            border: 1px solid var(--bg-card-border);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,212,170,0.3), transparent);
+        }
+        .glass-card:hover {
+            border-color: rgba(0,212,170,0.15);
+            box-shadow: 0 0 60px rgba(0,212,170,0.06);
+            transform: translateY(-4px);
+        }
+        .glass-card-accent {
+            border-color: rgba(245,158,11,0.12);
+        }
+        .glass-card-accent::before {
+            background: linear-gradient(90deg, transparent, rgba(245,158,11,0.3), transparent);
+        }
+        .glass-card-accent:hover {
+            border-color: rgba(245,158,11,0.2);
+            box-shadow: 0 0 60px rgba(245,158,11,0.06);
+        }
+
+        /* ========== TRIAL SECTION ========== */
+        .trial-section { padding: 60px 0 40px; }
+        .trial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: stretch;
+        }
+        .trial-card {
+            background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(245,158,11,0.02));
+            border: 1px solid rgba(245,158,11,0.15);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .trial-card::before {
+            content: '';
+            position: absolute;
+            top: -100px; right: -100px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(245,158,11,0.1), transparent 70%);
+            animation: floatBlob 10s ease-in-out infinite;
+        }
+        @keyframes floatBlob {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, 20px); }
+        }
+        .trial-card:hover {
+            border-color: rgba(245,158,11,0.25);
+            box-shadow: 0 0 80px rgba(245,158,11,0.08);
+            transform: translateY(-6px);
+        }
+        .trial-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 100px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+            position: relative;
+            z-index: 1;
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(245,158,11,0.3); }
+            50% { box-shadow: 0 4px 30px rgba(245,158,11,0.5); }
+        }
+        .trial-card h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--text-bright);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .trial-card p {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .trial-card p strong { color: var(--accent); }
+        .trial-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== PRICING CARD ========== */
+        .pricing-card-futuristic {
+            background: linear-gradient(135deg, rgba(0,212,170,0.06), rgba(0,212,170,0.01));
+            border: 1px solid rgba(0,212,170,0.12);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pricing-card-futuristic::before {
+            content: '';
+            position: absolute;
+            top: -100px; left: -100px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(0,212,170,0.08), transparent 70%);
+            animation: floatBlob 12s ease-in-out infinite reverse;
+        }
+        .pricing-card-futuristic::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,212,170,0.4), transparent);
+        }
+        .pricing-card-futuristic:hover {
+            border-color: rgba(0,212,170,0.2);
+            box-shadow: 0 0 80px rgba(0,212,170,0.06);
+            transform: translateY(-6px);
+        }
+        .pricing-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .price-display {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            line-height: 1;
+            position: relative;
+            z-index: 1;
+        }
+        .price-display .currency { font-size: 2rem; vertical-align: super; color: var(--primary); }
+        .price-display .period { font-size: 1.1rem; color: var(--text-muted); font-weight: 400; }
+        .price-per-day {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin: 16px 0 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .price-per-day strong { color: var(--primary); font-size: 1.3rem; }
+        .pricing-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        .pricing-tag {
+            padding: 6px 14px;
+            background: rgba(0,212,170,0.06);
+            border: 1px solid rgba(0,212,170,0.1);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            transition: var(--transition);
+        }
+        .pricing-tag:hover {
+            background: rgba(0,212,170,0.12);
+            border-color: rgba(0,212,170,0.2);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ========== FORM SECTION ========== */
+        .form-section { padding: 80px 0 120px; }
+        .form-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .form-wrapper-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .form-wrapper-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--text-bright);
+            margin-bottom: 12px;
+        }
+        .form-wrapper-header p { color: var(--text-dim); font-size: 1.05rem; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .form-group label .required { color: var(--accent); margin-left: 4px; }
+        .form-group label .optional { color: var(--text-muted); font-weight: 400; text-transform: none; }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 16px 18px;
+            border: 1.5px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-bright);
+            background: var(--bg-input);
+            transition: var(--transition);
+            outline: none;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,212,170,0.1), 0 0 20px rgba(0,212,170,0.05);
+            background: rgba(0,212,170,0.02);
+        }
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: var(--error);
+            box-shadow: 0 0 0 3px var(--error-glow);
+        }
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23647470' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 44px;
+        }
+        .form-group select option {
+            background: var(--bg-deep);
+            color: var(--text-bright);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group .helper {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .form-group .error-msg {
+            font-size: 0.8rem;
+            color: var(--error);
+            display: none;
+        }
+        .form-group .error-msg.show { display: block; }
+
+        /* ========== UPLOAD ZONE ========== */
+        .upload-zone {
+            border: 2px dashed rgba(0,212,170,0.15);
+            border-radius: var(--radius-md);
+            padding: 48px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(0,212,170,0.02);
+            position: relative;
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(0,212,170,0.05);
+            box-shadow: 0 0 40px rgba(0,212,170,0.08);
+        }
+        .upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+        .upload-zone-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(0,212,170,0.05));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            border: 1px solid rgba(0,212,170,0.1);
+            transition: var(--transition);
+        }
+        .upload-zone:hover .upload-zone-icon {
+            box-shadow: 0 0 30px rgba(0,212,170,0.15);
+            transform: scale(1.05);
+        }
+        .upload-zone h4 { font-size: 1.1rem; color: var(--text-bright); margin-bottom: 8px; }
+        .upload-zone p { font-size: 0.85rem; color: var(--text-muted); }
+        .upload-preview {
+            display: none;
+            margin-top: 24px;
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(0,212,170,0.1);
+        }
+        .upload-preview.active { display: block; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        .upload-preview img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            background: rgba(0,0,0,0.3);
+        }
+        .upload-preview .remove-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 16px;
+            background: rgba(239,68,68,0.9);
+            backdrop-filter: blur(8px);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .upload-preview .remove-btn:hover { background: #dc2626; transform: scale(1.05); }
+
+        /* ========== WHATSAPP SECTION ========== */
+        .whatsapp-glass {
+            background: rgba(37,211,102,0.04);
+            border: 1px solid rgba(37,211,102,0.1);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .whatsapp-glass::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(37,211,102,0.3), transparent);
+        }
+        .whatsapp-glass h4 {
+            font-size: 1.1rem;
+            color: var(--text-bright);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .whatsapp-glass p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        .whatsapp-glass .note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== NOTICE BOX ========== */
+        .notice-glass {
+            background: rgba(245,158,11,0.04);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+        .notice-glass::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(245,158,11,0.3), transparent);
+        }
+        .notice-glass svg { flex-shrink: 0; color: var(--accent); margin-top: 2px; }
+        .notice-glass p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+        .notice-glass p + p { margin-top: 8px !important; }
+        .notice-glass strong { color: var(--accent); }
+
+        /* ========== SUCCESS MESSAGE ========== */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 64px 24px;
+        }
+        .success-message.active { display: block; animation: fadeIn 0.6s ease; }
+        .success-ring {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(var(--success) 0%, var(--success) 100%, transparent 100%);
+            padding: 3px;
+            margin: 0 auto 28px;
+            animation: ringSpin 1s ease forwards;
+        }
+        @keyframes ringSpin { from { background: conic-gradient(var(--success) 0%, transparent 0%); } to { background: conic-gradient(var(--success) 0%, var(--success) 100%, transparent 100%); } }
+        .success-ring-inner {
+            width: 100%; height: 100%;
+            background: var(--bg-deep);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+        }
+        .success-message h3 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--text-bright);
+            margin-bottom: 16px;
+        }
+        .success-message p {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto 12px;
+        }
+
+        /* ========== FINAL CTA ========== */
+        .final-cta {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+        }
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0,212,170,0.08) 0%, transparent 60%);
+        }
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .final-cta h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--text-bright);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .final-cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        /* ========== FLOATING HOME ========== */
+        .floating-home {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 22px;
+            background: rgba(0,212,170,0.1);
+            backdrop-filter: blur(16px);
+            color: var(--primary);
+            border: 1px solid rgba(0,212,170,0.2);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease, box-shadow 0.3s ease;
+            pointer-events: none;
+        }
+        .floating-home.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .floating-home:hover {
+            background: rgba(0,212,170,0.2);
+            box-shadow: 0 8px 40px rgba(0,212,170,0.15);
+            transform: translateY(-2px);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: rgba(5, 10, 9, 0.95);
+            border-top: 1px solid rgba(0,212,170,0.06);
+            color: var(--text-muted);
+            padding: 80px 0 0;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+        .footer-brand .logo { color: var(--text-bright); margin-bottom: 20px; }
+        .footer-brand .logo-icon { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 0 20px var(--primary-glow); }
+        .footer-brand p { font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); max-width: 300px; }
+        .footer-social { display: flex; gap: 12px; margin-top: 24px; }
+        .footer-social a {
+            width: 42px; height: 42px;
+            border-radius: var(--radius-sm);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: rgba(0,212,170,0.1);
+            border-color: rgba(0,212,170,0.2);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,212,170,0.1);
+        }
+        .footer-social a svg { color: var(--text-dim); transition: var(--transition); }
+        .footer-social a:hover svg { color: var(--primary); }
+        .footer-column h4 {
+            color: var(--text-bright);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .footer-column a:hover { color: var(--primary); transform: translateX(4px); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.04);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .trial-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .section-padding { padding: 80px 0; }
+            .section-header { margin-bottom: 48px; }
+            .nav-desktop, .search-btn { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .mobile-nav { display: flex; }
+            .glass-card { padding: 32px 20px; }
+            .trial-card { padding: 32px 20px; }
+            .pricing-card-futuristic { padding: 32px 20px; }
+            .form-wrapper-header { margin-bottom: 40px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .final-cta-buttons { flex-direction: column; }
+            .final-cta-buttons .btn { width: 100%; }
+            .hero { min-height: 70vh; padding: 140px 20px 80px; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn { width: 100%; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .price-display { font-size: 3rem; }
+            .price-display .currency { font-size: 1.5rem; }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0);
+            white-space: nowrap; border: 0;
+        }
+        :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div class="grid-lines"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="Vihiga Times Home">
+                <span class="logo-icon">VT</span>
+                <span>Vihiga Times</span>
+            </a>
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/news">News</a>
+                <a href="/categories">Categories</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <a href="/">Home</a>
+            <a href="/news">News</a>
+            <a href="/categories">Categories</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/disclaimer">Disclaimer</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Advertise with Vihiga Times">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Reach Thousands of Local Readers
+            </div>
+            <h1>Advertise With <span>Vihiga Times</span></h1>
+            <p>Promote your business, products, services, events, and community initiatives to an engaged and growing audience across Vihiga County.</p>
+            <div class="hero-cta">
+                <a href="#trial" class="btn btn-accent btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    Start Free Trial
+                </a>
+                <a href="#advertise-form" class="btn btn-outline btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    Submit Advertisement
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Trial & Pricing -->
+    <section class="trial-section" id="trial">
+        <div class="container">
+            <div class="trial-grid">
+                <div class="trial-card reveal">
+                    <div class="trial-badge-pill">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        7-Day FREE Trial
+                    </div>
+                    <h2>Try Vihiga Times Advertising for FREE</h2>
+                    <p>Every new advertiser is welcome to experience the Vihiga Times advertising platform with a <strong>FREE one-week trial</strong>. During this trial, you can see how your business or service is displayed across the website before deciding whether to continue with a paid plan.</p>
+                    <a href="#advertise-form" class="btn btn-accent btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        Start Your Free Trial
+                    </a>
+                    <p class="trial-note">This offer is available once per advertiser and is intended to help local businesses confidently experience the benefits of advertising with Vihiga Times.</p>
+                </div>
+                <div class="pricing-card-futuristic reveal reveal-delay-1">
+                    <div class="pricing-label">Continue After Trial</div>
+                    <div class="price-display"><span class="currency">KSh</span> 100 <span class="period">/ week</span></div>
+                    <div class="price-per-day">Only about <strong>KSh 20</strong> per day</div>
+                    <div class="pricing-tags">
+                        <span class="pricing-tag">Small Businesses</span>
+                        <span class="pricing-tag">Local Shops</span>
+                        <span class="pricing-tag">Market Vendors</span>
+                        <span class="pricing-tag">Farmers</span>
+                        <span class="pricing-tag">Service Providers</span>
+                        <span class="pricing-tag">Community Orgs</span>
+                        <span class="pricing-tag">Churches</span>
+                        <span class="pricing-tag">Schools</span>
+                        <span class="pricing-tag">Entrepreneurs</span>
+                    </div>
+                    <p style="margin-top:24px; font-size:0.95rem; color:var(--text-dim); line-height:1.7; position:relative; z-index:1;">This affordable option is designed especially for the backbone of our community. Even the smallest businesses deserve an opportunity to reach more customers and grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Form -->
+    <section class="form-section" id="advertise-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-wrapper-header reveal">
+                    <h2>Submit Your Advertisement</h2>
+                    <p>Fill in the details below and upload your promotional image. Our team will review your submission and get back to you shortly.</p>
+                </div>
+
+                <div class="glass-card reveal reveal-delay-1" id="formCard">
+                    <form id="adForm" action="https://formsubmit.co/jameskiladi@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+                        <input type="hidden" name="_subject" value="New Advertisement Request - Vihiga Times">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://vihigatimes.co.ke/advertise?submitted=1">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="adTitle">Advertisement Title <span class="required">*</span></label>
+                                <input type="text" id="adTitle" name="Advertisement Title" placeholder="e.g. Fresh Farm Eggs" required>
+                                <span class="error-msg" id="err-adTitle">Please enter an advertisement title.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="productName">Product or Service Name <span class="required">*</span></label>
+                                <input type="text" id="productName" name="Product or Service Name" placeholder="e.g. Organic Vegetables" required>
+                                <span class="error-msg" id="err-productName">Please enter a product or service name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price <span class="required">*</span></label>
+                                <input type="text" id="price" name="Price" placeholder="e.g. KSh 500, Negotiable, Contact for Price, Free" required>
+                                <span class="error-msg" id="err-price">Please enter a price.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessName">Business or Shop Name <span class="required">*</span></label>
+                                <input type="text" id="businessName" name="Business or Shop Name" placeholder="e.g. Mama Njoro Grocery" required>
+                                <span class="error-msg" id="err-businessName">Please enter your business name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Business Location <span class="required">*</span></label>
+                                <input type="text" id="location" name="Business Location" placeholder="e.g. Mbale, Luanda, Chavakali, Hamisi" required>
+                                <span class="error-msg" id="err-location">Please enter your business location.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category <span class="required">*</span></label>
+                                <select id="category" name="Category" required>
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="Retail Shop">Retail Shop</option>
+                                    <option value="Grocery">Grocery</option>
+                                    <option value="Supermarket">Supermarket</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Clothing">Clothing</option>
+                                    <option value="Beauty">Beauty</option>
+                                    <option value="Restaurant">Restaurant</option>
+                                    <option value="Hotel">Hotel</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Livestock">Livestock</option>
+                                    <option value="Machinery">Machinery</option>
+                                    <option value="Automotive">Automotive</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Pharmacy">Pharmacy</option>
+                                    <option value="School">School</option>
+                                    <option value="Church">Church</option>
+                                    <option value="Professional Services">Professional Services</option>
+                                    <option value="Events">Events</option>
+                                    <option value="Entertainment">Entertainment</option>
+                                    <option value="Real Estate">Real Estate</option>
+                                    <option value="Tourism">Tourism</option>
+                                    <option value="NGO">NGO</option>
+                                    <option value="Community Project">Community Project</option>
+                                    <option value="Fundraising">Fundraising</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="error-msg" id="err-category">Please select a category.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="Phone Number" placeholder="e.g. 0712345678" required>
+                                <span class="error-msg" id="err-phone">Please enter a valid phone number.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number <span class="required">*</span></label>
+                                <input type="tel" id="whatsapp" name="WhatsApp Number" placeholder="e.g. 0712345678" required>
+                                <span class="error-msg" id="err-whatsapp">Please enter a valid WhatsApp number.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="Email Address" placeholder="your@email.com" required>
+                                <span class="error-msg" id="err-email">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="startDate">Preferred Start Date <span class="required">*</span></label>
+                                <input type="date" id="startDate" name="Preferred Start Date" required>
+                                <span class="error-msg" id="err-startDate">Please select a start date.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Advertisement Duration <span class="required">*</span></label>
+                                <select id="duration" name="Advertisement Duration" required>
+                                    <option value="" disabled selected>Select duration</option>
+                                    <option value="Free Trial (7 Days)">Free Trial (7 Days)</option>
+                                    <option value="1 Week">1 Week</option>
+                                    <option value="2 Weeks">2 Weeks</option>
+                                    <option value="1 Month">1 Month</option>
+                                    <option value="3 Months">3 Months</option>
+                                    <option value="6 Months">6 Months</option>
+                                    <option value="12 Months">12 Months</option>
+                                </select>
+                                <span class="error-msg" id="err-duration">Please select a duration.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="facebook">Facebook <span class="optional">(optional)</span></label>
+                                <input type="url" id="facebook" name="Facebook" placeholder="https://facebook.com/yourpage">
+                            </div>
+                            <div class="form-group">
+                                <label for="instagram">Instagram <span class="optional">(optional)</span></label>
+                                <input type="url" id="instagram" name="Instagram" placeholder="https://instagram.com/yourhandle">
+                            </div>
+                            <div class="form-group">
+                                <label for="tiktok">TikTok <span class="optional">(optional)</span></label>
+                                <input type="url" id="tiktok" name="TikTok" placeholder="https://tiktok.com/@yourhandle">
+                            </div>
+                            <div class="form-group">
+                                <label for="twitter">X (Twitter) <span class="optional">(optional)</span></label>
+                                <input type="url" id="twitter" name="X (Twitter)" placeholder="https://x.com/yourhandle">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="website">Website <span class="optional">(optional)</span></label>
+                                <input type="url" id="website" name="Website" placeholder="https://yourbusiness.com">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="description">Short Description <span class="required">*</span></label>
+                                <textarea id="description" name="Short Description" placeholder="Describe your product, service, special offers, or business information..." required></textarea>
+                                <span class="error-msg" id="err-description">Please enter a description.</span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Upload Advertisement Image <span class="required">*</span></label>
+                                <div class="upload-zone" id="uploadZone">
+                                    <input type="file" id="adImage" name="Advertisement Image" accept="image/jpeg,image/jpg,image/png,image/webp" required>
+                                    <div class="upload-zone-icon">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                    </div>
+                                    <h4>Click or drag image here</h4>
+                                    <p>Accepted formats: JPG, JPEG, PNG, WEBP</p>
+                                </div>
+                                <div class="upload-preview" id="uploadPreview">
+                                    <img id="previewImg" src="" alt="Advertisement preview">
+                                    <button type="button" class="remove-btn" id="removeImage">Remove</button>
+                                </div>
+                                <p class="helper">Upload a clear image of your product, service, business, event, or promotion.</p>
+                                <span class="error-msg" id="err-adImage">Please upload an advertisement image.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width" style="margin-top:28px;">
+                            <div class="whatsapp-glass">
+                                <h4>Want to Use a Promotional Video?</h4>
+                                <p>Videos are currently submitted through WhatsApp to ensure better quality and easier review.</p>
+                                <a href="https://wa.me/254769882553" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    Send Video via WhatsApp
+                                </a>
+                                <p class="note">After clicking, you can send your promotional video directly through WhatsApp together with any additional instructions.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width" style="margin-top:28px;">
+                            <div class="notice-glass">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                <div>
+                                    <p><strong>Review Process:</strong> Every advertisement is reviewed before publication to ensure it meets our advertising standards and community guidelines.</p>
+                                    <p>We reserve the right to decline advertisements that contain illegal, misleading, offensive, harmful, or inappropriate content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width" style="margin-top:36px; text-align:center;">
+                            <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                                Submit Advertisement
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="success-message" id="successMessage">
+                        <div class="success-ring">
+                            <div class="success-ring-inner">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your advertisement request has been received successfully.</p>
+                        <p>Our team will review your submission and contact you as soon as possible using the contact details you provided.</p>
+                        <p>If you submitted a Free Trial request, we will guide you through the next steps to get your advertisement online.</p>
+                        <a href="/" class="btn btn-primary" style="margin-top:16px;">Back to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <div class="final-cta-content reveal">
+                <h2>Your Next Customer Could Be Reading Vihiga Times Right Now</h2>
+                <p>Whether you are selling products, promoting services, organizing an event, growing your business, or supporting a community initiative, Vihiga Times is here to help you reach thousands of local readers.</p>
+                <p>Start with our <strong style="color:var(--primary);">FREE 7-day trial</strong>, and if you love the results, continue advertising for <strong style="color:var(--primary);">only KSh 100 per week</strong> — an affordable way to keep your business visible every day.</p>
+                <div class="final-cta-buttons">
+                    <a href="#advertise-form" class="btn btn-primary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        Start Free Trial
+                    </a>
+                    <a href="https://wa.me/254769882553" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Home -->
+    <a href="/" class="floating-home" id="floatingHome" aria-label="Back to homepage">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Back to Home
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">VT</span>
+                        <span>Vihiga Times</span>
+                    </a>
+                    <p>Vihiga Times is your trusted source for authentic hyperlocal news across Vihiga County and beyond, built by the community for the community.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/category/local-news">Local News</a></li>
+                        <li><a href="/category/national">National</a></li>
+                        <li><a href="/category/politics">Politics</a></li>
+                        <li><a href="/category/crime-safety">Crime & Safety</a></li>
+                        <li><a href="/category/business">Hustle & Business</a></li>
+                        <li><a href="/category/entertainment">Entertainment</a></li>
+                        <li><a href="/category/sports">Sports</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/advertise">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:jameskiladi@gmail.com">jameskiladi@gmail.com</a></li>
+                        <li><a href="tel:+254769882553">+254 769 882 553</a></li>
+                        <li><a href="/contact">Vihiga County, Kenya</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Vihiga Times. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Header Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Floating Home
+        const floatingHome = document.getElementById('floatingHome');
+        window.addEventListener('scroll', function() {
+            floatingHome.classList.toggle('visible', window.pageYOffset > 600);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Image Upload with Preview
+        const uploadZone = document.getElementById('uploadZone');
+        const adImage = document.getElementById('adImage');
+        const uploadPreview = document.getElementById('uploadPreview');
+        const previewImg = document.getElementById('previewImg');
+        const removeImage = document.getElementById('removeImage');
+
+        uploadZone.addEventListener('click', () => adImage.click());
+        uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length) { adImage.files = files; handleFileSelect(files[0]); }
+        });
+        adImage.addEventListener('change', function() {
+            if (this.files && this.files[0]) handleFileSelect(this.files[0]);
+        });
+
+        function handleFileSelect(file) {
+            const validTypes = ['image/jpeg','image/jpg','image/png','image/webp'];
+            if (!validTypes.includes(file.type)) {
+                alert('Please upload a valid image file (JPG, JPEG, PNG, or WEBP).');
+                adImage.value = '';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImg.src = e.target.result;
+                uploadPreview.classList.add('active');
+                uploadZone.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        removeImage.addEventListener('click', function(e) {
+            e.stopPropagation();
+            adImage.value = '';
+            previewImg.src = '';
+            uploadPreview.classList.remove('active');
+            uploadZone.style.display = 'block';
+        });
+
+        // Form Validation
+        const adForm = document.getElementById('adForm');
+        const successMessage = document.getElementById('successMessage');
+        const formCard = document.getElementById('formCard');
+
+        if (window.location.search.includes('submitted=1')) {
+            adForm.style.display = 'none';
+            successMessage.classList.add('active');
+        }
+
+        adForm.addEventListener('submit', function(e) {
+            let isValid = true;
+            const fields = [
+                { id: 'adTitle' }, { id: 'productName' }, { id: 'price' },
+                { id: 'businessName' }, { id: 'location' }, { id: 'category' },
+                { id: 'phone' }, { id: 'whatsapp' }, { id: 'email' },
+                { id: 'startDate' }, { id: 'duration' }, { id: 'description' }
+            ];
+
+            document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('input, select, textarea').forEach(el => el.classList.remove('error'));
+
+            fields.forEach(field => {
+                const el = document.getElementById(field.id);
+                const errEl = document.getElementById('err-' + field.id);
+                if (!el.value.trim()) {
+                    isValid = false;
+                    el.classList.add('error');
+                    if (errEl) errEl.classList.add('show');
+                }
+            });
+
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+                isValid = false;
+                email.classList.add('error');
+                document.getElementById('err-email').textContent = 'Please enter a valid email address.';
+                document.getElementById('err-email').classList.add('show');
+            }
+
+            if (!adImage.files || !adImage.files[0]) {
+                isValid = false;
+                document.getElementById('err-adImage').classList.add('show');
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+                const firstError = document.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+            }
+        });
+
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errId = 'err-' + this.id;
+                const errEl = document.getElementById(errId);
+                if (errEl) errEl.classList.remove('show');
+            });
+        });
+
+        const startDateInput = document.getElementById('startDate');
+        const today = new Date().toISOString().split('T')[0];
+        startDateInput.setAttribute('min', today);
+    </script>
+</body>
+</html>
