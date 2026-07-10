@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Vihiga Times Young Journalists Program. Learn digital journalism, build your portfolio, and publish stories under your own name.">
+  <title>Vihiga Times Young Journalists Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       VIHIGA TIMES — YOUNG JOURNALISTS PROGRAM
+       All styles in one block
+       ============================================ */
+    :root {
+      --navy: #0f172a;
+      --navy-light: #1e293b;
+      --blue: #1e40af;
+      --blue-light: #3b82f6;
+      --teal: #0d9488;
+      --gold: #d97706;
+      --gold-light: #f59e0b;
+      --text: #334155;
+      --text-light: #64748b;
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --bg-warm: #f1f5f9;
+      --border: #e2e8f0;
+      --radius: 14px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 20px -4px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 40px -8px rgba(15,23,42,0.14);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Utilities */
+    .vt-container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+    .vt-section { padding: 4rem 0; }
+    .vt-section-header { text-align: center; margin-bottom: 2.5rem; }
+    .vt-overline {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      background: rgba(13,148,136,0.08);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 0.75rem;
+    }
+    .vt-section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .vt-section-header p { font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; }
+
+    /* Scroll reveal */
+    .vt-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .vt-reveal.vt-visible { opacity: 1; transform: translateY(0); }
+
+    /* Buttons */
+    .vt-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.7rem 1.75rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 18px -4px rgba(30,64,175,0.3);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .vt-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px -6px rgba(30,64,175,0.4); }
+    .vt-btn-primary:active { transform: translateY(0); }
+    .vt-btn-primary::after {
+      content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: skewX(-20deg); animation: shimmer 3s ease-in-out infinite;
+    }
+    @keyframes shimmer { 0% { left: -60%; } 50% { left: 120%; } 100% { left: 120%; } }
+
+    .vt-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: var(--navy);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.7rem 1.75rem;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .vt-btn-secondary:hover { background: var(--bg-soft); border-color: var(--blue-light); color: var(--blue); }
+
+    .vt-btn-large { padding: 0.85rem 2.5rem; font-size: 0.95rem; }
+
+    /* Navigation */
+    .vt-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .vt-nav-container {
+      max-width: 1100px; margin: 0 auto; padding: 0 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; height: 60px;
+    }
+    .vt-logo {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 800; font-size: 1rem; color: var(--navy); text-decoration: none;
+    }
+    .vt-logo svg { width: 28px; height: 28px; color: var(--blue); }
+    .vt-nav-links { display: flex; list-style: none; gap: 1.75rem; }
+    .vt-nav-links a {
+      font-size: 0.82rem; font-weight: 600; color: var(--text-light);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .vt-nav-links a:hover { color: var(--blue); }
+    .vt-nav-toggle {
+      display: none; flex-direction: column; gap: 4px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .vt-nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: 0.3s; }
+
+    /* Hero */
+    .vt-hero {
+      padding: 8rem 1.25rem 4rem;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #f0fdfa 100%);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .vt-hero-content { max-width: 520px; }
+    .vt-hero-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gold); background: rgba(217,119,6,0.08);
+      padding: 0.35rem 0.85rem; border-radius: 50px; margin-bottom: 1rem;
+    }
+    .vt-hero h1 { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.15; margin-bottom: 1rem; }
+    .vt-hero p { font-size: 0.95rem; color: var(--text); margin-bottom: 1.5rem; line-height: 1.65; }
+    .vt-hero-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .vt-hero-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .vt-hero-image img { width: 100%; height: auto; display: block; }
+
+    /* About */
+    .vt-about { background: var(--bg); }
+    .vt-about-grid { max-width: 780px; margin: 0 auto; }
+    .vt-about-text p { margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.7; }
+    .vt-about-text p strong { color: var(--navy); }
+    .vt-notice {
+      display: flex; gap: 0.75rem; background: linear-gradient(135deg, #fffbeb, #fef3c7);
+      border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 1.25rem 0;
+    }
+    .vt-notice svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--gold); margin-top: 2px; }
+    .vt-notice p { margin: 0; font-size: 0.85rem; color: var(--navy); }
+    .vt-future { font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+
+    /* Benefits */
+    .vt-benefits { background: var(--bg-soft); }
+    .vt-benefits-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    .vt-benefit-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.5rem; transition: var(--transition);
+    }
+    .vt-benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
+    .vt-benefit-icon {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(30,64,175,0.08), rgba(13,148,136,0.08));
+      border-radius: 10px; color: var(--blue); margin-bottom: 0.875rem;
+    }
+    .vt-benefit-icon svg { width: 20px; height: 20px; }
+    .vt-benefit-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+    .vt-benefit-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+
+    /* Learn */
+    .vt-learn-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; max-width: 800px; margin: 0 auto;
+    }
+    .vt-learn-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 1rem; background: var(--bg-soft);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      font-size: 0.85rem; font-weight: 500; color: var(--navy);
+      transition: var(--transition);
+    }
+    .vt-learn-item:hover { background: var(--bg); border-color: var(--blue-light); transform: translateX(4px); }
+    .vt-learn-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+    }
+
+    /* Eligible */
+    .vt-eligible-card {
+      max-width: 640px; margin: 0 auto; background: var(--bg);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; box-shadow: var(--shadow);
+    }
+    .vt-eligible-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .vt-eligible-list li {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.85rem; color: var(--text);
+    }
+    .vt-eligible-list svg { width: 18px; height: 18px; color: var(--teal); flex-shrink: 0; }
+    .vt-no-exp {
+      text-align: center; margin-top: 1.5rem; padding-top: 1.25rem;
+      border-top: 1px solid var(--border); font-size: 0.85rem;
+      color: var(--text-light); font-style: italic;
+    }
+
+    /* Categories */
+    .vt-categories { background: var(--bg-soft); }
+    .vt-cat-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.75rem;
+    }
+    .vt-cat-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 1rem 0.5rem; text-align: center; transition: var(--transition);
+      cursor: default;
+    }
+    .vt-cat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--blue-light); }
+    .vt-cat-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: flex;
+      align-items: center; justify-content: center; margin: 0 auto 0.5rem;
+      color: #fff; font-size: 0.85rem; font-weight: 700;
+    }
+    .vt-cat-card h3 { font-size: 0.75rem; font-weight: 600; color: var(--navy); }
+
+    /* Rules */
+    .vt-rules-card {
+      max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, var(--bg), var(--bg-soft));
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; box-shadow: var(--shadow);
+    }
+    .vt-rules-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem; }
+    .vt-rules-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.82rem; color: var(--text);
+    }
+    .vt-rules-list svg { width: 16px; height: 16px; color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+    .vt-rules-warning {
+      margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--gold); font-weight: 600; text-align: center;
+    }
+
+    /* FAQ */
+    .vt-faq { background: var(--bg); }
+    .vt-faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.6rem; }
+    .vt-faq-item {
+      background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      overflow: hidden; transition: var(--transition);
+    }
+    .vt-faq-item:hover { border-color: var(--border); }
+    .vt-faq-question {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.25rem; background: none; border: none;
+      font-size: 0.9rem; font-weight: 600; color: var(--navy);
+      cursor: pointer; text-align: left;
+    }
+    .vt-faq-icon { width: 18px; height: 18px; color: var(--text-light); transition: transform 0.3s ease; flex-shrink: 0; }
+    .vt-faq-item.active .vt-faq-icon { transform: rotate(45deg); color: var(--blue); }
+    .vt-faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+    }
+    .vt-faq-item.active .vt-faq-answer { max-height: 200px; }
+    .vt-faq-answer p { padding: 0 1.25rem 1rem; font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+    /* Apply CTA */
+    .vt-apply-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); text-align: center; }
+    .vt-apply-cta h2 { color: #fff; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .vt-apply-cta p { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .vt-apply-cta .vt-btn-primary { background: #fff; color: var(--navy); box-shadow: 0 6px 20px -4px rgba(0,0,0,0.2); }
+    .vt-apply-cta .vt-btn-primary:hover { background: var(--bg-soft); }
+
+    /* Footer CTA */
+    .vt-footer-cta {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #f0fdfa 100%);
+      padding: 4rem 1.25rem; text-align: center;
+    }
+    .vt-footer-cta h2 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .vt-footer-cta p { color: var(--text); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .vt-share { font-size: 0.85rem !important; font-weight: 600; color: var(--gold) !important; margin-top: 1rem; margin-bottom: 0.25rem !important; }
+    .vt-together { font-size: 0.8rem !important; color: var(--text-light) !important; margin-bottom: 0 !important; }
+
+    /* Footer */
+    .vt-footer { background: var(--navy); color: #fff; padding: 3rem 0 1.5rem; }
+    .vt-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .vt-footer-brand .vt-logo { color: #fff; margin-bottom: 0.5rem; }
+    .vt-footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+    .vt-footer-links h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem; color: rgba(255,255,255,0.9); }
+    .vt-footer-links ul { list-style: none; }
+    .vt-footer-links li { margin-bottom: 0.4rem; }
+    .vt-footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .vt-footer-links a:hover { color: #fff; }
+    .vt-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; }
+    .vt-footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+
+    /* Scroll to top */
+    .vt-scroll-top {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 900;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--navy); color: #fff; border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0; transform: translateY(20px);
+      transition: var(--transition); box-shadow: var(--shadow-lg);
+    }
+    .vt-scroll-top.visible { opacity: 1; transform: translateY(0); }
+    .vt-scroll-top:hover { background: var(--blue); transform: translateY(-2px); }
+    .vt-scroll-top svg { width: 18px; height: 18px; }
+
+    /* Modal */
+    .vt-modal-overlay {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(15,23,42,0.6); backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem; opacity: 0; visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .vt-modal-overlay.active { opacity: 1; visibility: visible; }
+    .vt-modal {
+      background: var(--bg); border-radius: var(--radius);
+      width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto;
+      padding: 2rem; position: relative; box-shadow: var(--shadow-lg);
+      transform: translateY(20px) scale(0.98); transition: transform 0.3s ease;
+    }
+    .vt-modal-overlay.active .vt-modal { transform: translateY(0) scale(1); }
+    .vt-modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text-light); transition: var(--transition);
+    }
+    .vt-modal-close:hover { background: var(--border); color: var(--navy); }
+    .vt-modal-close svg { width: 16px; height: 16px; }
+    .vt-modal-header { margin-bottom: 1.5rem; }
+    .vt-modal-header h2 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 0.25rem; }
+    .vt-modal-header p { font-size: 0.82rem; color: var(--text-light); }
+
+    /* Form */
+    .vt-form { display: flex; flex-direction: column; gap: 0.875rem; }
+    .vt-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+    .vt-form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+    .vt-form-group label { font-size: 0.78rem; font-weight: 600; color: var(--navy); }
+    .vt-form-group label span { color: #ef4444; }
+    .vt-form-group input,
+    .vt-form-group select,
+    .vt-form-group textarea {
+      padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: 8px;
+      font-family: inherit; font-size: 0.85rem; color: var(--navy);
+      background: var(--bg); transition: var(--transition);
+    }
+    .vt-form-group input:focus,
+    .vt-form-group select:focus,
+    .vt-form-group textarea:focus {
+      outline: none; border-color: var(--blue-light);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    }
+    .vt-form-group input::placeholder,
+    .vt-form-group textarea::placeholder { color: var(--text-light); opacity: 0.6; }
+    .vt-form-group textarea { resize: vertical; min-height: 80px; }
+    .vt-error { font-size: 0.72rem; color: #ef4444; display: none; }
+    .vt-error.show { display: block; }
+
+    .vt-form-check { margin-top: 0.25rem; }
+    .vt-check {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      cursor: pointer; font-size: 0.78rem; color: var(--text);
+    }
+    .vt-check input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .vt-check-box {
+      width: 16px; height: 16px; border: 1.5px solid var(--border); border-radius: 4px;
+      flex-shrink: 0; margin-top: 1px; transition: var(--transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .vt-check input:checked + .vt-check-box {
+      background: var(--blue); border-color: var(--blue);
+    }
+    .vt-check-box::after {
+      content: ''; width: 8px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+      transform: rotate(-45deg) translate(1px, -1px); opacity: 0; transition: opacity 0.2s;
+    }
+    .vt-check input:checked + .vt-check-box::after { opacity: 1; }
+    .vt-check-label { line-height: 1.4; }
+
+    .vt-file-preview { margin-top: 0.5rem; }
+    .vt-file-preview img { max-width: 80px; max-height: 80px; border-radius: 8px; object-fit: cover; }
+
+    .vt-submit { width: 100%; margin-top: 0.5rem; }
+    .vt-btn-text { transition: opacity 0.2s; }
+    .vt-spinner {
+      display: none; width: 18px; height: 18px;
+      border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff;
+      border-radius: 50%; animation: spin 0.8s linear infinite;
+    }
+    .vt-submit.loading .vt-btn-text { opacity: 0; }
+    .vt-submit.loading .vt-spinner { display: block; position: absolute; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Success Modal */
+    .vt-modal-success { text-align: center; max-width: 480px; }
+    .vt-success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--blue-light));
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .vt-success-icon svg { width: 28px; height: 28px; }
+    .vt-modal-success h2 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 0.75rem; }
+    .vt-modal-success p { font-size: 0.85rem; color: var(--text); margin-bottom: 0.75rem; line-height: 1.6; }
+    .vt-modal-success .vt-btn-primary { margin-top: 0.5rem; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .vt-hero { grid-template-columns: 1fr; padding: 6rem 1rem 3rem; text-align: center; }
+      .vt-hero-content { max-width: 100%; }
+      .vt-hero h1 { font-size: 1.6rem; }
+      .vt-hero-image { order: -1; max-width: 400px; margin: 0 auto; }
+      .vt-hero-buttons { justify-content: center; }
+      .vt-benefits-grid { grid-template-columns: 1fr; }
+      .vt-learn-grid { grid-template-columns: 1fr; }
+      .vt-eligible-list { grid-template-columns: 1fr; }
+      .vt-rules-list { grid-template-columns: 1fr; }
+      .vt-cat-grid { grid-template-columns: repeat(3, 1fr); }
+      .vt-footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .vt-form-row { grid-template-columns: 1fr; }
+      .vt-nav-links {
+        position: absolute; top: 60px; left: 0; right: 0;
+        background: var(--bg); border-bottom: 1px solid var(--border);
+        flex-direction: column; padding: 1rem 1.25rem; gap: 0;
+        display: none;
+      }
+      .vt-nav-links.active { display: flex; }
+      .vt-nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+      .vt-nav-links li:last-child { border-bottom: none; }
+      .vt-nav-toggle { display: flex; }
+      .vt-section { padding: 3rem 0; }
+    }
+
+    @media (max-width: 480px) {
+      .vt-cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .vt-hero h1 { font-size: 1.35rem; }
+      .vt-section-header h2 { font-size: 1.25rem; }
+      .vt-modal { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="vt-nav" id="navbar">
+    <div class="vt-nav-container">
+      <a href="#" class="vt-logo">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 14h12M8 18h16M8 22h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Vihiga Times</span>
+      </a>
+      <button class="vt-nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="vt-nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#benefits">Why Join</a></li>
+        <li><a href="#learn">What You Learn</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="vt-hero" id="home">
+    <div class="vt-hero-content vt-reveal">
+      <span class="vt-hero-tag">Now Open for Applications</span>
+      <h1>Vihiga Times Young Journalists Program</h1>
+      <p>Start your journey into digital journalism. Learn, write, publish, and build your professional portfolio with Vihiga Times.</p>
+      <div class="vt-hero-buttons">
+        <button class="vt-btn-primary" onclick="openModal()">Apply Now</button>
+        <a href="#about" class="vt-btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="vt-hero-image vt-reveal">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop" alt="Young journalists working together" loading="eager">
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="vt-section vt-about" id="about">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">About the Program</span>
+        <h2>Real Experience. Real Stories. Real Growth.</h2>
+      </div>
+      <div class="vt-about-grid vt-reveal">
+        <div class="vt-about-text">
+          <p>The <strong>Vihiga Times Young Journalists Program</strong> is an opportunity for passionate young people to gain real-world experience in journalism and digital media.</p>
+          <p>Participants receive practical training while contributing to a growing community news platform. This program helps aspiring journalists improve their writing, reporting, research, interviewing, and digital publishing skills.</p>
+          <p>Every approved article is published under the contributor's own name, allowing participants to begin building a professional journalism portfolio.</p>
+          <div class="vt-notice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p><strong>This is NOT employment and it is not a salaried position.</strong> It is a learning and experience-building program designed to help young journalists develop practical skills while contributing to Vihiga Times.</p>
+          </div>
+          <p class="vt-future">As Vihiga Times continues to grow, contributors will also have opportunities to grow with the platform. Future revenue-sharing opportunities may become available if and when the platform becomes financially sustainable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join -->
+  <section class="vt-section vt-benefits" id="benefits">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">Why Join?</span>
+        <h2>What You Stand to Gain</h2>
+      </div>
+      <div class="vt-benefits-grid">
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3>Learn Professional Journalism</h3><p>Master news writing, reporting, and storytelling from experienced editors.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>News Writing Techniques</h3><p>Learn how to craft compelling headlines, leads, and structured news stories.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Fact-Checking & Verification</h3><p>Develop critical skills to verify sources and avoid misinformation.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Digital Publishing</h3><p>Learn how to publish articles on a live news website and manage content.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Basic HTML & Web Skills</h3><p>Get introductory training in HTML and webpage editing for modern newsrooms.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Editorial Mentorship</h3><p>Receive personalized feedback and guidance from our editorial team on every article.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3>Build Your Portfolio</h3><p>Every published article builds your professional credibility and online presence.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Gain Confidence</h3><p>Grow as a reporter and communicator through consistent practice and support.</p></div>
+        <div class="vt-benefit-card vt-reveal"><div class="vt-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3>Network with Peers</h3><p>Connect with fellow young journalists and build relationships in the media space.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Will Learn -->
+  <section class="vt-section vt-learn" id="learn">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">Curriculum</span>
+        <h2>What You Will Learn</h2>
+      </div>
+      <div class="vt-learn-grid">
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Writing news articles</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Interviewing people</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Research methods</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Verifying information</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Avoiding misinformation</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Headline writing</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Photography basics</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Digital storytelling</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Website publishing</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Basic HTML & webpage editing</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Working with online news platforms</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Responsible use of AI in journalism</span></div>
+        <div class="vt-learn-item vt-reveal"><div class="vt-learn-dot"></div><span>Journalism ethics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Can Apply -->
+  <section class="vt-section vt-eligible" id="eligible">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">Eligibility</span>
+        <h2>Who Can Apply?</h2>
+      </div>
+      <div class="vt-eligible-card vt-reveal">
+        <ul class="vt-eligible-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Have a passion for journalism</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Be willing to learn</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Be respectful and honest</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Be able to communicate clearly</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Be interested in community news</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Have access to a smartphone or computer with internet</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Be willing to attend online or physical training sessions</span></li>
+        </ul>
+        <p class="vt-no-exp">No previous journalism experience is required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="vt-section vt-categories" id="categories">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">Coverage Areas</span>
+        <h2>Program Categories</h2>
+        <p>Select your preferred area during registration.</p>
+      </div>
+      <div class="vt-cat-grid">
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#1e40af,#3b82f6)">N</div><h3>Local News</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#0f172a,#1e293b)">P</div><h3>Politics</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#0d9488,#14b8a6)">E</div><h3>Education</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)">S</div><h3>Sports</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">En</div><h3>Entertainment</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#be123c,#fb7185)">C</div><h3>Culture</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#047857,#34d399)">B</div><h3>Business</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">T</div><h3>Technology</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#65a30d,#a3e635)">A</div><h3>Agriculture</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#dc2626,#f87171)">H</div><h3>Health</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#4338ca,#818cf8)">Cr</div><h3>Crime & Safety</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#15803d,#4ade80)">Ev</div><h3>Environment</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#c2410c,#fb923c)">L</div><h3>Lifestyle</h3></div>
+        <div class="vt-cat-card vt-reveal"><div class="vt-cat-icon" style="background:linear-gradient(135deg,#1e3a5f,#60a5fa)">Op</div><h3>Opinion</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="vt-section vt-rules" id="rules">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">Guidelines</span>
+        <h2>Program Rules</h2>
+      </div>
+      <div class="vt-rules-card vt-reveal">
+        <ul class="vt-rules-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Always report truthful and verified information.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Never publish fake news.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Respect people's privacy.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Avoid hate speech and harmful language.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>No plagiarism. Do not copy from other websites.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Respect editorial decisions and feedback.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Meet agreed submission deadlines.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Maintain professionalism at all times.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Respect fellow contributors.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Follow Kenyan media ethics and laws.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Use respectful language in all communications.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Keep all communication professional.</span></li>
+        </ul>
+        <p class="vt-rules-warning">Violation of these rules may result in suspension or removal from the program.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="vt-section vt-faq" id="faq">
+    <div class="vt-container">
+      <div class="vt-section-header vt-reveal">
+        <span class="vt-overline">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="vt-faq-list">
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Is this a job?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>No. This is a learning and experience-building program.</p></div>
+        </div>
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Will I be paid?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>No. The program is voluntary. However, contributors may benefit from future opportunities as Vihiga Times grows.</p></div>
+        </div>
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Do I need journalism experience?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>No previous journalism experience is required. Passion and willingness to learn are what matter most.</p></div>
+        </div>
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Will my name appear on my articles?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>Yes. Approved articles will be published with your byline.</p></div>
+        </div>
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Can students apply?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>Yes. Students are encouraged to apply.</p></div>
+        </div>
+        <div class="vt-faq-item vt-reveal">
+          <button class="vt-faq-question" aria-expanded="false">
+            <span>Can I choose my preferred reporting category?</span>
+            <svg class="vt-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="vt-faq-answer"><p>Yes. You can select your preferred category during registration.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply CTA -->
+  <section class="vt-section vt-apply-cta" id="apply">
+    <div class="vt-container vt-reveal">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Applications are open. Take the first step toward becoming a published journalist.</p>
+      <button class="vt-btn-primary vt-btn-large" onclick="openModal()">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="vt-footer-cta">
+    <div class="vt-container vt-reveal">
+      <h2>Ready to Begin Your Journalism Journey?</h2>
+      <p>Join hundreds of future storytellers helping inform communities through responsible journalism.</p>
+      <button class="vt-btn-primary" onclick="openModal()">Apply Now</button>
+      <p class="vt-share">Tell a friend to tell a friend!</p>
+      <p class="vt-together">Together, let's build the next generation of journalists.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="vt-footer">
+    <div class="vt-container">
+      <div class="vt-footer-grid">
+        <div class="vt-footer-brand">
+          <a href="#" class="vt-logo">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 14h12M8 18h16M8 22h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Vihiga Times</span>
+          </a>
+          <p>Informing communities. Empowering voices.</p>
+        </div>
+        <div class="vt-footer-links">
+          <h4>Program</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#learn">Curriculum</a></li>
+            <li><a href="#apply">Apply</a></li>
+          </ul>
+        </div>
+        <div class="vt-footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#eligible">Eligibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="vt-footer-bottom">
+        <p> Vihiga Times. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="vt-scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Application Modal -->
+  <div class="vt-modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+    <div class="vt-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="vt-modal-close" onclick="closeModal()" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="vt-modal-header">
+        <h2 id="modalTitle">Apply to the Program</h2>
+        <p>Fill in your details below. Our editorial team will review your application.</p>
+      </div>
+      <!-- 
+        IMPORTANT: This form requires a backend to process file uploads and send emails.
+        Option A: Upload submit.php to the same folder (requires PHP server).
+        Option B: For static hosting, change the action to a service like Formspree, Getform, or EmailJS.
+      -->
+      <form class="vt-form" id="applicationForm" action="submit.php" method="POST" enctype="multipart/form-data" novalidate>
+        <div class="vt-form-row">
+          <div class="vt-form-group">
+            <label for="fullName">Full Name <span>*</span></label>
+            <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+            <span class="vt-error" id="error-fullName"></span>
+          </div>
+          <div class="vt-form-group">
+            <label for="institution">Institution / School / College / University</label>
+            <input type="text" id="institution" name="institution" placeholder="Name of your school">
+          </div>
+        </div>
+        <div class="vt-form-row">
+          <div class="vt-form-group">
+            <label for="county">County <span>*</span></label>
+            <input type="text" id="county" name="county" required placeholder="e.g. Vihiga">
+            <span class="vt-error" id="error-county"></span>
+          </div>
+          <div class="vt-form-group">
+            <label for="town">Town <span>*</span></label>
+            <input type="text" id="town" name="town" required placeholder="e.g. Mbale">
+            <span class="vt-error" id="error-town"></span>
+          </div>
+        </div>
+        <div class="vt-form-row">
+          <div class="vt-form-group">
+            <label for="phone">Phone Number <span>*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="07XX XXX XXX">
+            <span class="vt-error" id="error-phone"></span>
+          </div>
+          <div class="vt-form-group">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+            <span class="vt-error" id="error-email"></span>
+          </div>
+        </div>
+        <div class="vt-form-group">
+          <label for="category">Preferred Journalism Category <span>*</span></label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Local News">Local News</option>
+            <option value="Politics">Politics</option>
+            <option value="Education">Education</option>
+            <option value="Sports">Sports</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Culture">Culture</option>
+            <option value="Business">Business</option>
+            <option value="Technology">Technology</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Health">Health</option>
+            <option value="Crime & Safety">Crime & Safety</option>
+            <option value="Environment">Environment</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Opinion">Opinion</option>
+          </select>
+          <span class="vt-error" id="error-category"></span>
+        </div>
+        <div class="vt-form-group">
+          <label for="motivation">Short Motivation <span>*</span></label>
+          <textarea id="motivation" name="motivation" rows="3" required placeholder="Why do you want to join?"></textarea>
+          <span class="vt-error" id="error-motivation"></span>
+        </div>
+        <div class="vt-form-group">
+          <label for="profilePic">Upload Profile Picture</label>
+          <input type="file" id="profilePic" name="profilePic" accept="image/*">
+          <div class="vt-file-preview" id="filePreview"></div>
+        </div>
+        <div class="vt-form-check">
+          <label class="vt-check">
+            <input type="checkbox" name="confirmInfo" required>
+            <span class="vt-check-box"></span>
+            <span class="vt-check-label">I confirm that the information provided is accurate.</span>
+          </label>
+          <span class="vt-error" id="error-confirmInfo"></span>
+        </div>
+        <div class="vt-form-check">
+          <label class="vt-check">
+            <input type="checkbox" name="understandNotJob" required>
+            <span class="vt-check-box"></span>
+            <span class="vt-check-label">I understand this is not employment.</span>
+          </label>
+          <span class="vt-error" id="error-understandNotJob"></span>
+        </div>
+        <button type="submit" class="vt-btn-primary vt-submit" id="submitBtn">
+          <span class="vt-btn-text">Submit Application</span>
+          <span class="vt-spinner" id="formSpinner"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="vt-modal-overlay" id="successOverlay">
+    <div class="vt-modal vt-modal-success" role="dialog" aria-modal="true">
+      <div class="vt-success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h2>Application Submitted Successfully!</h2>
+      <p>Thank you for applying to the Vihiga Times Young Journalists Program.</p>
+      <p>Your application has been received successfully. Our editorial team will review your application and contact you through <strong>email, WhatsApp, or a phone call</strong> if you are selected for the next stage.</p>
+      <p>We appreciate your interest and wish you the very best.</p>
+      <button class="vt-btn-primary" onclick="closeSuccess()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    /* ============================================
+       VIHIGA TIMES — YOUNG JOURNALISTS PROGRAM
+       All JavaScript in one block
+       ============================================ */
+    (function() {
+      'use strict';
+
+      /* Navigation toggle */
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      /* Scroll reveal */
+      const revealElements = document.querySelectorAll('.vt-reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('vt-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      /* Scroll to top */
+      const scrollTopBtn = document.getElementById('scrollTop');
+      function toggleScrollTop() {
+        if (window.scrollY > 400) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', toggleScrollTop, { passive: true });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* Modal logic */
+      const modalOverlay = document.getElementById('modalOverlay');
+      const successOverlay = document.getElementById('successOverlay');
+
+      window.openModal = function() {
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const firstInput = document.getElementById('fullName');
+          if (firstInput) firstInput.focus();
+        }, 100);
+      };
+
+      window.closeModal = function() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      window.closeSuccess = function() {
+        successOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      window.closeModalOutside = function(e) {
+        if (e.target === modalOverlay) closeModal();
+        if (e.target === successOverlay) closeSuccess();
+      };
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (modalOverlay.classList.contains('active')) closeModal();
+          if (successOverlay.classList.contains('active')) closeSuccess();
+        }
+      });
+
+      /* FAQ Accordion */
+      document.querySelectorAll('.vt-faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.vt-faq-item').forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.vt-faq-question').setAttribute('aria-expanded', 'false');
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* File preview */
+      const fileInput = document.getElementById('profilePic');
+      const preview = document.getElementById('filePreview');
+      if (fileInput && preview) {
+        fileInput.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          preview.innerHTML = '';
+          if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+              const img = document.createElement('img');
+              img.src = ev.target.result;
+              img.alt = 'Profile preview';
+              preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+
+      /* Form validation & submission */
+      const form = document.getElementById('applicationForm');
+      const submitBtn = document.getElementById('submitBtn');
+
+      function showError(fieldId, message) {
+        const el = document.getElementById('error-' + fieldId);
+        if (el) { el.textContent = message; el.classList.add('show'); }
+      }
+      function clearErrors() {
+        document.querySelectorAll('.vt-error').forEach(el => {
+          el.textContent = ''; el.classList.remove('show');
+        });
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        let valid = true;
+        const required = ['fullName', 'county', 'town', 'phone', 'email', 'category', 'motivation'];
+        required.forEach(id => {
+          const el = document.getElementById(id);
+          if (!el || !el.value.trim()) {
+            showError(id, 'This field is required');
+            valid = false;
+          }
+        });
+
+        const email = document.getElementById('email');
+        if (email && email.value.trim()) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email.value.trim())) {
+            showError('email', 'Please enter a valid email');
+            valid = false;
+          }
+        }
+
+        const confirmInfo = form.querySelector('input[name="confirmInfo"]');
+        const understandNotJob = form.querySelector('input[name="understandNotJob"]');
+        if (confirmInfo && !confirmInfo.checked) {
+          showError('confirmInfo', 'You must confirm your information is accurate');
+          valid = false;
+        }
+        if (understandNotJob && !understandNotJob.checked) {
+          showError('understandNotJob', 'You must acknowledge this is not employment');
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+          });
+          const result = await response.json();
+
+          if (result.success) {
+            closeModal();
+            form.reset();
+            preview.innerHTML = '';
+            successOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          } else {
+            alert(result.message || 'Something went wrong. Please try again.');
+          }
+        } catch (err) {
+          // Fallback for static hosting without a backend
+          alert('Thank you! Your application has been prepared. (Note: A backend server is required to process file uploads and send emails to jameskiladi@gmail.com.)');
+          closeModal();
+          form.reset();
+          preview.innerHTML = '';
+          successOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        } finally {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+        }
+      });
+
+      /* Navbar shadow on scroll */
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          navbar.style.boxShadow = '0 2px 12px -4px rgba(15,23,42,0.08)';
+        } else {
+          navbar.style.boxShadow = 'none';
+        }
+      }, { passive: true });
+
+    })();
+  </script>
+</body>
+</html>

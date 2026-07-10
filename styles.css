@@ -2093,3 +2093,348 @@ border:white solid 1px ;
       .article-content { font-size: 12pt; line-height: 1.5; }
       a { text-decoration: underline; color: #000; }
     }
+
+
+
+
+
+    :root {
+    --vt-navy: #0f172a;
+    --vt-blue: #1e40af;
+    --vt-teal: #0d9488;
+    --vt-gold: #d97706;
+    --vt-text: #475569;
+    --vt-muted: #64748b;
+    --vt-border: #e2e8f0;
+    --vt-bg: #ffffff;
+    --vt-radius: 16px;
+    --vt-shadow: 0 10px 30px -8px rgba(15,23,42,0.12);
+    --vt-shadow-hover: 0 20px 40px -10px rgba(15,23,42,0.18);
+  }
+
+  /* Section wrapper — minimal */
+  .vt-card-section {
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* The Card */
+  .vt-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 1.5rem;
+    max-width: 860px;
+    width: 100%;
+    background: var(--vt-bg);
+    border: 1px solid var(--vt-border);
+    border-radius: var(--vt-radius);
+    box-shadow: var(--vt-shadow);
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+  }
+
+  .vt-card:hover {
+    box-shadow: var(--vt-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Decorative top line */
+  .vt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--vt-navy), var(--vt-blue), var(--vt-teal));
+  }
+
+  /* ============================================
+     IMAGE SIDE
+     ============================================ */
+  .vt-card-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    align-self: stretch;
+  }
+
+  .vt-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .vt-card:hover .vt-card-image img {
+    transform: scale(1.04);
+  }
+
+  .vt-img-accent {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(30,64,175,0.08) 0%, rgba(13,148,136,0.06) 100%);
+    pointer-events: none;
+  }
+
+  /* ============================================
+     CONTENT SIDE
+     ============================================ */
+  .vt-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0; /* prevent overflow */
+  }
+
+  .vt-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .vt-tag {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--vt-teal);
+    background: rgba(13,148,136,0.08);
+    border: 1px solid rgba(13,148,136,0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+  }
+
+  .vt-card-header h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--vt-navy);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .vt-card-header p {
+    font-size: 0.8rem;
+    color: var(--vt-text);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ============================================
+     PERKS GRID
+     ============================================ */
+  .vt-perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
+  .vt-perk {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
+    background: #f8fafc;
+    border: 1px solid var(--vt-border);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+  }
+
+  .vt-perk:hover {
+    background: #fff;
+    border-color: var(--vt-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px -3px rgba(30,64,175,0.1);
+  }
+
+  .vt-perk svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--vt-blue);
+  }
+
+  .vt-perk span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--vt-navy);
+    line-height: 1.2;
+  }
+
+  /* ============================================
+     APPLY BOX
+     ============================================ */
+  .vt-apply {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border: 1px solid var(--vt-border);
+    border-left: 2px solid var(--vt-teal);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    margin-top: 0.1rem;
+  }
+
+  .vt-apply svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--vt-teal);
+  }
+
+  .vt-apply p {
+    font-size: 0.75rem;
+    color: var(--vt-muted);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .vt-apply strong {
+    color: var(--vt-navy);
+    font-weight: 600;
+  }
+
+  /* ============================================
+     BUTTON
+     ============================================ */
+  .vt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: fit-content;
+    background: linear-gradient(135deg, var(--vt-navy) 0%, var(--vt-blue) 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 16px -4px rgba(30,64,175,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .vt-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -6px rgba(30,64,175,0.4);
+  }
+
+  .vt-btn:active {
+    transform: translateY(0);
+  }
+
+  .vt-btn:focus-visible {
+    outline: 2px solid var(--vt-teal);
+    outline-offset: 2px;
+  }
+
+  .vt-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .vt-btn:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* Shimmer */
+  .vt-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: skewX(-20deg);
+    animation: vtShimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes vtShimmer {
+    0% { left: -60%; }
+    50% { left: 120%; }
+    100% { left: 120%; }
+  }
+
+  /* ============================================
+     SCROLL REVEAL
+     ============================================ */
+  .vt-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .vt-reveal.vt-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .vt-card {
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .vt-card-image {
+      height: 180px;
+      width: 100%;
+    }
+
+    .vt-card-image img {
+      height: 100%;
+      width: 100%;
+      object-position: top center;
+    }
+
+    .vt-card-header h2 {
+      font-size: 1rem;
+    }
+
+    .vt-card-header p {
+      font-size: 0.78rem;
+    }
+
+    .vt-perks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vt-perk span {
+      font-size: 0.7rem;
+    }
+
+    .vt-apply p {
+      font-size: 0.72rem;
+    }
+
+    .vt-btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .vt-perks {
+      grid-template-columns: 1fr;
+    }
+
+    .vt-card-image {
+      height: 150px;
+    }
+  }
