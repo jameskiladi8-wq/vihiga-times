@@ -9,317 +9,12 @@
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9HQQRS14P"></script>
 <script>
-    (function() {
-      'use strict';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      // Inject toast styles so notifications are actually visible
-      var toastStyle = document.createElement('style');
-      toastStyle.textContent = '.share-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a1a;color:#fff;padding:12px 24px;border-radius:8px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:14px;font-weight:500;z-index:9999;opacity:0;transition:opacity 0.3s ease,transform 0.3s ease;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.2);white-space:nowrap;}.share-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}';
-      document.head.appendChild(toastStyle);
-
-      // READING PROGRESS BAR
-      var progressBar = document.getElementById('readingProgress');
-      var article = document.getElementById('articleContent');
-      function updateReadingProgress() {
-        if (!article || !progressBar) return;
-        var rect = article.getBoundingClientRect();
-        var articleHeight = article.offsetHeight;
-        var windowHeight = window.innerHeight;
-        var scrolled = window.scrollY;
-        var articleTop = rect.top + scrolled;
-        var progress = 0;
-        if (scrolled > articleTop - windowHeight) {
-          progress = ((scrolled - articleTop + windowHeight) / (articleHeight + windowHeight)) * 100;
-        }
-        progress = Math.min(100, Math.max(0, progress));
-        progressBar.style.width = progress + '%';
-      }
-      window.addEventListener('scroll', updateReadingProgress, { passive: true });
-      updateReadingProgress();
-
-      // HEADER COMPACT ON SCROLL
-      var header = document.getElementById('mainHeader');
-      function handleHeaderScroll() {
-        if (!header) return;
-        if (window.scrollY > 60) {
-          header.classList.add('header--compact');
-        } else {
-          header.classList.remove('header--compact');
-        }
-      }
-      window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-
-      // MOBILE MENU
-      var mobileToggle = document.getElementById('mobileToggle');
-      var mobileNav = document.getElementById('mobileNav');
-      var mobileOverlay = document.getElementById('mobileOverlay');
-      var mobileClose = document.getElementById('mobileClose');
-      var mobileLinks = mobileNav ? mobileNav.querySelectorAll('.mobile-nav__link') : [];
-      function openMobileMenu() {
-        if (!mobileToggle || !mobileNav || !mobileOverlay) return;
-        mobileToggle.setAttribute('aria-expanded', 'true');
-        mobileNav.classList.add('active');
-        mobileOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        if (mobileClose) mobileClose.focus();
-      }
-      function closeMobileMenu() {
-        if (!mobileToggle || !mobileNav || !mobileOverlay) return;
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileNav.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-        if (mobileToggle) mobileToggle.focus();
-      }
-      if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
-      if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
-      if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
-      mobileLinks.forEach(function(link) { link.addEventListener('click', closeMobileMenu); });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) {
-          closeMobileMenu();
-        }
-      });
-
-      // SEARCH WITH LIVE SUGGESTIONS (UPDATED FOR VICTOR GULAVI STORY)
-      var searchToggle = document.getElementById('searchToggle');
-      var searchOverlay = document.getElementById('searchOverlay');
-      var searchPanel = document.getElementById('searchPanel');
-      var searchInput = document.getElementById('searchInput');
-      var searchSuggestions = document.getElementById('searchSuggestions');
-      var searchData = [
-        { title: 'Zivi resident Victor Gulavi killed in Burnt Forest tanker crash', category: 'Local News', url: '#' },
-        { title: 'Burnt Forest highway: a history of fatal crashes', category: 'Road Safety', url: '#' },
-        { title: 'How communities are supporting families of road accident victims', category: 'Community', url: '#' },
-        { title: 'How roadside workers can stay safe near heavy vehicles', category: 'Safety', url: '#' },
-        { title: 'Family of Victor Gulavi appeals for support as burial plans begin', category: 'Local News', url: '#' },
-        { title: 'Police appeal for witnesses to Burnt Forest crash', category: 'Police', url: '#' }
-      ];
-      function openSearch() {
-        if (!searchOverlay || !searchPanel) return;
-        searchOverlay.classList.add('active');
-        searchPanel.classList.add('active');
-        if (searchToggle) searchToggle.setAttribute('aria-expanded', 'true');
-        setTimeout(function() { if (searchInput) searchInput.focus(); }, 100);
-      }
-      function closeSearch() {
-        if (!searchOverlay || !searchPanel) return;
-        searchOverlay.classList.remove('active');
-        searchPanel.classList.remove('active');
-        if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
-        if (searchInput) searchInput.value = '';
-        if (searchSuggestions) searchSuggestions.innerHTML = '';
-      }
-      if (searchToggle) searchToggle.addEventListener('click', openSearch);
-      if (searchOverlay) searchOverlay.addEventListener('click', closeSearch);
-      if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
-          var query = e.target.value.toLowerCase().trim();
-          if (!searchSuggestions) return;
-          if (!query) { searchSuggestions.innerHTML = ''; return; }
-          var matches = searchData.filter(function(item) {
-            return item.title.toLowerCase().indexOf(query) !== -1 || item.category.toLowerCase().indexOf(query) !== -1;
-          });
-          if (matches.length === 0) {
-            searchSuggestions.innerHTML = '<div class="search-suggestion__empty">No results found</div>';
-            return;
-          }
-          searchSuggestions.innerHTML = matches.map(function(item, index) {
-            return '<a href="' + item.url + '" class="search-suggestion ' + (index === 0 ? 'search-suggestion--focused' : '') + '" data-index="' + index + '">' +
-                   '<div class="search-suggestion__title">' + item.title + '</div>' +
-                   '<div class="search-suggestion__category">' + item.category + '</div>' +
-                   '</a>';
-          }).join('');
-        });
-        searchInput.addEventListener('keydown', function(e) {
-          if (!searchSuggestions) return;
-          var suggestions = searchSuggestions.querySelectorAll('.search-suggestion');
-          if (!suggestions.length) return;
-          var focused = searchSuggestions.querySelector('.search-suggestion--focused');
-          var focusedIndex = focused ? parseInt(focused.dataset.index) : -1;
-          if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            if (focused) focused.classList.remove('search-suggestion--focused');
-            focusedIndex = (focusedIndex + 1) % suggestions.length;
-            suggestions[focusedIndex].classList.add('search-suggestion--focused');
-            suggestions[focusedIndex].scrollIntoView({ block: 'nearest' });
-          } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            if (focused) focused.classList.remove('search-suggestion--focused');
-            focusedIndex = focusedIndex <= 0 ? suggestions.length - 1 : focusedIndex - 1;
-            suggestions[focusedIndex].classList.add('search-suggestion--focused');
-            suggestions[focusedIndex].scrollIntoView({ block: 'nearest' });
-          } else if (e.key === 'Enter') {
-            e.preventDefault();
-            if (focused) window.location.href = focused.href;
-          }
-        });
-      }
-
-      // MEDIA FULLSCREEN
-      var mediaContainer = document.getElementById('mediaContainer');
-      var fullscreenBtn = document.getElementById('fullscreenBtn');
-      if (fullscreenBtn && mediaContainer) {
-        fullscreenBtn.addEventListener('click', function() {
-          if (!document.fullscreenElement) {
-            mediaContainer.requestFullscreen().catch(function(err) { console.log('Fullscreen error:', err); });
-          } else {
-            document.exitFullscreen();
-          }
-        });
-      }
-
-      // TOAST NOTIFICATION
-      function showToast(message) {
-        var existing = document.querySelector('.share-toast');
-        if (existing) existing.remove();
-        var toast = document.createElement('div');
-        toast.className = 'share-toast';
-        toast.textContent = message;
-        document.body.appendChild(toast);
-        // Force reflow to enable transition
-        toast.offsetHeight;
-        toast.classList.add('show');
-        setTimeout(function() {
-          toast.classList.remove('show');
-          setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
-        }, 3000);
-      }
-
-      // CLIPBOARD FALLBACK (works on HTTP and older browsers)
-      function copyToClipboard(text, successMessage) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function() {
-            showToast(successMessage || 'Copied to clipboard!');
-          }).catch(function() {
-            execCommandCopy(text, successMessage);
-          });
-        } else {
-          execCommandCopy(text, successMessage);
-        }
-      }
-      function execCommandCopy(text, successMessage) {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.setAttribute('readonly', '');
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        try {
-          var success = document.execCommand('copy');
-          showToast(success ? (successMessage || 'Copied to clipboard!') : 'Unable to copy');
-        } catch (err) {
-          showToast('Unable to copy');
-        }
-        document.body.removeChild(ta);
-      }
-
-      // WEB SHARE API
-      var shareData = {
-        title: document.title,
-        text: 'Vihiga Mourns Victor Gulavi, Killed in Burnt Forest Road Accident While on Duty — Vihiga Times',
-        url: window.location.href
-      };
-      function handleShare() {
-        if (navigator.share) {
-          navigator.share(shareData).catch(function(err) {
-            if (err.name !== 'AbortError') {
-              // Fallback to copy URL if share fails
-              copyToClipboard(window.location.href, 'Link copied to clipboard!');
-            }
-          });
-        } else {
-          copyToClipboard(window.location.href, 'Link copied to clipboard!');
-        }
-      }
-
-      // Attach share handlers (Share button + floating share button)
-      document.querySelectorAll('.js-share-trigger').forEach(function(btn) {
-        btn.addEventListener('click', handleShare);
-      });
-
-      // Attach copy-link handlers (Copy Link button — always copies, never triggers native share)
-      document.querySelectorAll('.js-copy-trigger').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          copyToClipboard(window.location.href, 'Link copied to clipboard!');
-        });
-      });
-
-      // FLOATING SHARE BUTTON
-      var floatingShare = document.getElementById('floatingShare');
-      function toggleFloatingShare() {
-        if (!floatingShare || !article) return;
-        var articleRect = article.getBoundingClientRect();
-        var show = articleRect.top < window.innerHeight && articleRect.bottom > 0;
-        floatingShare.style.opacity = show ? '1' : '0';
-        floatingShare.style.pointerEvents = show ? 'auto' : 'none';
-      }
-      window.addEventListener('scroll', toggleFloatingShare, { passive: true });
-      toggleFloatingShare();
-
-      // FORM HANDLING (FormSubmit)
-      document.querySelectorAll('.js-newsletter-form').forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-          var btn = form.querySelector('button[type="submit"]');
-          if (!btn) return;
-          var originalText = btn.textContent;
-          btn.textContent = 'Subscribing…';
-          btn.disabled = true;
-          setTimeout(function() {
-            btn.textContent = 'Subscribed!';
-            btn.style.background = '#059669';
-            setTimeout(function() {
-              btn.textContent = originalText;
-              btn.disabled = false;
-              btn.style.background = '';
-              form.reset();
-            }, 2000);
-          }, 800);
-        });
-      });
-
-      // LAZY LOADING IMAGES
-      if ('IntersectionObserver' in window) {
-        var imageObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              var img = entry.target;
-              if (img.dataset.src) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
-              imageObserver.unobserve(img);
-            }
-          });
-        }, { rootMargin: '60px' });
-        document.querySelectorAll('img[data-src]').forEach(function(img) { imageObserver.observe(img); });
-      }
-
-      // SMOOTH SCROLL FOR ANCHORS
-      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-          var targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          var target = document.querySelector(targetId);
-          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-        });
-      });
-
-      // INTERSECTION OBSERVER FADE-IN
-      if ('IntersectionObserver' in window) {
-        var fadeObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              fadeObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.js-fade-in').forEach(function(el) { fadeObserver.observe(el); });
-      }
-    })();
-  </script>
+  gtag('config', 'G-W9HQQRS14P');
+</script>
 
    <!-- SEO META -->
   <title>Zivi resident Victor Gulavi killed in Burnt Forest tanker crash — Vihiga Times</title>
@@ -669,7 +364,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
               Share
             </button>
-            <button class="share-button js-copy-trigger" aria-label="Copy link">
+            <button class="share-button js-share-trigger" aria-label="Copy link">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
               Copy Link
             </button>
@@ -961,41 +656,90 @@
         });
       }
 
-      // WEB SHARE API + FALLBACK (UPDATED SHARE DATA)
-      var shareData = {
-        title: document.title,
-        text: 'Vihiga Mourns Victor Gulavi, Killed in Burnt Forest Road Accident While on Duty — Vihiga Times',
-        url: window.location.href
-      };
+      // TOAST NOTIFICATION (with inline styles for visibility)
       function showToast(message) {
         var existing = document.querySelector('.share-toast');
         if (existing) existing.remove();
         var toast = document.createElement('div');
         toast.className = 'share-toast';
         toast.textContent = message;
+        toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:12px 24px;border-radius:8px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:14px;font-weight:500;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.2);white-space:nowrap;opacity:0;transition:opacity 0.3s ease;';
         document.body.appendChild(toast);
-        setTimeout(function() { toast.remove(); }, 3000);
+        requestAnimationFrame(function() { toast.style.opacity = '1'; });
+        setTimeout(function() {
+          toast.style.opacity = '0';
+          setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
+        }, 3000);
       }
-      function fallbackShare() {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(window.location.href).then(function() {
-            showToast('Link copied to clipboard!');
-          }).catch(function() { showToast('Unable to copy link'); });
-        } else {
-          showToast('Sharing not supported on this device');
-        }
-      }
-      function handleShare() {
-        if (navigator.share) {
-          navigator.share(shareData).catch(function(err) {
-            if (err.name !== 'AbortError') fallbackShare();
+
+      // CLIPBOARD COPY (with execCommand fallback for HTTP/older browsers)
+      function copyToClipboard(text, onSuccess, onError) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(onSuccess).catch(function() {
+            execCommandCopy(text, onSuccess, onError);
           });
         } else {
-          fallbackShare();
+          execCommandCopy(text, onSuccess, onError);
         }
       }
+      function execCommandCopy(text, onSuccess, onError) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          var ok = document.execCommand('copy');
+          ok ? onSuccess() : onError();
+        } catch (err) { onError(); }
+        document.body.removeChild(ta);
+      }
+
+      // WEB SHARE API
+      var shareData = {
+        title: document.title,
+        text: 'Vihiga Mourns Victor Gulavi, Killed in Burnt Forest Road Accident While on Duty — Vihiga Times',
+        url: window.location.href
+      };
+
+      // Attach handlers to ALL js-share-trigger buttons
       document.querySelectorAll('.js-share-trigger').forEach(function(btn) {
-        btn.addEventListener('click', handleShare);
+        var label = btn.getAttribute('aria-label') || '';
+        if (label.toLowerCase().indexOf('copy') !== -1 || label.toLowerCase().indexOf('link') !== -1) {
+          // This is the Copy Link button — copy to clipboard
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            copyToClipboard(
+              window.location.href,
+              function() { showToast('Link copied to clipboard!'); },
+              function() { showToast('Unable to copy link'); }
+            );
+          });
+        } else {
+          // This is the Share button — use Web Share API
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (navigator.share) {
+              navigator.share(shareData).catch(function(err) {
+                if (err.name !== 'AbortError') {
+                  copyToClipboard(
+                    window.location.href,
+                    function() { showToast('Link copied to clipboard!'); },
+                    function() { showToast('Sharing not supported on this device'); }
+                  );
+                }
+              });
+            } else {
+              copyToClipboard(
+                window.location.href,
+                function() { showToast('Link copied to clipboard!'); },
+                function() { showToast('Sharing not supported on this device'); }
+              );
+            }
+          });
+        }
       });
 
       // FLOATING SHARE BUTTON
@@ -1068,6 +812,5 @@
         document.querySelectorAll('.js-fade-in').forEach(function(el) { fadeObserver.observe(el); });
       }
     })();
-  </script>
-</body>
+  </script></body>
 </html>
