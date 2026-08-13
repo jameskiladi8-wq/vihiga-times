@@ -97,8 +97,7 @@
 
   <meta name="twitter:title" content="Vihiga Times | Breaking News in Western Kenya" />
 
-  <meta name="twitter:description"
-    content="Latest news from Vihiga County and Kenya covering politics, business, sports, and community stories." />
+  <meta name="twitter:description" content="Latest news from Vihiga County and Kenya covering politics, business, sports, and community stories." />
 
   <meta name="twitter:image" content="https://ik.imagekit.io/vihigatimes/vihigatimes-share-logo.png" />
 
@@ -210,6 +209,166 @@
 ========================= -->
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- =========================
+     ADVERTISEMENT PLACEHOLDER CSS
+     (Only for ad slots — does not affect existing styles)
+========================= -->
+  <style>
+    /* ----- Ad Placeholder Container ----- */
+    .ad-placeholder {
+      background: #f9fafb;
+      border: 2px dashed #cbd5e0;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+      transition: border-color 0.25s ease, background 0.25s ease;
+      box-sizing: border-box;
+    }
+
+    .ad-placeholder:hover {
+      border-color: #1a365d;
+      background: #f0f4f8;
+    }
+
+    /* ----- Label ("ADVERTISEMENT") ----- */
+    .ad-placeholder-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #718096;
+      background: #e2e8f0;
+      padding: 0.2rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      font-family: inherit;
+    }
+
+    /* ----- Inner Content ----- */
+    .ad-placeholder-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a365d;
+      margin: 0.4rem 0 0.3rem;
+      font-family: inherit;
+    }
+
+    .ad-placeholder-content p {
+      font-size: 1rem;
+      color: #4a5568;
+      margin: 0.3rem 0 1rem;
+      font-family: inherit;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ----- CTA Button ----- */
+    .ad-placeholder-cta {
+      display: inline-block;
+      background: #1a365d;
+      color: #fff;
+      padding: 0.55rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: background 0.25s ease, transform 0.15s ease;
+      font-family: inherit;
+    }
+
+    .ad-placeholder-cta:hover {
+      background: #2a4a7f;
+      transform: scale(1.02);
+    }
+
+    /* ----- Ad inside Latest News (card-style) ----- */
+    .ad-placeholder--inline {
+      background: #f9fafb;
+      border: 2px dashed #cbd5e0;
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem;
+      margin: 0.5rem 0 1rem;
+      text-align: center;
+      transition: border-color 0.25s ease, background 0.25s ease;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .ad-placeholder--inline:hover {
+      border-color: #1a365d;
+      background: #f0f4f8;
+    }
+
+    .ad-placeholder--inline .ad-placeholder-label {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.7rem;
+    }
+
+    .ad-placeholder--inline .ad-placeholder-content h3 {
+      font-size: 1.05rem;
+      margin: 0.2rem 0 0.2rem;
+    }
+
+    .ad-placeholder--inline .ad-placeholder-content p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0 0.7rem;
+    }
+
+    .ad-placeholder--inline .ad-placeholder-cta {
+      font-size: 0.8rem;
+      padding: 0.4rem 1.4rem;
+    }
+
+    /* ----- Mobile First: full width, no overflow ----- */
+    @media (max-width: 767px) {
+      .ad-placeholder {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+        border-radius: 10px;
+      }
+      .ad-placeholder-content h3 {
+        font-size: 1.1rem;
+      }
+      .ad-placeholder-content p {
+        font-size: 0.9rem;
+      }
+      .ad-placeholder--inline {
+        padding: 1rem 0.75rem;
+        margin: 0.4rem 0 0.8rem;
+      }
+      .ad-placeholder--inline .ad-placeholder-content h3 {
+        font-size: 0.95rem;
+      }
+      .ad-placeholder--inline .ad-placeholder-content p {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* ----- Tablet / Desktop: slightly more breathing room ----- */
+    @media (min-width: 768px) {
+      .ad-placeholder {
+        padding: 2.5rem 2rem;
+        margin: 2.5rem 0;
+      }
+      .ad-placeholder-content h3 {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* ----- Large desktop: wider max-width, centered nicely ----- */
+    @media (min-width: 1200px) {
+      .ad-placeholder {
+        padding: 3rem 2.5rem;
+      }
+      .ad-placeholder-content h3 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -316,6 +475,17 @@
       </div>
     </section>
 
+    <!-- ===== AD PLACEHOLDER #1 ===== -->
+    <!-- After Hero, before Trending Picks — HIGH visibility, prime real estate -->
+    <div class="ad-placeholder" id="ad-1">
+      <span class="ad-placeholder-label">ADVERTISEMENT</span>
+      <div class="ad-placeholder-content">
+        <h3>Your Business Could Be Here</h3>
+        <p>Reach thousands of readers in Vihiga County and Western Kenya every day. Promote your products, services, or events to a local audience that trusts Vihiga Times.</p>
+        <a href="advertise.html" class="ad-placeholder-cta">Advertise With Us →</a>
+      </div>
+    </div>
+
     <!-- ==================== TRENDING PICKS ==================== -->
     <section class="section-wrap" id="trending" aria-labelledby="trending-title">
       <div class="section-header">
@@ -386,6 +556,17 @@
       </div>
     </section>
 
+    <!-- ===== AD PLACEHOLDER #2 ===== -->
+    <!-- Between Trending Picks and Latest News — good visibility, natural break -->
+    <div class="ad-placeholder" id="ad-2">
+      <span class="ad-placeholder-label">ADVERTISEMENT</span>
+      <div class="ad-placeholder-content">
+        <h3>Get Your Brand in Front of Local Readers</h3>
+        <p>Vihiga Times connects you with an engaged audience across Vihiga County, Western Kenya, and beyond. Book your ad space today.</p>
+        <a href="advertise.html" class="ad-placeholder-cta">Reserve Your Spot →</a>
+      </div>
+    </div>
+
     <!-- ==================== LATEST NEWS (Compact) ==================== -->
     <section class="section-wrap" id="latest-news" aria-labelledby="latest-title">
       <div class="section-header">
@@ -417,6 +598,16 @@ class="latest-card-img" loading="lazy">
           </div>
         </article>
 
+        <!-- ===== AD PLACEHOLDER #3 ===== -->
+        <!-- Inside Latest News, after the 2nd article — native placement within content flow -->
+        <div class="ad-placeholder--inline" id="ad-3">
+          <span class="ad-placeholder-label">ADVERTISEMENT</span>
+          <div class="ad-placeholder-content">
+            <h3>Support Local Journalism — Advertise Here</h3>
+            <p>Your business, school, or event featured where the community reads daily.</p>
+            <a href="advertise.html" class="ad-placeholder-cta">Learn More →</a>
+          </div>
+        </div>
 
         <article class="latest-card" id="latest-3" onclick="window.location.href='national/elvis-opiyo-mary-clare-acid-attack-death/index.html'"   target="_self">
           <img src="https://ik.imagekit.io/vihigatimes/National/elvis%20opiyo.jpeg"
@@ -571,6 +762,17 @@ class="latest-card-img" loading="lazy">
         <button class="scroll-btn next" aria-label="Scroll right">›</button>
       </div>
     </section>
+
+    <!-- ===== AD PLACEHOLDER #4 ===== -->
+    <!-- Between Local News and Crime Safety — natural section break, good engagement -->
+    <div class="ad-placeholder" id="ad-4">
+      <span class="ad-placeholder-label">ADVERTISEMENT</span>
+      <div class="ad-placeholder-content">
+        <h3>Reach the Heart of Vihiga</h3>
+        <p>From local businesses to community events, Vihiga Times helps you connect with the people who matter most. Affordable rates for local advertisers.</p>
+        <a href="advertise.html" class="ad-placeholder-cta">Get Started →</a>
+      </div>
+    </div>
 
     <!-- ==================== CATEGORY: CRIME SAFETY ==================== -->
     <section class="section-wrap cat-section" id="crime-safety" aria-labelledby="crime-title">
@@ -883,6 +1085,17 @@ class="latest-card-img" loading="lazy">
         <button class="scroll-btn next" aria-label="Scroll right">›</button>
       </div>
     </section>
+
+    <!-- ===== AD PLACEHOLDER #5 ===== -->
+    <!-- Between Entertainment & Culture and Hustle & Business — good section transition -->
+    <div class="ad-placeholder" id="ad-5">
+      <span class="ad-placeholder-label">ADVERTISEMENT</span>
+      <div class="ad-placeholder-content">
+        <h3>Promote Your Business to Vihiga's Readers</h3>
+        <p>Whether you run a shop, a school, a farm, or a service — Vihiga Times puts your brand in front of a local audience that trusts us for news.</p>
+        <a href="advertise.html" class="ad-placeholder-cta">Advertise Here →</a>
+      </div>
+    </div>
 
     <!-- ==================== CATEGORY: HUSTLE & BUSINESS ==================== -->
     <section class="section-wrap cat-section" id="hustle-business" aria-labelledby="business-title">
