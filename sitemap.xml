@@ -103,6 +103,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vihigatimes.co.ke/local-news/vtrh-receives-essential-medicines-vihiga/index.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vihigatimes.co.ke/local-news/blind-vihiga-man-samuel-lugadiru-busaina-village-mbihi-appeals-help-family-support/index.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -590,6 +596,12 @@
   </url>
   <url>
     <loc>https://vihigatimes.co.ke/sitemap.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vihigatimes.co.ke/health/index.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
