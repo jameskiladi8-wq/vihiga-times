@@ -1,0 +1,72 @@
+[
+  {
+    "id": "community-project-in-luanda",
+    "title": "New Community Project Launched in Luanda",
+    "description": "Residents welcome a new development project aimed at improving services in the area.",
+    "image": "https://picsum.photos/seed/vt-local-news-1/640/360",
+    "imageAlt": "Placeholder image for sample article: New Community Project Launched in Luanda",
+    "link": "/local-news/community-project-in-luanda/",
+    "date": "2026-10-30",
+    "status": "published"
+  },
+  {
+    "id": "mbale-market-upgrade",
+    "title": "Mbale Market Upgrade Enters New Phase",
+    "description": "Traders and shoppers welcome the latest improvements at the busy Mbale market.",
+    "image": "https://picsum.photos/seed/vt-local-news-2/640/360",
+    "imageAlt": "Placeholder image for sample article: Mbale Market Upgrade Enters New Phase",
+    "link": "/local-news/mbale-market-upgrade/",
+    "date": "2026-10-27",
+    "status": "published"
+  },
+  {
+    "id": "luanda-boda-safety",
+    "title": "Boda Boda Safety Campaign Kicks Off in Luanda",
+    "description": "Riders and passengers urged to put safety first as a new campaign launches.",
+    "image": "https://picsum.photos/seed/vt-local-news-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Boda Boda Safety Campaign Kicks Off in Luanda",
+    "link": "/local-news/luanda-boda-safety/",
+    "date": "2026-10-24",
+    "status": "published"
+  },
+  {
+    "id": "chavakali-water-project",
+    "title": "Water Project to Serve More Chavakali Households",
+    "description": "A new water project promises reliable supply for hundreds of local households.",
+    "image": "https://picsum.photos/seed/vt-local-news-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Water Project to Serve More Chavakali Households",
+    "link": "/local-news/chavakali-water-project/",
+    "date": "2026-10-20",
+    "status": "published"
+  },
+  {
+    "id": "vihiga-health-outreach",
+    "title": "Free Medical Outreach Announced for Vihiga Residents",
+    "description": "Health officials announce dates for a free community medical camp.",
+    "image": "https://picsum.photos/seed/vt-local-news-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Free Medical Outreach Announced for Vihiga Residents",
+    "link": "/local-news/vihiga-health-outreach/",
+    "date": "2026-10-16",
+    "status": "published"
+  },
+  {
+    "id": "hamisi-road-repairs",
+    "title": "Road Repairs Begin on Hamisi-Chavakali Route",
+    "description": "Work starts on a key road linking Hamisi and Chavakali trading centres.",
+    "image": "https://picsum.photos/seed/vt-local-news-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Road Repairs Begin on Hamisi-Chavakali Route",
+    "link": "/local-news/hamisi-road-repairs/",
+    "date": "2026-10-12",
+    "status": "published"
+  },
+  {
+    "id": "upcoming-community-event",
+    "title": "Community Event Scheduled for Next Month",
+    "description": "Organisers have announced plans for an upcoming community event.",
+    "image": "https://picsum.photos/seed/vt-local-news-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Community Event Scheduled for Next Month",
+    "link": "/local-news/upcoming-community-event/",
+    "date": "2026-10-27",
+    "status": "draft"
+  }
+]

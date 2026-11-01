@@ -1,0 +1,72 @@
+[
+  {
+    "id": "community-policing-forum",
+    "title": "Community Policing Forum Strengthens Neighbourhood Watch",
+    "description": "Residents and police partner to improve security in local estates.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-1/640/360",
+    "imageAlt": "Placeholder image for sample article: Community Policing Forum Strengthens Neighbourhood Watch",
+    "link": "/crime-safety/community-policing-forum/",
+    "date": "2026-10-26",
+    "status": "published"
+  },
+  {
+    "id": "market-fire-safety",
+    "title": "Fire Safety Drive Targets Open-Air Markets",
+    "description": "Traders trained on prevention as fire safety checks begin in markets.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-2/640/360",
+    "imageAlt": "Placeholder image for sample article: Fire Safety Drive Targets Open-Air Markets",
+    "link": "/crime-safety/market-fire-safety/",
+    "date": "2026-10-22",
+    "status": "published"
+  },
+  {
+    "id": "boda-theft-arrests",
+    "title": "Police Recover Stolen Motorbikes in Vihiga",
+    "description": "Several suspects arrested in a crackdown on motorbike theft.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Police Recover Stolen Motorbikes in Vihiga",
+    "link": "/crime-safety/boda-theft-arrests/",
+    "date": "2026-10-18",
+    "status": "published"
+  },
+  {
+    "id": "school-safety-guidelines",
+    "title": "New Safety Guidelines Issued for Schools",
+    "description": "Schools receive updated guidance on protecting learners and staff.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-4/640/360",
+    "imageAlt": "Placeholder image for sample article: New Safety Guidelines Issued for Schools",
+    "link": "/crime-safety/school-safety-guidelines/",
+    "date": "2026-10-14",
+    "status": "published"
+  },
+  {
+    "id": "domestic-violence-helpline",
+    "title": "Helpline Expanded for Gender Violence Survivors",
+    "description": "Support services extended for survivors of gender-based violence.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Helpline Expanded for Gender Violence Survivors",
+    "link": "/crime-safety/domestic-violence-helpline/",
+    "date": "2026-10-10",
+    "status": "published"
+  },
+  {
+    "id": "road-safety-checkpoints",
+    "title": "Traffic Checkpoints Reduce Night Accidents",
+    "description": "Enhanced patrols lead to fewer night-time road accidents.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Traffic Checkpoints Reduce Night Accidents",
+    "link": "/crime-safety/road-safety-checkpoints/",
+    "date": "2026-10-06",
+    "status": "published"
+  },
+  {
+    "id": "fraud-awareness-campaign",
+    "title": "Fraud Awareness Campaign to Launch Soon",
+    "description": "Police plan a campaign on phone and online scams.",
+    "image": "https://picsum.photos/seed/vt-crime-safety-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Fraud Awareness Campaign to Launch Soon",
+    "link": "/crime-safety/fraud-awareness-campaign/",
+    "date": "2026-10-17",
+    "status": "draft"
+  }
+]

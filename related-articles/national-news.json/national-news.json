@@ -1,0 +1,72 @@
+[
+  {
+    "id": "national-budget-highlights",
+    "title": "What the New National Budget Means for Counties",
+    "description": "A simple breakdown of how the latest national budget affects county services.",
+    "image": "https://picsum.photos/seed/vt-national-news-1/640/360",
+    "imageAlt": "Placeholder image for sample article: What the New National Budget Means for Counties",
+    "link": "/national/national-budget-highlights/",
+    "date": "2026-10-28",
+    "status": "published"
+  },
+  {
+    "id": "education-funding-policy",
+    "title": "National Education Funding Policy Explained",
+    "description": "Key changes in national education funding and what they mean for schools.",
+    "image": "https://picsum.photos/seed/vt-national-news-2/640/360",
+    "imageAlt": "Placeholder image for sample article: National Education Funding Policy Explained",
+    "link": "/national/education-funding-policy/",
+    "date": "2026-10-24",
+    "status": "published"
+  },
+  {
+    "id": "healthcare-devolution-update",
+    "title": "Healthcare Services: Devolution Update",
+    "description": "Counties take on new responsibilities in the delivery of health services.",
+    "image": "https://picsum.photos/seed/vt-national-news-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Healthcare Services: Devolution Update",
+    "link": "/national/healthcare-devolution-update/",
+    "date": "2026-10-20",
+    "status": "published"
+  },
+  {
+    "id": "affordable-housing-programme",
+    "title": "Affordable Housing Programme Expands to New Regions",
+    "description": "The national housing programme adds new project sites across the country.",
+    "image": "https://picsum.photos/seed/vt-national-news-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Affordable Housing Programme Expands to New Regions",
+    "link": "/national/affordable-housing-programme/",
+    "date": "2026-10-16",
+    "status": "published"
+  },
+  {
+    "id": "road-network-upgrade",
+    "title": "Major Road Network Upgrade Announced",
+    "description": "New funding targets key highways and rural access roads nationwide.",
+    "image": "https://picsum.photos/seed/vt-national-news-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Major Road Network Upgrade Announced",
+    "link": "/national/road-network-upgrade/",
+    "date": "2026-10-12",
+    "status": "published"
+  },
+  {
+    "id": "small-business-support-fund",
+    "title": "New Fund to Support Small Businesses Launched",
+    "description": "Small enterprises can now apply for support through a new national fund.",
+    "image": "https://picsum.photos/seed/vt-national-news-6/640/360",
+    "imageAlt": "Placeholder image for sample article: New Fund to Support Small Businesses Launched",
+    "link": "/national/small-business-support-fund/",
+    "date": "2026-10-08",
+    "status": "published"
+  },
+  {
+    "id": "census-preparations",
+    "title": "Preparations Begin for National Census",
+    "description": "Officials begin groundwork for the next national population count.",
+    "image": "https://picsum.photos/seed/vt-national-news-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Preparations Begin for National Census",
+    "link": "/national/census-preparations/",
+    "date": "2026-10-19",
+    "status": "draft"
+  }
+]

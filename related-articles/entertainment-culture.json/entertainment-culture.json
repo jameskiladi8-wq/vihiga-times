@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vihiga-cultural-festival",
+    "title": "Cultural Festival to Celebrate Vihiga Heritage",
+    "description": "Organisers promise music, dance and food at this year's heritage festival.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-1/640/360",
+    "imageAlt": "Placeholder image for sample article: Cultural Festival to Celebrate Vihiga Heritage",
+    "link": "/entertainment-culture/vihiga-cultural-festival/",
+    "date": "2026-10-27",
+    "status": "published"
+  },
+  {
+    "id": "local-artists-showcase",
+    "title": "Local Artists Showcase Talent in Mbale",
+    "description": "Painters, sculptors and performers display their work at a community exhibition.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-2/640/360",
+    "imageAlt": "Placeholder image for sample article: Local Artists Showcase Talent in Mbale",
+    "link": "/entertainment-culture/local-artists-showcase/",
+    "date": "2026-10-23",
+    "status": "published"
+  },
+  {
+    "id": "isukuti-dance-troupe",
+    "title": "Isukuti Dance Troupe Books Regional Tour",
+    "description": "A beloved traditional dance group prepares to perform across the region.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Isukuti Dance Troupe Books Regional Tour",
+    "link": "/entertainment-culture/isukuti-dance-troupe/",
+    "date": "2026-10-19",
+    "status": "published"
+  },
+  {
+    "id": "community-theatre-play",
+    "title": "Community Theatre Group Stages New Play",
+    "description": "A local drama group tackles everyday issues in an original production.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Community Theatre Group Stages New Play",
+    "link": "/entertainment-culture/community-theatre-play/",
+    "date": "2026-10-15",
+    "status": "published"
+  },
+  {
+    "id": "gospel-music-concert",
+    "title": "Gospel Music Concert Announced for Chavakali",
+    "description": "Worship teams from across the county set to perform at an evening concert.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Gospel Music Concert Announced for Chavakali",
+    "link": "/entertainment-culture/gospel-music-concert/",
+    "date": "2026-10-11",
+    "status": "published"
+  },
+  {
+    "id": "food-festival-vihiga",
+    "title": "County Food Festival to Promote Local Cuisines",
+    "description": "Street food, traditional dishes and cooking contests come to the county capital.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-6/640/360",
+    "imageAlt": "Placeholder image for sample article: County Food Festival to Promote Local Cuisines",
+    "link": "/entertainment-culture/food-festival-vihiga/",
+    "date": "2026-10-07",
+    "status": "published"
+  },
+  {
+    "id": "film-screening-event",
+    "title": "Outdoor Film Screening Planned for December",
+    "description": "A family-friendly film night is being planned for the festive season.",
+    "image": "https://picsum.photos/seed/vt-entertainment-culture-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Outdoor Film Screening Planned for December",
+    "link": "/entertainment-culture/film-screening-event/",
+    "date": "2026-10-21",
+    "status": "draft"
+  }
+]

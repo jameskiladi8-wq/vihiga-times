@@ -1,0 +1,72 @@
+[
+  {
+    "id": "youth-empowerment-grants",
+    "title": "Youth Empowerment Grants Open for Applications",
+    "description": "Young entrepreneurs invited to apply for start-up support funding.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-1/640/360",
+    "imageAlt": "Placeholder image for sample article: Youth Empowerment Grants Open for Applications",
+    "link": "/hustle-business/youth-empowerment-grants/",
+    "date": "2026-10-28",
+    "status": "published"
+  },
+  {
+    "id": "mama-mbo-boost",
+    "title": "'Mama Mbo' Fish Traders Get Market Boost",
+    "description": "Improved market stalls and cold storage promised for fish vendors.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-2/640/360",
+    "imageAlt": "Placeholder image for sample article: 'Mama Mbo' Fish Traders Get Market Boost",
+    "link": "/hustle-business/mama-mbo-boost/",
+    "date": "2026-10-24",
+    "status": "published"
+  },
+  {
+    "id": "avocado-export-vihiga",
+    "title": "Avocado Farming Attracts Export Interest",
+    "description": "Local farmers eye new income as exporters scout for produce.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Avocado Farming Attracts Export Interest",
+    "link": "/hustle-business/avocado-export-vihiga/",
+    "date": "2026-10-20",
+    "status": "published"
+  },
+  {
+    "id": "boda-sacco-dividends",
+    "title": "Boda Boda SACCO Announces Dividends",
+    "description": "Members of a popular riders' SACCO to receive year-end payouts.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Boda Boda SACCO Announces Dividends",
+    "link": "/hustle-business/boda-sacco-dividends/",
+    "date": "2026-10-16",
+    "status": "published"
+  },
+  {
+    "id": "tailoring-cooperative",
+    "title": "Tailoring Cooperative Opens New Workshop",
+    "description": "A shared workshop gives local tailors modern equipment and space.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Tailoring Cooperative Opens New Workshop",
+    "link": "/hustle-business/tailoring-cooperative/",
+    "date": "2026-10-12",
+    "status": "published"
+  },
+  {
+    "id": "digital-jobs-training",
+    "title": "Digital Jobs Training Targets Jobless Youth",
+    "description": "A new programme teaches online work skills to young job seekers.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Digital Jobs Training Targets Jobless Youth",
+    "link": "/hustle-business/digital-jobs-training/",
+    "date": "2026-10-08",
+    "status": "published"
+  },
+  {
+    "id": "small-kiosks-renovation",
+    "title": "Kiosk Renovation Programme Announced",
+    "description": "Plans to upgrade small trading kiosks across major market centres.",
+    "image": "https://picsum.photos/seed/vt-hustle-business-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Kiosk Renovation Programme Announced",
+    "link": "/hustle-business/small-kiosks-renovation/",
+    "date": "2026-10-18",
+    "status": "draft"
+  }
+]

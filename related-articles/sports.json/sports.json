@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vihiga-football-results",
+    "title": "Vihiga Teams Share Spoils in Weekend Football Fixtures",
+    "description": "A recap of the latest action from local football leagues.",
+    "image": "https://picsum.photos/seed/vt-sports-1/640/360",
+    "imageAlt": "Placeholder image for sample article: Vihiga Teams Share Spoils in Weekend Football Fixtures",
+    "link": "/sports/vihiga-football-results/",
+    "date": "2026-10-30",
+    "status": "published"
+  },
+  {
+    "id": "county-athletics-trials",
+    "title": "County Athletics Trials Draw Big Crowd",
+    "description": "Young athletes compete for slots in the regional championships.",
+    "image": "https://picsum.photos/seed/vt-sports-2/640/360",
+    "imageAlt": "Placeholder image for sample article: County Athletics Trials Draw Big Crowd",
+    "link": "/sports/county-athletics-trials/",
+    "date": "2026-10-26",
+    "status": "published"
+  },
+  {
+    "id": "volleyball-tournament",
+    "title": "Volleyball Tournament Launches at Hamisi Grounds",
+    "description": "Teams from across the county register for a new tournament.",
+    "image": "https://picsum.photos/seed/vt-sports-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Volleyball Tournament Launches at Hamisi Grounds",
+    "link": "/sports/volleyball-tournament/",
+    "date": "2026-10-22",
+    "status": "published"
+  },
+  {
+    "id": "youth-football-academy",
+    "title": "Youth Football Academy Registers New Intake",
+    "description": "A local academy opens registration for its next cohort of players.",
+    "image": "https://picsum.photos/seed/vt-sports-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Youth Football Academy Registers New Intake",
+    "link": "/sports/youth-football-academy/",
+    "date": "2026-10-18",
+    "status": "published"
+  },
+  {
+    "id": "road-race-vihiga",
+    "title": "Annual Road Race Returns to Vihiga",
+    "description": "Runners of all ages invited to the popular county road race.",
+    "image": "https://picsum.photos/seed/vt-sports-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Annual Road Race Returns to Vihiga",
+    "link": "/sports/road-race-vihiga/",
+    "date": "2026-10-14",
+    "status": "published"
+  },
+  {
+    "id": "boxing-club-fundraiser",
+    "title": "Local Boxing Club Holds Fundraiser for Equipment",
+    "description": "Community rallies behind a boxing club seeking new equipment.",
+    "image": "https://picsum.photos/seed/vt-sports-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Local Boxing Club Holds Fundraiser for Equipment",
+    "link": "/sports/boxing-club-fundraiser/",
+    "date": "2026-10-10",
+    "status": "published"
+  },
+  {
+    "id": "inter-wards-tournament",
+    "title": "Inter-Wards Tournament Dates Announced",
+    "description": "Ward teams prepare for the annual county tournament.",
+    "image": "https://picsum.photos/seed/vt-sports-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Inter-Wards Tournament Dates Announced",
+    "link": "/sports/inter-wards-tournament/",
+    "date": "2026-10-23",
+    "status": "draft"
+  }
+]

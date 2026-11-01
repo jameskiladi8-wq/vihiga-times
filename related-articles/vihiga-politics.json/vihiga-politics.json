@@ -1,0 +1,72 @@
+[
+  {
+    "id": "county-assembly-sittings",
+    "title": "County Assembly Resumes Sittings After Recess",
+    "description": "Lawmakers return to tackle pending county business.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-1/640/360",
+    "imageAlt": "Placeholder image for sample article: County Assembly Resumes Sittings After Recess",
+    "link": "/vihiga-politics/county-assembly-sittings/",
+    "date": "2026-10-29",
+    "status": "published"
+  },
+  {
+    "id": "bursary-disbursement-debate",
+    "title": "Bursary Disbursement Sparks Assembly Debate",
+    "description": "MCAs debate priorities as bursary funds are released.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-2/640/360",
+    "imageAlt": "Placeholder image for sample article: Bursary Disbursement Sparks Assembly Debate",
+    "link": "/vihiga-politics/bursary-disbursement-debate/",
+    "date": "2026-10-25",
+    "status": "published"
+  },
+  {
+    "id": "governor-development-tour",
+    "title": "Governor Announces Development Tour of Sub-Counties",
+    "description": "The county chief sets out to inspect development projects.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Governor Announces Development Tour of Sub-Counties",
+    "link": "/vihiga-politics/governor-development-tour/",
+    "date": "2026-10-21",
+    "status": "published"
+  },
+  {
+    "id": "ward-projects-audit",
+    "title": "Audit Report Reviews Ward Project Spending",
+    "description": "A new report examines how ward funds were spent.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-4/640/360",
+    "imageAlt": "Placeholder image for sample article: Audit Report Reviews Ward Project Spending",
+    "link": "/vihiga-politics/ward-projects-audit/",
+    "date": "2026-10-17",
+    "status": "published"
+  },
+  {
+    "id": "mca-bylaws-proposal",
+    "title": "MCA Proposes New Market Bylaws",
+    "description": "A ward representative tables proposals to improve market operations.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-5/640/360",
+    "imageAlt": "Placeholder image for sample article: MCA Proposes New Market Bylaws",
+    "link": "/vihiga-politics/mca-bylaws-proposal/",
+    "date": "2026-10-13",
+    "status": "published"
+  },
+  {
+    "id": "public-participation-forum",
+    "title": "Public Participation Forum on County Budget",
+    "description": "Residents invited to give input on next year's county budget.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Public Participation Forum on County Budget",
+    "link": "/vihiga-politics/public-participation-forum/",
+    "date": "2026-10-09",
+    "status": "published"
+  },
+  {
+    "id": "nominations-preview",
+    "title": "Early Nominations Talk Heats Up County Politics",
+    "description": "Speculation grows as political alliances begin to form.",
+    "image": "https://picsum.photos/seed/vt-vihiga-politics-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Early Nominations Talk Heats Up County Politics",
+    "link": "/vihiga-politics/nominations-preview/",
+    "date": "2026-10-20",
+    "status": "draft"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "school-performance-in-vihiga",
+    "title": "Vihiga School Records Improved Academic Performance",
+    "description": "The school has reported progress following improvements in its learning programme.",
+    "image": "https://picsum.photos/seed/vt-education-1/640/360",
+    "imageAlt": "Placeholder image for sample article: Vihiga School Records Improved Academic Performance",
+    "link": "/education/school-performance-in-vihiga/",
+    "date": "2026-10-29",
+    "status": "published"
+  },
+  {
+    "id": "bursary-allocation-2027",
+    "title": "County Bursary Allocation Plan Released",
+    "description": "Details of the next bursary cycle are now available for students and parents.",
+    "image": "https://picsum.photos/seed/vt-education-2/640/360",
+    "imageAlt": "Placeholder image for sample article: County Bursary Allocation Plan Released",
+    "link": "/education/bursary-allocation-2027/",
+    "date": "2026-10-25",
+    "status": "published"
+  },
+  {
+    "id": "vihiga-technical-college",
+    "title": "Technical College Opens New Skills Programmes",
+    "description": "New vocational courses target youth seeking practical, marketable skills.",
+    "image": "https://picsum.photos/seed/vt-education-3/640/360",
+    "imageAlt": "Placeholder image for sample article: Technical College Opens New Skills Programmes",
+    "link": "/education/vihiga-technical-college/",
+    "date": "2026-10-21",
+    "status": "published"
+  },
+  {
+    "id": "early-childhood-centres",
+    "title": "New Early Childhood Centres Planned for the County",
+    "description": "Plans announced for additional ECD centres in underserved areas.",
+    "image": "https://picsum.photos/seed/vt-education-4/640/360",
+    "imageAlt": "Placeholder image for sample article: New Early Childhood Centres Planned for the County",
+    "link": "/education/early-childhood-centres/",
+    "date": "2026-10-17",
+    "status": "published"
+  },
+  {
+    "id": "kcse-preparations",
+    "title": "Schools Intensify KCSE Preparations",
+    "description": "Candidates enter the final stretch as national exams approach.",
+    "image": "https://picsum.photos/seed/vt-education-5/640/360",
+    "imageAlt": "Placeholder image for sample article: Schools Intensify KCSE Preparations",
+    "link": "/education/kcse-preparations/",
+    "date": "2026-10-13",
+    "status": "published"
+  },
+  {
+    "id": "digital-learning-tablets",
+    "title": "Digital Learning Tablets Introduced in Local Schools",
+    "description": "Selected schools pilot a new digital learning programme.",
+    "image": "https://picsum.photos/seed/vt-education-6/640/360",
+    "imageAlt": "Placeholder image for sample article: Digital Learning Tablets Introduced in Local Schools",
+    "link": "/education/digital-learning-tablets/",
+    "date": "2026-10-09",
+    "status": "published"
+  },
+  {
+    "id": "teachers-training-workshop",
+    "title": "Teachers' Training Workshop Planned for Holidays",
+    "description": "A capacity-building workshop is scheduled for the end of term.",
+    "image": "https://picsum.photos/seed/vt-education-7/640/360",
+    "imageAlt": "Placeholder image for sample article: Teachers' Training Workshop Planned for Holidays",
+    "link": "/education/teachers-training-workshop/",
+    "date": "2026-10-22",
+    "status": "draft"
+  }
+]
