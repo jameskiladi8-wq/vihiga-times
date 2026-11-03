@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sample-vihiga-football-final",
+    "title": "Local Side Reaches Football Final",
+    "description": "A local team has booked its place in the final after a closely contested semi-final.",
+    "image": "https://picsum.photos/seed/vt-sp-1/640/400",
+    "imageAlt": "Football players contesting the ball",
+    "link": "/sports/sample-vihiga-football-final/",
+    "date": "2026-10-30",
+    "status": "published"
+  },
+  {
+    "id": "sample-athletics-meet",
+    "title": "Athletics Meet Attracts Young Runners",
+    "description": "Young athletes competed in track events at a weekend meet held on a local field.",
+    "image": "https://picsum.photos/seed/vt-sp-2/640/400",
+    "imageAlt": "Runners competing on a track",
+    "link": "/sports/sample-athletics-meet/",
+    "date": "2026-10-27",
+    "status": "published"
+  },
+  {
+    "id": "sample-volleyball-league",
+    "title": "Volleyball League Continues This Weekend",
+    "description": "Teams will return to the court for the next round of fixtures this weekend.",
+    "image": "https://picsum.photos/seed/vt-sp-3/640/400",
+    "imageAlt": "Players at the net during a volleyball match",
+    "link": "/sports/sample-volleyball-league/",
+    "date": "2026-10-24",
+    "status": "published"
+  },
+  {
+    "id": "sample-youth-tournament",
+    "title": "Youth Tournament Kicks Off",
+    "description": "A youth tournament featuring several teams opened with a full day of matches.",
+    "image": "https://picsum.photos/seed/vt-sp-4/640/400",
+    "imageAlt": "Young players on a football pitch",
+    "link": "/sports/sample-youth-tournament/",
+    "date": "2026-10-21",
+    "status": "published"
+  },
+  {
+    "id": "sample-cycling-challenge",
+    "title": "Cycling Challenge Draws Riders",
+    "description": "Cyclists took part in a long-distance challenge along a hilly route.",
+    "image": "https://picsum.photos/seed/vt-sp-5/640/400",
+    "imageAlt": "Cyclists riding along a country road",
+    "link": "/sports/sample-cycling-challenge/",
+    "date": "2026-10-18",
+    "status": "published"
+  },
+  {
+    "id": "sample-netball-fixtures",
+    "title": "Netball Fixtures Released",
+    "description": "The schedule for the next round of netball matches has been published.",
+    "image": "https://picsum.photos/seed/vt-sp-6/640/400",
+    "imageAlt": "Netball players passing the ball",
+    "link": "/sports/sample-netball-fixtures/",
+    "date": "2026-10-15",
+    "status": "published"
+  },
+  {
+    "id": "sample-rugby-sevens",
+    "title": "Rugby Sevens Event Returns",
+    "description": "Teams are preparing for the return of a popular rugby sevens event.",
+    "image": "https://example.invalid/vt-broken-image-test.jpg",
+    "imageAlt": "Rugby players in a scrum",
+    "link": "/sports/sample-rugby-sevens/",
+    "date": "2026-10-12",
+    "status": "published"
+  },
+  {
+    "id": "sample-sports-fund-plan",
+    "title": "Sports Fund Proposal Under Discussion",
+    "description": "A proposal to create a local sports fund is still under discussion.",
+    "image": "https://picsum.photos/seed/vt-sp-8/640/400",
+    "imageAlt": "Sports equipment stored in a room",
+    "link": "/sports/sample-sports-fund-plan/",
+    "date": "2026-10-06",
+    "status": "draft"
+  }
+]
