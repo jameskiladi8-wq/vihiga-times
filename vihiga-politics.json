@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sample-ward-development-plan",
+    "title": "Ward Development Plan Presented",
+    "description": "A draft ward development plan has been presented for residents to review.",
+    "image": "https://picsum.photos/seed/vt-vp-1/640/400",
+    "imageAlt": "A presentation being delivered to residents",
+    "link": "/vihiga-politics/sample-ward-development-plan/",
+    "date": "2026-10-29",
+    "status": "published"
+  },
+  {
+    "id": "sample-county-assembly-session",
+    "title": "County Assembly Session Convenes",
+    "description": "Members met for a scheduled session to discuss items on the order paper.",
+    "image": "https://picsum.photos/seed/vt-vp-2/640/400",
+    "imageAlt": "Seats arranged in a assembly chamber",
+    "link": "/vihiga-politics/sample-county-assembly-session/",
+    "date": "2026-10-26",
+    "status": "published"
+  },
+  {
+    "id": "sample-public-participation",
+    "title": "Public Participation Exercise Announced",
+    "description": "Residents have been invited to give their views at a series of public participation forums.",
+    "image": "https://picsum.photos/seed/vt-vp-3/640/400",
+    "imageAlt": "Residents queuing to give their views",
+    "link": "/vihiga-politics/sample-public-participation/",
+    "date": "2026-10-23",
+    "status": "published"
+  },
+  {
+    "id": "sample-bursary-committee",
+    "title": "Bursary Committee Holds Sitting",
+    "description": "The bursary committee met to review applications received from students.",
+    "image": "https://picsum.photos/seed/vt-vp-4/640/400",
+    "imageAlt": "A committee seated around a table",
+    "link": "/vihiga-politics/sample-bursary-committee/",
+    "date": "2026-10-20",
+    "status": "published"
+  },
+  {
+    "id": "sample-ward-budget-forum",
+    "title": "Ward Budget Forum Draws Residents",
+    "description": "Residents attended a forum to discuss priorities for the next ward budget.",
+    "image": "https://picsum.photos/seed/vt-vp-5/640/400",
+    "imageAlt": "Residents raising hands at a forum",
+    "link": "/vihiga-politics/sample-ward-budget-forum/",
+    "date": "2026-10-17",
+    "status": "published"
+  },
+  {
+    "id": "sample-civic-education-drive",
+    "title": "Civic Education Drive Launched",
+    "description": "A civic education drive aims to help residents understand local decision-making processes.",
+    "image": "https://picsum.photos/seed/vt-vp-6/640/400",
+    "imageAlt": "A facilitator addressing a community group",
+    "link": "/vihiga-politics/sample-civic-education-drive/",
+    "date": "2026-10-14",
+    "status": "published"
+  },
+  {
+    "id": "sample-community-ledger",
+    "title": "Community Project Ledger Published",
+    "description": "A summary of spending on community projects has been published for residents.",
+    "image": "https://picsum.photos/seed/vt-vp-7/640/400",
+    "imageAlt": "Documents laid out on a desk",
+    "link": "/vihiga-politics/sample-community-ledger/",
+    "date": "2026-10-10",
+    "status": "published"
+  },
+  {
+    "id": "sample-ward-office-plan",
+    "title": "Ward Office Plan Not Yet Approved",
+    "description": "A proposal to establish a ward office is still being reviewed.",
+    "image": "https://picsum.photos/seed/vt-vp-8/640/400",
+    "imageAlt": "An office building exterior",
+    "link": "/vihiga-politics/sample-ward-office-plan/",
+    "date": "2026-10-05",
+    "status": "draft"
+  }
+]
