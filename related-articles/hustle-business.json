@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sample-traders-loan-scheme",
+    "title": "Traders Welcome Small Loan Scheme",
+    "description": "Market traders have welcomed a small loan scheme aimed at supporting stock purchases.",
+    "image": "https://picsum.photos/seed/vt-hb-1/640/400",
+    "imageAlt": "A trader arranging goods at a market stall",
+    "link": "/hustle-business/sample-traders-loan-scheme/",
+    "date": "2026-10-30",
+    "status": "published"
+  },
+  {
+    "id": "sample-tailoring-workshop",
+    "title": "Tailoring Workshop Opens to New Learners",
+    "description": "A tailoring workshop is enrolling beginners interested in learning the trade.",
+    "image": "https://picsum.photos/seed/vt-hb-2/640/400",
+    "imageAlt": "A person using a sewing machine",
+    "link": "/hustle-business/sample-tailoring-workshop/",
+    "date": "2026-10-27",
+    "status": "published"
+  },
+  {
+    "id": "sample-dairy-cooperative",
+    "title": "Dairy Cooperative Reports Growth",
+    "description": "Members of a dairy cooperative say milk collection has increased over recent months.",
+    "image": "https://picsum.photos/seed/vt-hb-3/640/400",
+    "imageAlt": "Milk containers at a collection point",
+    "link": "/hustle-business/sample-dairy-cooperative/",
+    "date": "2026-10-24",
+    "status": "published"
+  },
+  {
+    "id": "sample-boda-savings-group",
+    "title": "Riders Form Savings Group",
+    "description": "A group of riders has started a savings scheme to help members buy equipment.",
+    "image": "https://picsum.photos/seed/vt-hb-4/640/400",
+    "imageAlt": "A group meeting to discuss savings plans",
+    "link": "/hustle-business/sample-boda-savings-group/",
+    "date": "2026-10-21",
+    "status": "published"
+  },
+  {
+    "id": "sample-online-selling",
+    "title": "Small Shops Turn to Online Selling",
+    "description": "Several small shops have begun taking orders through messaging apps.",
+    "image": "https://picsum.photos/seed/vt-hb-5/640/400",
+    "imageAlt": "A shopkeeper using a phone to take orders",
+    "link": "/hustle-business/sample-online-selling/",
+    "date": "2026-10-18",
+    "status": "published"
+  },
+  {
+    "id": "sample-poultry-farming",
+    "title": "Poultry Farming Training Attracts Farmers",
+    "description": "A short training course on poultry farming drew participants from several villages.",
+    "image": "https://picsum.photos/seed/vt-hb-6/640/400",
+    "imageAlt": "Chickens in a small poultry shed",
+    "link": "/hustle-business/sample-poultry-farming/",
+    "date": "2026-10-14",
+    "status": "published"
+  },
+  {
+    "id": "sample-crafts-market-stall",
+    "title": "Crafts Makers Secure Market Stall Space",
+    "description": "Crafts makers have been allocated space to sell handmade goods at a weekly market.",
+    "image": "https://picsum.photos/seed/vt-hb-7/640/400",
+    "imageAlt": "Handmade baskets and crafts on display",
+    "link": "/hustle-business/sample-crafts-market-stall/",
+    "date": "2026-10-09",
+    "status": "published"
+  },
+  {
+    "id": "sample-business-hub-proposal",
+    "title": "Business Hub Proposal Being Considered",
+    "description": "A proposal for a shared business hub is under consideration and not yet approved.",
+    "image": "https://picsum.photos/seed/vt-hb-8/640/400",
+    "imageAlt": "An empty office space prepared for renovation",
+    "link": "/hustle-business/sample-business-hub-proposal/",
+    "date": "2026-10-04",
+    "status": "draft"
+  }
+]
