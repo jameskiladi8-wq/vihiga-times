@@ -1,0 +1,491 @@
+/* =========================================================================
+ * Vihiga Times — Related Articles Styles
+ * Version 1.0.5
+ * Companion to related-articles.js — loaded automatically.
+ *
+ * Editing rules of thumb:
+ *   - Keep the `!important` flags. They defend against article CSS such as
+ *     `.article-content p { margin: 20px 0; }` leaking into the cards.
+ *   - Keep the viewport-based caps on cards (`calc(100vw - Npx)`). They are
+ *     what stops one card from being wider than the phone screen.
+ *   - Keep `contain: inline-size` on the section and container. It stops
+ *     the six-card strip from forcing the article column wider than the
+ *     viewport on mobile.
+ * ========================================================================= */
+
+/* ---------------------------------------------------------------- container
+ * The mounting div. Neutralise anything the article CSS may impose on it.
+ * ---------------------------------------------------------------------- */
+#related-articles {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: min(100%, 100vw) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    contain: inline-size !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    position: static !important;
+    float: none !important;
+    clear: none !important;
+    overflow: visible !important;
+}
+
+/* -------------------------------------------------------------- section root
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section {
+    --vt-accent: #0e6b45;
+    --vt-accent-dark: #0a5236;
+    --vt-accent-soft: #e9f4ee;
+    --vt-ink: #14171c;
+    --vt-muted: #5a6069;
+    --vt-line: #e4dfd5;
+    --vt-card: #ffffff;
+    --vt-bg: #fffdf9;
+    --vt-radius: 14px;
+    --vt-gap: 14px;
+
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: min(100%, 100vw) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    contain: inline-size !important;
+    overflow: hidden !important;
+    margin: 40px 0 0 !important;
+    padding: 22px 0 4px !important;
+    border: 0 !important;
+    border-top: 1px solid var(--vt-line) !important;
+    border-radius: 0 !important;
+    background: var(--vt-bg) !important;
+    color: var(--vt-ink) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    white-space: normal !important;
+    position: static !important;
+    float: none !important;
+    clear: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vt-related-section.vt-related-section,
+.vt-related-section.vt-related-section *,
+.vt-related-section.vt-related-section *::before,
+.vt-related-section.vt-related-section *::after {
+    box-sizing: border-box !important;
+}
+
+.vt-related-section.vt-related-section [hidden] { display: none !important; }
+
+.vt-related-section.vt-related-section .vt-related-sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* ------------------------------------------------------------ element resets
+ * Explicitly reset the tags article CSS commonly targets.
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section img {
+    display: block !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    vertical-align: middle !important;
+    float: none !important;
+}
+
+.vt-related-section.vt-related-section a {
+    color: inherit !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font: inherit !important;
+    box-shadow: none !important;
+}
+
+.vt-related-section.vt-related-section p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font: inherit !important;
+    color: inherit !important;
+    text-indent: 0 !important;
+}
+
+.vt-related-section.vt-related-section h2,
+.vt-related-section.vt-related-section h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font: inherit !important;
+    color: inherit !important;
+    text-transform: none !important;
+    letter-spacing: inherit !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.vt-related-section.vt-related-section button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font: inherit !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+}
+
+/* -------------------------------------------------------------------- heading
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section .vt-related-head {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+    margin: 0 0 14px !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-head-text {
+    flex: 1 1 220px !important;
+    min-width: 0 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-eyebrow {
+    display: inline-block !important;
+    margin: 0 0 8px !important;
+    padding: 5px 11px !important;
+    border-radius: 999px !important;
+    background: var(--vt-accent-soft) !important;
+    color: var(--vt-accent-dark) !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    line-height: 1.4 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-title {
+    margin: 0 0 6px !important;
+    font-size: clamp(18px, 2vw, 26px) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    color: var(--vt-ink) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-subtitle {
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    color: var(--vt-muted) !important;
+}
+
+/* ------------------------------------------------------------------- controls
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section .vt-related-controls {
+    display: flex !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-btn {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    border: 1px solid var(--vt-line) !important;
+    background: #fff !important;
+    color: var(--vt-ink) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: background 0.18s ease, border-color 0.18s ease,
+                color 0.18s ease, transform 0.18s ease !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-btn:hover {
+    background: var(--vt-accent) !important;
+    border-color: var(--vt-accent) !important;
+    color: #fff !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-btn:active {
+    transform: scale(0.95) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-btn svg { display: block !important; }
+
+/* --------------------------------------------------------------------- slider
+ * The only element that scrolls horizontally.
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section .vt-related-slider {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: var(--vt-gap) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain !important;
+    padding: 0 0 10px 0 !important;
+    margin: 0 !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #cfc8bc transparent !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-slider::-webkit-scrollbar { height: 6px !important; }
+.vt-related-section.vt-related-section .vt-related-slider::-webkit-scrollbar-track { background: transparent !important; }
+.vt-related-section.vt-related-section .vt-related-slider::-webkit-scrollbar-thumb {
+    background: #d8d2c6 !important;
+    border-radius: 999px !important;
+}
+
+/* ---------------------------------------------------------------------- cards
+ * THE CRITICAL RULE:
+ *   The card cap uses `calc(100vw - Npx)` — a definite length — not `%`.
+ *   Percentages resolve to `auto` during flex intrinsic sizing, which
+ *   silently invalidates the `min()`. `calc(100vw - 32px)` is always
+ *   definite, so the cap is always enforced. This is what guarantees one
+ *   card always fits the phone screen.
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section .vt-related-card {
+    flex: 0 0 82% !important;
+    max-width: min(400px, calc(100vw - 32px)) !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    scroll-snap-align: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--vt-card) !important;
+    border: 1px solid var(--vt-line) !important;
+    border-radius: var(--vt-radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04) !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease,
+                border-color 0.2s ease !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card:hover {
+    box-shadow: 0 8px 22px rgba(16, 24, 40, 0.10) !important;
+    border-color: #d6cfc1 !important;
+    transform: translateY(-2px) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-thumb {
+    display: block !important;
+    position: relative !important;
+    aspect-ratio: 16 / 9 !important;
+    background: #f1efe9 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-thumb-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    transition: transform 0.35s ease !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card:hover .vt-related-thumb-img {
+    transform: scale(1.04) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-thumb-fallback {
+    object-fit: contain !important;
+    background: #f2efe9 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    flex: 1 1 auto !important;
+    padding: 12px 14px 14px !important;
+    margin: 0 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card-title {
+    margin: 0 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.005em !important;
+    color: var(--vt-ink) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card-title a {
+    color: var(--vt-ink) !important;
+    text-decoration: none !important;
+    font: inherit !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card-title a:hover {
+    color: var(--vt-accent) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-card-text {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: var(--vt-muted) !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-indent: 0 !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-more {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: auto !important;
+    padding-top: 4px !important;
+    font-size: 12.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.01em !important;
+    color: var(--vt-accent) !important;
+    text-decoration: none !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-more:hover {
+    color: var(--vt-accent-dark) !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-more-icon {
+    display: inline-flex !important;
+    transition: transform 0.18s ease !important;
+}
+
+.vt-related-section.vt-related-section .vt-related-more:hover .vt-related-more-icon {
+    transform: translateX(3px) !important;
+}
+
+/* ---------------------------------------------------------------------- focus
+ * ---------------------------------------------------------------------- */
+.vt-related-section.vt-related-section a:focus-visible,
+.vt-related-section.vt-related-section button:focus-visible,
+.vt-related-section.vt-related-section .vt-related-slider:focus-visible {
+    outline: 3px solid #7fb99f !important;
+    outline-offset: 2px !important;
+    border-radius: 8px !important;
+}
+
+/* --------------------------------------------------------- responsive sizing
+ * Each breakpoint caps the card with BOTH a pixel ceiling and a viewport
+ * length, so the card always fits even if the slider or a parent misbehaves.
+ * ---------------------------------------------------------------------- */
+@media (min-width: 480px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 72% !important;
+        max-width: min(440px, calc(100vw - 48px)) !important;
+    }
+}
+
+@media (min-width: 640px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 56% !important;
+        max-width: min(460px, calc(100vw - 64px)) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 46% !important;
+        max-width: min(480px, calc(100vw - 80px)) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 32% !important;
+        max-width: min(520px, calc(100vw - 100px)) !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 26% !important;
+        max-width: min(560px, calc(100vw - 120px)) !important;
+    }
+}
+
+@media (max-width: 359px) {
+    .vt-related-section.vt-related-section .vt-related-card {
+        flex-basis: 88% !important;
+        max-width: calc(100vw - 24px) !important;
+    }
+}
+
+/* ------------------------------------------------------------ reduced motion
+ * ---------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .vt-related-section.vt-related-section .vt-related-slider {
+        scroll-behavior: auto !important;
+    }
+    .vt-related-section.vt-related-section .vt-related-card,
+    .vt-related-section.vt-related-section .vt-related-thumb-img,
+    .vt-related-section.vt-related-section .vt-related-btn,
+    .vt-related-section.vt-related-section .vt-related-more-icon {
+        transition: none !important;
+    }
+    .vt-related-section.vt-related-section .vt-related-card:hover {
+        transform: none !important;
+    }
+    .vt-related-section.vt-related-section .vt-related-card:hover .vt-related-thumb-img {
+        transform: none !important;
+    }
+}
