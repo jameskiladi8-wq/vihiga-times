@@ -3574,255 +3574,494 @@
     </section>
 
 
-    <!-- ============ COMMUNITY HUB ============ -->
-    <section class="section container" aria-labelledby="hubTitle">
-      <div class="section-head">
-        <div class="section-head-text">
-          <p class="section-kicker">Noticeboard</p>
-          <h2 class="section-title" id="hubTitle">Vihiga community</h2>
-          <p class="section-sub">Announcements, events, public notices, appeals and obituaries from across the county.
-          </p>
+
+<!-- ============ SHARED ICON SPRITE ============ -->
+<svg aria-hidden="true" width="0" height="0" focusable="false" style="position:absolute;overflow:hidden">
+  <defs>
+    <symbol id="vt-ico-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="vt-ico-eye" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+      <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="vt-ico-close" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+    <symbol id="vt-ico-pin" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.5-7-12a7 7 0 1114 0c0 5.5-7 12-7 12z"/>
+      <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="vt-ico-cal" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M3 10h18M8 3v4M16 3v4"/>
+    </symbol>
+    <symbol id="vt-ico-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="vt-ico-chev-l" viewBox="0 0 24 24">
+      <polyline points="15 18 9 12 15 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="vt-ico-chev-r" viewBox="0 0 24 24">
+      <polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<!-- ============ COMMUNITY HUB ============ -->
+<section class="section container vt-hub" aria-labelledby="hubTitle">
+  <div class="section-head">
+    <div class="section-head-text">
+      <p class="section-kicker">Noticeboard</p>
+      <h2 class="section-title" id="hubTitle">Vihiga community</h2>
+      <p class="section-sub">Announcements, public notices, community appeals and obituaries from across Vihiga County.</p>
+    </div>
+  </div>
+
+  <div class="chips" id="hubChips" role="tablist" aria-label="Community noticeboard categories">
+    <button class="chip active" type="button" role="tab" id="hubTabAll" aria-selected="true"  aria-controls="hubGrid" data-hub="All"           tabindex="0">All</button>
+    <button class="chip"        type="button" role="tab" id="hubTabAnn" aria-selected="false" aria-controls="hubGrid" data-hub="Announcements" tabindex="-1">Announcements</button>
+    <button class="chip"        type="button" role="tab" id="hubTabObi" aria-selected="false" aria-controls="hubGrid" data-hub="Obituaries"    tabindex="-1">Obituaries</button>
+  </div>
+
+  <div class="vt-rail-wrap">
+    <div class="vt-rail" id="hubGrid" role="tabpanel" aria-labelledby="hubTabAll" aria-live="polite" tabindex="0">
+
+      <!-- ─── 1. NOTICE ─── -->
+      <article class="vt-tile vt-tile--notice" data-type="notice">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-water/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Public Notice</span>
+          <h3 class="vt-tile__title clamp-2">Scheduled water maintenance in Mbale</h3>
+          <p class="vt-tile__desc clamp-2">Supply will be interrupted on 22 Nov for scheduled repairs on the main line.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="ann-water-mbale">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
         </div>
-      </div>
+        <button type="button" class="vt-tile__hit" data-open="ann-water-mbale" aria-label="Open Public Notice: Scheduled water maintenance in Mbale"></button>
+      </article>
 
-      <div class="chips" id="hubChips" role="tablist" aria-label="Noticeboard categories">
-        <button class="chip active" role="tab" aria-selected="true" data-hub="All">All</button>
-        <button class="chip" role="tab" aria-selected="false" data-hub="Announcements">Announcements</button>
-        <button class="chip" role="tab" aria-selected="false" data-hub="Events">Events</button>
-        <button class="chip" role="tab" aria-selected="false" data-hub="Notices">Notices</button>
-        <button class="chip" role="tab" aria-selected="false" data-hub="Appeals">Appeals</button>
-        <button class="chip" role="tab" aria-selected="false" data-hub="Obituaries">Obituaries</button>
-      </div>
-
-      <div class="grid grid-2 grid-hub" id="hubGrid" style="margin-top:16px">
-        <button class="hub-card" data-modal="hub" data-hub-tab="Announcements" data-hub-title="Community announcements"
-          data-hub-seed="vt-hub-1" data-hub-desc="Share a notice with the whole county.">
-          <span class="hub-icon"><svg>
-              <use href="#i-megaphone" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Community announcements</h3>
-            <p>Share a notice with the whole county.</p>
-          </span>
-        </button>
-        <button class="hub-card" data-modal="hub" data-hub-tab="Events" data-hub-title="Events" data-hub-seed="vt-hub-2"
-          data-hub-desc="Festivals, meetings and community gatherings.">
-          <span class="hub-icon"><svg>
-              <use href="#i-calendar" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Events</h3>
-            <p>Festivals, meetings and community gatherings.</p>
-          </span>
-        </button>
-        <button class="hub-card" data-modal="hub" data-hub-tab="Notices" data-hub-title="Public notices"
-          data-hub-seed="vt-hub-3" data-hub-desc="Official county and ward notices.">
-          <span class="hub-icon"><svg>
-              <use href="#i-news" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Public notices</h3>
-            <p>Official county and ward notices.</p>
-          </span>
-        </button>
-        <button class="hub-card" data-modal="hub" data-hub-tab="Appeals" data-hub-title="Missing persons"
-          data-hub-seed="vt-hub-4" data-hub-desc="Help reunite families with missing relatives.">
-          <span class="hub-icon"><svg>
-              <use href="#i-users" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Missing persons</h3>
-            <p>Help reunite families with missing relatives.</p>
-          </span>
-        </button>
-        <button class="hub-card" data-modal="hub" data-hub-tab="Appeals" data-hub-title="Community appeals"
-          data-hub-seed="vt-hub-5" data-hub-desc="Medical and emergency appeals.">
-          <span class="hub-icon"><svg>
-              <use href="#i-health" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Community appeals</h3>
-            <p>Medical and emergency appeals.</p>
-          </span>
-        </button>
-        <button class="hub-card" data-modal="hub" data-hub-tab="Obituaries" data-hub-title="Obituaries"
-          data-hub-seed="vt-hub-6" data-hub-desc="Announcements and funeral arrangements.">
-          <span class="hub-icon"><svg>
-              <use href="#i-culture" />
-            </svg></span>
-          <span style="min-width:0">
-            <h3>Obituaries</h3>
-            <p>Announcements and funeral arrangements.</p>
-          </span>
-        </button>
-      </div>
-      <p class="small muted" id="hubEmpty" style="display:none;margin-top:16px">Nothing in this category yet.</p>
-    </section>
-
-    <!-- ============ JOBS ============ -->
-    <section class="section container" aria-labelledby="jobsTitle">
-      <div class="section-head">
-        <div class="section-head-text">
-          <p class="section-kicker">Opportunities</p>
-          <h2 class="section-title" id="jobsTitle">Jobs &amp; opportunities</h2>
-          <p class="section-sub">All listings below are fictional demo data. Swipe to see the next card.</p>
+      <!-- ─── 2. ANNOUNCEMENT ─── -->
+      <article class="vt-tile vt-tile--announcement" data-type="announcement">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-health/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Announcement</span>
+          <h3 class="vt-tile__title clamp-2">Free health outreach in Vihiga</h3>
+          <p class="vt-tile__desc clamp-2">Free screening and consultation across five sub-counties.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="ann-health-outreach">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
         </div>
-        <div class="rail-nav">
-          <button class="icon-btn sm" data-rail="jobsRail" data-dir="-1" aria-label="Scroll jobs left"><svg>
-              <use href="#i-left" />
-            </svg></button>
-          <button class="icon-btn sm" data-rail="jobsRail" data-dir="1" aria-label="Scroll jobs right"><svg>
-              <use href="#i-right" />
-            </svg></button>
+        <button type="button" class="vt-tile__hit" data-open="ann-health-outreach" aria-label="Open Announcement: Free health outreach in Vihiga"></button>
+      </article>
+
+      <!-- ─── 3. APPEAL ─── -->
+      <article class="vt-tile vt-tile--appeal" data-type="appeal">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-road/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Appeal</span>
+          <h3 class="vt-tile__title clamp-2">Community appeal: Chavakali road repairs</h3>
+          <p class="vt-tile__desc clamp-2">Residents are appealing for help repairing the access road.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="app-roads-chavakali">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
         </div>
+        <button type="button" class="vt-tile__hit" data-open="app-roads-chavakali" aria-label="Open Appeal: Community appeal: Chavakali road repairs"></button>
+      </article>
+
+      <!-- ─── 4. EVENT ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-heritage/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Vihiga Cultural Heritage Festival</h3>
+          <p class="vt-tile__desc clamp-2">Three days of music, dance, food and crafts at Mbale Grounds.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-heritage">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-heritage" aria-label="Open Event: Vihiga Cultural Heritage Festival"></button>
+      </article>
+
+      <!-- ─── 5. EVENT ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-cleanup/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Vihiga Community Clean-Up Day</h3>
+          <p class="vt-tile__desc clamp-2">A countywide clean-up bringing together residents and traders.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-cleanup">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-cleanup" aria-label="Open Event: Vihiga Community Clean-Up Day"></button>
+      </article>
+
+      <!-- ─── 6. EVENT ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-youth/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Youth business clinic</h3>
+          <p class="vt-tile__desc clamp-2">Free advice on registration, records, and access to markets.</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-youth-clinic">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-youth-clinic" aria-label="Open Event: Youth business clinic"></button>
+      </article>
+
+      <!-- ─── 7. OBITUARY ─── -->
+      <article class="vt-tile vt-tile--obituary" data-type="obituary">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-obi-1/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Obituary</span>
+          <h3 class="vt-tile__title clamp-2">Mzee John Ominde</h3>
+          <p class="vt-tile__desc clamp-2">Sunrise 1948 — Sunset 2026</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="obi-mzee-ominde">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="obi-mzee-ominde" aria-label="Open Obituary: Mzee John Ominde"></button>
+      </article>
+
+      <!-- ─── 8. OBITUARY ─── -->
+      <article class="vt-tile vt-tile--obituary" data-type="obituary">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-obi-2/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Obituary</span>
+          <h3 class="vt-tile__title clamp-2">Mama Grace Akinyi</h3>
+          <p class="vt-tile__desc clamp-2">Sunrise 1956 — Sunset 2026</p>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="obi-mama-akinyi">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="obi-mama-akinyi" aria-label="Open Obituary: Mama Grace Akinyi"></button>
+      </article>
+
+    </div>
+  </div>
+  <p class="small muted" id="hubEmpty" style="display:none;margin-top:16px">Nothing in this category yet.</p>
+</section>
+
+
+<!-- ============ COMMUNITY DIARY / WHAT'S HAPPENING ============ -->
+<section class="section container vt-diary" aria-labelledby="eventsTitle">
+  <div class="section-head">
+    <div class="section-head-text">
+      <p class="section-kicker">Diary</p>
+      <h2 class="section-title" id="eventsTitle">What's happening in Vihiga</h2>
+    </div>
+    <div class="rail-nav">
+      <button class="icon-btn sm" type="button" data-rail="eventsRail" data-dir="-1" aria-label="Scroll events left">
+        <svg class="vt-ico"><use href="#vt-ico-chev-l"/></svg>
+      </button>
+      <button class="icon-btn sm" type="button" data-rail="eventsRail" data-dir="1" aria-label="Scroll events right">
+        <svg class="vt-ico"><use href="#vt-ico-chev-r"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="vt-rail-wrap">
+    <div class="vt-rail vt-rail--diary" id="eventsRail" aria-live="polite">
+
+      <!-- ─── DIARY: HERITAGE ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-heritage/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Vihiga Cultural Heritage Festival</h3>
+          <p class="vt-tile__desc clamp-2">Three days of music, dance, food and crafts at Mbale Grounds.</p>
+          <div class="vt-tile__meta">
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg>12 Dec 2026</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg>10:00 AM – 6:00 PM</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg>Mbale Grounds</span>
+          </div>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-heritage">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-heritage" aria-label="Open Event: Vihiga Cultural Heritage Festival"></button>
+      </article>
+
+      <!-- ─── DIARY: CLEANUP ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-cleanup/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Vihiga Community Clean-Up Day</h3>
+          <p class="vt-tile__desc clamp-2">A countywide clean-up bringing together residents and traders.</p>
+          <div class="vt-tile__meta">
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg>28 Nov 2026</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg>8:00 AM – 12:00 PM</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg>Vihiga Town</span>
+          </div>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-cleanup">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-cleanup" aria-label="Open Event: Vihiga Community Clean-Up Day"></button>
+      </article>
+
+      <!-- ─── DIARY: YOUTH CLINIC ─── -->
+      <article class="vt-tile vt-tile--event" data-type="event">
+        <div class="vt-tile__media"><img src="https://picsum.photos/seed/vt-youth/800/1000" alt="" loading="lazy" decoding="async"></div>
+        <span class="vt-tile__shade" aria-hidden="true"></span>
+        <div class="vt-tile__body">
+          <span class="badge vt-tile__badge">Event</span>
+          <h3 class="vt-tile__title clamp-2">Youth business clinic</h3>
+          <p class="vt-tile__desc clamp-2">Free advice on registration, records, and access to markets.</p>
+          <div class="vt-tile__meta">
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg>5 Dec 2026</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg>9:00 AM – 3:00 PM</span>
+            <span><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg>Chavakali Social Hall</span>
+          </div>
+          <div class="vt-tile__foot">
+            <span class="vt-tile__views"><svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg><span data-card-views="evt-youth-clinic">0</span></span>
+            <span class="vt-tile__arrow" aria-hidden="true"><svg class="vt-ico"><use href="#vt-ico-arrow"/></svg></span>
+          </div>
+        </div>
+        <button type="button" class="vt-tile__hit" data-open="evt-youth-clinic" aria-label="Open Event: Youth business clinic"></button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ SHARED COMMUNITY MODAL ============ -->
+<div class="modal" id="vtModal" aria-hidden="true">
+  <div class="modal-overlay" data-vt-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="vtModalTitle">
+    <div class="modal-head">
+      <div>
+        <p class="modal-kicker" id="vtModalKicker"></p>
+        <h2 id="vtModalTitle"></h2>
       </div>
-      <div class="rail-wrap">
-        <div class="rail jobs-rail" id="jobsRail">
-          <article class="job-card">
-            <span class="badge jobs" style="align-self:flex-start">Job</span>
-            <h3>Shop Assistant (Demo)</h3>
-            <div class="job-meta">
-              <div><svg>
-                  <use href="#i-pin" />
-                </svg><span>Vihiga Town</span></div>
-              <div><svg>
-                  <use href="#i-clock" />
-                </svg><span>Deadline: 30 March 2026</span></div>
-              <div><svg>
-                  <use href="#i-store" />
-                </svg><span>Example Business Vihiga</span></div>
-            </div>
-            <button class="btn btn-ghost btn-sm" style="align-self:flex-start" data-modal="job"
-              data-org="Example Business Vihiga" data-deadline="30 March 2026" data-type="Full time">View
-              opportunity</button>
-          </article>
-          <article class="job-card">
-            <span class="badge jobs" style="align-self:flex-start">Job</span>
-            <h3>Community Health Volunteer (Demo)</h3>
-            <div class="job-meta">
-              <div><svg>
-                  <use href="#i-pin" />
-                </svg><span>Emuhaya</span></div>
-              <div><svg>
-                  <use href="#i-clock" />
-                </svg><span>Deadline: 12 April 2026</span></div>
-              <div><svg>
-                  <use href="#i-store" />
-                </svg><span>Sample Health Programme</span></div>
-            </div>
-            <button class="btn btn-ghost btn-sm" style="align-self:flex-start" data-modal="job"
-              data-org="Sample Health Programme" data-deadline="12 April 2026" data-type="Volunteer">View
-              opportunity</button>
-          </article>
-        </div>
-      </div>
-    </section>
+      <button class="icon-btn sm modal-close" type="button" data-vt-close aria-label="Close">
+        <svg class="vt-ico"><use href="#vt-ico-close"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="vtModalBody"></div>
+  </div>
+</div>
 
-    <!-- ============ EVENTS ============ -->
-    <section class="section container" aria-labelledby="eventsTitle">
-      <div class="section-head">
-        <div class="section-head-text">
-          <p class="section-kicker">Diary</p>
-          <h2 class="section-title" id="eventsTitle">What's happening in Vihiga</h2>
-        </div>
-        <div class="rail-nav">
-          <button class="icon-btn sm" data-rail="eventsRail" data-dir="-1" aria-label="Scroll events left"><svg>
-              <use href="#i-left" />
-            </svg></button>
-          <button class="icon-btn sm" data-rail="eventsRail" data-dir="1" aria-label="Scroll events right"><svg>
-              <use href="#i-right" />
-            </svg></button>
-        </div>
-      </div>
-      <div class="rail-wrap">
-        <div class="rail" id="eventsRail">
 
-          <article class="event-card">
-            <div class="date-badge"><strong>14</strong><span>Mar</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">Vihiga Community Clean-Up Day</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Vihiga Town</span><span class="dot"></span><span>8:00 AM – 12:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional community clean-up bringing together residents, traders and youth
-                groups.</p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="14" data-month="Mar" data-location="Vihiga Town" data-time="8:00 AM – 12:00 PM">View
-                event</button>
-            </div>
-          </article>
+<!-- ============ MODAL CONTENT TEMPLATES ============ -->
+<!-- Each template's content is cloned into #vtModalBody when its data-open is clicked. -->
 
-          <article class="event-card">
-            <div class="date-badge"><strong>21</strong><span>Mar</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">Youth Business Clinic</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Mbale</span><span class="dot"></span><span>9:00 AM – 3:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional clinic offering free advice on registration, records and access
-                to markets.</p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="21" data-month="Mar" data-location="Mbale" data-time="9:00 AM – 3:00 PM">View event</button>
-            </div>
-          </article>
+<!-- ─── TPL: WATER NOTICE ─── -->
+<template id="tpl-ann-water-mbale" data-title="Scheduled water maintenance in Mbale" data-kicker="Public Notice">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-water/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>20 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Mbale Town</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>Vihiga Water Services informs residents that supply will be interrupted on 22 Nov from 8:00 AM to 4:00 PM to allow scheduled repairs on the main line.</p>
+    <p>Affected areas include Mbale town centre, Kidundu, and parts of Chavakali.</p>
+    <p style="margin-top:12px"><strong>Contact:</strong> 0800 720 100</p>
+  </div>
+</template>
 
-          <article class="event-card">
-            <div class="date-badge"><strong>28</strong><span>Mar</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">Vihiga Cultural Festival</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Hamisi</span><span class="dot"></span><span>10:00 AM – 6:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional family festival featuring music, dance, crafts and local food.
-              </p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="28" data-month="Mar" data-location="Hamisi" data-time="10:00 AM – 6:00 PM">View event</button>
-            </div>
-          </article>
+<!-- ─── TPL: HEALTH ANNOUNCEMENT ─── -->
+<template id="tpl-ann-health-outreach" data-title="Free health outreach in Vihiga" data-kicker="Announcement">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-health/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>25 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Countywide</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>The County Department of Health will run a free medical outreach offering blood pressure, diabetes, and eye screening.</p>
+    <p>Bring your national ID and, if available, your NHIF card.</p>
+    <p style="margin-top:12px"><strong>Contact:</strong> health@vihiga.go.ke</p>
+  </div>
+</template>
 
-          <article class="event-card">
-            <div class="date-badge"><strong>04</strong><span>Apr</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">County Football Finals</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Luanda</span><span class="dot"></span><span>2:00 PM – 5:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional community league final between two local teams.</p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="04" data-month="Apr" data-location="Luanda" data-time="2:00 PM – 5:00 PM">View event</button>
-            </div>
-          </article>
+<!-- ─── TPL: CHAVAKALI APPEAL ─── -->
+<template id="tpl-app-roads-chavakali" data-title="Community appeal: Chavakali road repairs" data-kicker="Appeal">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-road/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>18 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Chavakali</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>Residents of Chavakali are appealing to well-wishers and the county government to help repair the road connecting the market to the main highway.</p>
+    <p>The road has become impassable during the rains, affecting traders and schoolchildren.</p>
+    <p style="margin-top:12px"><strong>Contact:</strong> chavakali@vihigatimes.co.ke</p>
+  </div>
+</template>
 
-          <article class="event-card">
-            <div class="date-badge"><strong>11</strong><span>Apr</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">Farmers Field Day</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Sabatia</span><span class="dot"></span><span>9:00 AM – 4:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional field day with demonstrations on seed, soil and post-harvest
-                handling.</p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="11" data-month="Apr" data-location="Sabatia" data-time="9:00 AM – 4:00 PM">View event</button>
-            </div>
-          </article>
+<!-- ─── TPL: HERITAGE FESTIVAL (event) ─── -->
+<template id="tpl-evt-heritage" data-title="Vihiga Cultural Heritage Festival" data-kicker="Event">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-heritage/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>12 Dec 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg><span>10:00 AM – 6:00 PM</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Mbale Grounds</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>The Vihiga Cultural Heritage Festival returns for its third year, celebrating the music, dance, cuisine and crafts of the Maragoli, Tiriki, and Bunyore communities.</p>
+    <p>Entry is free for children under 12.</p>
+    <p style="margin-top:12px"><strong>Organizer:</strong> Vihiga County Department of Culture</p>
+    <p><strong>Contact:</strong> events@vihigatimes.co.ke</p>
+  </div>
+</template>
 
-          <article class="event-card">
-            <div class="date-badge"><strong>18</strong><span>Apr</span></div>
-            <div class="event-body">
-              <h3 class="clamp-2">Health Screening Camp</h3>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span>Emuhaya</span><span class="dot"></span><span>8:00 AM – 2:00 PM</span></div>
-              <p class="card-desc clamp-2">A fictional free screening camp for blood pressure and blood sugar.</p>
-              <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px" data-modal="event"
-                data-day="18" data-month="Apr" data-location="Emuhaya" data-time="8:00 AM – 2:00 PM">View event</button>
-            </div>
-          </article>
+<!-- ─── TPL: CLEANUP (event) ─── -->
+<template id="tpl-evt-cleanup" data-title="Vihiga Community Clean-Up Day" data-kicker="Event">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-cleanup/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>28 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg><span>8:00 AM – 12:00 PM</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Vihiga Town</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>Join fellow residents for a countywide clean-up. Gloves, bags and refreshments will be provided at the assembly point near the county offices.</p>
+    <p style="margin-top:12px"><strong>Organizer:</strong> Vihiga Youth Environmental Network</p>
+    <p><strong>Contact:</strong> 0722 000 100</p>
+  </div>
+</template>
 
-        </div>
-      </div>
-    </section>
+<!-- ─── TPL: YOUTH CLINIC (event) ─── -->
+<template id="tpl-evt-youth-clinic" data-title="Youth business clinic" data-kicker="Event">
+  <div class="modal-hero">
+    <img src="https://picsum.photos/seed/vt-youth/800/1000" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>5 Dec 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-clock"/></svg><span>9:00 AM – 3:00 PM</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Chavakali Social Hall</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>A one-day clinic for young entrepreneurs covering business registration, record-keeping, and simple marketing.</p>
+    <p>Free entry. Pre-register by phone to reserve a seat.</p>
+    <p style="margin-top:12px"><strong>Organizer:</strong> Vihiga Chamber of Commerce</p>
+    <p><strong>Contact:</strong> clinic@vihigatimes.co.ke</p>
+  </div>
+</template>
+
+<!-- ─── TPL: MZEE OMINDE (obituary, portrait) ─── -->
+<template id="tpl-obi-mzee-ominde" data-title="Mzee John Ominde" data-kicker="Obituary">
+  <div class="modal-hero vt-modal-hero--portrait">
+    <img src="https://picsum.photos/seed/vt-obi-1/800/1000" alt="Portrait of Mzee John Ominde" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>15 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Aged 78</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Mudete, Vihiga</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>Mzee John Ominde passed away peacefully at his home in Mudete on 15 Nov 2026, aged 78.</p>
+    <p>He was a respected elder, a founding member of the Mudete Farmers Cooperative, and a mentor to many young people in the community.</p>
+    <p style="margin-top:12px"><strong>Family:</strong> Husband to the late Mama Ruth Ominde; father of seven; grandfather of eighteen.</p>
+    <p><strong>Funeral arrangements:</strong> Requiem mass on 28 Nov 2026 at Mudete Catholic Church, followed by burial at his home in Madzuu.</p>
+    <p><strong>Contact:</strong> 0722 000 200</p>
+  </div>
+</template>
+
+<!-- ─── TPL: MAMA AKINYI (obituary, portrait) ─── -->
+<template id="tpl-obi-mama-akinyi" data-title="Mama Grace Akinyi" data-kicker="Obituary">
+  <div class="modal-hero vt-modal-hero--portrait">
+    <img src="https://picsum.photos/seed/vt-obi-2/800/1000" alt="Portrait of Mama Grace Akinyi" loading="lazy" decoding="async">
+  </div>
+  <div class="modal-prose" style="margin-top:14px">
+    <div class="meta" style="margin-bottom:10px">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-eye"/></svg>
+      <span><strong data-modal-views>0</strong> views</span>
+    </div>
+    <div class="meta">
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-cal"/></svg><span>10 Nov 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Aged 70</span>
+      <span class="dot" aria-hidden="true"></span>
+      <svg class="vt-ico" aria-hidden="true"><use href="#vt-ico-pin"/></svg><span>Serem, Vihiga</span>
+    </div>
+    <div style="height:12px"></div>
+    <p>Mama Grace Akinyi passed away after a short illness on 10 Nov 2026, aged 70.</p>
+    <p>She was a dedicated teacher at Serem Primary School for over 30 years and a pillar of the local PAG church.</p>
+    <p style="margin-top:12px"><strong>Family:</strong> Wife of Mzee Peter Akinyi; mother of five; grandmother of eleven.</p>
+    <p><strong>Funeral arrangements:</strong> Funeral service on 25 Nov 2026 at Serem PAG Church, followed by burial at her home.</p>
+    <p><strong>Contact:</strong> 0722 000 300</p>
+  </div>
+</template>
 
     <!-- ============ MARKETPLACE ============ -->
     <section class="section container" aria-labelledby="marketTitle">
@@ -5175,149 +5414,179 @@
 
 
 
-      /* ---------- Marketplace modal ---------- */
-      function openMarketModal(trigger) {
-        const d = readCard(trigger);
-        if (!d) return;
-        const location = trigger.dataset.location || '';
-        const seller = trigger.dataset.seller || '';
-        const category = trigger.dataset.category || d.category;
-        const priceEl = trigger.closest('.market-card') && trigger.closest('.market-card').querySelector('.price');
-        const price = priceEl ? priceEl.textContent.trim() : '';
-        const waLink = trigger.closest('.market-card') && trigger.closest('.market-card').querySelector('.js-wa');
-        const product = waLink ? (waLink.dataset.waProduct || d.title) : d.title;
-        const ref = waLink ? (waLink.dataset.waRef || '') : '';
-        const shareEl = trigger.closest('.market-card') && trigger.closest('.market-card').querySelector('.js-share');
-        const shareUrl = shareEl ? shareEl.dataset.shareUrl : window.location.href;
+      /*===========comunity hub===*/
+(function () {
+  'use strict';
 
-        const waMsg = 'Hello, I would like to know more details about this product that you are selling on Vihiga Marketplace: ' + product + (ref ? '\nRef: ' + ref : '');
-        const waHref = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(waMsg);
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-        const body = `
-      <div class="modal-hero"><img src="${d.image}" alt="${escapeHtml(d.imageAlt || d.title)}"></div>
-      <div style="margin-top:16px;display:grid;gap:10px">
-        <span class="badge market">${escapeHtml(category)}</span>
-        ${price ? `<h3 style="font-size:1.4rem">${escapeHtml(price)}</h3>` : ''}
-        <div class="meta">
-          <svg><use href="#i-pin"/></svg><span>${escapeHtml(location)}</span>
-          ${seller ? `<span class="dot"></span><span>${escapeHtml(seller)}</span>` : ''}
-          ${ref ? `<span class="dot"></span><span>Ref: ${escapeHtml(ref)}</span>` : ''}
-        </div>
-        <p style="font-size:14px;color:var(--ink-2);margin-top:6px">A fictional demo listing used to demonstrate the marketplace layout. Condition, documents and price are placeholders.</p>
-      </div>
-      ${shareBlockHTML(d.title, 'Share this listing', shareUrl, 'Vihiga Marketplace listing: ' + d.title)}`;
+  /* View counter (localStorage demo only) */
+  var VT_VIEWS_KEY = 'vt-hub-views-v1';
+  function vtReadViews() {
+    try { return JSON.parse(localStorage.getItem(VT_VIEWS_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+  function vtBumpView(id) {
+    var map = vtReadViews();
+    map[id] = (map[id] || 0) + 1;
+    try { localStorage.setItem(VT_VIEWS_KEY, JSON.stringify(map)); } catch (e) {}
+    return map[id];
+  }
+  function vtHydrateCardViews() {
+    var views = vtReadViews();
+    $$('[data-card-views]').forEach(function (el) {
+      var id = el.getAttribute('data-card-views');
+      el.textContent = views[id] || 0;
+    });
+  }
 
-        openModal({
-          kicker: 'Marketplace listing',
-          title: d.title,
-          body: body,
-          foot: `<button class="btn btn-ghost" data-modal-close>Close</button>
-             <a class="btn btn-wa" href="${waHref}" target="_blank" rel="noopener noreferrer"><svg><use href="#i-wa"/></svg> Contact seller</a>`
-        });
+  /* Hub filtering */
+  var hubRail = $('#hubGrid');
+  var hubChips = $('#hubChips');
+  var hubEmpty = $('#hubEmpty');
+
+  function vtApplyFilter(filter) {
+    if (!hubRail) return;
+    var visible = 0;
+    $$('.vt-tile', hubRail).forEach(function (card) {
+      var type = card.getAttribute('data-type') || '';
+      var show = filter === 'All' ||
+                 (filter === 'Announcements' && type !== 'obituary') ||
+                 (filter === 'Obituaries' && type === 'obituary');
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    if (hubEmpty) hubEmpty.style.display = visible ? 'none' : '';
+    hubRail.scrollLeft = 0;
+  }
+
+  function vtInitTabs() {
+    if (!hubChips) return;
+    hubChips.addEventListener('click', function (e) {
+      var btn = e.target.closest('.chip');
+      if (!btn || !hubChips.contains(btn)) return;
+      $$('.chip', hubChips).forEach(function (c) {
+        var on = c === btn;
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-selected', on ? 'true' : 'false');
+        c.tabIndex = on ? 0 : -1;
+      });
+      vtApplyFilter(btn.getAttribute('data-hub') || 'All');
+    });
+    hubChips.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var tabs = $$('.chip', hubChips);
+      var idx = tabs.indexOf(document.activeElement);
+      if (idx === -1) return;
+      e.preventDefault();
+      var next = tabs[(idx + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      next.focus();
+      next.click();
+    });
+  }
+
+  /* Shared modal */
+  var modal = $('#vtModal');
+  var modalBody = $('#vtModalBody');
+  var modalTitle = $('#vtModalTitle');
+  var modalKick = $('#vtModalKicker');
+  var vtLastFocus = null;
+
+  function vtLockScroll(on) { document.body.style.overflow = on ? 'hidden' : ''; }
+
+  function vtOpenModal(id) {
+    var tpl = document.getElementById('tpl-' + id);
+    if (!tpl || !modal) return;
+
+    vtLastFocus = document.activeElement;
+    var views = vtBumpView(id);
+
+    if (modalTitle) modalTitle.textContent = tpl.getAttribute('data-title') || '';
+    if (modalKick) modalKick.textContent = tpl.getAttribute('data-kicker') || '';
+
+    if (modalBody) {
+      modalBody.innerHTML = '';
+      modalBody.appendChild(tpl.content.cloneNode(true));
+      var mv = modalBody.querySelector('[data-modal-views]');
+      if (mv) mv.textContent = views;
+    }
+
+    $$('[data-card-views="' + id + '"]').forEach(function (el) {
+      el.textContent = views;
+    });
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    vtLockScroll(true);
+    void modal.offsetWidth;
+    modal.classList.add('visible');
+
+    var closeBtn = modal.querySelector('.modal-close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function vtCloseModal() {
+    if (!modal || !modal.classList.contains('open')) return;
+    modal.classList.remove('visible');
+    window.setTimeout(function () {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      vtLockScroll(false);
+      if (vtLastFocus && typeof vtLastFocus.focus === 'function') vtLastFocus.focus();
+      vtLastFocus = null;
+    }, 300);
+  }
+
+  function vtInitModal() {
+    if (!modal) return;
+    modal.addEventListener('click', function (e) {
+      if (e.target.closest('[data-vt-close]')) {
+        e.preventDefault();
+        vtCloseModal();
       }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) vtCloseModal();
+    });
+  }
 
-      /* ---------- Business modal ---------- */
-      function openBizModal(trigger) {
-        const d = readCard(trigger);
-        if (!d) return;
-        const category = trigger.dataset.category || d.category;
-        const location = trigger.dataset.location || '';
-        const phone = trigger.dataset.phone || '';
-        const initials = d.title.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
-        const name = d.title;
-        const waMsg = 'Hello ' + name + ', I found you on Vihiga Times.';
-        const waHref = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(waMsg);
-
-        const body = `
-      <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
-        <div class="biz-logo" style="width:58px;height:58px;font-size:20px">${escapeHtml(initials)}</div>
-        <div><span class="badge">${escapeHtml(category)}</span><h3 style="font-size:1.25rem;margin-top:6px">${escapeHtml(name)}</h3></div>
-      </div>
-      <div class="modal-hero"><img src="${d.image}" alt="${escapeHtml(d.imageAlt || name)}"></div>
-      <div class="modal-prose" style="margin-top:16px">
-        <p>${escapeHtml(d.description || 'A fictional business created for the prototype.')}</p>
-        <p class="small muted">Each directory listing would show opening hours, a map, photos and a verified contact number in the live platform.</p>
-        <div class="job-meta" style="margin-top:12px">
-          ${location ? `<div><svg><use href="#i-pin"/></svg><span>${escapeHtml(location)}</span></div>` : ''}
-          ${phone ? `<div><svg><use href="#i-phone"/></svg><span>${escapeHtml(phone)} (placeholder)</span></div>` : ''}
-        </div>
-      </div>
-      ${shareBlockHTML(name, 'Share this business', window.location.href, 'Vihiga business directory: ' + name)}`;
-
-        openModal({
-          kicker: 'Business directory',
-          title: name,
-          body: body,
-          foot: `<button class="btn btn-ghost" data-modal-close>Close</button>
-             <a class="btn btn-wa" href="${waHref}" target="_blank" rel="noopener noreferrer"><svg><use href="#i-wa"/></svg> WhatsApp</a>`
-        });
+  function vtInitCards() {
+    document.addEventListener('click', function (e) {
+      var hit = e.target.closest('[data-open]');
+      if (hit) {
+        e.preventDefault();
+        vtOpenModal(hit.getAttribute('data-open'));
       }
+    });
+  }
 
-      /* ---------- Event modal ---------- */
-      function openEventModal(trigger) {
-        const d = readCard(trigger);
-        if (!d) return;
-        const day = trigger.dataset.day || '';
-        const month = trigger.dataset.month || '';
-        const location = trigger.dataset.location || '';
-        const time = trigger.dataset.time || '';
+  function vtInitRailNav() {
+    $$('[data-rail]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = document.getElementById(btn.getAttribute('data-rail'));
+        if (!target) return;
+        var dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;
+        var step = Math.max(target.clientWidth * 0.8, 240);
+        target.scrollBy({ left: dir * step, behavior: 'smooth' });
+      });
+    });
+  }
 
-        const body = `
-      <div style="display:flex;gap:14px;align-items:center;margin-bottom:14px">
-        <div class="date-badge"><strong>${escapeHtml(day)}</strong><span>${escapeHtml(month)}</span></div>
-        <div><h3 style="font-size:1.15rem">${escapeHtml(d.title)}</h3>
-        ${time ? `<div class="meta" style="margin-top:6px"><svg><use href="#i-clock"/></svg><span>${escapeHtml(time)}</span></div>` : ''}</div>
-      </div>
-      <div class="modal-hero"><img src="${d.image}" alt="${escapeHtml(d.imageAlt || d.title)}"></div>
-      <div class="modal-prose" style="margin-top:16px">
-        <p>${escapeHtml(d.description)}</p>
-        <div class="job-meta" style="margin-top:12px">
-          ${location ? `<div><svg><use href="#i-pin"/></svg><span>${escapeHtml(location)}</span></div>` : ''}
-          ${day ? `<div><svg><use href="#i-calendar"/></svg><span>${escapeHtml(day + ' ' + month)}</span></div>` : ''}
-        </div>
-        <p class="small muted" style="margin-top:12px">Prototype note: this event is fictional.</p>
-      </div>
-      ${shareBlockHTML(d.title, 'Share this event', window.location.href, 'Vihiga event: ' + d.title)}`;
+  function vtInit() {
+    vtHydrateCardViews();
+    vtInitTabs();
+    vtInitModal();
+    vtInitCards();
+    vtInitRailNav();
+  }
 
-        openModal({
-          kicker: 'Event',
-          title: d.title,
-          body: body,
-          foot: `<button class="btn btn-ghost" data-modal-close>Close</button>
-             <button class="btn btn-primary" data-toast="Prototype: this would save the event to your calendar.">Save event</button>`
-        });
-      }
-
-
-
-      /* ---------- Hub modal ---------- */
-      function openHubModal(trigger) {
-        const tab = trigger.dataset.hubTab || 'Notice';
-        const title = trigger.dataset.hubTitle || '';
-        const seed = trigger.dataset.hubSeed || 'vt-hub';
-        const desc = trigger.dataset.hubDesc || '';
-        const body = `
-      <div class="modal-hero"><img src="https://picsum.photos/seed/${seed}/1100/620" alt="${escapeHtml(title)}"></div>
-      <div class="modal-prose" style="margin-top:16px">
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
-          <span class="badge">${escapeHtml(tab)}</span>
-          <span class="badge" style="background:#f1f5f9;color:#475569">Demo notice</span>
-        </div>
-        <h3 class="modal-h">${escapeHtml(title)}</h3>
-        <p style="font-size:15px;color:var(--ink);font-weight:600">${escapeHtml(desc)}</p>
-        <p>This is a fictional community notice created for the prototype. In the live platform each notice would include verified dates, venues and contact details supplied by the person who submitted it.</p>
-        <p class="small muted">Prototype note: all content here is fictional.</p>
-      </div>
-      ${shareBlockHTML(title, 'Share this notice', window.location.href, 'Vihiga community notice: ' + title)}`;
-
-        openModal({
-          kicker: 'Community noticeboard',
-          title: title,
-          body: body,
-          foot: `<button class="btn btn-ghost" data-modal-close>Close</button>
-             <button class="btn btn-primary" data-toast="Prototype: this would open the community submission form.">Post a notice</button>`
-        });
-      }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', vtInit);
+  } else {
+    vtInit();
+  }
+})();
 
 
 

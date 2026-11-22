@@ -2792,3 +2792,178 @@
          scroll-behavior: auto !important
      }
  }
+
+
+
+ /* =========================================================
+   VIHIGA TIMES — COMMUNITY HUB + DIARY (scoped additions)
+   Fluid sizing via clamp(): scales 320px → 1400px+ smoothly.
+   ========================================================= */
+
+.vt-ico {
+  width: clamp(11px, 2.8vw, 14px);
+  height: clamp(11px, 2.8vw, 14px);
+  flex: none; display: inline-block; vertical-align: middle;
+}
+
+/* ---------- Rail wrap (mobile fade) ---------- */
+.vt-rail-wrap { position: relative; }
+@media (max-width: 899px) {
+  .vt-rail-wrap::after {
+    content: "";
+    position: absolute; top: 0; right: 0;
+    width: clamp(28px, 8vw, 44px); height: 100%;
+    background: linear-gradient(to right, rgba(251,248,243,0), rgba(251,248,243,.92));
+    pointer-events: none;
+  }
+}
+
+/* ---------- Rail (horizontal, snap) ---------- */
+.vt-rail {
+  display: flex;
+  gap: clamp(8px, 2vw, 12px);
+  overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  padding-bottom: 4px;
+  scroll-padding-inline: var(--gutter);
+  scroll-behavior: smooth;
+}
+.vt-rail::-webkit-scrollbar { display: none; }
+.vt-rail > * { scroll-snap-align: start; flex: 0 0 auto; }
+
+/* ---------- Tile ---------- */
+.vt-tile {
+  position: relative;
+  width: clamp(145px, 36vw, 185px);
+  aspect-ratio: 4 / 5;
+  border-radius: clamp(10px, 2vw, 14px);
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--brand), var(--brand-dark));
+  color: #fff;
+  cursor: pointer;
+  transition: transform .22s ease, box-shadow .22s ease;
+  isolation: isolate;
+}
+
+.vt-tile__media { position: absolute; inset: 0; z-index: 0; background: var(--brand-dark); }
+.vt-tile__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.vt-tile__shade {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(to top,
+    rgba(8, 14, 12, .93) 0%,
+    rgba(8, 14, 12, .78) 28%,
+    rgba(8, 14, 12, .45) 55%,
+    rgba(8, 14, 12, .12) 80%,
+    rgba(8, 14, 12, .02) 100%);
+}
+
+.vt-tile__body {
+  position: absolute; inset: auto 0 0 0; z-index: 2;
+  padding: clamp(8px, 2vw, 12px);
+  display: flex; flex-direction: column;
+  gap: clamp(3px, 1vw, 5px);
+  color: #fff;
+}
+
+.vt-tile__badge {
+  align-self: flex-start;
+  background: rgba(255,255,255,.95);
+  color: var(--brand);
+  box-shadow: var(--shadow-sm);
+  font-size: clamp(7.5px, 1.8vw, 9px);
+  padding: clamp(2px, .7vw, 3px) clamp(5px, 1.4vw, 7px);
+  letter-spacing: .06em;
+}
+.vt-tile--obituary .vt-tile__badge { color: #6b7280; }
+.vt-tile--event    .vt-tile__badge { color: #c2410c; }
+
+.vt-tile__title {
+  font-family: var(--font-head);
+  font-size: clamp(.78rem, 2vw, .9rem);
+  line-height: 1.24;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0,0,0,.4);
+  margin: 0;
+}
+
+.vt-tile__desc {
+  font-size: clamp(9.5px, 2.3vw, 11px);
+  color: rgba(255,255,255,.82);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.vt-tile__meta {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: clamp(4px, 1vw, 6px);
+  font-size: clamp(8.5px, 2.2vw, 10px);
+  color: rgba(255,255,255,.85);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.vt-tile__meta span {
+  display: inline-flex; align-items: center; gap: 3px; min-width: 0;
+}
+
+.vt-tile__foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 6px; margin-top: 2px;
+}
+.vt-tile__views {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: clamp(8.5px, 2.2vw, 10px);
+  color: rgba(255,255,255,.78);
+  font-weight: 600;
+}
+.vt-tile__arrow {
+  width: clamp(22px, 5.6vw, 28px);
+  height: clamp(22px, 5.6vw, 28px);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  transition: background .2s, transform .2s;
+}
+.vt-tile__arrow svg {
+  width: clamp(11px, 2.8vw, 14px);
+  height: clamp(11px, 2.8vw, 14px);
+}
+
+.vt-tile__hit {
+  position: absolute; inset: 0; z-index: 3;
+  cursor: pointer; background: transparent; border: 0; color: transparent;
+}
+.vt-tile__hit:focus-visible {
+  outline: 3px solid rgba(255,255,255,.85);
+  outline-offset: -4px;
+  border-radius: inherit;
+}
+
+@media (hover: hover) {
+  .vt-tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .vt-tile:hover .vt-tile__media img { transform: scale(1.05); }
+  .vt-tile:hover .vt-tile__arrow { background: var(--brand-2); transform: translateX(2px); }
+}
+
+/* ---------- Diary variant (slightly wider for meta row) ---------- */
+.vt-rail--diary .vt-tile {
+  width: clamp(160px, 40vw, 210px);
+}
+
+/* ---------- Modal portrait hero ---------- */
+.vt-modal-hero--portrait { aspect-ratio: 4 / 3; max-height: 340px; }
+.vt-modal-hero--portrait img { object-position: top center; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .vt-tile, .vt-tile__media img, .vt-tile__arrow { transition: none !important; }
+  .vt-rail { scroll-behavior: auto; }
+}
