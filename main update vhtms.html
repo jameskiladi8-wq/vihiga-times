@@ -4063,558 +4063,418 @@
   </div>
 </template>
 
-    <!-- ============ MARKETPLACE ============ -->
-    <section class="section container" aria-labelledby="marketTitle">
-      <div class="section-head">
-        <div class="section-head-text">
-          <p class="section-kicker">Buy &amp; sell locally</p>
-          <h2 class="section-title" id="marketTitle">Vihiga marketplace</h2>
-          <p class="section-sub">Buy and sell locally. All items and prices below are fictional placeholders. Every
-            listing has a WhatsApp "Contact" action that opens a chat with the seller using the official Vihiga Times
-            marketplace number.</p>
+   <!-- ============================================================ -->
+<!-- VIHIGA MARKETPLACE — HOMEPAGE SECTION                        -->
+<!-- ============================================================ -->
+
+<!-- ============================================================= -->
+<!-- VIHIGA MARKETPLACE — HOMEPAGE SECTION                          -->
+<!-- ============================================================= -->
+<section class="vmp-section" aria-labelledby="vmpTitle">
+
+  <!-- ===== SVG ICON SPRITE ===== -->
+  <svg class="vmp-sprite" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <symbol id="vmp-i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="vmp-i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+      <symbol id="vmp-i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="vmp-i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+      <symbol id="vmp-i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.8 7.8 0 0 0 12 4a7.9 7.9 0 0 0-6.8 11.9L4 20l4.2-1.1A7.9 7.9 0 0 0 12 19.9a7.9 7.9 0 0 0 7.9-7.9c0-2.1-.8-4.1-2.3-5.7zM12 18.5c-1.2 0-2.3-.3-3.3-.9l-.2-.1-2.5.7.7-2.4-.2-.3A6.5 6.5 0 1 1 12 18.5zm3.6-4.9c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.4.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4 0 0 .2-.2.3-.4.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4 0-.1-.4-1.1-.6-1.5-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.3 0-.5.2s-.7.7-.7 1.6c0 1 .7 1.9.8 2 .1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2 1 .1 1.3.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/></symbol>
+      <symbol id="vmp-i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+      <symbol id="vmp-i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 16-9 0 12-4 16-9 16z"/><path d="M4 20c2-4 6-7 12-8"/></symbol>
+      <symbol id="vmp-i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></symbol>
+      <symbol id="vmp-i-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6l-4-4-4 2-4-2-4 4v4h4v12h8V10h4z"/></symbol>
+      <symbol id="vmp-i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13v-3a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v6H3z"/></symbol>
+      <symbol id="vmp-i-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-4 4-6-6z"/><path d="M10 8L4 14l6 6 6-6"/><path d="M12 6l6 6"/></symbol>
+      <symbol id="vmp-i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/><path d="M5 19l1 2 1-2 2-1-2-1-1-2-1 2-2 1z"/></symbol>
+      <symbol id="vmp-i-bowl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M12 3v3"/><path d="M8 6c0-1 1-2 2-2s2 1 2 2"/><path d="M14 6c0-1 1-2 2-2s2 1 2 2"/></symbol>
+      <symbol id="vmp-i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+      <symbol id="vmp-i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-2-7H7z"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M5 13l-2-2"/><path d="M19 13l2-2"/></symbol>
+      <symbol id="vmp-i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v4c0 1 3 3 6 3s6-2 6-3v-4"/></symbol>
+      <symbol id="vmp-i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="10" rx="1"/><path d="M14 10h5l3 3v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+      <symbol id="vmp-i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/></symbol>
+      <symbol id="vmp-i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1 5.6 5.6L9 23l-4-4z"/><path d="M14 6l4-2"/></symbol>
+      <symbol id="vmp-i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><path d="M9 20v-6h6v6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- INTRO -->
+  <div class="vmp-container">
+    <header class="vmp-intro">
+      <div class="vmp-intro-text">
+        <p class="vmp-kicker">Buy &amp; sell locally</p>
+        <h2 class="vmp-title" id="vmpTitle">Vihiga Marketplace</h2>
+        <p class="vmp-subtitle">Discover products, services and businesses from your local community. Explore what Vihiga has to offer and support local entrepreneurs.</p>
+      </div>
+      <a class="vmp-explore" href="https://vihigatimes.co.ke/marketplace/">
+        Explore Full Marketplace
+        <svg class="vmp-icon" width="16" height="16" aria-hidden="true"><use href="#vmp-i-arrow-right"/></svg>
+      </a>
+    </header>
+
+    <!-- TABS -->
+    <div class="vmp-tabs" role="tablist" aria-label="Marketplace content">
+      <button class="vmp-tab vmp-tab--active" role="tab" aria-selected="true"  data-vmp-tab="all">All</button>
+      <button class="vmp-tab" role="tab" aria-selected="false" data-vmp-tab="product">Products</button>
+      <button class="vmp-tab" role="tab" aria-selected="false" data-vmp-tab="service">Services</button>
+      <button class="vmp-tab" role="tab" aria-selected="false" data-vmp-tab="shop">Shops</button>
+    </div>
+
+    <!-- CATEGORIES -->
+    <nav class="vmp-cats" aria-label="Marketplace categories">
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=agriculture"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Agriculture</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=electronics"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-smartphone"/></svg>Electronics</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=fashion"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=furniture"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Furniture</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=construction"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-hammer"/></svg>Construction</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=beauty"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-sparkle"/></svg>Beauty</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=food"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-bowl"/></svg>Food</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=technology"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Technology</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=automotive"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-car"/></svg>Automotive</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=education"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-cap"/></svg>Education</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=transport"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-truck"/></svg>Transport</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=professional-services"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-briefcase"/></svg>Professional</a>
+      <a class="vmp-cat" href="https://vihigatimes.co.ke/marketplace/?category=other-services"><svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-wrench"/></svg>Other</a>
+    </nav>
+  </div>
+
+  <!-- 3-CARD CAROUSEL (full-bleed, 5px from edge) -->
+  <div class="vmp-carousel" id="vmpCarousel" tabindex="0" aria-label="Marketplace listings showcase">
+    <div class="vmp-track" id="vmpTrack">
+
+      <!-- PRODUCTS -->
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Clean, working smartphone with a bright display, reliable battery and a crisp camera. Ideal for everyday use. Price is slightly negotiable — inspection welcome in Luanda town."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/smartphone-01.html"
+        tabindex="0" role="button" aria-label="View details for Smartphone">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m1/640/480" alt="Smartphone" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-smartphone"/></svg>Phones</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Smartphone</h3>
+          <p class="vmp-card-price">KSh 18,500</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Luanda</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Well-maintained motorcycle with recent service, new tyres and clean papers. Perfect for daily commuting or boda boda work. Available for viewing in Hamisi."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/motorcycle-01.html"
+        tabindex="0" role="button" aria-label="View details for Motorcycle">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m2/640/480" alt="Motorcycle" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Motorcycle</h3>
+          <p class="vmp-card-price">KSh 95,000</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Hamisi</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Reliable laptop with decent specs for office work, browsing and light design. Includes charger and a fresh install. Visit our Mbale shop to test before buying."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/laptop-01.html"
+        tabindex="0" role="button" aria-label="View details for Laptop">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m5/640/480" alt="Laptop" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Laptop</h3>
+          <p class="vmp-card-price">KSh 32,000</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Comfortable 3+2 sofa set with hardwood frame and firm foam cushions. Recently reupholstered in a durable fabric. Available for viewing in Vihiga Town."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/sofa-set-01.html"
+        tabindex="0" role="button" aria-label="View details for Sofa set">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m3/640/480" alt="Sofa set" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Sofa set</h3>
+          <p class="vmp-card-price">KSh 25,000</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Complete solar kit with panel, battery, controller and bulbs. Enough to power lights and small appliances. Free installation guidance within Emuhaya."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/solar-kit-01.html"
+        tabindex="0" role="button" aria-label="View details for Solar kit">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m6/640/480" alt="Solar kit" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Solar kit</h3>
+          <p class="vmp-card-price">KSh 12,800</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Emuhaya</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Boda boda in good working condition with clean papers and recent service. Ready for daily business. Viewing and test ride available in Gisambai."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/boda-boda-01.html"
+        tabindex="0" role="button" aria-label="View details for Boda boda">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m11/640/480" alt="Boda boda" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Boda boda</h3>
+          <p class="vmp-card-price">KSh 88,000</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Gisambai</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Fresh farm produce bundle including maize, beans, bananas and seasonal vegetables — harvested to order. Delivery can be arranged within Sabatia."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/farm-produce-bundle-01.html"
+        tabindex="0" role="button" aria-label="View details for Farm produce bundle">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m4/640/480" alt="Farm produce bundle" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Farm produce bundle</h3>
+          <p class="vmp-card-price">KSh 4,500</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Sabatia</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Farm</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="This season's maize, properly dried and sorted. Sold per sack with bulk discounts available. Transport can be arranged from Shiru to nearby towns."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/maize-harvest-01.html"
+        tabindex="0" role="button" aria-label="View details for Maize harvest">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m7/640/480" alt="Maize harvest" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Maize harvest</h3>
+          <p class="vmp-card-price">KSh 3,200</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Shiru</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Farm</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Beautifully tailored dress with neat finishing and quality fabric. Custom measurements and colour options available. Allow 3–5 days for tailoring."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/tailored-dress-01.html"
+        tabindex="0" role="button" aria-label="View details for Tailored dress">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m8/640/480" alt="Tailored dress" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Tailored dress</h3>
+          <p class="vmp-card-price">KSh 2,600</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Chavakali</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="product"
+        data-vmp-description="Set of four sturdy wooden kitchen chairs with cushioned seats. Slight wear on one leg but otherwise in great condition. Viewing in Wodanga."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/kitchen-chairs-01.html"
+        tabindex="0" role="button" aria-label="View details for Kitchen chairs">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m12/640/480" alt="Kitchen chairs" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Kitchen chairs</h3>
+          <p class="vmp-card-price">KSh 6,400</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Wodanga</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICES -->
+      <article class="vmp-card" data-vmp-type="service"
+        data-vmp-description="Fast and reliable local delivery within Vihiga Town and nearby areas. Motorcycle-based, ideal for parcels, food and small items. Message us on WhatsApp for a quote."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/delivery-service-01.html"
+        tabindex="0" role="button" aria-label="View details for Delivery service">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m9/640/480" alt="Delivery service" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-truck"/></svg>Services</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Delivery service</h3>
+          <p class="vmp-card-price">KSh 500 / trip</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Business</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="service"
+        data-vmp-description="Two-bedroom house with sitting room, kitchen and shared compound. Water and electricity connected. Located in a quiet neighbourhood in Mbale, ready for occupation."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/two-bedroom-house-01.html"
+        tabindex="0" role="button" aria-label="View details for Two-bedroom house">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-m10/640/480" alt="Two-bedroom house" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Property</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Two-bedroom house</h3>
+          <p class="vmp-card-price">KSh 8,000 / month</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Landlord</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SHOPS -->
+      <article class="vmp-card" data-vmp-type="shop"
+        data-vmp-description="Trusted electronics and auto shop in Mbale with a wide range of phones, accessories, laptops and motorcycle spares. All products tested and backed by a shop warranty."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/shops/mbale-electronics.html"
+        tabindex="0" role="button" aria-label="View details for Mbale Electronics & Auto">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-shop1/640/480" alt="Mbale Electronics &amp; Auto" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Mbale Electronics &amp; Auto</h3>
+          <p class="vmp-card-price">View shop</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Electronics &amp; Auto</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="shop"
+        data-vmp-description="Family-run farm in Sabatia selling fresh produce direct from the shamba — avocados, bananas, maize and seasonal vegetables. Bulk orders and delivery available."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/shops/sabatia-farms.html"
+        tabindex="0" role="button" aria-label="View details for Sabatia Fresh Farms">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-shop2/640/480" alt="Sabatia Fresh Farms" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Sabatia Fresh Farms</h3>
+          <p class="vmp-card-price">View shop</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Sabatia</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vmp-card" data-vmp-type="shop"
+        data-vmp-description="Fashion house offering tailored outfits, school uniforms and alterations for all ages. Book a fitting or order custom designs for weddings and events."
+        data-vmp-url="https://vihigatimes.co.ke/marketplace/shops/vihiga-fashion.html"
+        tabindex="0" role="button" aria-label="View details for Vihiga Fashion House">
+        <div class="vmp-card-media">
+          <img src="https://picsum.photos/seed/vt-shop3/640/480" alt="Vihiga Fashion House" loading="lazy" width="640" height="480">
+          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        </div>
+        <div class="vmp-card-body">
+          <h3 class="vmp-card-title">Vihiga Fashion House</h3>
+          <p class="vmp-card-price">View shop</p>
+          <div class="vmp-card-meta-row">
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- VISIT FULL MARKETPLACE -->
+  <div class="vmp-container">
+    <div class="vmp-visit">
+      <a class="vmp-visit-btn" href="https://vihigatimes.co.ke/marketplace/">
+        <svg class="vmp-icon" width="18" height="18" aria-hidden="true"><use href="#vmp-i-store"/></svg>
+        <span>Visit Full Marketplace</span>
+        <svg class="vmp-icon" width="16" height="16" aria-hidden="true"><use href="#vmp-i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== MODAL ===== -->
+  <div class="vmp-modal" id="vmpModal" hidden aria-hidden="true">
+    <div class="vmp-modal-backdrop" data-vmp-close></div>
+    <div class="vmp-modal-panel" role="dialog" aria-modal="true" aria-labelledby="vmpModalTitle">
+      <button class="vmp-modal-close" type="button" data-vmp-close aria-label="Close">
+        <svg class="vmp-icon" width="18" height="18" aria-hidden="true"><use href="#vmp-i-close"/></svg>
+      </button>
+      <div class="vmp-modal-media">
+        <img id="vmpModalImage" src="" alt="">
+        <span class="vmp-modal-badge" id="vmpModalBadge">
+          <svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-store" id="vmpModalBadgeIcon"/></svg>
+          <span id="vmpModalCategory">—</span>
+        </span>
+      </div>
+      <div class="vmp-modal-body">
+        <h2 class="vmp-modal-title" id="vmpModalTitle"></h2>
+        <p class="vmp-modal-price" id="vmpModalPrice"></p>
+        <div class="vmp-modal-meta">
+          <span class="vmp-modal-meta-item">
+            <svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-pin"/></svg>
+            <span id="vmpModalLocation"></span>
+          </span>
+          <span class="vmp-modal-meta-item">
+            <svg class="vmp-icon" width="15" height="15" aria-hidden="true"><use href="#vmp-i-user"/></svg>
+            <span id="vmpModalSeller"></span>
+          </span>
+        </div>
+        <p class="vmp-modal-desc" id="vmpModalDesc"></p>
+        <div class="vmp-modal-actions">
+          <a class="vmp-modal-cta-primary" id="vmpModalView" href="#" target="_blank" rel="noopener">
+            <svg class="vmp-icon" width="16" height="16" aria-hidden="true"><use href="#vmp-i-external"/></svg>
+            View Full Listing
+          </a>
+          <a class="vmp-modal-cta-wa" href="https://wa.me/254769882553" target="_blank" rel="noopener">
+            <svg class="vmp-icon" width="16" height="16" aria-hidden="true"><use href="#vmp-i-whatsapp"/></svg>
+            Contact on WhatsApp
+          </a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="chips" id="marketChips" role="tablist" aria-label="Marketplace categories">
-        <button class="chip active" role="tab" aria-selected="true" data-market="All">All</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Phones">Phones</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Vehicles">Vehicles</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Electronics">Electronics</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Farm Produce">Farm Produce</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Fashion">Fashion</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Home">Home</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Services">Services</button>
-        <button class="chip" role="tab" aria-selected="false" data-market="Property">Property</button>
-      </div>
+</section>
+<!-- /VIHIGA MARKETPLACE SECTION -->
 
-      <div class="mini-head">
-        <h3>Hot deals this week</h3>
-        <div class="rail-nav">
-          <button class="icon-btn sm" data-rail="marketRail" data-dir="-1" aria-label="Scroll hot deals left"><svg>
-              <use href="#i-left" />
-            </svg></button>
-          <button class="icon-btn sm" data-rail="marketRail" data-dir="1" aria-label="Scroll hot deals right"><svg>
-              <use href="#i-right" />
-            </svg></button>
-        </div>
-      </div>
-      <div class="rail-wrap">
-        <div class="rail" id="marketRail">
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m2/640/480" alt="Motorcycle (demo)"
-                loading="lazy"><span class="badge market">Vehicles</span>
-              <button class="media-share js-share" aria-label="Share Motorcycle (demo)"
-                data-share-title="Motorcycle (demo) — KSh 95,000"
-                data-share-text="Motorcycle (demo) listed on Vihiga Marketplace in Hamisi for KSh 95,000."
-                data-share-url="https://vihigatimes.co.ke/marketplace/motorcycle-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Motorcycle (demo)</h3><span class="price">KSh 95,000</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Hamisi</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Vehicles"
-                  data-location="Hamisi" data-seller="Dealer">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Motorcycle (demo) — KSh 95,000" data-wa-ref="VT-MKT-0001"
-                  aria-label="Contact seller on WhatsApp about Motorcycle (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
 
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m1/640/480" alt="Smartphone (demo)"
-                loading="lazy"><span class="badge market">Phones</span>
-              <button class="media-share js-share" aria-label="Share Smartphone (demo)"
-                data-share-title="Smartphone (demo) — KSh 18,500"
-                data-share-text="Smartphone (demo) listed on Vihiga Marketplace in Luanda for KSh 18,500."
-                data-share-url="https://vihigatimes.co.ke/marketplace/smartphone-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Smartphone (demo)</h3><span class="price">KSh 18,500</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Luanda</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Phones" data-location="Luanda"
-                  data-seller="Individual seller">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Smartphone (demo) — KSh 18,500" data-wa-ref="VT-MKT-0002"
-                  aria-label="Contact seller on WhatsApp about Smartphone (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m5/640/480" alt="Laptop (demo)"
-                loading="lazy"><span class="badge market">Electronics</span>
-              <button class="media-share js-share" aria-label="Share Laptop (demo)"
-                data-share-title="Laptop (demo) — KSh 32,000"
-                data-share-text="Laptop (demo) listed on Vihiga Marketplace in Mbale for KSh 32,000."
-                data-share-url="https://vihigatimes.co.ke/marketplace/laptop-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Laptop (demo)</h3><span class="price">KSh 32,000</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Mbale</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Electronics"
-                  data-location="Mbale" data-seller="Dealer">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Laptop (demo) — KSh 32,000" data-wa-ref="VT-MKT-0003"
-                  aria-label="Contact seller on WhatsApp about Laptop (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m3/640/480" alt="Sofa set (demo)"
-                loading="lazy"><span class="badge market">Home</span>
-              <button class="media-share js-share" aria-label="Share Sofa set (demo)"
-                data-share-title="Sofa set (demo) — KSh 25,000"
-                data-share-text="Sofa set (demo) listed on Vihiga Marketplace in Vihiga Town for KSh 25,000."
-                data-share-url="https://vihigatimes.co.ke/marketplace/sofa-set-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Sofa set (demo)</h3><span class="price">KSh 25,000</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Vihiga Town</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Home"
-                  data-location="Vihiga Town" data-seller="Individual seller">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Sofa set (demo) — KSh 25,000" data-wa-ref="VT-MKT-0004"
-                  aria-label="Contact seller on WhatsApp about Sofa set (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m6/640/480" alt="Solar kit (demo)"
-                loading="lazy"><span class="badge market">Electronics</span>
-              <button class="media-share js-share" aria-label="Share Solar kit (demo)"
-                data-share-title="Solar kit (demo) — KSh 12,800"
-                data-share-text="Solar kit (demo) listed on Vihiga Marketplace in Emuhaya for KSh 12,800."
-                data-share-url="https://vihigatimes.co.ke/marketplace/solar-kit-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Solar kit (demo)</h3><span class="price">KSh 12,800</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Emuhaya</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Electronics"
-                  data-location="Emuhaya" data-seller="Dealer">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Solar kit (demo) — KSh 12,800" data-wa-ref="VT-MKT-0005"
-                  aria-label="Contact seller on WhatsApp about Solar kit (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="market-card">
-            <div class="card-media"><img src="https://picsum.photos/seed/vt-m11/640/480" alt="Boda boda (demo)"
-                loading="lazy"><span class="badge market">Vehicles</span>
-              <button class="media-share js-share" aria-label="Share Boda boda (demo)"
-                data-share-title="Boda boda (demo) — KSh 88,000"
-                data-share-text="Boda boda (demo) listed on Vihiga Marketplace in Gisambai for KSh 88,000."
-                data-share-url="https://vihigatimes.co.ke/marketplace/boda-boda-01.html"><svg>
-                  <use href="#i-share" />
-                </svg></button>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title clamp-2">Boda boda (demo)</h3><span class="price">KSh 88,000</span>
-              <div class="meta"><svg>
-                  <use href="#i-pin" />
-                </svg><span class="clamp-1">Gisambai</span></div>
-              <div class="card-foot">
-                <button class="btn btn-primary btn-sm" data-modal="market" data-category="Vehicles"
-                  data-location="Gisambai" data-seller="Individual seller">View</button>
-                <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                  rel="noopener noreferrer" data-wa-product="Boda boda (demo) — KSh 88,000" data-wa-ref="VT-MKT-0006"
-                  aria-label="Contact seller on WhatsApp about Boda boda (demo)">
-                  <svg>
-                    <use href="#i-wa" />
-                  </svg> Contact</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="mini-head">
-        <h3 id="marketGridTitle">All listings</h3>
-        <span class="mini-note" id="marketGridCount">12 items</span>
-      </div>
-      <div class="market-grid" id="marketGrid">
-
-        <article class="market-card" data-market-cat="Phones">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m1/640/480" alt="Smartphone (demo)"
-              loading="lazy"><span class="badge market">Phones</span>
-            <button class="media-share js-share" aria-label="Share Smartphone (demo)"
-              data-share-title="Smartphone (demo) — KSh 18,500"
-              data-share-text="Smartphone (demo) listed on Vihiga Marketplace in Luanda for KSh 18,500."
-              data-share-url="https://vihigatimes.co.ke/marketplace/smartphone-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Smartphone (demo)</h3><span class="price">KSh 18,500</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Luanda</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Phones" data-location="Luanda"
-                data-seller="Individual seller">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Smartphone (demo) — KSh 18,500" data-wa-ref="VT-MKT-0002"
-                aria-label="Contact seller on WhatsApp about Smartphone (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Vehicles">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m2/640/480" alt="Motorcycle (demo)"
-              loading="lazy"><span class="badge market">Vehicles</span>
-            <button class="media-share js-share" aria-label="Share Motorcycle (demo)"
-              data-share-title="Motorcycle (demo) — KSh 95,000"
-              data-share-text="Motorcycle (demo) listed on Vihiga Marketplace in Hamisi for KSh 95,000."
-              data-share-url="https://vihigatimes.co.ke/marketplace/motorcycle-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Motorcycle (demo)</h3><span class="price">KSh 95,000</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Hamisi</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Vehicles" data-location="Hamisi"
-                data-seller="Dealer">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Motorcycle (demo) — KSh 95,000" data-wa-ref="VT-MKT-0001"
-                aria-label="Contact seller on WhatsApp about Motorcycle (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Home">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m3/640/480" alt="Sofa set (demo)"
-              loading="lazy"><span class="badge market">Home</span>
-            <button class="media-share js-share" aria-label="Share Sofa set (demo)"
-              data-share-title="Sofa set (demo) — KSh 25,000"
-              data-share-text="Sofa set (demo) listed on Vihiga Marketplace in Vihiga Town for KSh 25,000."
-              data-share-url="https://vihigatimes.co.ke/marketplace/sofa-set-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Sofa set (demo)</h3><span class="price">KSh 25,000</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Vihiga Town</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Home"
-                data-location="Vihiga Town" data-seller="Individual seller">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Sofa set (demo) — KSh 25,000" data-wa-ref="VT-MKT-0004"
-                aria-label="Contact seller on WhatsApp about Sofa set (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Farm Produce">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m4/640/480" alt="Farm produce bundle (demo)"
-              loading="lazy"><span class="badge market">Farm Produce</span>
-            <button class="media-share js-share" aria-label="Share Farm produce bundle (demo)"
-              data-share-title="Farm produce bundle (demo) — KSh 4,500"
-              data-share-text="Farm produce bundle (demo) listed on Vihiga Marketplace in Sabatia for KSh 4,500."
-              data-share-url="https://vihigatimes.co.ke/marketplace/farm-produce-bundle-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Farm produce bundle (demo)</h3><span class="price">KSh 4,500</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Sabatia</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Farm Produce"
-                data-location="Sabatia" data-seller="Farm">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Farm produce bundle (demo) — KSh 4,500"
-                data-wa-ref="VT-MKT-0007" aria-label="Contact seller on WhatsApp about Farm produce bundle (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Electronics">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m5/640/480" alt="Laptop (demo)"
-              loading="lazy"><span class="badge market">Electronics</span>
-            <button class="media-share js-share" aria-label="Share Laptop (demo)"
-              data-share-title="Laptop (demo) — KSh 32,000"
-              data-share-text="Laptop (demo) listed on Vihiga Marketplace in Mbale for KSh 32,000."
-              data-share-url="https://vihigatimes.co.ke/marketplace/laptop-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Laptop (demo)</h3><span class="price">KSh 32,000</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Mbale</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Electronics"
-                data-location="Mbale" data-seller="Dealer">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Laptop (demo) — KSh 32,000" data-wa-ref="VT-MKT-0003"
-                aria-label="Contact seller on WhatsApp about Laptop (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Electronics">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m6/640/480" alt="Solar kit (demo)"
-              loading="lazy"><span class="badge market">Electronics</span>
-            <button class="media-share js-share" aria-label="Share Solar kit (demo)"
-              data-share-title="Solar kit (demo) — KSh 12,800"
-              data-share-text="Solar kit (demo) listed on Vihiga Marketplace in Emuhaya for KSh 12,800."
-              data-share-url="https://vihigatimes.co.ke/marketplace/solar-kit-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Solar kit (demo)</h3><span class="price">KSh 12,800</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Emuhaya</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Electronics"
-                data-location="Emuhaya" data-seller="Dealer">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Solar kit (demo) — KSh 12,800" data-wa-ref="VT-MKT-0005"
-                aria-label="Contact seller on WhatsApp about Solar kit (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Farm Produce">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m7/640/480" alt="Maize harvest (demo)"
-              loading="lazy"><span class="badge market">Farm Produce</span>
-            <button class="media-share js-share" aria-label="Share Maize harvest (demo)"
-              data-share-title="Maize harvest (demo) — KSh 3,200"
-              data-share-text="Maize harvest (demo) listed on Vihiga Marketplace in Shiru for KSh 3,200."
-              data-share-url="https://vihigatimes.co.ke/marketplace/maize-harvest-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Maize harvest (demo)</h3><span class="price">KSh 3,200</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Shiru</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Farm Produce"
-                data-location="Shiru" data-seller="Farm">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Maize harvest (demo) — KSh 3,200" data-wa-ref="VT-MKT-0008"
-                aria-label="Contact seller on WhatsApp about Maize harvest (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Fashion">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m8/640/480" alt="Tailored dress (demo)"
-              loading="lazy"><span class="badge market">Fashion</span>
-            <button class="media-share js-share" aria-label="Share Tailored dress (demo)"
-              data-share-title="Tailored dress (demo) — KSh 2,600"
-              data-share-text="Tailored dress (demo) listed on Vihiga Marketplace in Chavakali for KSh 2,600."
-              data-share-url="https://vihigatimes.co.ke/marketplace/tailored-dress-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Tailored dress (demo)</h3><span class="price">KSh 2,600</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Chavakali</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Fashion"
-                data-location="Chavakali" data-seller="Individual seller">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Tailored dress (demo) — KSh 2,600" data-wa-ref="VT-MKT-0009"
-                aria-label="Contact seller on WhatsApp about Tailored dress (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Services">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m9/640/480" alt="Delivery service (demo)"
-              loading="lazy"><span class="badge market">Services</span>
-            <button class="media-share js-share" aria-label="Share Delivery service (demo)"
-              data-share-title="Delivery service (demo) — KSh 500 / trip"
-              data-share-text="Delivery service (demo) listed on Vihiga Marketplace in Vihiga Town for KSh 500 per trip."
-              data-share-url="https://vihigatimes.co.ke/marketplace/delivery-service-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Delivery service (demo)</h3><span class="price">KSh 500 / trip</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Vihiga Town</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Services"
-                data-location="Vihiga Town" data-seller="Business">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Delivery service (demo) — KSh 500 / trip"
-                data-wa-ref="VT-MKT-0010" aria-label="Contact seller on WhatsApp about Delivery service (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Property">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m10/640/480" alt="Two-bedroom house (demo)"
-              loading="lazy"><span class="badge market">Property</span>
-            <button class="media-share js-share" aria-label="Share Two-bedroom house (demo)"
-              data-share-title="Two-bedroom house (demo) — KSh 8,000 / month"
-              data-share-text="Two-bedroom house (demo) listed on Vihiga Marketplace in Mbale for KSh 8,000 per month."
-              data-share-url="https://vihigatimes.co.ke/marketplace/two-bedroom-house-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Two-bedroom house (demo)</h3><span class="price">KSh 8,000 / month</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Mbale</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Property" data-location="Mbale"
-                data-seller="Landlord">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Two-bedroom house (demo) — KSh 8,000 / month"
-                data-wa-ref="VT-MKT-0011" aria-label="Contact seller on WhatsApp about Two-bedroom house (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Vehicles">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m11/640/480" alt="Boda boda (demo)"
-              loading="lazy"><span class="badge market">Vehicles</span>
-            <button class="media-share js-share" aria-label="Share Boda boda (demo)"
-              data-share-title="Boda boda (demo) — KSh 88,000"
-              data-share-text="Boda boda (demo) listed on Vihiga Marketplace in Gisambai for KSh 88,000."
-              data-share-url="https://vihigatimes.co.ke/marketplace/boda-boda-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Boda boda (demo)</h3><span class="price">KSh 88,000</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Gisambai</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Vehicles"
-                data-location="Gisambai" data-seller="Individual seller">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Boda boda (demo) — KSh 88,000" data-wa-ref="VT-MKT-0006"
-                aria-label="Contact seller on WhatsApp about Boda boda (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="market-card" data-market-cat="Home">
-          <div class="card-media"><img src="https://picsum.photos/seed/vt-m12/640/480" alt="Kitchen chairs (demo)"
-              loading="lazy"><span class="badge market">Home</span>
-            <button class="media-share js-share" aria-label="Share Kitchen chairs (demo)"
-              data-share-title="Kitchen chairs (demo) — KSh 6,400"
-              data-share-text="Kitchen chairs (demo) listed on Vihiga Marketplace in Wodanga for KSh 6,400."
-              data-share-url="https://vihigatimes.co.ke/marketplace/kitchen-chairs-01.html"><svg>
-                <use href="#i-share" />
-              </svg></button>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title clamp-2">Kitchen chairs (demo)</h3><span class="price">KSh 6,400</span>
-            <div class="meta"><svg>
-                <use href="#i-pin" />
-              </svg><span class="clamp-1">Wodanga</span></div>
-            <div class="card-foot">
-              <button class="btn btn-primary btn-sm" data-modal="market" data-category="Home" data-location="Wodanga"
-                data-seller="Dealer">View</button>
-              <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/254769882553" target="_blank"
-                rel="noopener noreferrer" data-wa-product="Kitchen chairs (demo) — KSh 6,400" data-wa-ref="VT-MKT-0012"
-                aria-label="Contact seller on WhatsApp about Kitchen chairs (demo)">
-                <svg>
-                  <use href="#i-wa" />
-                </svg> Contact</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <p class="small muted" id="marketEmpty" style="display:none;margin-top:16px">No items in this category yet.</p>
-    </section>
 
     <!-- ============ BUSINESS DIRECTORY ============ -->
     <section class="section container" aria-labelledby="dirTitle">
@@ -6191,7 +6051,305 @@
 
       document.addEventListener('DOMContentLoaded', boot);
     })();
+
+
+
+
+
+
+
   </script>
+
+
+
+<script>
+/* ============================================================
+   VIHIGA MARKETPLACE — HOMEPAGE SECTION — FUNCTIONALITY ONLY
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var section = document.querySelector('.vmp-section');
+  if (!section) return;
+
+  var carousel = section.querySelector('#vmpCarousel');
+  var track    = section.querySelector('#vmpTrack');
+  var cards    = Array.prototype.slice.call(section.querySelectorAll('.vmp-card'));
+  var tabs     = Array.prototype.slice.call(section.querySelectorAll('.vmp-tab'));
+
+  var modal    = section.querySelector('#vmpModal');
+  var lastFocus = null;
+
+  if (!carousel || !track || !cards.length) return;
+
+  var AUTO_MS = 4000;
+  var RESUME_MS = 8000;
+  var DRAG_THRESHOLD = 40;
+
+  var activeIndex = 0;
+  var autoTimer = null;
+  var resumeTimer = null;
+  var userPaused = false;
+
+  var isDragging = false;
+  var dragStartX = 0;
+  var dragStartOffset = 0;
+  var didDrag = false;
+
+  /* ---------- helpers ---------- */
+  function getCardWidth() { return cards[0].offsetWidth || 240; }
+  function getGap() {
+    var s = getComputedStyle(track);
+    return parseFloat(s.columnGap || s.gap) || 5;
+  }
+  function isVisible(card) { return card.style.display !== 'none'; }
+  function visibleIndices() {
+    var out = [];
+    for (var i = 0; i < cards.length; i++) if (isVisible(cards[i])) out.push(i);
+    return out;
+  }
+  function offsetForIndex(index) {
+    var cw = getCardWidth();
+    var gap = getGap();
+    var visibleBefore = 0;
+    for (var i = 0; i < index; i++) if (isVisible(cards[i])) visibleBefore++;
+    var cardCenter = visibleBefore * (cw + gap) + cw / 2;
+    return carousel.clientWidth / 2 - cardCenter;
+  }
+
+  /* ---------- active card ---------- */
+  function setActive(index, animate) {
+    if (index < 0 || index >= cards.length) return;
+    if (!isVisible(cards[index])) return;
+    activeIndex = index;
+
+    if (animate === false) track.style.transition = 'none';
+    track.style.transform = 'translateX(' + offsetForIndex(index) + 'px)';
+
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].classList.toggle('vmp-card--active', i === index);
+      cards[i].setAttribute('aria-pressed', i === index ? 'true' : 'false');
+    }
+
+    if (animate === false) {
+      void track.offsetWidth;
+      track.style.transition = '';
+    }
+  }
+
+  /* ---------- auto-advance ---------- */
+  function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+  function startAuto() {
+    stopAuto();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    autoTimer = setInterval(function () {
+      if (userPaused) return;
+      var vis = visibleIndices();
+      if (vis.length < 2) return;
+      var pos = vis.indexOf(activeIndex);
+      if (pos === -1) pos = 0;
+      setActive(vis[(pos + 1) % vis.length]);
+    }, AUTO_MS);
+  }
+  function pauseAuto() { userPaused = true; stopAuto(); }
+  function scheduleResume() {
+    if (resumeTimer) clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function () {
+      userPaused = false;
+      startAuto();
+    }, RESUME_MS);
+  }
+
+  /* ---------- tabs ---------- */
+  function applyTab(type) {
+    for (var i = 0; i < cards.length; i++) {
+      var card = cards[i];
+      var show = type === 'all' || card.getAttribute('data-vmp-type') === type;
+      card.style.display = show ? '' : 'none';
+    }
+    var vis = visibleIndices();
+    if (vis.length) setActive(vis[0], false);
+    stopAuto();
+    startAuto();
+  }
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var type = btn.getAttribute('data-vmp-tab');
+      tabs.forEach(function (t) {
+        var on = t === btn;
+        t.classList.toggle('vmp-tab--active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      applyTab(type);
+    });
+  });
+
+  /* ---------- drag / swipe ---------- */
+  function onPointerDown(e) {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    isDragging = true;
+    didDrag = false;
+    dragStartX = e.clientX;
+    dragStartOffset = offsetForIndex(activeIndex);
+    track.style.transition = 'none';
+    pauseAuto();
+    document.addEventListener('pointermove', onPointerMove);
+    document.addEventListener('pointerup', onPointerUp);
+    document.addEventListener('pointercancel', onPointerUp);
+  }
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    var delta = e.clientX - dragStartX;
+    if (Math.abs(delta) > 8) didDrag = true;
+    track.style.transform = 'translateX(' + (dragStartOffset + delta) + 'px)';
+  }
+  function onPointerUp(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    document.removeEventListener('pointermove', onPointerMove);
+    document.removeEventListener('pointerup', onPointerUp);
+    document.removeEventListener('pointercancel', onPointerUp);
+    track.style.transition = '';
+
+    var delta = e.clientX - dragStartX;
+    var vis = visibleIndices();
+    var pos = vis.indexOf(activeIndex);
+    if (pos === -1) pos = 0;
+
+    if (Math.abs(delta) > DRAG_THRESHOLD && vis.length > 1) {
+      pos = delta < 0 ? (pos + 1) % vis.length : (pos - 1 + vis.length) % vis.length;
+      setActive(vis[pos]);
+    } else {
+      setActive(activeIndex);
+    }
+    scheduleResume();
+  }
+
+  /* block card-open after a drag */
+  carousel.addEventListener('click', function (e) {
+    if (didDrag) { e.preventDefault(); e.stopPropagation(); didDrag = false; }
+  }, true);
+
+  carousel.addEventListener('pointerdown', onPointerDown);
+  carousel.addEventListener('wheel', function () { pauseAuto(); scheduleResume(); }, { passive: true });
+  carousel.addEventListener('touchstart', function () { pauseAuto(); }, { passive: true });
+
+  /* keyboard nav */
+  carousel.addEventListener('keydown', function (e) {
+    var vis = visibleIndices();
+    var pos = vis.indexOf(activeIndex);
+    if (pos === -1) pos = 0;
+    if (e.key === 'ArrowLeft' && vis.length > 1) {
+      e.preventDefault();
+      setActive(vis[(pos - 1 + vis.length) % vis.length]);
+      pauseAuto(); scheduleResume();
+    } else if (e.key === 'ArrowRight' && vis.length > 1) {
+      e.preventDefault();
+      setActive(vis[(pos + 1) % vis.length]);
+      pauseAuto(); scheduleResume();
+    }
+  });
+
+  /* recenter on resize */
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { setActive(activeIndex, false); }, 150);
+  });
+
+  /* ---------- MODAL ---------- */
+  var modalImage     = section.querySelector('#vmpModalImage');
+  var modalTitle     = section.querySelector('#vmpModalTitle');
+  var modalPrice     = section.querySelector('#vmpModalPrice');
+  var modalLocation  = section.querySelector('#vmpModalLocation');
+  var modalSeller    = section.querySelector('#vmpModalSeller');
+  var modalCategory  = section.querySelector('#vmpModalCategory');
+  var modalBadgeIcon = section.querySelector('#vmpModalBadgeIcon');
+  var modalDesc      = section.querySelector('#vmpModalDesc');
+  var modalView      = section.querySelector('#vmpModalView');
+
+  function openModalFor(card) {
+    var title    = card.querySelector('.vmp-card-title');
+    var price    = card.querySelector('.vmp-card-price');
+    var meta     = card.querySelectorAll('.vmp-card-meta');
+    var badge    = card.querySelector('.vmp-card-badge');
+    var img      = card.querySelector('.vmp-card-media img');
+    var badgeSvg = badge ? badge.querySelector('use') : null;
+    var location = meta[0] ? meta[0].textContent.trim() : '';
+    var seller   = meta[1] ? meta[1].textContent.trim() : '';
+
+    modalImage.src = img ? img.currentSrc || img.src : '';
+    modalImage.alt = img ? img.alt : '';
+
+    modalTitle.textContent    = title ? title.textContent.trim() : '';
+    modalPrice.textContent    = price ? price.textContent.trim() : '';
+    modalLocation.textContent = location;
+    modalSeller.textContent   = seller;
+    modalCategory.textContent = badge ? badge.textContent.trim() : '';
+
+    if (badgeSvg && modalBadgeIcon) {
+      var href = badgeSvg.getAttribute('href') || badgeSvg.getAttribute('xlink:href');
+      if (href) modalBadgeIcon.setAttribute('href', href);
+    }
+
+    modalDesc.textContent = card.getAttribute('data-vmp-description') || '';
+
+    var url = card.getAttribute('data-vmp-url') || '#';
+    modalView.href = url;
+
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('.vmp-modal-close');
+    if (closeBtn) closeBtn.focus();
+
+    pauseAuto();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+    scheduleResume();
+  }
+
+  modal.addEventListener('click', function (e) {
+    if (e.target.closest('[data-vmp-close]')) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  /* card interactions */
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      if (didDrag) return;
+      openModalFor(card);
+    });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModalFor(card);
+      }
+    });
+  });
+
+  /* ---------- init ---------- */
+  function init() {
+    setActive(0, false);
+    startAuto();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+
 </body>
 
 </html>
