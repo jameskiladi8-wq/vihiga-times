@@ -2971,15 +2971,8 @@
 
 
 
-
-
-
-
-
-
-
 /* ============================================================
-   VIHIGA MARKETPLACE — HOMEPAGE SECTION
+   VIHIGA MARKETPLACE — HOMEPAGE SECTION (v2 · full-bleed cards)
    ============================================================ */
 .vmp-section {
   --vmp-primary: #0a4432;
@@ -2994,11 +2987,15 @@
   --vmp-surface: #ffffff;
   --vmp-wa: #25d366;
   --vmp-wa-hover: #1fbe5a;
-  --vmp-radius: 16px;
-  --vmp-radius-sm: 12px;
-  --vmp-card-w: clamp(200px, 58vw, 400px);
+  --vmp-radius: 18px;
   --vmp-gap: 5px;
   --vmp-edge: 5px;
+  --vmp-card-w: clamp(272px, 76vw, 380px);
+  --vmp-card-h: clamp(225px, 58vw, 268px);
+  --vmp-scale-active: 1.06;
+  --vmp-scale-side: 0.94;
+  --vmp-side-dim: 0.9;
+  --vmp-track-ms: 550ms;
   --vmp-shadow: 0 2px 10px rgba(10, 68, 50, 0.06);
   --vmp-shadow-hover: 0 18px 42px rgba(10, 68, 50, 0.16);
   --vmp-shadow-lg: 0 30px 80px rgba(10, 68, 50, 0.28);
@@ -3044,7 +3041,7 @@
   justify-content: space-between;
   gap: clamp(14px, 3vw, 28px);
   flex-wrap: wrap;
-  margin-bottom: clamp(18px, 2.5vw, 26px);
+  margin-bottom: clamp(16px, 2.2vw, 22px);
 }
 .vmp-kicker {
   font-size: clamp(10.5px, 1.2vw, 12px);
@@ -3098,7 +3095,7 @@
   border: 1px solid var(--vmp-border);
   padding: 4px;
   border-radius: 999px;
-  margin-bottom: clamp(12px, 1.8vw, 16px);
+  margin-bottom: clamp(10px, 1.6vw, 14px);
   overflow-x: auto;
   scrollbar-width: none;
   max-width: 100%;
@@ -3107,7 +3104,7 @@
 .vmp-tab {
   border: 0;
   background: transparent;
-  padding: 8px 16px;
+  padding: 7px 15px;
   border-radius: 999px;
   font-size: clamp(12px, 1.4vw, 13px);
   font-weight: 650;
@@ -3131,7 +3128,7 @@
   scrollbar-width: thin;
   scrollbar-color: #cfe0d6 transparent;
   -webkit-overflow-scrolling: touch;
-  margin-bottom: clamp(4px, 1vw, 8px);
+  margin-bottom: clamp(2px, 0.8vw, 6px);
 }
 .vmp-cats::-webkit-scrollbar { height: 5px; }
 .vmp-cats::-webkit-scrollbar-thumb { background: #cfe0d6; border-radius: 99px; }
@@ -3166,82 +3163,92 @@
 /* ---------- CAROUSEL ---------- */
 .vmp-carousel {
   overflow: hidden;
-  padding: clamp(28px, 4vw, 40px) var(--vmp-edge) clamp(20px, 3vw, 28px);
+  /* vertical padding leaves room for the elevated centre card + shadow */
+  padding: clamp(34px, 4.5vw, 46px) var(--vmp-edge) clamp(26px, 3.5vw, 34px);
   touch-action: pan-y;
   outline: none;
-  /* Peeking cards touch the edge with only 5px of gap */
 }
 @media (min-width: 1024px) {
   .vmp-carousel {
-    max-width: 960px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 28px;
-    padding-left: max(var(--vmp-edge), calc((100% - 960px) / 2 * 0));
   }
 }
 .vmp-track {
   display: flex;
   gap: var(--vmp-gap);
-  transition: transform 0.65s var(--vmp-ease-out);
+  transition: transform var(--vmp-track-ms) ease-in-out;
   will-change: transform;
 }
 
-/* ---------- CARDS ---------- */
+/* ---------- FULL-BLEED CARDS (DESIGN 2) ---------- */
 .vmp-card {
+  position: relative;
   flex: 0 0 var(--vmp-card-w);
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid var(--vmp-border);
+  height: var(--vmp-card-h);
   border-radius: var(--vmp-radius);
   overflow: hidden;
-  color: inherit;
+  background: #123528;
+  color: #fff;
   cursor: pointer;
-  opacity: 0.62;
-  transform: scale(0.9) translateY(6px);
+  isolation: isolate;
+  transform: scale(var(--vmp-scale-side)) translateY(10px);
+  filter: brightness(var(--vmp-side-dim));
+  box-shadow: 0 6px 18px rgba(10, 68, 50, 0.12);
   transition:
-    transform 0.55s var(--vmp-ease-out),
-    opacity 0.4s var(--vmp-ease),
-    box-shadow 0.4s var(--vmp-ease),
-    border-color 0.3s var(--vmp-ease);
-  will-change: transform, opacity;
+    transform var(--vmp-track-ms) ease-in-out,
+    filter var(--vmp-track-ms) ease-in-out,
+    box-shadow var(--vmp-track-ms) ease-in-out;
+  will-change: transform, filter;
 }
 .vmp-card.vmp-card--active {
-  opacity: 1;
-  transform: scale(1.04) translateY(-4px);
-  border-color: #cbe3d5;
-  box-shadow: 0 16px 38px rgba(10, 68, 50, 0.16);
+  transform: scale(var(--vmp-scale-active)) translateY(-4px);
+  filter: brightness(1);
+  box-shadow: 0 26px 52px rgba(10, 68, 50, 0.3);
   z-index: 2;
 }
-.vmp-card:hover .vmp-card-media img { transform: scale(1.04); }
 .vmp-card:focus-visible {
   outline: 3px solid var(--vmp-accent);
   outline-offset: 3px;
 }
 
+/* photo surface */
 .vmp-card-media {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  background: var(--vmp-soft);
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #123528;
 }
 .vmp-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s var(--vmp-ease);
+  transition: transform 0.6s var(--vmp-ease-out);
 }
+.vmp-card:hover .vmp-card-media img { transform: scale(1.05); }
+
+/* readability gradient: subtle top, dark bottom */
+.vmp-card-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(8, 28, 20, 0.28) 0%, rgba(8, 28, 20, 0) 26%),
+    linear-gradient(180deg, rgba(8, 28, 20, 0) 38%, rgba(8, 28, 20, 0.62) 74%, rgba(8, 28, 20, 0.85) 100%);
+}
+
+/* top-left category badge */
 .vmp-card-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 9px;
+  padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(10, 68, 50, 0.92);
+  background: rgba(8, 28, 20, 0.55);
   color: #fff;
   font-size: 10px;
   font-weight: 700;
@@ -3249,60 +3256,114 @@
   text-transform: uppercase;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 56px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.vmp-card-body {
-  padding: 11px 13px 13px;
+
+/* top-right verified badge — add this span inside any card to show it */
+.vmp-card-verified {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1d9bf0;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.vmp-card-verified .vmp-icon { width: 15px; height: 15px; }
+
+/* bottom info stack */
+.vmp-card-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 16px 15px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  flex: 1;
-  min-width: 0;
+  align-items: flex-start;
+  gap: 4px;
 }
 .vmp-card-title {
   margin: 0;
-  font-size: clamp(13px, 1.5vw, 14.5px);
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--vmp-ink);
+  font-size: clamp(18px, 2.1vw, 23px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.6em;
 }
 .vmp-card-price {
   margin: 0;
-  font-size: clamp(13.5px, 1.6vw, 15px);
+  font-size: clamp(16px, 1.8vw, 20px);
   font-weight: 800;
-  color: var(--vmp-primary);
+  color: #ffd166;
   letter-spacing: -0.01em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 .vmp-card-meta-row {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin-top: 2px;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 1px;
   min-width: 0;
 }
 .vmp-card-meta {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: clamp(11px, 1.3vw, 11.5px);
-  color: var(--vmp-muted);
+  font-size: clamp(11px, 1.2vw, 12px);
+  color: rgba(255, 255, 255, 0.85);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
 }
-.vmp-card-meta .vmp-icon { color: #97b2a3; }
+.vmp-card-meta .vmp-icon { color: rgba(255, 255, 255, 0.65); }
 
-/* ---------- VISIT FULL MARKETPLACE ---------- */
+/* Details button */
+.vmp-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+  padding: 8px 16px;
+  min-height: 36px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--vmp-primary);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  transition: transform 0.22s var(--vmp-ease),
+              box-shadow 0.22s var(--vmp-ease),
+              background 0.22s var(--vmp-ease);
+}
+.vmp-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
+  background: var(--vmp-soft);
+}
+.vmp-card-btn:active { transform: translateY(0); }
+
+/* ---------- EXPLORE FULL MARKETPLACE ---------- */
 .vmp-visit {
   display: flex;
   justify-content: center;
-  margin-top: clamp(20px, 3vw, 30px);
+  margin-top: clamp(14px, 2.4vw, 22px);
 }
 .vmp-visit-btn {
   display: inline-flex;
@@ -3329,7 +3390,7 @@
 .vmp-visit-btn .vmp-icon:last-child { transition: transform 0.25s var(--vmp-ease-out); }
 .vmp-visit-btn:hover .vmp-icon:last-child { transform: translateX(3px); }
 
-/* ---------- MODAL ---------- */
+/* ---------- QUICK-VIEW MODAL ---------- */
 .vmp-modal {
   position: fixed;
   inset: 0;
@@ -3521,6 +3582,8 @@
   .vmp-explore { width: 100%; justify-content: center; }
   .vmp-modal-panel { border-radius: 16px; }
   .vmp-visit-btn { padding: 13px 22px; }
+  .vmp-card-info { padding: 12px 13px 13px; }
+  .vmp-card-btn { min-height: 34px; padding: 7px 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

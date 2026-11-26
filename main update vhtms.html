@@ -4066,9 +4066,8 @@
    <!-- ============================================================ -->
 <!-- VIHIGA MARKETPLACE — HOMEPAGE SECTION                        -->
 <!-- ============================================================ -->
-
 <!-- ============================================================= -->
-<!-- VIHIGA MARKETPLACE — HOMEPAGE SECTION                          -->
+<!-- VIHIGA MARKETPLACE — HOMEPAGE SECTION (v2 · full-bleed cards)  -->
 <!-- ============================================================= -->
 <section class="vmp-section" aria-labelledby="vmpTitle">
 
@@ -4095,6 +4094,7 @@
       <symbol id="vmp-i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/></symbol>
       <symbol id="vmp-i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1 5.6 5.6L9 23l-4-4z"/><path d="M14 6l4-2"/></symbol>
       <symbol id="vmp-i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><path d="M9 20v-6h6v6"/></symbol>
+      <symbol id="vmp-i-verified" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.6 14.9 4h4.2v4.2L21.6 12l-2.5 3.8V20h-4.2L12 22.4 9.1 20H4.9v-4.2L2.4 12l2.5-3.8V4h4.2z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m8.6 12.2 2.3 2.3 4.5-4.6"/></symbol>
     </defs>
   </svg>
 
@@ -4138,26 +4138,29 @@
     </nav>
   </div>
 
-  <!-- 3-CARD CAROUSEL (full-bleed, 5px from edge) -->
+  <!-- 3-CARD FULL-BLEED CAROUSEL -->
   <div class="vmp-carousel" id="vmpCarousel" tabindex="0" aria-label="Marketplace listings showcase">
     <div class="vmp-track" id="vmpTrack">
 
-      <!-- PRODUCTS -->
+      <!-- ============ PRODUCTS ============ -->
+
       <article class="vmp-card" data-vmp-type="product"
         data-vmp-description="Clean, working smartphone with a bright display, reliable battery and a crisp camera. Ideal for everyday use. Price is slightly negotiable — inspection welcome in Luanda town."
         data-vmp-url="https://vihigatimes.co.ke/marketplace/smartphone-01.html"
         tabindex="0" role="button" aria-label="View details for Smartphone">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m1/640/480" alt="Smartphone" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-smartphone"/></svg>Phones</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-smartphone"/></svg>Phones</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Smartphone</h3>
           <p class="vmp-card-price">KSh 18,500</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Luanda</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/smartphone-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4167,15 +4170,17 @@
         tabindex="0" role="button" aria-label="View details for Motorcycle">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m2/640/480" alt="Motorcycle" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Motorcycle</h3>
           <p class="vmp-card-price">KSh 95,000</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Hamisi</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/motorcycle-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4185,15 +4190,17 @@
         tabindex="0" role="button" aria-label="View details for Laptop">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m5/640/480" alt="Laptop" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Laptop</h3>
           <p class="vmp-card-price">KSh 32,000</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/laptop-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4203,15 +4210,17 @@
         tabindex="0" role="button" aria-label="View details for Sofa set">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m3/640/480" alt="Sofa set" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Sofa set</h3>
           <p class="vmp-card-price">KSh 25,000</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/sofa-set-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4221,15 +4230,17 @@
         tabindex="0" role="button" aria-label="View details for Solar kit">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m6/640/480" alt="Solar kit" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-monitor"/></svg>Electronics</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Solar kit</h3>
           <p class="vmp-card-price">KSh 12,800</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Emuhaya</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/solar-kit-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4239,15 +4250,17 @@
         tabindex="0" role="button" aria-label="View details for Boda boda">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m11/640/480" alt="Boda boda" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-car"/></svg>Vehicles</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Boda boda</h3>
           <p class="vmp-card-price">KSh 88,000</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Gisambai</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/boda-boda-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4257,15 +4270,17 @@
         tabindex="0" role="button" aria-label="View details for Farm produce bundle">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m4/640/480" alt="Farm produce bundle" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Farm produce bundle</h3>
           <p class="vmp-card-price">KSh 4,500</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Sabatia</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Farm</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/farm-produce-bundle-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4275,15 +4290,17 @@
         tabindex="0" role="button" aria-label="View details for Maize harvest">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m7/640/480" alt="Maize harvest" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Maize harvest</h3>
           <p class="vmp-card-price">KSh 3,200</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Shiru</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Farm</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/maize-harvest-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4293,15 +4310,17 @@
         tabindex="0" role="button" aria-label="View details for Tailored dress">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m8/640/480" alt="Tailored dress" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Tailored dress</h3>
           <p class="vmp-card-price">KSh 2,600</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Chavakali</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Individual seller</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/tailored-dress-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4311,34 +4330,39 @@
         tabindex="0" role="button" aria-label="View details for Kitchen chairs">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m12/640/480" alt="Kitchen chairs" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Home</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Kitchen chairs</h3>
           <p class="vmp-card-price">KSh 6,400</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Wodanga</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Dealer</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/kitchen-chairs-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
-      <!-- SERVICES -->
+      <!-- ============ SERVICES ============ -->
+
       <article class="vmp-card" data-vmp-type="service"
         data-vmp-description="Fast and reliable local delivery within Vihiga Town and nearby areas. Motorcycle-based, ideal for parcels, food and small items. Message us on WhatsApp for a quote."
         data-vmp-url="https://vihigatimes.co.ke/marketplace/delivery-service-01.html"
         tabindex="0" role="button" aria-label="View details for Delivery service">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m9/640/480" alt="Delivery service" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-truck"/></svg>Services</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-truck"/></svg>Services</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Delivery service</h3>
           <p class="vmp-card-price">KSh 500 / trip</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Business</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/delivery-service-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4348,34 +4372,39 @@
         tabindex="0" role="button" aria-label="View details for Two-bedroom house">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-m10/640/480" alt="Two-bedroom house" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Property</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-sofa"/></svg>Property</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Two-bedroom house</h3>
           <p class="vmp-card-price">KSh 8,000 / month</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Landlord</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/two-bedroom-house-01.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
-      <!-- SHOPS -->
+      <!-- ============ SHOPS ============ -->
+
       <article class="vmp-card" data-vmp-type="shop"
         data-vmp-description="Trusted electronics and auto shop in Mbale with a wide range of phones, accessories, laptops and motorcycle spares. All products tested and backed by a shop warranty."
         data-vmp-url="https://vihigatimes.co.ke/marketplace/shops/mbale-electronics.html"
-        tabindex="0" role="button" aria-label="View details for Mbale Electronics & Auto">
+        tabindex="0" role="button" aria-label="View details for Mbale Electronics &amp; Auto">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-shop1/640/480" alt="Mbale Electronics &amp; Auto" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Mbale Electronics &amp; Auto</h3>
           <p class="vmp-card-price">View shop</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Mbale</span>
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Electronics &amp; Auto</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/shops/mbale-electronics.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4385,15 +4414,17 @@
         tabindex="0" role="button" aria-label="View details for Sabatia Fresh Farms">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-shop2/640/480" alt="Sabatia Fresh Farms" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Sabatia Fresh Farms</h3>
           <p class="vmp-card-price">View shop</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Sabatia</span>
-            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-leaf"/></svg>Farm Produce</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Farm Produce</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/shops/sabatia-farms.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
@@ -4403,33 +4434,35 @@
         tabindex="0" role="button" aria-label="View details for Vihiga Fashion House">
         <div class="vmp-card-media">
           <img src="https://picsum.photos/seed/vt-shop3/640/480" alt="Vihiga Fashion House" loading="lazy" width="640" height="480">
-          <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
         </div>
-        <div class="vmp-card-body">
+        <div class="vmp-card-shade" aria-hidden="true"></div>
+        <span class="vmp-card-badge"><svg class="vmp-icon" width="11" height="11" aria-hidden="true"><use href="#vmp-i-store"/></svg>Shop</span>
+        <div class="vmp-card-info">
           <h3 class="vmp-card-title">Vihiga Fashion House</h3>
           <p class="vmp-card-price">View shop</p>
           <div class="vmp-card-meta-row">
             <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-pin"/></svg>Vihiga Town</span>
-            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-shirt"/></svg>Fashion</span>
+            <span class="vmp-card-meta"><svg class="vmp-icon" width="12" height="12" aria-hidden="true"><use href="#vmp-i-user"/></svg>Fashion</span>
           </div>
+          <a class="vmp-card-btn" href="https://vihigatimes.co.ke/marketplace/shops/vihiga-fashion.html">Details<svg class="vmp-icon" width="13" height="13" aria-hidden="true"><use href="#vmp-i-external"/></svg></a>
         </div>
       </article>
 
     </div>
   </div>
 
-  <!-- VISIT FULL MARKETPLACE -->
+  <!-- EXPLORE FULL MARKETPLACE -->
   <div class="vmp-container">
     <div class="vmp-visit">
       <a class="vmp-visit-btn" href="https://vihigatimes.co.ke/marketplace/">
         <svg class="vmp-icon" width="18" height="18" aria-hidden="true"><use href="#vmp-i-store"/></svg>
-        <span>Visit Full Marketplace</span>
+        <span>Explore Full Marketplace</span>
         <svg class="vmp-icon" width="16" height="16" aria-hidden="true"><use href="#vmp-i-arrow-right"/></svg>
       </a>
     </div>
   </div>
 
-  <!-- ===== MODAL ===== -->
+  <!-- ===== QUICK-VIEW MODAL ===== -->
   <div class="vmp-modal" id="vmpModal" hidden aria-hidden="true">
     <div class="vmp-modal-backdrop" data-vmp-close></div>
     <div class="vmp-modal-panel" role="dialog" aria-modal="true" aria-labelledby="vmpModalTitle">
@@ -6065,6 +6098,7 @@
 <script>
 /* ============================================================
    VIHIGA MARKETPLACE — HOMEPAGE SECTION — FUNCTIONALITY ONLY
+   (v2 · full-bleed cards — same engine, tuned to the brief)
    ============================================================ */
 (function () {
   'use strict';
@@ -6082,9 +6116,9 @@
 
   if (!carousel || !track || !cards.length) return;
 
-  var AUTO_MS = 4000;
-  var RESUME_MS = 8000;
-  var DRAG_THRESHOLD = 40;
+  var AUTO_MS = 4000;        // automatic advance every 4s
+  var RESUME_MS = 5000;      // resume auto after 5s of inactivity
+  var DRAG_THRESHOLD = 40;   // px of horizontal drag needed to change card
 
   var activeIndex = 0;
   var autoTimer = null;
@@ -6097,7 +6131,7 @@
   var didDrag = false;
 
   /* ---------- helpers ---------- */
-  function getCardWidth() { return cards[0].offsetWidth || 240; }
+  function getCardWidth() { return cards[0].offsetWidth || 260; }
   function getGap() {
     var s = getComputedStyle(track);
     return parseFloat(s.columnGap || s.gap) || 5;
@@ -6137,7 +6171,7 @@
     }
   }
 
-  /* ---------- auto-advance ---------- */
+  /* ---------- auto-advance (loops through the visible cards) ---------- */
   function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
   function startAuto() {
     stopAuto();
@@ -6148,7 +6182,7 @@
       if (vis.length < 2) return;
       var pos = vis.indexOf(activeIndex);
       if (pos === -1) pos = 0;
-      setActive(vis[(pos + 1) % vis.length]);
+      setActive(vis[(pos + 1) % vis.length]);   // wraps last -> first
     }, AUTO_MS);
   }
   function pauseAuto() { userPaused = true; stopAuto(); }
@@ -6160,7 +6194,7 @@
     }, RESUME_MS);
   }
 
-  /* ---------- tabs ---------- */
+  /* ---------- tabs (filter cards by data-vmp-type) ---------- */
   function applyTab(type) {
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
@@ -6187,6 +6221,7 @@
   /* ---------- drag / swipe ---------- */
   function onPointerDown(e) {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (e.target.closest && e.target.closest('.vmp-card-btn')) return; // let the Details link behave normally
     isDragging = true;
     didDrag = false;
     dragStartX = e.clientX;
@@ -6257,7 +6292,7 @@
     resizeTimer = setTimeout(function () { setActive(activeIndex, false); }, 150);
   });
 
-  /* ---------- MODAL ---------- */
+  /* ---------- QUICK-VIEW MODAL ---------- */
   var modalImage     = section.querySelector('#vmpModalImage');
   var modalTitle     = section.querySelector('#vmpModalTitle');
   var modalPrice     = section.querySelector('#vmpModalPrice');
@@ -6322,7 +6357,7 @@
     if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
 
-  /* card interactions */
+  /* card interactions: card body -> quick-view modal; Details button -> listing */
   cards.forEach(function (card) {
     card.addEventListener('click', function () {
       if (didDrag) return;
@@ -6334,6 +6369,12 @@
         openModalFor(card);
       }
     });
+    var btn = card.querySelector('.vmp-card-btn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();   // don't also open the modal
+      });
+    }
   });
 
   /* ---------- init ---------- */
@@ -6348,6 +6389,7 @@
   }
 })();
 </script>
+
 
 
 </body>
